@@ -4,7 +4,7 @@
 :root {
   color-scheme: light dark; /* both supported */
   --background-color: #FCFCFC;
-  --c1: #205374;  /* dark accent */
+  --c1: #22822E;  /* dark accent */
   --c2: #30CE88;
   --a0: #F1435A;  /* main accent (previously: #FD80A8) */
   --a1: #FFC300;  /* yellow, secondary accent */
@@ -26,7 +26,7 @@ body {
   padding-bottom: 150px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  font-size: 12pt;
+  font-size: 13pt;
   transition: 0.3s;
   color: #111;
   background-color: var(--background-color);
@@ -92,6 +92,9 @@ h3 span {
   font-size: 16pt;
   padding-bottom: 2px;
 }
+body.dark-theme h3 span {
+  color: #bbb;
+}
 
 a {
   color: var(--c1);
@@ -128,6 +131,9 @@ body.dark-theme #btn-toggle div {
 }
 
 
+div.div-icon {
+  padding-right: 120px;
+}
 a.a-icon {
   margin-right: 20px;
   text-decoration: none;
@@ -159,7 +165,7 @@ body.dark-theme a.a-icon:hover svg {
 
 #logo {
   font-family: 'Pacifico', sans-serif;
-  font-size: 40pt;
+  font-size: 32pt;
   text-decoration: none;
   transition: all 4s;
   background: linear-gradient(to bottom right, var(--a1), var(--a0) 40%, var(--a1));

@@ -1,11 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Pacifico&family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@700&display=swap');
 
 :root {
   color-scheme: light dark; /* both supported */
   --background-color: #FCFCFC;
   --c1: #205374;  /* dark accent */
   --c2: #30CE88;
+  --a0: #F1435A;  /* main accent (previously: #FD80A8) */
+  --a1: #FFC300;  /* yellow, secondary accent */
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -152,6 +154,20 @@ body.dark-theme a.a-icon:hover svg {
   fill: var(--c2);
   color: var(--c2);
   transition: all 0.3s ease 0s;
+}
+
+
+#logo {
+  font-family: 'Pacifico', sans-serif;
+  font-size: 40pt;
+  text-decoration: none;
+  transition: all 4s;
+  background: linear-gradient(to bottom right, var(--a1), var(--a0) 40%, var(--a1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.4s ease;
+  background-size: 200% 200%;
+  background-position: 0 100%;
 }
 
 

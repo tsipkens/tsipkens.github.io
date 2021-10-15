@@ -229,15 +229,16 @@ p.pub-num {
 
 
 div.pub-entry {
-  margin: 30px 0px;
-  padding: 20px 0px;
-  padding-top: 15px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+  padding-top: 8px;
   border-top: 1px #DDD solid;
   transition: all 0.3s ease 0s;
 }
 div.pub-entry:hover {
   border-top: 5px var(--c1) solid;
-  padding-top: 11px;
+  padding-top: 6px;
+  margin-top: 28px;
 }
 body.dark-theme div.pub-entry:hover {
   border-top: 5px var(--c2) solid;

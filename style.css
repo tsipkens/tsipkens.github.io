@@ -133,7 +133,7 @@ body.dark-theme #btn-toggle div {
 
 
 div.div-icon {
-  padding-right: 120px;
+  padding-right: 80px;
 }
 a.a-icon {
   margin-right: 20px;
@@ -141,6 +141,8 @@ a.a-icon {
 }
 
 a.a-icon svg {
+  margin-top: 10px;
+  margin-bottom: 10px;
   height: 38px;
   width: 40px;
   color: black;

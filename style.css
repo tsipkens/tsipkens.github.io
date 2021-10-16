@@ -4,7 +4,7 @@
 :root {
   color-scheme: light dark; /* both supported */
   --background-color: #FCFCFC;
-  --c1: #271D7D;  /* dark accent */
+  --c1: #0A1C96;  /* dark accent */
   --c2: #30CE88;
   --a0: #F1435A;  /* main accent (previously: #FD80A8) */
   --a1: #FFC300;  /* yellow, secondary accent */
@@ -23,7 +23,7 @@
 body {
   margin: auto 0px;
   padding: 0px;
-  padding-left: 20px;
+  padding-left: 20px;x
   padding-right: 8px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -311,5 +311,29 @@ body.dark-theme .little-icon i {
   font-size: 10pt;
   margin-top: 100px;
   padding-bottom: 60px;
+}
+
+
+
+/* SCROLL BAR */
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #E9E9E9;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--c2);
+  transition: all 0.5s;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb:hover {
+  background: #2AB476;
 }
 

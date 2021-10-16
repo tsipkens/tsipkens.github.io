@@ -26,7 +26,7 @@ html {
 body {
   margin: auto 0px;
   padding: 0px;
-  padding-left: 22px;
+  padding-left: 20px;
   padding-right: 8px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
@@ -256,6 +256,7 @@ body.dark-theme .pub-entry:hover a {
   color: #CCC;
   font-weight: 200;
   transition: all 0.3s ease 0s;
+  font-size: 10pt;
 }
 .pub-entry:hover::marker {
   color: var(--c1);

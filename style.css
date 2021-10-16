@@ -23,7 +23,8 @@
 body {
   margin: auto 0px;
   padding: 0px;
-  padding-bottom: 150px;
+  padding-left: 20px;
+  padding-right: 8px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
   font-size: 13pt;
@@ -229,6 +230,9 @@ p.no-space-sub {
 p.no-space-sub a {
   color: #CCC;
 }
+body.dark-theme p.no-space-sub a {
+  color: #777;
+}
 p.no-space-sub a:hover {
   color: var(--c1);
 }
@@ -243,34 +247,69 @@ p.pub-num {
 }
 
 
-div.pub-entry {
+.pub-entry {
   margin-top: 30px;
   padding-bottom: 20px;
   padding-top: 8px;
   border-top: 1px #DDD solid;
   transition: all 0.3s ease 0s;
 }
-div.pub-entry:hover {
+.pub-entry:hover {
   border-top: 5px var(--c1) solid;
   padding-top: 6px;
   margin-top: 28px;
 }
-body.dark-theme div.pub-entry:hover {
+body.dark-theme .pub-entry:hover {
   border-top: 5px var(--c2) solid;
 }
-div.pub-entry:hover p.no-space {
+.pub-entry:hover p.no-space {
   color: var(--c1);
 }
-body.dark-theme div.pub-entry:hover p.no-space {
+body.dark-theme .pub-entry:hover p.no-space {
   color: var(--c2);
 }
-div.pub-entry:hover p.no-space-sub {
+.pub-entry:hover p.no-space-sub {
   color: inherit;
 }
-div.pub-entry:hover a {
+.pub-entry:hover a {
   color: var(--c1);
 }
-body.dark-theme div.pub-entry:hover a {
+body.dark-theme .pub-entry:hover a {
   color: var(--c2);
+}
+.pub-entry::marker {
+  color: #CCC;
+  font-weight: 200;
+  transition: all 0.3s ease 0s;
+}
+.pub-entry:hover::marker {
+  color: var(--c1);
+  font-weight: 600;
+}
+body.dark-theme .pub-entry::marker {
+  color: #777;
+}
+body.dark-theme .pub-entry:hover::marker {
+  color: var(--c2);
+}
+
+
+.little-icon {
+  margin-left: 15px;
+}
+.little-icon i {
+  color: var(--c1);
+  font-size: 8pt;
+}
+body.dark-theme .little-icon i {
+  color: var(--c2);
+}
+
+
+.footer {
+  text-align: center;
+  font-size: 10pt;
+  margin-top: 100px;
+  padding-bottom: 60px;
 }
 

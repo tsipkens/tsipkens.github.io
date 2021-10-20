@@ -59,6 +59,7 @@ function requestUserRepos(username) {
 
             // Add Bootstrap list item class to each li
             li.classList.add('pub-entry')
+            li.setAttribute('data-aos', 'slide-up')
 
             // Create the html markup for each li
             tstar = formater('<a class="little-icon" href=' + data[i].html_url + 

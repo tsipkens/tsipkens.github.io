@@ -224,7 +224,7 @@ p.pub-num {
   margin-top: 30px;
   padding-bottom: 20px;
   padding-top: 8px;
-  border-top: 1px #DDD solid;
+  border-top: 1px #D8DEE4 solid;
   transition: all 0.3s ease 0s;
 }
 .pub-entry:hover {

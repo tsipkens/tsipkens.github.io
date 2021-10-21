@@ -14,6 +14,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Load jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- For scrolling effect -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   
   <link rel="icon" type="image/png" href="ico/favicon.png">
@@ -48,16 +52,28 @@
 </head>
 
 <body onload="if (dark) { toggleNight(); }">
-  <div class="main">
-    <div id="btn-toggle">
-      <a>
-        <div>
-            <span><i class="fas fa-moon" id="moon"></i></span>
-            <span><i class="fas fa-sun" id="sun"></i></span>
-            <span></span>  <!-- placeholder for dark/light theme toggle -->
-          </div>
-      </a>
+  
+  
+<div id="header"><div class="pre-main"></div>
+    <div class="post-header">
+      <a href="index.html#" class="head-first">SIPKENS</a>
+      <a href="#journal1">JOURNAL ARTICLES</a>
+      <a href="#conf1">CONFERENCES</a>
+      <a href="#theses">THESES</a>
     </div>
+  </div></div>
+
+  <div class="pre-main">
+    <div class="main">
+      <div id="btn-toggle">
+        <a>
+          <div>
+              <span><i class="fas fa-moon" id="moon"></i></span>
+              <span><i class="fas fa-sun" id="sun"></i></span>
+              <span></span>  <!-- placeholder for dark/light theme toggle -->
+            </div>
+        </a>
+      </div>
 <h3 id="journal1">JOURNAL ARTICLES <span>(28)</span></h3>
 <ol class="pubs">
 <li class="pub-entry" data-aos="slide-up">
@@ -783,7 +799,7 @@ University of Waterloo (2014) | MASc Thesis
 </p>
 </li>
 </ul>
-
+    </div>
 </div>
 
 <div class="footer">
@@ -792,26 +808,45 @@ University of Waterloo (2014) | MASc Thesis
 
 </body>
 
-<script src="gh.js"></script>
 
+<!-- Add scrolling effect. -->
 <script>
+    const btn = document.querySelector("#btn-toggle");
+    btn.addEventListener("click", function () {
+        // Toggle dark theme.
+        dark = !dark;
 
-// For dark mode.
-const btn = document.querySelector("#btn-toggle");
-btn.addEventListener("click", function () {
-    // Toggle dark theme.
-    dark = !dark;
-
-    toggleNight();  // apply theme
-    scrollFunction();
-})
-
+        toggleNight();  // apply theme
+        scrollFunction();
+    })
 </script>
+
 
 <!-- Add scrolling effect. -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
+</script>
+
+
+<script>
+    // When the user scrolls down 50px from the top of the document, reformat header
+    scrollFunction()
+    window.onscroll = function() {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+
+      f_width = $(window).width() > 600  // flags if sidebar is present
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 60) {
+        document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(150,150,150,0.5)"; 
+      document.getElementById("header").style.maxHeight = "50px"; 
+      } else {
+        document.getElementById("header").style.boxShadow = "none";
+      document.getElementById("header").style.maxHeight = "0px";
+      }
+    }
 </script>
 
 

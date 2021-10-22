@@ -127,7 +127,7 @@ a:hover {
     top: 0;
     width: 100%;
     box-shadow: white;
-    transition: 0.3s;
+    transition: 0.6s;
     max-height: 0px;
     overflow-y: hidden;
    }
@@ -138,16 +138,17 @@ div.post-header {
   max-width: 800px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 12pt;
+  font-size: 11pt;
+  font-weight: 400;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 div.post-header a {
   text-decoration: none;
-  font-weight: 200;
   margin-right: 20px;
   margin-left: 20px;
+  line-height: 17px;
   color: #111;
   transition: all 0.3s ease 0s;
 }
@@ -163,6 +164,7 @@ body.dark-theme div.post-header a {
  div.post-header a.head-first {
    font-weight: 700;
    font-size: 14pt;
+   line-height: 20px;
    margin-left: 0px;
  }
 

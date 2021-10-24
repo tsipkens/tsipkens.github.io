@@ -285,7 +285,7 @@ p.pub-num {
   padding-bottom: 20px;
   padding-top: 8px;
   border-top: 1px #DDD solid;
-  transition: all 0.6s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 .pub-entry:hover {
   border-top: 5px var(--c1) solid;
@@ -340,7 +340,7 @@ body.dark-theme .pub-entry:hover::marker {
   font-weight: 700;
   color: var(--c1);
   text-decoration: none;
-  transition: all 0.3s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 body.dark-theme .post-pub a {
   color: var(--c2);

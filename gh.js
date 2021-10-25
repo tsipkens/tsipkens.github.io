@@ -55,11 +55,12 @@ function requestUserRepos(username) {
             }
 
             // Create variable that will create li's to be added to ul
-            let li = document.createElement('li');
+            let di = document.createElement('div');
+            di.setAttribute('data-aos', 'slide-up')
 
             // Add Bootstrap list item class to each li
+            let li = document.createElement('li');
             li.classList.add('pub-entry')
-            li.setAttribute('data-aos', 'slide-up')
 
             // Create the html markup for each li
             tstar = formater('<a class="little-icon" href=' + data[i].html_url + 
@@ -73,9 +74,10 @@ function requestUserRepos(username) {
                 <p class="no-space-sub" style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
             `);
-
+            
             // Append each li to the ul
-            ul.appendChild(li);
+            di.appendChild(li);
+            ul.appendChild(di);
 
         }
     }

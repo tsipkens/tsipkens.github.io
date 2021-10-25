@@ -105,7 +105,7 @@ body.dark-theme h3 span {
 a {
   color: var(--c3);
   cursor: pointer;
-  transition: all 0.3s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 a:hover {
   color: var(--c2);
@@ -319,8 +319,8 @@ body.dark-theme .pub-entry:hover a {
 .pub-entry::marker {
   color: #CCC;
   font-weight: 200;
-  transition: all 0.3s ease 0s;
   font-size: 10pt;
+  transition: all 0.3s ease 0s;
 }
 .pub-entry:hover::marker {
   color: var(--c1);
@@ -392,5 +392,11 @@ body.dark-theme .little-icon i {
 /* Handle */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--c3);
+}
+
+
+
+.pub-entry .aos-init .aos-animate {
+  transition: all 0.8s ease 0s;
 }
 

@@ -824,12 +824,17 @@ University of Waterloo (2014) | MASc Thesis
     function scrollFunction() {
 
       f_width = $(window).width() > 600  // flags if sidebar is present
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 60) {
-        document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(150,150,150,0.5)"; 
-      document.getElementById("header").style.maxHeight = "50px"; 
+      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 120) {
+        if (document.body.className == "dark-theme") {
+          document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(0,0,0,0.7)"; 
+          document.getElementById("header").style.maxHeight = "50px"; 
+        } else {
+          document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(200,200,200,0.7)"; 
+          document.getElementById("header").style.maxHeight = "50px"; 
+        }
       } else {
         document.getElementById("header").style.boxShadow = "none";
-      document.getElementById("header").style.maxHeight = "0px";
+        document.getElementById("header").style.maxHeight = "0px";
       }
     }
 </script>

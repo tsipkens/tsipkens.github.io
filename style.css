@@ -295,6 +295,7 @@ body.dark-theme .pub-entry:hover {
   border-top: 5px var(--c2) solid;
 }
 .pub-entry:hover p.pub-title {
+  transition: all 0.8s ease 0s;
   color: var(--c1);
 }
 body.dark-theme .pub-entry:hover p.pub-title {
@@ -346,6 +347,12 @@ body.dark-theme .post-pub a {
 }
 .post-pub a:hover {
   text-decoration: underline;
+}
+.pub-honour {
+  color: #111;
+}
+body.dark-theme .pub-honour {
+  color: #DDD;
 }
 
 

@@ -5,8 +5,8 @@
   color-scheme: light dark; /* both supported */
   --background-color: #FCFCFC;
   --c1: #0A1C96;  /* dark accent */
-  --c2: #F78C94;
-  --c3: #F5CBE1;
+  --c2: #66FCF1;
+  --c3: #45A29E;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -103,11 +103,19 @@ body.dark-theme h3 span {
 }
 
 a {
-  color: var(--c2);
+  color: var(--c1);
   cursor: pointer;
   transition: all 0.8s ease 0s;
 }
 a:hover {
+  color: var(--c3);
+}
+body.dark-theme a {
+  color: var(--c2);
+  cursor: pointer;
+  transition: all 0.8s ease 0s;
+}
+body.dark-theme a:hover {
   color: var(--c3);
 }
 
@@ -135,8 +143,8 @@ div.post-header {
   margin: 0 auto;
   width: 95%;
   max-width: 800px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   font-size: 11pt;
   font-weight: 400;
   display: flex;
@@ -218,8 +226,8 @@ body.dark-theme a.a-icon svg {
 }
 
 a.a-icon:hover svg {
-  fill: var(--c2);
-  color: var(--c2);
+  fill: var(--c3);
+  color: var(--c3);
   transition: all 0.3s ease 0s;
 }
 body.dark-theme a.a-icon:hover svg {

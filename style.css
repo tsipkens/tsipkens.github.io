@@ -5,8 +5,8 @@
   color-scheme: light dark; /* both supported */
   --background-color: #FCFCFC;
   --c1: #0A1C96;  /* dark accent */
-  --c2: #30CE88;
-  --c3: #2AB476;
+  --c2: #F78C94;
+  --c3: #F5CBE1;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -103,12 +103,12 @@ body.dark-theme h3 span {
 }
 
 a {
-  color: var(--c3);
+  color: var(--c2);
   cursor: pointer;
   transition: all 0.8s ease 0s;
 }
 a:hover {
-  color: var(--c2);
+  color: var(--c3);
 }
 
 

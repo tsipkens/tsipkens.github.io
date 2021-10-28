@@ -4,9 +4,9 @@
 :root {
   color-scheme: light dark; /* both supported */
   --background-color: #FCFCFC;
-  --c1: #0A1C96;  /* dark accent */
-  --c2: #66FCF1;
-  --c3: #45A29E;
+  --c1: #3F1194;  /* dark accent */
+  --c2: #60F3D6;
+  --c3: #FF5656;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -389,7 +389,7 @@ body.dark-theme .little-icon i {
 /* SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 14px;
 }
 
 /* Track */
@@ -400,10 +400,8 @@ body.dark-theme .little-icon i {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--c2);
-  transition: all 0.5s;
+  border-radius: 7px;
 }
-
-/* Handle */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--c3);
 }

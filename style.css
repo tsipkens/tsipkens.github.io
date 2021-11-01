@@ -254,7 +254,7 @@ p.pub-title a {
   color: inherit;
 }
 
-p.no-space-pt2 {
+.no-space-pt2 {
   padding-top: 2px;
   padding-bottom: 0px;
   margin: 0px;
@@ -272,6 +272,9 @@ p.no-space-pt2 {
 }
 .no-space-sub a {
   text-decoration: none;
+  color: #AAA;
+}
+body.dark-theme .no-space-sub a {
   color: #AAA;
 }
 .no-space-sub a:hover {

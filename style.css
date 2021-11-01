@@ -214,13 +214,13 @@ a.a-icon {
 a.a-icon svg {
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 38px;
-  width: 40px;
+  height: 33px;
+  width: 35px;
   color: black;
 }
 body.dark-theme a.a-icon svg {
-  height: 38px;
-  width: 40px;
+  height: 33px;
+  width: 35px;
   color: white;
   fill: white;
 }

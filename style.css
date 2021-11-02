@@ -3,7 +3,7 @@
 
 :root {
   color-scheme: light dark; /* both supported */
-  --background-color: #FCFCFC;
+  --background-color: #F8F8F8;
   --c1: #3F1194;  /* dark accent */
   --c2: #60F3D6;
   --c3: #FF5656;
@@ -188,10 +188,12 @@ body.dark-theme div.post-header a {
   border: solid 1px #CCC;
   border-radius: 40px;
   padding: 5px;
+  background-color: white;
 }
 body.dark-theme #btn-toggle div {
   color: #555;
   border: solid 1px #555;
+  background-color: black;
 }
 #btn-toggle div span {
   padding-left: 5px;

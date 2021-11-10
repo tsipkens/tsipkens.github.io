@@ -417,3 +417,9 @@ body.dark-theme .little-icon i {
   transition: all 0.8s ease 0s;
 }
 
+
+.badge-wrap {
+  display: inline-block;
+  margin-top: 10px;
+}
+

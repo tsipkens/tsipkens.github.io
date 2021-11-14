@@ -303,6 +303,7 @@ p.pub-num {
   border-top: 5px var(--c1) solid;
   padding-top: 6px;
   margin-top: 28px;
+  cursor: pointer;
 }
 body.dark-theme .pub-entry:hover {
   border-top: 5px var(--c2) solid;
@@ -417,9 +418,9 @@ body.dark-theme .little-icon i {
   transition: all 0.8s ease 0s;
 }
 
-
-.badge-wrap {
-  display: inline-block;
-  margin-top: 10px;
+.altmetric-embed {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 

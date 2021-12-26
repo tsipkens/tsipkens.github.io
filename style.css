@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&family=Pacifico&family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Roboto:wght@700&display=swap');
 
 :root {
   color-scheme: light dark; /* both supported */
@@ -26,7 +26,7 @@ html {
 body {
   margin: auto 0px;
   padding: 0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   font-weight: 300;
   font-size: 13pt;
   transition: 0.3s;
@@ -40,7 +40,6 @@ body.dark-theme {
 
 b {
   /* Format all bolds */
-  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
 }
 
@@ -79,7 +78,6 @@ h2 {
   padding-bottom: 15px;
   padding-top: 110px;
   color: var(--c1);
-  font-family: 'Poppins';
   font-weight: 600;
 }
 body.dark-theme h2 {
@@ -249,11 +247,14 @@ p.pub-title {
   color: #111;
 }
 body.dark-theme p.pub-title {
-  color: #DDD;
+  color: #EEE;
 }
 p.pub-title a {
   text-decoration: none;
   color: inherit;
+}
+p.pub-title b {
+  font-weight: 700;
 }
 
 .no-space-pt2 {
@@ -262,7 +263,10 @@ p.pub-title a {
   margin: 0px;
   font-size: 11.5pt;
   text-align: left;
-  color: #AAA;
+  color: #444;
+}
+body.dark-theme .no-space-pt2 {
+  color: #CCC;
 }
 .no-space-sub {
   padding-top: 0px;
@@ -270,14 +274,13 @@ p.pub-title a {
   margin: 0px;
   text-align: left;
   font-size: 11.5pt;
-  color: #AAA;
+  color: #444;
+}
+body.dark-theme .no-space-sub {
+  color: #CCC;
 }
 .no-space-sub a {
   text-decoration: none;
-  color: #AAA;
-}
-body.dark-theme .no-space-sub a {
-  color: #AAA;
 }
 .no-space-sub a:hover {
   color: var(--c1);
@@ -300,9 +303,9 @@ p.pub-num {
   transition: all 0.8s ease 0s;
 }
 .pub-entry:hover {
-  border-top: 5px var(--c1) solid;
-  padding-top: 6px;
-  margin-top: 28px;
+  border-top: 3px var(--c1) solid;
+  padding-top: 7px;
+  margin-top: 29px;
   cursor: pointer;
 }
 body.dark-theme .pub-entry:hover {

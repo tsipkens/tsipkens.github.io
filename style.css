@@ -257,7 +257,7 @@ p.pub-title b {
   font-weight: 700;
 }
 
-.no-space-pt2 {
+.pub-author {
   padding-top: 2px;
   padding-bottom: 0px;
   margin: 0px;
@@ -265,7 +265,7 @@ p.pub-title b {
   text-align: left;
   color: #444;
 }
-body.dark-theme .no-space-pt2 {
+body.dark-theme .pub-author {
   color: #CCC;
 }
 .no-space-sub {
@@ -318,7 +318,7 @@ body.dark-theme .pub-entry:hover {
 body.dark-theme .pub-entry:hover p.pub-title {
   color: var(--c2);
 }
-.pub-entry:hover .no-space-pt2 {
+.pub-entry:hover .pub-author {
   color: inherit;
 }
 .pub-entry:hover .no-space-sub {

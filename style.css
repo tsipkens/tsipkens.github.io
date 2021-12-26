@@ -240,7 +240,7 @@ body.dark-theme a.a-icon:hover svg {
 /* Format publication and code entries. */
 p.pub-title {
   padding-top: 0px;
-  padding-bottom: 6px;
+  padding-bottom: 3px;
   margin: 0px;
   text-align: left;
   font-size: 13pt;

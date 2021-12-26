@@ -371,6 +371,10 @@ body.dark-theme .post-pub a {
 body.dark-theme .pub-honour {
   color: #DDD;
 }
+.fa-award {
+  font-size: 10pt;
+  color: #881111;
+}
 
 
 /* Code icons */

@@ -4,9 +4,9 @@
 :root {
   color-scheme: light dark; /* both supported */
   --background-color: #F8F8F8;
-  --c1: #3F1194;  /* dark accent */
+  --c1: #02558B;  /* dark accent */
   --c2: #FEDC3D;  /* light accent */
-  --c3: #3F1194;
+  --c3: #02558B;
 }
 @media (prefers-color-scheme: dark) {
   :root {

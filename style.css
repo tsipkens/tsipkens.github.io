@@ -5,12 +5,12 @@
   color-scheme: light dark; /* both supported */
   --background-color: #F8F8F8;
   --c1: #3F1194;  /* dark accent */
-  --c2: #60F3D6;
-  --c3: #FF5656;
+  --c2: #FEDC3D;  /* light accent */
+  --c3: #3F1194;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #242526;
+    --background-color: #46344E;
   }
 }
 
@@ -412,11 +412,11 @@ body.dark-theme .little-icon i {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--c2);
+  background: var(--c1);
   border-radius: 7px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--c3);
+  background: var(--c2);
 }
 
 

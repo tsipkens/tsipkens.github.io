@@ -69,10 +69,10 @@ function requestUserRepos(username) {
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a>')
             console.log(tfork)
             li.innerHTML = (`
-                <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b>
-                <span style="font-size:9.5pt;margin-left:10px;">${data[i].language}` + tstar + tfork + `</span></p>
+                <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p class="no-space-sub" style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
+                <p class="pub-title"><span style="font-size:9.5pt;margin-right:10px;">${data[i].language}` + tstar + tfork + `</span></p>
             `);
             
             // Append each li to the ul

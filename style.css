@@ -303,7 +303,7 @@ p.pub-num {
   line-height: 108%;
 }
 body.dark-theme .pub-entry {
-  border-top: 1px #666 solid;
+  border-top: 1px #444 solid;
 }
 .pub-entry:hover {
   border-top: 3px var(--c1) solid;

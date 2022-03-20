@@ -301,11 +301,9 @@ p.pub-num {
   border-top: 1px #DDD solid;
   transition: all 0.8s ease 0s;
   line-height: 108%;
-  background-color: #FBFBFB;
 }
 body.dark-theme .pub-entry {
   border-top: 1px #333 solid;
-  background-color: #181818;
 }
 .pub-entry:hover {
   border-top: 3px var(--c1) solid;

@@ -306,7 +306,7 @@ p.pub-num {
 }
 body.dark-theme .pub-entry {
   border: 1px #333 solid;
-  background-color: #0D0D0D;
+  background-color: #181818;
 }
 .pub-entry:hover {
   border: 2px var(--c1) solid;

@@ -1,1 +1,6 @@
+
+# Ignore code generation files.
 codegen/
+
+# Ignore temporary files.
+temp*

@@ -17,7 +17,7 @@ var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github
       
       var today = new Date();
       var yyyy = today.getFullYear();
-      if (!(data[i].Year > (yyyy - 2))) {
+      if (!(data[i].Year > (yyyy - 3))) {
         continue;
       }
 

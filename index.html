@@ -36,16 +36,18 @@
 
   <!-- For scrolling effect -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  
-  <link rel="icon" type="image/png" href="ico/favicon.png">
-
-  <link href="style.css" rel="stylesheet">
 
   <!-- Import font awesome icons -->
   <script src="https://kit.fontawesome.com/58cf1bb60d.js" crossorigin="anonymous"></script>
 
   <!-- Import for Alimetric -->
   <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+
+  <!-- Custom content -->
+  <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
+  
+  <link rel="icon" type="image/png" href="ico/favicon.png">
+  <link href="style.css" rel="stylesheet">
 
   <meta name="color-scheme" content="light dark" />
 
@@ -713,56 +715,28 @@
 <h2 id="pubs">PUBLICATIONS</h2>
 <h3 id="journaln">JOURNAL ARTICLES <span> / Recent</span></h3>
 
-<ol id="pubs-j" class="pubs">
+<ol id="pubs-j" class="pubs"></ol>
 
-</ol>
-
-<script src="js/pubs.js"></script>
-
+<!-- Add journal articles -->
+<script>
+   var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json", function(data) {
+      var today = new Date();
+      var yyyy = today.getFullYear();
+      writePubs(data, 'pubs-j', yyyy - 3)
+   });
+</script>
 
 <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p><h3 id="journaln">CONFERENCES <span> / Select</span></h3>
-<ol class="pubs">
- <div data-aos="slide-up">
-  <li class="pub-entry">
-   <p class="pub-title"><b>Examination of the methods available to compute the transfer function of CPMA and APM devices</b></p>
-   <p class="pub-author"><u>T. A. Sipkens*</u>, J. Olfert, and S. Rogak <b>·</b> 
-   <span class="no-space-sub">
-    <i>European Aerosol Conference</i> <b>·</b> Gothenburg, Sweden <b>·</b> August 25-30, 2019
-    <br><span class="pub-honour"><i class="fas fa-award"></i> Best Poster Award</span>
-   </span></p>
-  </li>
- </div>
- <div data-aos="slide-up">
-  <li class="pub-entry">
-   <p class="pub-title"><b>Inferring the thermal accommodation coefficient from time-resolved laser-induced incandescence on iron nanoparticles</b></p>
-   <p class="pub-author"><u>T. A. Sipkens*</u>, W. Richards, N. Bizmark, N. R. Singh, K. J. Daun, and M. Ioannidis <b>·</b> 
-   <span class="no-space-sub">
-    <i>4th Annual Nano Ontario Conference</i> <b>·</b> Kingston, ON, Canada <b>·</b> November 7-8, 2013
-    <br><span class="pub-honour"><i class="fas fa-award"></i> 2nd Prize, Poster Competition</span>
-   </span></p>
-  </li>
- </div>
- <div data-aos="slide-up">
-  <li class="pub-entry">
-   <p class="pub-title"><b>In situ particle size measurements of gas-borne silicon nanoparticles by time-resolved laser-induced incandescence</b></p>
-   <p class="pub-author"><u>T. A. Sipkens*</u>, K. J. Daun, C. Schulz, T. Dreier, and N. Petermann <b>·</b> 
-   <span class="no-space-sub">
-    <i>3rd Annual Nano Ontario Conference</i> <b>·</b> Waterloo, ON, Canada <b>·</b> October 11-12, 2012
-    <br><span class="pub-honour"><i class="fas fa-award"></i> 1st Prize, Poster Competition</span>
-   </span></p>
-  </li>
- </div>
- <div data-aos="slide-up">
-  <li class="pub-entry">
-   <p class="pub-title"><b>Molybdenum nanoparticle sizing by time-resolved laser-induced incandescence</b></p>
-   <p class="pub-author"><u>T. Sipkens*</u>, G. Joshi, K. J. Daun, and Y. Murakami <b>·</b> 
-   <span class="no-space-sub">
-    <i>61st Canadian Chemical Engineering Conference</i> <b>·</b> London, Ontario, Canada <b>·</b> October 23-26, 2011
-    <br><span class="pub-honour"><i class="fas fa-award"></i> 1st Prize, PTRC Graduate Student Competition</span>
-   </span></p>
-  </li>
- </div>
-</ol>
+
+
+<ol id="pubs-c" class="pubs"></ol>
+
+<!-- Honour conferences -->
+<script>
+   var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json", function(data) {
+      writeConf(data, 'pubs-c', null, true)
+   });
+ </script>
 
 
 <p class="post-pub" data-aos="slide-up"><a href="pubs.html#conf1">Full publication list <i class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p><h3 id="theses">THESES</h3>

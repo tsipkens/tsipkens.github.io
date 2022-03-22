@@ -1,24 +1,21 @@
 
+function formatAuthor (author) {
+  return author.replace('T. Sipkens', '<u>T. Sipkens</u>').replace('T. A. Sipkens', '<u>T. A. Sipkens</u>');
+}
 
-var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json", function(data) {
+// For writing HTML from JSON data.
+function writePubs(data, id, yyyy) {
   
-  // Get the ul with id of of userRepos
-  let ul = document.getElementById('pubs-j');
+  let ul = document.getElementById(id);
 
   // Loop over each object in data array
   for (let i in data) {
-      console.log(data[i])
-
-      /*
-      if (!(validRepos.includes(data[i].Year))) {
-          continue;
-      }
-      */
       
-      var today = new Date();
-      var yyyy = today.getFullYear();
-      if (!(data[i].Year > (yyyy - 3))) {
-        continue;
+      // Filter by the date.
+      if (!(yyyy == null)) {
+        if (!(data[i].Year > yyyy)) {
+          continue;
+        }
       }
 
       // Create variable that will create li's to be added to ul
@@ -31,10 +28,19 @@ var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github
 
       content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].Title + '</a></b></p>';
       content = content + '<p class="no-space-sub" style="padding-top:0px;"> ' 
-      content = content + data[i].Author.replace('T. Sipkens', '<u>T. Sipkens</u>').replace('T. A. Sipkens', '<u>T. A. Sipkens</u>');
-      content = content + ' <b>&#183</b> <i>' + data[i].Journal + '</i> (' + data[i].Year + ')';
+      content = content + formatAuthor(data[i].Author);
+      content = content + '<span class="no-space-sub">';
+      content = content + ' <br> <i>' + data[i].Journal + '</i> (' + data[i].Year + ')';
       content = content + ' <b>&#183</b> <b>' + data[i].Volume + '</b>, ' + data[i].PagesNo + '<br>';
-      content = content + '<a href=' + data[i].DOI + '">' + data[i].DOI + '</a></p>';
+      content = content + '<a href=' + data[i].DOI + '">' + data[i].DOI + '</a>';
+      
+      if (!(data[i].Honours == '')) {
+        content = content + '<br><span class="pub-honour">';
+        content = content + '<i class="fas fa-award"></i> ';
+        content = content +  data[i].Honours + '</span>';
+      }
+
+      content = content + '</span></p>';
 
       // Create the html markup for each li
       li.innerHTML = (content);
@@ -43,5 +49,61 @@ var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github
       di.appendChild(li);
       ul.appendChild(di);
   }
+}
+
+
+
+// For writing HTML from JSON data.
+function writeConf(data, id, type, hon) {
   
-});
+  let ul = document.getElementById(id);
+
+  // Loop over each object in data array
+  for (let i in data) {
+      
+      // Filter by the presentation type.
+      if (!(type == null)) {
+        if (!(data[i].Type == type)) {
+          continue;
+        }
+      }
+
+      // Filter by honours.
+      if (hon == true) {
+        if (data[i].Honours == '') {
+          continue;
+        }
+      }
+
+      // Create variable that will create li's to be added to ul
+      let di = document.createElement('div');
+      di.setAttribute('data-aos', 'slide-up')
+
+      // Add Bootstrap list item class to each li
+      let li = document.createElement('li');
+      li.classList.add('pub-entry')
+
+      content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].Title + '</a></b></p>';
+      content = content + '<p class="no-space-sub" style="padding-top:0px;"> ' 
+      content = content + formatAuthor(data[i].Author);
+      content = content + '<span class="no-space-sub">';
+      content = content + ' <b>&#183</b> <i>' + data[i].Conference + '</i> <b>&#183</b> ' + data[i].Location;
+      content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].Year;
+      
+      if (!(data[i].Honours == '')) {
+        content = content + '<br><span class="pub-honour">';
+        content = content + '<i class="fas fa-award"></i> ';
+        content = content +  data[i].Honours + '</span>';
+      }
+
+      content = content + '</span></p>';
+
+      // Create the html markup for each li
+      li.innerHTML = (content);
+            
+      // Append each li to the ul
+      di.appendChild(li);
+      ul.appendChild(di);
+  }
+}
+

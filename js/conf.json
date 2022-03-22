@@ -1,0 +1,541 @@
+[{
+    "Type": "Oral",
+    "Author": "Darwin Zhu*, Hamed Nikookar, Timothy A. Sipkens, Steven N. Rogak",
+    "Title": "Comparing analysis routines for characterizing soot images",
+    "Conference": "American Association for Aerosol Research Annual Conference",
+    "Location": "Virtual",
+    "Date": "October 18-22",
+    "Year": 2021,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "J. Corbin*, G. Smallwood, I. Leroux, J. Norooz Oliaee, F. Liu, R. Green, N. F. Murnaghan, T. Sipkens, T. Koukoulas, P. Lobo",
+    "Title": "Respirator and Face Mask Particle Filtration Efficiency: Experimental Comparison of Test Methods",
+    "Conference": "American Association for Aerosol Research Annual Conference",
+    "Location": "Virtual",
+    "Date": "October 18-22",
+    "Year": 2021,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "A. Naseri, T. Sipkens, S. Rogak, J. S. Olfert*",
+    "Title": "Optimized sampling settings and reconstructions for tandem particle mass analyzer and single particle-soot photometer measurements",
+    "Conference": "American Association for Aerosol Research Annual Conference",
+    "Location": "Virtual",
+    "Date": "October 18-22",
+    "Year": 2021,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, H. Nikookar, S. N. Rogak",
+    "Title": "Machine learning approaches to characterizing soot in TEM images",
+    "Conference": "American Association for Aerosol Research 38th Annual Conference",
+    "Location": "Virtual",
+    "Date": "October 5-9",
+    "Year": 2020,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "S. N. Rogak*, T. A. Sipkens, H. Nikookar, M. Guan, J. J. Wang",
+    "Title": "Properties of materials used for improvised masks",
+    "Conference": "American Association for Aerosol Research 38th Annual Conference",
+    "Location": "Virtual",
+    "Date": "October 5-9",
+    "Year": 2020,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, L. Zhou, S. N. Rogak",
+    "Title": "Aggregate level segmentation of soot TEM images by unsupervised machine learning",
+    "Conference": "European Aerosol Conference",
+    "Location": "Aachen, Germany",
+    "Date": "August 31-September 4",
+    "Year": 2020,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "E. Stanic*, T. A. Sipkens, M. Knight, J. Rochussen, S. N. Rogak, P. Kirchen, S. J. Grauer",
+    "Title": "Gas jet injection characterization using BOS imaging and Abel inversion for engine relevant conditions",
+    "Conference": "OSA Optical Sensors and Sensing Congress",
+    "Location": "Vancouver, BC, Canada (virtual)",
+    "Date": "June 22-26",
+    "Year": 2020,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "O. W. Bello*, T. A. Sipkens, U. Trivanovic, A. Naseri, D. Thi Bui, S. Schmidt, A. Baldelli, S. N. Rogak, J. J. Harynuk, L. Kostiuk, J. S. Olfert",
+    "Title": "Particle, volatile organic compounds and polycyclic aromatic hydrocarbon emission flaring from hydro-fracturing",
+    "Conference": "American Association for Aerosol Research 37th Annual Conference",
+    "Location": "Portland, OR, USA",
+    "Date": "October 14-18",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "K. Babaee, T. A. Sipkens, S. N. Rogak*",
+    "Title": "Light scattering and absorption from soot aggregates with polydisperse primary particles",
+    "Conference": "American Association for Aerosol Research 37th Annual Conference",
+    "Location": "Portland, OR, USA",
+    "Date": "October 14-18",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, J. Olfert, S. Rogak",
+    "Title": "Examination of the methods available to compute the transfer function of CPMA and APM devices",
+    "Conference": "European Aerosol Conference",
+    "Location": "Gothenburg, Sweden",
+    "Date": "August 25-30",
+    "Year": 2019,
+    "Honours": "Best Poster Award",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "S. J. Grauer, A. Unterberger, T. A. Sipkens, A. M. Kempft, K. J. Daun, K. Mohri*",
+    "Title": "Background-oriented schlieren tomography for instantaneous 3D combustion imaging",
+    "Conference": "37th International Symposium on Combustion",
+    "Location": "Dublin, Ireland",
+    "Date": "July 29 - August 3",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, J. Menser, R. Mansmann, C. Schulz, K. J. Daun",
+    "Title": "What is hiding in the intensity scaling factor and what can be gained from analyzing its temporal variation?",
+    "Conference": "8th International Workshop on Laser-Induced Incandescence",
+    "Location": "Tutzing, Germany",
+    "Date": "June 10-13",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, K. J. Daun",
+    "Title": "Influence of the surface potential on molecular dynamics-derived thermal accommodation coefficients",
+    "Conference": "8th International Workshop on Laser-Induced Incandescence",
+    "Location": "Tutzing, Germany",
+    "Date": "June 10-13",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, K. J. Daun",
+    "Title": "Determining size-dependent nanoparticle evaporation effects using time-resolved laser-induced incandescence",
+    "Conference": "8th Annual Nano Ontario Conference",
+    "Location": "Toronto, ON, Canada",
+    "Date": "November 9-10",
+    "Year": 2017,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "S. Talebi Moghaddam*, T. A. Sipkens, K. J. Daun",
+    "Title": "Laser-induced incandescence of aerosolized nanoparticles: contamination of incandescence signal by plasma emission",
+    "Conference": "8th Annual Nano Ontario Conference",
+    "Location": "Toronto, ON, Canada",
+    "Date": "November 9-10",
+    "Year": 2017,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens, S. J. Grauer, P. J. Hadwin, K. J. Daun*",
+    "Title": "Applying Bayesian model selection to time-resolved laser-induced incandescence measurements on iron nanoparticles",
+    "Conference": "Laser Diagnostics in Combustion Gordon Research Conference",
+    "Location": "Waterville Valley, NH, USA",
+    "Date": "August 6-11",
+    "Year": 2017,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "S. Talebi Moghaddam, T. A. Sipkens, K. J. Daun*",
+    "Title": "Optical modeling of high-fluence laser-induced incandescence: Effect of plasma formation",
+    "Conference": "Laser Diagnostics in Combustion Gordon Research Conference",
+    "Location": "Mount Snow, VT, USA",
+    "Date": "August 6-11",
+    "Year": 2017,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, S. Talebi Moghaddam, K. J. Daun",
+    "Title": "Defining regimes and analytical expressions for fluence curves in pulsed laser heating of nanoparticles",
+    "Conference": "7th Annual Nano Ontario Conference",
+    "Location": "Guelph, ON, Canada",
+    "Date": "November 10-11",
+    "Year": 2016,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, K. J. Daun",
+    "Title": "Investigation of trends in high-temperature thermal accommodation coefficients using cube models",
+    "Conference": "7th International Workshop on Laser-Induced Incandescence",
+    "Location": "Lake Tahoe, CA, USA",
+    "Date": "June 19-22",
+    "Year": 2016,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, P. J. Hadwin, K. J. Daun, K. A. Thomson, F. Liu",
+    "Title": "Bayesian inference in auto-correlated laser-induced incandescence analyses of soot",
+    "Conference": "Laser Diagnostics in Combustion Gordon Research Conference",
+    "Location": "Waterville Valley, NH, USA",
+    "Date": "August 9-14",
+    "Year": 2015,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, W. Richards, N. Bizmark, N. R. Singh, K. J. Daun, M. Ioannidis",
+    "Title": "Inferring the thermal accommodation coefficient from time-resolved laser-induced incandescence on iron nanoparticles",
+    "Conference": "4th Annual Nano Ontario Conference",
+    "Location": "Kingston, ON, Canada",
+    "Date": "November 7-8",
+    "Year": 2013,
+    "Honours": "2nd Prize, Poster Competition",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. A. Sipkens*, K. J. Daun, C. Schulz, T. Dreier, N. Petermann",
+    "Title": "In situ particle size measurements of gas-borne silicon nanoparticles by time-resolved laser-induced incandescence",
+    "Conference": "3rd Annual Nano Ontario Conference",
+    "Location": "Waterloo, ON, Canada",
+    "Date": "October 11-12",
+    "Year": 2012,
+    "Honours": "1st Prize, Poster Competition",
+    "DOI": null
+}, {
+    "Type": "Poster",
+    "Author": "T. Sipkens*, G. Joshi, K. J. Daun, Y. Murakami",
+    "Title": "Molybdenum nanoparticle sizing by time-resolved laser-induced incandescence",
+    "Conference": "61st Canadian Chemical Engineering Conference",
+    "Location": "London, Ontario, Canada",
+    "Date": "October 23-26",
+    "Year": 2011,
+    "Honours": "1st Prize, PTRC Graduate Student Competition",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "M. Frei*, T. A. Sipkens, F. E. Kruis, S. N. Rogak",
+    "Title": "Characterizing soot in TEM images using a convolutional neural network",
+    "Conference": "European Aerosol Conference",
+    "Location": "Virtual",
+    "Date": "August 5-September 9",
+    "Year": 2021,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, S. N. Rogak, J. S. Olfert",
+    "Title": "Tandem CPMA-SMPS measurements and CPMA kernel evaluation",
+    "Conference": "American Association for Aerosol Research 37th Annual Conference",
+    "Location": "Portland, OR, USA",
+    "Date": "October 14-18",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, U. Trivanovic, A. Baldelli, S. N. Rogak, M. Kazemimanesh, O. W. Bello, A. Naseri, L. Kostiuk, J. S. Olfert, A. Melina Jefferson, M. R. Johnson, J. Corbin",
+    "Title": "Investigating the 2D distribution of mass and mobility diameter of flare-generated particles",
+    "Conference": "American Association for Aerosol Research 37th Annual Conference",
+    "Location": "Portland, OR, USA",
+    "Date": "October 14-18",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, J. Olfert, S. Rogak",
+    "Title": "Consideration of established inversion methods extended to determine two-dimensional aerosol mass-mobility distributions",
+    "Conference": "European Aerosol Conference",
+    "Location": "Gothenburg, Sweden",
+    "Date": "August 25-30",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "U. Trivanovic*, A. Baldelli, T. Sipkens, S. Rogak, M. Kazemimanesh, J. Olfert, B. M. Conrad, A. M. Jefferson, M. R. Johnson, J. C. Corbin",
+    "Title": "Effects of fuel mixture and inorganic salts on the morphological and optical properties of soot from gas flares",
+    "Conference": "European Aerosol Conference",
+    "Location": "Gothenburg, Sweden",
+    "Date": "August 25-30",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "U. Trivanovic*, A. Baldelli, T. A. Sipkens, P. Kirchen, S. Rogak, M. Kazemimanesh, J. Olfert, B. M. Conrad, A. M. Jefferson, M. R. Johnson, J. C. Corbin, P. Lobo, S. Gagné, W. Peng, J. Yang, J. W. Miller",
+    "Title": "Primary particle and aggregate size of soot: Relationships for soot from a marine engine and gas flares",
+    "Conference": "Cambridge Particle Meeting",
+    "Location": "Cambridge, UK",
+    "Date": "June 28",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "S. Talebi-Moghaddam, S. Robinson-Enebeli, T. A. Sipkens, A. Klinkova, K. J. Daun",
+    "Title": "Investigating non-incandescence emission during laser induced incandescence experiments on aerosolized plasmonic nanoparticles",
+    "Conference": "Proceedings of the 9th International Symposium on Radiative Transfer",
+    "Location": "Athens, Greece",
+    "Date": "June 3-7",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, S. N. Rogak, J. S. Olfert",
+    "Title": "Inversion of tandem CPMA-DMA measurements to determine the two-dimensional mass-mobility distribution of soot",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Kelowna, BC, Canada",
+    "Date": "May 13-16",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "K. Babaee, T. A. Sipkens, S. N. Rogak*",
+    "Title": "The effect of primary particles polydispersity and effective density on radiative properties of soot aggregates",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Kelowna, BC, Canada",
+    "Date": "May 13-16",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "S. Talebi-Moghaddam, S. Robinson-Enebeli, T. A. Sipkens, A. Klinkova, K. J. Daun",
+    "Title": "Non-incandescent emission in laser-induced incandescence measurements of metal nanoparticles",
+    "Conference": "SAOT International Conference on Advanced Optical Technologies",
+    "Location": "Erlangen, Germany",
+    "Date": "March 13-15",
+    "Year": 2019,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "K. J. Daun*, S. J. Grauer, P. J. Hadwin, T. A. Sipkens",
+    "Title": "Chemical species tomography in the Bayesian framework",
+    "Conference": "34th AIAA Aerodynamic Measurement Technology and Ground Testing Conference",
+    "Location": "Atlanta, GA, USA",
+    "Date": "June 25-29",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, S. Grauer, P. J. Hadwin, K. J. Daun",
+    "Title": "Predicting the heat of vaporization of iron at high temperatures using TiRe-LII and Bayesian model selection",
+    "Conference": "8th International Workshop on Laser-Induced Incandescence",
+    "Location": "Tutzing, Germany",
+    "Date": "June 10-13",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "S. Talebi Moghaddam*, F. J. Bauer, T. A. Sipkens, F. J. T. Huber, S. Will, K. J. Daun",
+    "Title": "Neutral bremsstrahlung emission in laser-induced incandescence experiments on soot and silver nanoparticles",
+    "Conference": "8th International Workshop on Laser-Induced Incandescence",
+    "Location": "Tutzing, Germany",
+    "Date": "June 10-13",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, P. J. Hadwn, S. J. Grauer, K. J. Daun",
+    "Title": "Using Bayesian model selection and time-resolved laser-induced incandescence to probe the sublimation properties of soot",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Toronto, ON, Canada",
+    "Date": "May 14-17",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "R. B. Miguel*, S. J. Grauer, T. A. Sipkens, N. R. Singh, K. J. Daun",
+    "Title": "Optical measurement of hydrocarbon gas mixtures using MWIR broadband cameras",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Toronto, ON, Canada",
+    "Date": "May 14-17",
+    "Year": 2018,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, P. J. Hadwin, S. J. Grauer, K. J. Daun",
+    "Title": "Applying model selection to laser-induced incandescence",
+    "Conference": "9th International Conference on Inverse Problems in Engineering",
+    "Location": "Waterloo, ON, Canada",
+    "Date": "May 23-26",
+    "Year": 2017,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, K. J. Daun, R. Mansmann, J. Menser, T. Dreier, C. Schulz",
+    "Title": "Simultaneous inference of temperature and intensity scaling factor in laser-induced incandescence",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Montreal, QC, Canada",
+    "Date": "May 15-18",
+    "Year": 2016,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "P. J. Hadwin*, T. A. Sipkens, K. J. Daun, K. A. Thomson, F. Liu",
+    "Title": "Uncertainty quantification for TiRe-LII",
+    "Conference": "7th International Workshop on Laser-Induced Incandescence",
+    "Location": "Lake Tahoe, CA, USA",
+    "Date": "June 19-22",
+    "Year": 2016,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "P. J. Hadwin*, T. A. Sipkens, K. J. Daun, K. A. Thomson, F. Liu",
+    "Title": "Bayesian analyses of nuisance parameters in auto-correlated laser induced incandescence",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Waterloo, ON, Canada",
+    "Date": "May 10-12",
+    "Year": 2016,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens, K. J. Daun*, J. T. Titantah, M. Karttunen",
+    "Title": "Quantifying the thermal accommodation coefficient for iron surfaces using molecular dynamics simulations",
+    "Conference": "ASME 2015 International Mechanical Engineering Congress and Exposition",
+    "Location": "Houston, TX, USA",
+    "Date": "November 13-19",
+    "Year": 2015,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "N. R. Singh, T. A. Sipkens, K. J. Daun*",
+    "Title": "Time-resolved laser-induced incandescence for sizing aerosolized silver nanoparticles",
+    "Conference": "1st Thermal and Fluids Engineering Conference",
+    "Location": "New York City, NY, USA",
+    "Date": "August 9-12",
+    "Year": 2015,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "P. J. Hadwin, T. A. Sipkens, K. J. Daun*, K. A. Thomson, D. R. Snelling",
+    "Title": "Bayesian inference of soot volume fractions inferred through auto-correlated laser-induced incandescence",
+    "Conference": "1st Thermal and Fluids Engineering Conference",
+    "Location": "New York City, NY, USA",
+    "Date": "August 9-12",
+    "Year": 2015,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, N. R. Singh, K. J. Daun, N. Bizmark, M. Ioannidis, J. T. Titantah, M. Karttunen",
+    "Title": "Using time-resolved laser-induced incandescence for sizing aerosolized iron nanoparticles",
+    "Conference": "ASME 2014 International Mechanical Engineering Congress and Exposition",
+    "Location": "Montreal, QC, Canada",
+    "Date": "November 14-20",
+    "Year": 2014,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, N. R. Singh, K. J. Daun, N. Bizmark, M. Ioannidis, J. T. Titantah, M. Karttunen",
+    "Title": "Quantifying the thermal accommodation coefficient for TiRe-LII analysis of iron nanoparticles",
+    "Conference": "6th International Workshop on Laser-Induced Incandescence",
+    "Location": "Ven, Sweden",
+    "Date": "June 8-11",
+    "Year": 2014,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "N. R. Singh*, T. A. Sipkens, K. J. Daun, N. Bizmark, M. Ioannidis",
+    "Title": "Aerosolized iron nanoparticles using time resolved lased induced incandescence",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Windsor, ON, Canada",
+    "Date": "May 12-15",
+    "Year": 2014,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens, K. J. Daun*",
+    "Title": "Investigation of the sensitivity of inferred parameters in laser-induced incandescence experiments",
+    "Conference": "ASME 2013 International Mechanical Engineering Congress and Exposition",
+    "Location": "San Diego, CA, USA",
+    "Date": "November 13-21",
+    "Year": 2013,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, N. Petermann, K. J. Daun, J. Titantah, M. Karttunen, H. Wiggers, T. Dreier, C. Schulz",
+    "Title": "In situ particle size measurements of gas-borne silicon nanoparticles by time-resolved laser-induced incandescence",
+    "Conference": "ASME 2013 Summer Heat Transfer Conference",
+    "Location": "Minneapolis, MN, USA",
+    "Date": "July 14-19",
+    "Year": 2013,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens, K. J. Daun*, J. T. Titantah, M. Karttunen",
+    "Title": "Aerosolized iron nanoparticles using time resolved lased induced incandescence",
+    "Conference": "ASME 2012 International Mechanical Engineering Congress and Exposition",
+    "Location": "Houston, TX, USA",
+    "Date": "November 9-15",
+    "Year": 2012,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. Sipkens, G. Joshi, K. J. Daun*, Y. Murakami",
+    "Title": "Sizing of molybdenum nanoparticles using time-resolved laser-induced incandescence",
+    "Conference": "ASME 2012 Summer Heat Transfer Conference",
+    "Location": "Puerto Rico, USA",
+    "Date": "July 8-12",
+    "Year": 2012,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "T. A. Sipkens*, K. J. Daun, J. T. Titantah, M. Karttunen",
+    "Title": "Sizing molybdenum nanoparticles using time-resolved laser-induced incandescence",
+    "Conference": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "Location": "Toronto, ON, Canada",
+    "Date": "May 13-16",
+    "Year": 2012,
+    "Honours": "",
+    "DOI": null
+}, {
+    "Type": "Oral",
+    "Author": "K. J. Daun*, T. A. Sipkens, J. T. Titantah, M. Karttunen, Y. Murakami",
+    "Title": "Extending time-resolved LII to metal nanoparticles: simulating the thermal accommodation coefficient",
+    "Conference": "5th International Workshop on Laser-Induced Incandescence",
+    "Location": "Le Touquet, France",
+    "Date": "May 9-11",
+    "Year": 2012,
+    "Honours": "",
+    "DOI": null
+}]

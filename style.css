@@ -1,13 +1,16 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
 
 :root {
-  color-scheme: light dark; /* both supported */
+  color-scheme: light dark;
+  /* both supported */
   --background-color: #F8F8F8;
-  --c1: #0969DA;  /* dark accent */
-  --c2: #FEDC3D;  /* light accent */
+  --c1: #0969DA;
+  /* dark accent */
+  --c2: #FEDC3D;
+  /* light accent */
   --c3: #0969DA;
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #46344E;
@@ -26,13 +29,14 @@ html {
 body {
   margin: auto 0px;
   padding: 0px;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 300;
   font-size: 13pt;
   transition: 0.3s;
   color: #111;
   background-color: var(--background-color);
 }
+
 body.dark-theme {
   color: #DDD;
   background-color: var(--background-color);
@@ -49,10 +53,11 @@ p {
   padding-bottom: 8px;
   margin: 0px;
 }
+
 @media screen and (min-width: 600px) {
-   p {
-      text-align: justify;
-   }
+  p {
+    text-align: justify;
+  }
 }
 
 div.main {
@@ -62,6 +67,7 @@ div.main {
   padding-top: 50px;
   padding-bottom: 50px;
 }
+
 div.pre-main {
   padding-left: 18px;
   padding-right: 5px;
@@ -80,6 +86,7 @@ h2 {
   color: var(--c1);
   font-weight: 600;
 }
+
 body.dark-theme h2 {
   color: var(--c2);
 }
@@ -89,6 +96,7 @@ h3 {
   padding-top: 45px;
   padding-bottom: 0px;
 }
+
 h3 span {
   color: #333;
   font-weight: 200;
@@ -96,6 +104,7 @@ h3 span {
   padding-bottom: 2px;
   display: inline-block;
 }
+
 body.dark-theme h3 span {
   color: #bbb;
 }
@@ -105,14 +114,17 @@ a {
   cursor: pointer;
   transition: all 0.8s ease 0s;
 }
+
 a:hover {
   color: var(--c3);
 }
+
 body.dark-theme a {
   color: var(--c2);
   cursor: pointer;
   transition: all 0.8s ease 0s;
 }
+
 body.dark-theme a:hover {
   color: var(--c3);
 }
@@ -121,6 +133,7 @@ body.dark-theme a:hover {
 #header {
   display: none;
 }
+
 @media screen and (min-width: 600px) {
   #header {
     display: inline-block;
@@ -135,8 +148,9 @@ body.dark-theme a:hover {
     transition: 0.6s;
     max-height: 0px;
     overflow-y: hidden;
-   }
+  }
 }
+
 div.post-header {
   margin: 0 auto;
   width: 95%;
@@ -149,6 +163,7 @@ div.post-header {
   align-items: flex-start;
   justify-content: space-between;
 }
+
 div.post-header a {
   text-decoration: none;
   margin-right: 20px;
@@ -157,43 +172,50 @@ div.post-header a {
   color: #111;
   transition: all 0.3s ease 0s;
 }
+
 body.dark-theme div.post-header a {
   color: #DDD;
- }
- div.post-header a:hover {
-  color: var(--c1);
- }
- body.dark-theme div.post-header a:hover {
-  color: var(--c2);
- }
- div.post-header a.head-first {
-   font-weight: 700;
-   font-size: 14pt;
-   line-height: 20px;
-   margin-left: 0px;
- }
+}
 
- 
- input {
-   width: 75%;
-   margin-top: 20px;
-   margin-right: 3px;
-   padding: 7px;
-   background-color: white;
-   border: 2.5px solid #CCC;
-   border-radius: 4px;
-   font-size: 12pt;
-   transition: 0.5s;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
- }
+div.post-header a:hover {
+  color: var(--c1);
+}
+
+body.dark-theme div.post-header a:hover {
+  color: var(--c2);
+}
+
+div.post-header a.head-first {
+  font-weight: 700;
+  font-size: 14pt;
+  line-height: 20px;
+  margin-left: 0px;
+}
+
+
+input {
+  width: 75%;
+  margin-top: 20px;
+  margin-right: 3px;
+  padding: 7px;
+  background-color: white;
+  border: 2.5px solid #CCC;
+  border-radius: 4px;
+  font-size: 12pt;
+  transition: 0.5s;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
 input:hover {
   border: 2.5px solid var(--c1);
 }
+
 body.dark-theme input {
   border: 2.5px solid #666;
   background-color: black;
   color: white;
 }
+
 body.dark-theme input:hover {
   border: 2.5px solid var(--c2);
 }
@@ -202,6 +224,7 @@ body.dark-theme input:hover {
 #btn-toggle {
   padding-bottom: 40px;
 }
+
 #btn-toggle a div {
   font-size: 18pt;
   display: inline;
@@ -213,11 +236,13 @@ body.dark-theme input:hover {
   padding: 5px;
   background-color: white;
 }
+
 body.dark-theme #btn-toggle div {
   color: #555;
   border: solid 1px #555;
   background-color: black;
 }
+
 #btn-toggle div span {
   padding-left: 5px;
 }
@@ -228,9 +253,11 @@ img.profile {
   border: 1.5px solid black;
   border-radius: 50%;
 }
+
 div.div-icon {
   padding-right: 80px;
 }
+
 a.a-icon {
   margin-right: 20px;
   text-decoration: none;
@@ -243,6 +270,7 @@ a.a-icon svg {
   width: 35px;
   color: black;
 }
+
 body.dark-theme a.a-icon svg {
   height: 33px;
   width: 35px;
@@ -255,6 +283,7 @@ a.a-icon:hover svg {
   color: var(--c3);
   transition: all 0.3s ease 0s;
 }
+
 body.dark-theme a.a-icon:hover svg {
   fill: var(--c2);
   color: var(--c2);
@@ -271,13 +300,16 @@ p.pub-title {
   font-size: 13pt;
   color: #111;
 }
+
 body.dark-theme p.pub-title {
   color: #EEE;
 }
+
 p.pub-title a {
   text-decoration: none;
   color: inherit;
 }
+
 p.pub-title b {
   font-weight: 600;
 }
@@ -290,9 +322,11 @@ p.pub-title b {
   text-align: left;
   color: #444;
 }
+
 body.dark-theme .pub-author {
   color: #CCC;
 }
+
 .no-space-sub {
   padding-top: 0px;
   padding-bottom: 2px;
@@ -301,15 +335,19 @@ body.dark-theme .pub-author {
   font-size: 11.5pt;
   color: #444;
 }
+
 body.dark-theme .no-space-sub {
   color: #CCC;
 }
+
 .no-space-sub a {
   text-decoration: none;
 }
+
 .no-space-sub a:hover {
   color: var(--c1);
 }
+
 p.pub-num {
   padding-top: 0px;
   padding-bottom: 2px;
@@ -327,59 +365,75 @@ p.pub-num {
   transition: all 0.8s ease 0s;
   line-height: 108%;
 }
+
 body.dark-theme .pub-entry {
   border-top: 1px #444 solid;
 }
+
 .pub-entry:hover {
   border-top: 3px var(--c1) solid;
   padding-top: 7px;
   cursor: pointer;
 }
+
 body.dark-theme .pub-entry:hover {
   border-top: 3px var(--c2) solid;
 }
+
 .pub-entry:hover p.pub-title {
   transition: all 0.8s ease 0s;
   color: var(--c1);
 }
+
 body.dark-theme .pub-entry:hover p.pub-title {
   color: var(--c2);
 }
+
 .pub-entry:hover .pub-author {
   color: inherit;
 }
+
 .pub-entry:hover .no-space-sub {
   color: inherit;
 }
+
 .pub-entry:hover a {
   color: var(--c1);
 }
+
 .pub-entry:hover .no-space-sub a {
   text-decoration: underline;
 }
+
 body.dark-theme .pub-entry:hover a {
   color: var(--c2);
 }
+
 .pub-entry::marker {
   color: #999;
   font-weight: 200;
   font-size: 10pt;
   transition: all 0.3s ease 0s;
 }
+
 .pub-entry:hover::marker {
   color: var(--c1);
   font-weight: 600;
 }
+
 body.dark-theme .pub-entry::marker {
   color: #777;
 }
+
 body.dark-theme .pub-entry:hover::marker {
   color: var(--c2);
 }
+
 .post-pub {
   margin-top: 18px;
   margin-bottom: 35px;
 }
+
 .post-pub a {
   font-size: 13pt;
   font-weight: 600;
@@ -389,18 +443,23 @@ body.dark-theme .pub-entry:hover::marker {
   text-decoration: none;
   transition: all 0.8s ease 0s;
 }
+
 body.dark-theme .post-pub a {
   color: var(--c2);
 }
+
 .post-pub a:hover {
   text-decoration: underline;
 }
+
 .pub-honour {
   color: #111;
 }
+
 body.dark-theme .pub-honour {
   color: #DDD;
 }
+
 .fa-award {
   font-size: 10pt;
   color: #881111;
@@ -411,10 +470,12 @@ body.dark-theme .pub-honour {
 .little-icon {
   margin-left: 15px;
 }
+
 .little-icon i {
   color: var(--c1);
   font-size: 8pt;
 }
+
 body.dark-theme .little-icon i {
   color: var(--c2);
 }
@@ -445,6 +506,7 @@ body.dark-theme .little-icon i {
   background: var(--c1);
   border-radius: 7px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--c2);
 }
@@ -460,4 +522,3 @@ body.dark-theme .little-icon i {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
-

@@ -1,4 +1,3 @@
-
 /*
 See https://github.com/timmywheels/github-api-tutorial
 for more information. 
@@ -12,7 +11,7 @@ validRepos = ['atems', 'fmviz', 'cmap', 'mat-2d-aerosol-inversion', 'tfer-pma', 
 
 
 function formater(txt, num, tafter) {
-    if (num==0) {
+    if (num == 0) {
         out = '';
     } else {
         out = txt + ' ' + num.toString() + tafter;
@@ -35,7 +34,7 @@ function requestUserRepos(username) {
 
     // When request is received
     // Process it here
-    xhr.onload = function() {
+    xhr.onload = function () {
 
         // Parse API data into JSON
         const data = JSON.parse(this.response);
@@ -46,7 +45,7 @@ function requestUserRepos(username) {
 
         // Get the ul with id of of userRepos
         let ul = document.getElementById('userRepos');
-        
+
         // Loop over each object in data array
         for (let i in data) {
             if (!(validRepos.includes(data[i].name))) {
@@ -62,18 +61,18 @@ function requestUserRepos(username) {
             li.classList.add('pub-entry')
 
             // Create the html markup for each li
-            tstar = formater('<a class="little-icon" href=' + data[i].html_url + 
+            tstar = formater('<a class="little-icon" href=' + data[i].html_url +
                 '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a>')
-            tfork = formater('<a class="little-icon" href=' + data[i].html_url + 
+            tfork = formater('<a class="little-icon" href=' + data[i].html_url +
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a>')
-            
+
             li.innerHTML = (`
                 <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p class="no-space-sub" style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
                 <p class="pub-title"><span style="font-size:9.5pt;margin-right:10px;">${data[i].language}` + tstar + tfork + `</span></p>
             `);
-            
+
             // Append each li to the ul
             di.appendChild(li);
             ul.appendChild(di);

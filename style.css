@@ -177,7 +177,9 @@ body.dark-theme div.post-header a {
  input {
    width: 75%;
    margin-top: 20px;
+   margin-right: 3px;
    padding: 7px;
+   background-color: white;
    border: 2.5px solid #CCC;
    border-radius: 4px;
    font-size: 12pt;
@@ -186,6 +188,14 @@ body.dark-theme div.post-header a {
  }
 input:hover {
   border: 2.5px solid var(--c1);
+}
+body.dark-theme input {
+  border: 2.5px solid #666;
+  background-color: black;
+  color: white;
+}
+body.dark-theme input:hover {
+  border: 2.5px solid var(--c2);
 }
 
 

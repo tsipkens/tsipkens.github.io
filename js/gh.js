@@ -49,7 +49,6 @@ function requestUserRepos(username) {
         
         // Loop over each object in data array
         for (let i in data) {
-            console.log(data[i])
             if (!(validRepos.includes(data[i].name))) {
                 continue;
             }
@@ -67,7 +66,7 @@ function requestUserRepos(username) {
                 '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a>')
             tfork = formater('<a class="little-icon" href=' + data[i].html_url + 
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a>')
-            console.log(tfork)
+            
             li.innerHTML = (`
                 <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p class="no-space-sub" style="padding-top:0px;"> ${data[i].description}

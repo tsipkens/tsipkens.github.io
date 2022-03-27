@@ -100,6 +100,13 @@
         </div>
       </a>
   </div>
+
+  <p>
+    <input type="text" id="filtBox" name="filtBox" value=""></input>
+    <i class="fas fa-search"></i>
+  </p>
+
+
   <h3 id="journal1">JOURNAL ARTICLES</h3>
 
 
@@ -108,7 +115,7 @@
 <!-- Add journal articles -->
 <script>
   var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json", function(data) {
-     writePubs(data, 'pubs-j', null)
+     writePubs(data, 'pubs-j', null, null)
   });
 </script>
 
@@ -213,6 +220,20 @@ University of Waterloo (2014) | MASc Thesis
         document.getElementById("header").style.maxHeight = "0px";
       }
     }
+
+    const node = document.getElementById("filtBox");
+    node.addEventListener("keyup", function(event) {
+        if (event.key === "Enter") {
+          var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json", function(data) {
+            writePubs(data, 'pubs-j', null, node.value);
+          });
+          var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json", function(data) {
+            writeConf(data, 'pubs-co', 'Oral', false, node.value);
+            writeConf(data, 'pubs-cp', 'Poster', false, node.value);
+          });
+        };
+    });
+
 </script>
 
 

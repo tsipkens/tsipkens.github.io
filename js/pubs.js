@@ -1,12 +1,48 @@
 
 function formatAuthor (author) {
-  return author.replace('T. Sipkens', '<u>T. Sipkens</u>').replace('T. A. Sipkens', '<u>T. A. Sipkens</u>');
+  author = author.replace('T. Sipkens', '<u>T. Sipkens</u>').replace('T. A. Sipkens', '<u>T. A. Sipkens</u>');
+  return author;
+}
+
+filterPubs = function (data, st) {
+
+  if (!(st == null)) {
+    
+    st2 = st.split(" ");
+    
+    data = data.filter( function (entry) {
+      fl = true;
+
+      for (let i in st2) {
+        st3 = st2[i].toUpperCase();
+        if (!(st3 === "")) {
+          flTemp = entry.Author.toUpperCase().includes(st3);
+          flTemp = flTemp || entry.Title.toUpperCase().includes(st3);
+          if (entry.hasOwnProperty('Journal')) {
+            flTemp = flTemp || entry.Journal.toUpperCase().includes(st3);
+          }
+          if (entry.hasOwnProperty('Conference')) {
+            flTemp = flTemp || entry.Conference.toUpperCase().includes(st3);
+          }
+
+          fl = fl && flTemp;
+        }
+      }
+
+      return fl;
+    });
+  }
+
+  return data;
 }
 
 // For writing HTML from JSON data.
-function writePubs(data, id, yyyy) {
+function writePubs(data, id, yyyy, st=null) {
+  
+  data = filterPubs(data, st);
   
   let ul = document.getElementById(id);
+  ul.innerHTML = "";
 
   // Loop over each object in data array
   for (let i in data) {
@@ -54,9 +90,11 @@ function writePubs(data, id, yyyy) {
 
 
 // For writing HTML from JSON data.
-function writeConf(data, id, type, hon) {
+function writeConf(data, id, type, hon, st=null) {
   
+  data = filterPubs(data, st);
   let ul = document.getElementById(id);
+  ul.innerHTML = "";
 
   // Loop over each object in data array
   for (let i in data) {

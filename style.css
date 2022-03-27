@@ -173,6 +173,21 @@ body.dark-theme div.post-header a {
    margin-left: 0px;
  }
 
+ 
+ input {
+   width: 75%;
+   margin-top: 20px;
+   padding: 7px;
+   border: 2.5px solid #CCC;
+   border-radius: 4px;
+   font-size: 12pt;
+   transition: 0.5s;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+ }
+input:hover {
+  border: 2.5px solid var(--c1);
+}
+
 
 #btn-toggle {
   padding-bottom: 40px;

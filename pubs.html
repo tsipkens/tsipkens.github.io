@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,18 +7,20 @@
   <title>Timothy Sipkens | Publications</title>
 
   <meta name="author" content="Timothy Sipkens" />
-  <meta name="description" content="A full publication list including journal articles, conferences contributions, and theses.">
+  <meta name="description"
+    content="A full publication list including journal articles, conferences contributions, and theses.">
   <meta name="keywords" content="sipkens, timothy sipkens, t a sipkens, aerosol scientist, researcher, profile">
   <meta name="robots" content="index,follow" />
 
-  
+
 
   <!-- facebook open graph tags -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tsipkens.github.io" />
   <meta property="og:title" content="Timothy Sipkens | Publications" />
   <meta property="og:site_name" content="Timothy Sipkens | Publications" />
-  <meta property="og:description" content="A full publication list including journal articles, conferences contributions, and theses." />
+  <meta property="og:description"
+    content="A full publication list including journal articles, conferences contributions, and theses." />
 
   <meta name="title" property="og:title" content="Timothy Sipkens | Publications">
   <meta name="author" content="Timothy Sipkens">
@@ -45,7 +46,7 @@
 
   <!-- Custom content -->
   <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
-  
+
   <link rel="icon" type="image/png" href="ico/favicon.png">
   <link href="style.css" rel="stylesheet">
 
@@ -57,7 +58,7 @@
     var dark = prefersDarkScheme.matches;
 
     // Apply appropriate theme.
-    function toggleNight () {
+    function toggleNight() {
       // Swap CSS.
       document.body.classList.toggle("dark-theme");
 
@@ -73,101 +74,106 @@
 </head>
 
 <body onload="if (dark) { toggleNight(); }">
-  
-  
-<div id="header"><div class="pre-main">
-  <div class="post-header">
-      <div>
-        <a href="index.html#" class="head-first">SIPKENS</a>
-      </div>
-      <div>
-        <a href="#journal1">Journal Articles</a>
-        <a href="#conf1">Conferences</a>
-        <a href="#theses" style="margin-right:0px;">Theses</a>
+
+
+  <div id="header">
+    <div class="pre-main">
+      <div class="post-header">
+        <div>
+          <a href="index.html#" class="head-first">SIPKENS</a>
+        </div>
+        <div>
+          <a href="#journal1">Journal Articles</a>
+          <a href="#conf1">Conferences</a>
+          <a href="#theses" style="margin-right:0px;">Theses</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="pre-main">
-  <div class="main">
-  <div id="btn-toggle">
-      <a>
-        <div>
+  <div class="pre-main">
+    <div class="main">
+      <div id="btn-toggle">
+        <a>
+          <div>
             <span><i class="fas fa-moon" id="moon"></i></span>
             <span><i class="fas fa-sun" id="sun"></i></span>
-            <span></span>  <!-- placeholder for dark/light theme toggle -->
-        </div>
-      </a>
+            <span></span> <!-- placeholder for dark/light theme toggle -->
+          </div>
+        </a>
+      </div>
+
+      <p>
+        <input type="text" id="filtBox" name="filtBox" value=""></input>
+        <i class="fas fa-search"></i>
+      </p>
+
+
+      <h3 id="journal1">JOURNAL ARTICLES</h3>
+
+
+      <ol id="pubs-j" class="pubs"></ol>
+
+      <!-- Add journal articles -->
+      <script>
+        var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json",
+          function (data) {
+            writePubs(data, 'pubs-j', null, null)
+          });
+      </script>
+
+
+      <h3 id="conf1">CONFERENCES <span>/ Oral presentations</span></h3>
+      <ol id="pubs-co" class="pubs"></ol>
+
+      <!-- Add oral presentations -->
+      <script>
+        var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+          function (data) {
+            writeConf(data, 'pubs-co', 'Oral', false)
+          });
+      </script>
+
+
+      <h3 id="conf2">CONFERENCES <span>/ Posters</span></h3>
+      <ol id="pubs-cp" class="pubs"></ol>
+
+      <!-- Add poster presentations -->
+      <script>
+        var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+          function (data) {
+            writeConf(data, 'pubs-cp', 'Poster', false)
+          });
+      </script>
+
+
+      <h3 id="theses">THESES</h3>
+      <ul style="list-style: none;">
+        <li class="pub-entry" data-aos="slide-up">
+          <p class="pub-title"><a href="https://uwspace.uwaterloo.ca/handle/10012/13860">
+              <b>Advances in the modeling of time-resolved laser-induced incandescence</b></a></p>
+          <span class="pub-author"><u>T. A. Sipkens</u></span>
+          <span class="no-space-sub">
+            University of Waterloo (2018) | PhD Thesis
+            <a href="http://hdl.handle.net/10012/13860"><br>http://hdl.handle.net/10012/13860</a>
+          </span></p>
+        </li>
+        <li class="pub-entry" data-aos="slide-up">
+          <p class="pub-title"><a href="https://uwspace.uwaterloo.ca/handle/10012/13860">
+              <b>Sizing of non-carbonaceous nanoparticles by time-resolved laser-induced incandescence</b></a></p>
+          <span class="pub-author"><u>T. A. Sipkens</u></span>
+          <span class="no-space-sub">
+            University of Waterloo (2014) | MASc Thesis
+            <a href="http://hdl.handle.net/10012/8890"><br>http://hdl.handle.net/10012/8890</a>
+          </span></p>
+        </li>
+      </ul>
+    </div>
   </div>
 
-  <p>
-    <input type="text" id="filtBox" name="filtBox" value=""></input>
-    <i class="fas fa-search"></i>
-  </p>
-
-
-  <h3 id="journal1">JOURNAL ARTICLES</h3>
-
-
-<ol id="pubs-j" class="pubs"></ol>
-
-<!-- Add journal articles -->
-<script>
-  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json", function(data) {
-     writePubs(data, 'pubs-j', null, null)
-  });
-</script>
-
-
-<h3 id="conf1">CONFERENCES <span>/ Oral presentations</span></h3>
-<ol id="pubs-co" class="pubs"></ol>
-
-<!-- Add oral presentations -->
-<script>
-  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json", function(data) {
-     writeConf(data, 'pubs-co', 'Oral', false)
-  });
-</script>
-
-
-<h3 id="conf2">CONFERENCES <span>/ Posters</span></h3>
-<ol id="pubs-cp" class="pubs"></ol>
-
-<!-- Add poster presentations -->
-<script>
-  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json", function(data) {
-     writeConf(data, 'pubs-cp', 'Poster', false)
-  });
-</script>
-
-
-<h3 id="theses">THESES</h3>
-<ul style="list-style: none;"><li class="pub-entry" data-aos="slide-up">
-<p class="pub-title"><a href="https://uwspace.uwaterloo.ca/handle/10012/13860">
-<b>Advances in the modeling of time-resolved laser-induced incandescence</b></a></p>
-<span class="pub-author"><u>T. A. Sipkens</u></span>
-<span class="no-space-sub">
-University of Waterloo (2018) | PhD Thesis 
-<a href="http://hdl.handle.net/10012/13860"><br>http://hdl.handle.net/10012/13860</a>
-</span></p>
-</li>
-<li class="pub-entry" data-aos="slide-up">
-<p class="pub-title"><a href="https://uwspace.uwaterloo.ca/handle/10012/13860">
-<b>Sizing of non-carbonaceous nanoparticles by time-resolved laser-induced incandescence</b></a></p>
-<span class="pub-author"><u>T. A. Sipkens</u></span>
-<span class="no-space-sub">
-University of Waterloo (2014) | MASc Thesis 
-<a href="http://hdl.handle.net/10012/8890"><br>http://hdl.handle.net/10012/8890</a>
-</span></p>
-</li>
-</ul>
-    </div>
-</div>
-
-<div class="footer">
+  <div class="footer">
     © Timothy Sipkens 2021
-</div>
+  </div>
 
 </body>
 
@@ -177,63 +183,62 @@ University of Waterloo (2014) | MASc Thesis
 
 <!-- Add scrolling effect. -->
 <script>
-    const btn = document.querySelector("#btn-toggle");
-    btn.addEventListener("click", function () {
-        // Toggle dark theme.
-        dark = !dark;
+  const btn = document.querySelector("#btn-toggle");
+  btn.addEventListener("click", function () {
+    // Toggle dark theme.
+    dark = !dark;
 
-        toggleNight();  // apply theme
-        scrollFunction();
-    })
+    toggleNight(); // apply theme
+    scrollFunction();
+  })
 </script>
 
 
 <!-- Add scrolling effect. -->
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init({
-      once: true,
-    })
+  AOS.init({
+    once: true,
+  })
 </script>
 
 
 <script>
-    // When the user scrolls down 50px from the top of the document, reformat header
+  // When the user scrolls down 50px from the top of the document, reformat header
+  scrollFunction()
+  window.onscroll = function () {
     scrollFunction()
-    window.onscroll = function() {
-      scrollFunction()
-    };
+  };
 
-    function scrollFunction() {
+  function scrollFunction() {
 
-      f_width = $(window).width() > 600  // flags if sidebar is present
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 120) {
-        if (document.body.className == "dark-theme") {
-          document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(0,0,0,0.7)"; 
-          document.getElementById("header").style.maxHeight = "50px"; 
-        } else {
-          document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(200,200,200,0.7)"; 
-          document.getElementById("header").style.maxHeight = "50px"; 
-        }
+    f_width = $(window).width() > 600 // flags if sidebar is present
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 120) {
+      if (document.body.className == "dark-theme") {
+        document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(0,0,0,0.7)";
+        document.getElementById("header").style.maxHeight = "50px";
       } else {
-        document.getElementById("header").style.boxShadow = "none";
-        document.getElementById("header").style.maxHeight = "0px";
+        document.getElementById("header").style.boxShadow = "0px 0px 4px rgba(200,200,200,0.7)";
+        document.getElementById("header").style.maxHeight = "50px";
       }
+    } else {
+      document.getElementById("header").style.boxShadow = "none";
+      document.getElementById("header").style.maxHeight = "0px";
     }
+  }
 
-    const node = document.getElementById("filtBox");
-    node.addEventListener("keyup", function(event) {
-        if (event.key === "Enter") {
-          var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json", function(data) {
-            writePubs(data, 'pubs-j', null, node.value);
-          });
-          var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json", function(data) {
-            writeConf(data, 'pubs-co', 'Oral', false, node.value);
-            writeConf(data, 'pubs-cp', 'Poster', false, node.value);
-          });
-        };
-    });
-
+  const node = document.getElementById("filtBox");
+  node.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+      var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/pubs.json",
+        function (data) {
+          writePubs(data, 'pubs-j', null, node.value);
+        });
+      var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+        function (data) {
+          writeConf(data, 'pubs-co', 'Oral', false, node.value);
+          writeConf(data, 'pubs-cp', 'Poster', false, node.value);
+        });
+    };
+  });
 </script>
-
-

@@ -4,27 +4,61 @@ function formatAuthor(author) {
 }
 
 filterPubs = function (data, st) {
+  
+  if (!(st == null)) {  // skip is search term (st) is empty
+    
+    st = st.toUpperCase();
+    stq = st.split('"');  // first, split by quotes
+    
+    st = [];  // initialize empty array
+    for (let i in stq) {
+      if ((i % 2) === 0) {  // then split based on spaces
+        st = st.concat(stq[i].split(" "));
+      } else {  // then in quotes, add as a block
+        st.push(stq[i]);
+      }
+    }
 
-  if (!(st == null)) {
+    // Remove empty elements prior to search.
+    st = st.filter(function (element) {
+      return element != "";
+    });
 
-    st2 = st.split(" ");
-
+    // Filter the data by the search term. 
     data = data.filter(function (entry) {
-      fl = true;
+      fl = true;  // initialize as true
 
-      for (let i in st2) {
-        st3 = st2[i].toUpperCase();
-        if (!(st3 === "")) {
-          flTemp = entry.Author.toUpperCase().includes(st3);
-          flTemp = flTemp || entry.Title.toUpperCase().includes(st3);
-          if (entry.hasOwnProperty('Journal')) {
-            flTemp = flTemp || entry.Journal.toUpperCase().includes(st3);
-          }
-          if (entry.hasOwnProperty('Conference')) {
-            flTemp = flTemp || entry.Conference.toUpperCase().includes(st3);
-          }
+      for (let i in st) {
+        sti = st[i];  // part of what makes search case insensitive
+        
+        // Add authors.
+        se = entry.Author;  // create text to search in (se)
+        se = se.concat(" ");
 
-          fl = fl && flTemp;
+        // Add entry titles.
+        se = se.concat(entry.Title);
+        se = se.concat(" ");
+
+        // Add entry journal (only if exists).
+        if (entry.hasOwnProperty('Journal')) {
+          se = se.concat(entry.Journal);
+          se = se.concat(" ");
+        }
+
+        // Add entry conference name (only if exists).
+        if (entry.hasOwnProperty('Conference')) {
+          se = se.concat(entry.Conference);
+          se = se.concat(" ");
+        }
+        
+        se = se.toUpperCase();  // second part to make case insensitive
+
+        // Search. Combine with an "and" to find/exclude all terms.
+        if (!(sti.substr(0, 1) === "-")) {
+          fl = fl && se.includes(sti);  // if to include search term
+        } else {
+          sti = sti.substr(1);
+          fl = fl && !(se.includes(sti));  // if to exclude search term
         }
       }
 

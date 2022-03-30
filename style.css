@@ -499,17 +499,16 @@ body.dark-theme .little-icon i {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #E9E9E9;
+  background-color: #AAA;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--c1);
-  border-radius: 7px;
+  background: var(--c2);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--c2);
+  background: #F7E074;
 }
 
 

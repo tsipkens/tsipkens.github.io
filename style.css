@@ -515,6 +515,7 @@ body.dark-theme .little-icon i {
 ::-webkit-scrollbar-thumb:hover {
   background: #777;
   transition: all 0.8s ease 0s;
+  border: 4px solid var(--background-color);
 }
 
 

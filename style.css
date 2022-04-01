@@ -463,7 +463,10 @@ body.dark-theme .pub-honour {
 
 .fa-award {
   font-size: 10pt;
-  color: #881111;
+  color: var(--c1);
+}
+body.dark-theme .fa-award {
+  color: var(--c2);
 }
 
 
@@ -494,21 +497,24 @@ body.dark-theme .little-icon i {
 /* SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 18px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background-color: #AAA;
+  background-color: var(--background-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--c2);
+  background: #999;
+  border: 5px solid var(--background-color);
+  border-radius: 9px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #F7E074;
+  background: #777;
+  transition: all 0.8s ease 0s;
 }
 
 

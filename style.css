@@ -8,7 +8,8 @@
   /* dark accent */
   --c2: #FEDC3D;
   /* light accent */
-  --c3: #0969DA;
+  --c3: #004da5;
+  --c4: #EEC200;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,7 +32,7 @@ body {
   padding: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 300;
-  font-size: 13pt;
+  font-size: 13.5pt;
   transition: 0.3s;
   color: #111;
   background-color: var(--background-color);
@@ -80,7 +81,7 @@ h1 {
 }
 
 h2 {
-  font-size: 35pt;
+  font-size: 37pt;
   padding-bottom: 15px;
   padding-top: 110px;
   color: var(--c1);
@@ -92,7 +93,7 @@ body.dark-theme h2 {
 }
 
 h3 {
-  font-size: 26px;
+  font-size: 30px;
   padding-top: 45px;
   padding-bottom: 0px;
 }
@@ -100,7 +101,7 @@ h3 {
 h3 span {
   color: #333;
   font-weight: 200;
-  font-size: 16pt;
+  font-size: 18pt;
   padding-bottom: 2px;
   display: inline-block;
 }
@@ -113,20 +114,19 @@ a {
   color: var(--c1);
   cursor: pointer;
   transition: all 0.8s ease 0s;
+  text-decoration: underline 1px;
 }
-
 a:hover {
   color: var(--c3);
+  text-decoration: underline 1.5px;
 }
 
 body.dark-theme a {
   color: var(--c2);
   cursor: pointer;
-  transition: all 0.8s ease 0s;
 }
-
 body.dark-theme a:hover {
-  color: var(--c3);
+  color: var(--c4);
 }
 
 
@@ -201,7 +201,7 @@ input {
   background-color: white;
   border: 2.5px solid #CCC;
   border-radius: 4px;
-  font-size: 12pt;
+  font-size: 13.5pt;
   transition: 0.5s;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   color: black;
@@ -225,7 +225,9 @@ body.dark-theme input:hover {
 #btn-toggle {
   padding-bottom: 40px;
 }
-
+#btn-toggle a {
+  text-decoration: none;
+}
 #btn-toggle a div {
   font-size: 18pt;
   display: inline;
@@ -298,7 +300,7 @@ p.pub-title {
   padding-bottom: 6px;
   margin: 0px;
   text-align: left;
-  font-size: 13pt;
+  font-size: 13.5pt;
   color: #111;
 }
 
@@ -315,25 +317,12 @@ p.pub-title b {
   font-weight: 600;
 }
 
-.pub-author {
-  padding-top: 2px;
-  padding-bottom: 0px;
-  margin: 0px;
-  font-size: 11.5pt;
-  text-align: left;
-  color: #444;
-}
-
-body.dark-theme .pub-author {
-  color: #CCC;
-}
-
 .no-space-sub {
   padding-top: 0px;
   padding-bottom: 2px;
   margin: 0px;
   text-align: left;
-  font-size: 11.5pt;
+  font-size: 12pt;
   color: #444;
 }
 

@@ -252,9 +252,12 @@ body.dark-theme #btn-toggle div {
 
 img.profile {
   margin-top: 70px;
-  height: 140px;
+  height: 160px;
   border: 1.5px solid black;
   border-radius: 50%;
+}
+body.dark-theme img.profile {
+  border: 1.5px solid #DDD;
 }
 
 div.div-icon {

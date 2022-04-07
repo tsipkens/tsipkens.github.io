@@ -447,6 +447,8 @@ body.dark-theme .post-pub a {
 
 .pub-honour {
   color: #111;
+  font-size: 12pt;
+  margin-right: 10px;
 }
 
 body.dark-theme .pub-honour {

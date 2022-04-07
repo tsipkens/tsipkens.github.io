@@ -162,7 +162,7 @@ function writeConf(data, id, type, hon, st = null) {
     content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].Year;
     
     if ((!(data[i].Honours == '')) || (data[i].hasOwnProperty('PDF'))) {
-      content = content + '<br>';
+      content = content + '<p class="pub-title">';
 
       if (!(data[i].Honours == '')) {
         content = content + '<span class="pub-honour">';
@@ -176,6 +176,7 @@ function writeConf(data, id, type, hon, st = null) {
         content = content + '<i class="fas fa-file-pdf"></i> ';
         content = content + ' PDF</a></span>';
       }
+      content = content + '</p>';
     }
 
     content = content + '</span></p>';

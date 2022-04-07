@@ -160,11 +160,22 @@ function writeConf(data, id, type, hon, st = null) {
     content = content + '<span class="no-space-sub">';
     content = content + ' <b>&#183</b> <i>' + data[i].Conference + '</i> <b>&#183</b> ' + data[i].Location;
     content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].Year;
+    
+    if ((!(data[i].Honours == '')) || (data[i].hasOwnProperty('PDF'))) {
+      content = content + '<br>';
 
-    if (!(data[i].Honours == '')) {
-      content = content + '<br><span class="pub-honour">';
-      content = content + '<i class="fas fa-award"></i> ';
-      content = content + data[i].Honours + '</span>';
+      if (!(data[i].Honours == '')) {
+        content = content + '<span class="pub-honour">';
+        content = content + '<i class="fas fa-award"></i> ';
+        content = content + data[i].Honours + '</span> ';
+      }
+      
+      if (data[i].hasOwnProperty('PDF')) {
+        content = content + '<span class="pub-honour">';
+        content = content + '<a href="' + data[i].PDF + '" style="text-decoration:none;">';
+        content = content + '<i class="fas fa-file-pdf"></i> ';
+        content = content + ' PDF</a></span>';
+      }
     }
 
     content = content + '</span></p>';

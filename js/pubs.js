@@ -100,8 +100,16 @@ function writePubs(data, id, yyyy, st = null) {
     content = content + formatAuthor(data[i].Author);
     content = content + '<span class="no-space-sub">';
     content = content + ' <br> <i>' + data[i].Journal + '</i> (' + data[i].Year + ')';
-    content = content + ' <b>&#183</b> <b>' + data[i].Volume + '</b>, ' + data[i].PagesNo + '<br>';
-    content = content + '<a href="' + data[i].DOI + '">' + data[i].DOI.replace('https://doi.org/', '') + '</a>';
+
+    if (!(data[i].Volume === null)) {
+      content = content + ' <b>&#183</b> <b>' + data[i].Volume + '</b>, ' + data[i].PagesNo;
+    }
+    
+    if (data[i].DOI.includes('arxiv')) {  // for pre-prints
+      content = content + '<br><a href="' + data[i].DOI + '">' + data[i].DOI + '</a>';
+    } else {  // otherwise for DOIs
+      content = content + '<br><a href="' + data[i].DOI + '">' + data[i].DOI.replace('https://doi.org/', '') + '</a>';
+    }
 
     if (!(data[i].Honours == '')) {
       content = content + '<br><span class="pub-honour">';

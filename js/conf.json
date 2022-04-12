@@ -1,4 +1,14 @@
 [{
+    "Type": "Poster",
+    "Author": "Timothy A. Sipkens, Hamed Nikookar, Steven N. Rogak",
+    "Title": "Various perspectives of a single soot aggregate, coloured by primary particle size (artwork)",
+    "Conference": "American Association for Aerosol Research Annual Conference",
+    "Location": "Virtual",
+    "Date": "October 18-22",
+    "Year": 2021,
+    "Honours": "Placed in Fine Particle Art Contest",
+    "DOI": null
+}, {
     "Type": "Oral",
     "Author": "Darwin Zhu*, Hamed Nikookar, Timothy A. Sipkens, Steven N. Rogak",
     "Title": "Comparing analysis routines for characterizing soot images",

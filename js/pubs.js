@@ -168,6 +168,8 @@ function writeConf(data, id, type, hon, st = null) {
     content = content + '<span class="no-space-sub">';
     content = content + ' <b>&#183</b> <i>' + data[i].Conference + '</i> <b>&#183</b> ' + data[i].Location;
     content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].Year;
+
+    content = content + '</span></p>';
     
     if ((!(data[i].Honours == '')) || (data[i].hasOwnProperty('PDF'))) {
       content = content + '<p class="pub-title">';
@@ -184,10 +186,9 @@ function writeConf(data, id, type, hon, st = null) {
         content = content + '<i class="fas fa-file-pdf"></i> ';
         content = content + ' PDF</a></span>';
       }
+
       content = content + '</p>';
     }
-
-    content = content + '</span></p>';
 
     // Create the html markup for each li
     li.innerHTML = (content);

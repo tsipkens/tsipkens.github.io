@@ -32,16 +32,16 @@ filterPubs = function (data, st) {
         sti = st[i];  // part of what makes search case insensitive
         
         // Add authors.
-        se = entry.Author;  // create text to search in (se)
+        se = entry.author;  // create text to search in (se)
         se = se.concat(" ");
 
         // Add entry titles.
-        se = se.concat(entry.Title);
+        se = se.concat(entry.title);
         se = se.concat(" ");
 
         // Add entry journal (only if exists).
-        if (entry.hasOwnProperty('Journal')) {
-          se = se.concat(entry.Journal);
+        if (entry.hasOwnProperty('journal')) {
+          se = se.concat(entry.journal);
           se = se.concat(" ");
         }
 
@@ -82,7 +82,7 @@ function writePubs(data, id, yyyy, st = null) {
 
     // Filter by the date.
     if (!(yyyy == null)) {
-      if (!(data[i].Year > yyyy)) {
+      if (!(data[i].year > yyyy)) {
         continue;
       }
     }
@@ -95,11 +95,11 @@ function writePubs(data, id, yyyy, st = null) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].Title + '</a></b></p>';
+    content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].title + '</a></b></p>';
     content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
-    content = content + formatAuthor(data[i].Author);
+    content = content + formatAuthor(data[i].author);
     content = content + '<span class="no-space-sub">';
-    content = content + ' <br> <i>' + data[i].Journal + '</i> (' + data[i].Year + ')';
+    content = content + ' <br> <i>' + data[i].journal + '</i> (' + data[i].year + ')';
 
     if (!(data[i].Volume === null)) {
       content = content + ' <b>&#183</b> <b>' + data[i].Volume + '</b>, ' + data[i].PagesNo;
@@ -162,12 +162,12 @@ function writeConf(data, id, type, hon, st = null) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].Title + '</a></b></p>';
+    content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].title + '</a></b></p>';
     content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
-    content = content + formatAuthor(data[i].Author);
+    content = content + formatAuthor(data[i].author);
     content = content + '<span class="no-space-sub">';
     content = content + ' <b>&#183</b> <i>' + data[i].Conference + '</i> <b>&#183</b> ' + data[i].Location;
-    content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].Year;
+    content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].year;
 
     content = content + '</span></p>';
     

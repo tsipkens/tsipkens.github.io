@@ -142,7 +142,7 @@ function writeConf(data, id, type, hon, st = null) {
 
     // Filter by the presentation type.
     if (!(type == null)) {
-      if (!(data[i].Type == type)) {
+      if (!(data[i].type == type)) {
         continue;
       }
     }

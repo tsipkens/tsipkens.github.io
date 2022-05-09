@@ -47,7 +47,7 @@ filterPubs = function (data, st) {
 
         // Add entry conference name (only if exists).
         if (entry.hasOwnProperty('Conference')) {
-          se = se.concat(entry.Conference);
+          se = se.concat(entry.booktitle);
           se = se.concat(" ");
         }
         
@@ -95,7 +95,7 @@ function writePubs(data, id, yyyy, st = null) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].title + '</a></b></p>';
+    content = '<p class="pub-title"><b><a href="' + data[i].doi + '">' + data[i].title + '</a></b></p>';
     content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
     content = content + formatAuthor(data[i].author);
     content = content + '<span class="no-space-sub">';
@@ -105,16 +105,16 @@ function writePubs(data, id, yyyy, st = null) {
       content = content + ' <b>&#183</b> <b>' + data[i].volume + '</b>, ' + data[i].pages;
     }
     
-    if (data[i].DOI.includes('arxiv')) {  // for pre-prints
-      content = content + '<br><a href="' + data[i].DOI + '">' + data[i].DOI + '</a>';
+    if (data[i].doi.includes('arxiv')) {  // for pre-prints
+      content = content + '<br><a href="' + data[i].doi + '">' + data[i].doi + '</a>';
     } else {  // otherwise for DOIs
-      content = content + '<br><a href="' + data[i].DOI + '">' + data[i].DOI.replace('https://doi.org/', '') + '</a>';
+      content = content + '<br><a href="' + data[i].doi + '">' + data[i].doi.replace('https://doi.org/', '') + '</a>';
     }
 
-    if (!(data[i].Honours == '')) {
+    if (!(data[i].honours == '')) {
       content = content + '<br><span class="pub-honour">';
       content = content + '<i class="fas fa-award"></i> ';
-      content = content + data[i].Honours + '</span>';
+      content = content + data[i].honours + '</span>';
     }
 
     content = content + '</span></p>';
@@ -149,7 +149,7 @@ function writeConf(data, id, type, hon, st = null) {
 
     // Filter by honours.
     if (hon == true) {
-      if (data[i].Honours == '') {
+      if (data[i].honours == '') {
         continue;
       }
     }
@@ -162,22 +162,22 @@ function writeConf(data, id, type, hon, st = null) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p class="pub-title"><b><a href="' + data[i].DOI + '">' + data[i].title + '</a></b></p>';
+    content = '<p class="pub-title"><b><a href="' + data[i].doi + '">' + data[i].title + '</a></b></p>';
     content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
     content = content + formatAuthor(data[i].author);
     content = content + '<span class="no-space-sub">';
-    content = content + ' <b>&#183</b> <i>' + data[i].Conference + '</i> <b>&#183</b> ' + data[i].Location;
-    content = content + ' <b>&#183</b> ' + data[i].Date + ', ' + data[i].year;
+    content = content + ' <b>&#183</b> <i>' + data[i].booktitle + '</i> <b>&#183</b> ' + data[i].address;
+    content = content + ' <b>&#183</b> ' + data[i].date + ', ' + data[i].year;
 
     content = content + '</span></p>';
     
-    if ((!(data[i].Honours == '')) || (data[i].hasOwnProperty('PDF'))) {
+    if ((!(data[i].honours == '')) || (data[i].hasOwnProperty('PDF'))) {
       content = content + '<p class="pub-title">';
 
-      if (!(data[i].Honours == '')) {
+      if (!(data[i].honours == '')) {
         content = content + '<span class="pub-honour">';
         content = content + '<i class="fas fa-award"></i> ';
-        content = content + data[i].Honours + '</span> ';
+        content = content + data[i].honours + '</span> ';
       }
       
       if (data[i].hasOwnProperty('PDF')) {

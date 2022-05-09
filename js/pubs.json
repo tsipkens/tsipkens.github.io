@@ -6,9 +6,9 @@
     "number": null,
     "PagesNo": null,
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://arxiv.org/abs/2202.03505"
+    "honours": "",
+    "badge": null,
+    "doi": "https://arxiv.org/abs/2202.03505"
 }, {
     "author": "T. A. Sipkens, J. C. Corbin, T. Koukoulas, A. Oldershaw, T. Lavoie, J. Norooz Oliaee, F. Liu, I. D. Leroux, G. J. Smallwood, P. Lobo, R. G. Green",
     "title": "Comparison of measurement systems for assessing number- and mass-based particle filtration efficiency",
@@ -17,9 +17,9 @@
     "number": null,
     "PagesNo": null,
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://arxiv.org/abs/2201.12446"
+    "honours": "",
+    "badge": null,
+    "doi": "https://arxiv.org/abs/2201.12446"
 }, {
     "author": "B. Zhao, T. A. Sipkens, K. J. Daun",
     "title": "Choosing an optimal austenitization submodel using Bayesian model selection",
@@ -28,9 +28,9 @@
     "number": null,
     "PagesNo": null,
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "N/A"
+    "honours": "",
+    "badge": null,
+    "doi": "N/A"
 }, {
     "author": "J. C. Corbin, T. J. Johnson, F. Liu, T. A. Sipkens, M. P. Johnson, P. Lobo, G. J. Smallwood",
     "title": "Size-dependent mass absorption cross-section of soot particles from various sources",
@@ -39,9 +39,9 @@
     "number": null,
     "PagesNo": "438-451",
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.carbon.2022.02.037"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.carbon.2022.02.037"
 }, {
     "author": "T. A. Sipkens, J. Menser, T. Dreier, C. Schulz, G. J. Smallwood, K. J. Daun",
     "title": "Laser-induced incandescence for non-soot nanoparticles: recent trends and current challenges",
@@ -50,9 +50,9 @@
     "number": 72,
     "PagesNo": "1-31",
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-022-07769-z"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-022-07769-z"
 }, {
     "author": "T. A. Sipkens, S. J. Grauer, A. M. Steinberg, S. N. Rogak, P. Kirchen",
     "title": "New transform to project axisymmetric deflection fields along arbitrary rays",
@@ -61,9 +61,9 @@
     "number": null,
     "PagesNo": "35201",
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1088/1361-6501/ac3f83"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1088/1361-6501/ac3f83"
 }, {
     "author": "J. C. Corbin, G. J. Smallwood, I. Leroux, J. N. Oliaee, F. Liu, T. A. Sipkens, R. G. Green, N. F. Murnaghan, T. Koukoulas, P. Lobo",
     "title": "Systematic experimental comparison of particle filtration efficiency test methods for commercial respirators and face masks",
@@ -72,9 +72,9 @@
     "number": null,
     "PagesNo": "21979",
     "year": 2021,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1038/s41598-021-01265-8"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1038/s41598-021-01265-8"
 }, {
     "author": "A. Naseri, T. A. Sipkens, S. N. Rogak, J. S. Olfert",
     "title": "Optimized instrument configurations for tandem particle mass analyzer and single particle-soot photometer experiments",
@@ -83,9 +83,9 @@
     "number": null,
     "PagesNo": "105897",
     "year": 2022,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.jaerosci.2021.105897"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2021.105897"
 }, {
     "author": "T. A. Sipkens, U. Trivanovic, A. Naseri, O. W. Bello, A. Baldelli, M. Kazemimanesh, A. K. Bertram, L. Kostiuk, J. C. Corbin, J. S. Olfert, S. N. Rogak",
     "title": "Using two-dimensional distributions to inform the mixing state of soot and salt particles produced in gas flares",
@@ -94,9 +94,9 @@
     "number": null,
     "PagesNo": "105826",
     "year": 2021,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.jaerosci.2021.105826"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2021.105826"
 }, {
     "author": "T. A. Sipkens, M. Frei, A. Baldelli, P. Kirchen, F. E. Kruis, S. N. Rogak",
     "title": "Characterizing soot in TEM images using a convolutional neural network",
@@ -105,9 +105,9 @@
     "number": null,
     "PagesNo": "313-324",
     "year": 2021,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.powtec.2021.04.026"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.powtec.2021.04.026"
 }, {
     "author": "S. Rogak, T. A. Sipkens, M. Guan, H. Nikookar, D. V. Figueroa, J. Wang",
     "title": "Properties of materials considered for improvised masks",
@@ -116,9 +116,9 @@
     "number": 4,
     "PagesNo": "398-413",
     "year": 2021,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1080/02786826.2020.1855321"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1080/02786826.2020.1855321"
 }, {
     "author": "T. A. Sipkens, S. N. Rogak",
     "title": "Technical note: Using k-means to identify soot aggregates in transmission electron microscopy images",
@@ -127,9 +127,9 @@
     "number": null,
     "PagesNo": "105699",
     "year": 2020,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.jaerosci.2020.105699"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2020.105699"
 }, {
     "author": "A. Naseri, T. A. Sipkens, S. N. Rogak, J. S. Olfert",
     "title": "An improved inversion method for determining two-dimensional mass distributions of non-refractory coatings on refractory black carbon",
@@ -138,9 +138,9 @@
     "number": 1,
     "PagesNo": "104-118",
     "year": 2020,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1080/02786826.2020.1825615"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1080/02786826.2020.1825615"
 }, {
     "author": "U. Trivanovic, T. A. Sipkens, M. Kazemimanesh, A. Baldelli, A. M. Jefferson, B. M. Conrad, M. R. Johnson, J. C. Corbin, J. S. Olfert, S. N. Rogak",
     "title": "Morphology and size of soot from gas flares as a function of fuel and water addition",
@@ -149,9 +149,9 @@
     "number": null,
     "PagesNo": "118478",
     "year": 2020,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.fuel.2020.118478"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.fuel.2020.118478"
 }, {
     "author": "T. A. Sipkens, J. S. Olfert, S. N. Rogak",
     "title": "Inversion methods to determine two-dimensional aerosol mass-mobility distributions II: Existing and novel Bayesian methods",
@@ -160,9 +160,9 @@
     "number": null,
     "PagesNo": "105565",
     "year": 2020,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.jaerosci.2020.105565"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2020.105565"
 }, {
     "author": "A. Baldelli, U. Trivanovic, T. A. Sipkens, S. N. Rogak",
     "title": "On determining soot maturity: A review of the role of microscopy- and spectroscopy-based techniques",
@@ -171,9 +171,9 @@
     "number": null,
     "PagesNo": "126532",
     "year": 2020,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.chemosphere.2020.126532"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.chemosphere.2020.126532"
 }, {
     "author": "T. A. Sipkens, J. S. Olfert, S. N. Rogak",
     "title": "Inversion methods to determine two-dimensional aerosol mass-mobility distributions: A critical comparison of established methods",
@@ -182,9 +182,9 @@
     "number": null,
     "PagesNo": "105484",
     "year": 2020,
-    "Honours": "Cover feature",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.jaerosci.2019.105484"
+    "honours": "Cover feature",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2019.105484"
 }, {
     "author": "T. A. Sipkens, J. S. Olfert, S. N. Rogak",
     "title": "New approaches to calculate the transfer function of particle mass analyzers",
@@ -193,9 +193,9 @@
     "number": 1,
     "PagesNo": "111-127",
     "year": 2020,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1080/02786826.2019.1680794"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1080/02786826.2019.1680794"
 }, {
     "author": "S. Talebi-Moghaddam, T. A. Sipkens, K. J. Daun",
     "title": "Laser-induced incandescence on metal nanoparticles: validity of the Rayleigh approximation",
@@ -204,9 +204,9 @@
     "number": 11,
     "PagesNo": "214-229",
     "year": 2019,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-019-7325-6"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-019-7325-6"
 }, {
     "author": "T. A. Sipkens, J. Menser, R. Mansmann, C. Schulz, K. J. Daun",
     "title": "Investigating temporal variation in the apparent volume fraction measured by time-resolved laser-induced incandescence",
@@ -215,9 +215,9 @@
     "number": 8,
     "PagesNo": "140-159",
     "year": 2019,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-019-7251-7"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-019-7251-7"
 }, {
     "author": "R. Mansmann, T. A. Sipkens, J. Menser, K. J. Daun, T. Dreier, C. Schulz",
     "title": "Detector calibration and measurement issues in multi-color time-resolved laser-induced incandescence",
@@ -226,9 +226,9 @@
     "number": 7,
     "PagesNo": "126-146",
     "year": 2019,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-019-7235-7"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-019-7235-7"
 }, {
     "author": "T. A. Sipkens, K. J. Daun",
     "title": "Effect of surface interatomic potential on thermal accommodation coefficients derived from molecular dynamics",
@@ -237,9 +237,9 @@
     "number": 35,
     "PagesNo": "20431-20443",
     "year": 2018,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1021/acs.jpcc.8b06394"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1021/acs.jpcc.8b06394"
 }, {
     "author": "T. A. Sipkens, P. J. Hadwin, S. J. Grauer, K. J. Daun",
     "title": "Predicting the heat of vaporization of iron at high temperatures using time-resolved laser-induced incandescence and Bayesian model selection",
@@ -248,9 +248,9 @@
     "number": 9,
     "PagesNo": "95103",
     "year": 2018,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1063/1.5016341"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1063/1.5016341"
 }, {
     "author": "P. J. Hadwin, T. A. Sipkens, K. A. Thomson, F. Liu, K. J. Daun",
     "title": "A Kalman filter approach for uncertainty quantification in time-resolved laser-induced incandescence",
@@ -259,9 +259,9 @@
     "number": 3,
     "PagesNo": "386-396",
     "year": 2018,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1364/JOSAA.35.000386"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1364/JOSAA.35.000386"
 }, {
     "author": "T. A. Sipkens, P. J. Hadwin, S. J. Grauer, K. J. Daun",
     "title": "General error model for analysis of laser-induced incandescence signals",
@@ -270,9 +270,9 @@
     "number": 30,
     "PagesNo": "8436-8445",
     "year": 2017,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1364/AO.56.008436"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1364/AO.56.008436"
 }, {
     "author": "S. J. Grauer, P. J. Hadwin, T. A. Sipkens, K. J. Daun",
     "title": "Measurement-based meshing, basis selection, and prior assignment in chemical species tomography",
@@ -281,9 +281,9 @@
     "number": 21,
     "PagesNo": "25135-25148",
     "year": 2017,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1364/OE.25.025135"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1364/OE.25.025135"
 }, {
     "author": "T. A. Sipkens, K. J. Daun",
     "title": "Using cube models to understand trends in thermal accommodation coefficients at high surface temperatures",
@@ -292,9 +292,9 @@
     "number": null,
     "PagesNo": "56-64",
     "year": 2017,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1016/j.ijheatmasstransfer.2017.03.090"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.ijheatmasstransfer.2017.03.090"
 }, {
     "author": "P. J. Hadwin, T. A. Sipkens, K. A. Thomson, F. Liu, K. J. Daun",
     "title": "Quantifying uncertainty in auto-compensating laser-induced incandescence parameters due to multiple nuisance parameters",
@@ -303,9 +303,9 @@
     "number": 4,
     "PagesNo": "114-128",
     "year": 2017,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-017-6693-z"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-017-6693-z"
 }, {
     "author": "T. A. Sipkens, K. J. Daun",
     "title": "Defining regimes and analytical expressions for fluence curves in pulsed laser heating of aerosolized nanoparticles",
@@ -314,9 +314,9 @@
     "number": 5,
     "PagesNo": "5684-5696",
     "year": 2017,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1364/OE.25.005684"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1364/OE.25.005684"
 }, {
     "author": "T. A. Sipkens, N. R. Singh, K. J. Daun",
     "title": "Time-resolved laser-induced incandescence characterization of metal nanoparticles",
@@ -325,9 +325,9 @@
     "number": 1,
     "PagesNo": "14-33",
     "year": 2017,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-016-6593-7"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-016-6593-7"
 }, {
     "author": "P. J. Hadwin, T. A. Sipkens, K. A. Thomson, F. Liu, K. J. Daun",
     "title": "Quantifying uncertainty in soot volume fraction estimates using Bayesian inference of auto-correlated laser-induced incandescence measurements",
@@ -336,9 +336,9 @@
     "number": 1,
     "PagesNo": "1-16",
     "year": 2016,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-015-6287-6"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-015-6287-6"
 }, {
     "author": "T. A. Sipkens, N. R. Singh, K. J. Daun, N. Bizmark, M. Ioannidis",
     "title": "Examination of the thermal accommodation coefficient used in the sizing of iron nanoparticles by time-resolved laser-induced incandescence",
@@ -347,9 +347,9 @@
     "number": 3,
     "PagesNo": "409-420",
     "year": 2015,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-015-6022-3"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-015-6022-3"
 }, {
     "author": "J. W. Labahn, C. B. Devaud, T. A. Sipkens, K. J. Daun",
     "title": "Inverse analysis and regularization in conditional source-term estimation modelling",
@@ -358,9 +358,9 @@
     "number": 3,
     "PagesNo": "474-499",
     "year": 2014,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1080/13647830.2014.927076"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1080/13647830.2014.927076"
 }, {
     "author": "T. A. Sipkens, R. Mansmann, K. J. Daun, N. Petermann, J. T. Titantah, M. Karttunen, H. Wiggers, T. Dreier, C. Schulz",
     "title": "In situ nanoparticle size measurements of gas-borne silicon nanoparticles by time-resolved laser-induced incandescence",
@@ -369,9 +369,9 @@
     "number": 3,
     "PagesNo": "623-636",
     "year": 2014,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-013-5745-2"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-013-5745-2"
 }, {
     "author": "K. J. Daun, T. A. Sipkens, J. T. Titantah, M. Karttunen",
     "title": "Thermal accommodation coefficients for laser-induced incandescence sizing of metal nanoparticles in monatomic gases",
@@ -380,9 +380,9 @@
     "number": 3,
     "PagesNo": "409-420",
     "year": 2013,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1007/s00340-013-5508-0"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00340-013-5508-0"
 }, {
     "author": "T. Sipkens, G. Joshi, K. J. Daun, Y. Murakami",
     "title": "Sizing of molybdenum nanoparticles using time-resolved laser-induced incandescence",
@@ -391,7 +391,7 @@
     "number": 5,
     "PagesNo": "52401",
     "year": 2013,
-    "Honours": "",
-    "Badge": null,
-    "DOI": "https://doi.org/10.1115/HT2012-58185"
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1115/HT2012-58185"
 }]

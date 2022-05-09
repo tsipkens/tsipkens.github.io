@@ -101,8 +101,8 @@ function writePubs(data, id, yyyy, st = null) {
     content = content + '<span class="no-space-sub">';
     content = content + ' <br> <i>' + data[i].journal + '</i> (' + data[i].year + ')';
 
-    if (!(data[i].Volume === null)) {
-      content = content + ' <b>&#183</b> <b>' + data[i].Volume + '</b>, ' + data[i].PagesNo;
+    if (!(data[i].volume === null)) {
+      content = content + ' <b>&#183</b> <b>' + data[i].volume + '</b>, ' + data[i].pages;
     }
     
     if (data[i].DOI.includes('arxiv')) {  // for pre-prints

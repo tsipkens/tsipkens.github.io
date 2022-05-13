@@ -111,10 +111,12 @@ function writePubs(data, id, yyyy, st = null) {
       content = content + '<br><a href="' + data[i].doi + '">' + data[i].doi.replace('https://doi.org/', '') + '</a>';
     }
 
-    if (!(data[i].honours == '')) {
-      content = content + '<br><span class="pub-honour">';
-      content = content + '<i class="fas fa-award"></i> ';
-      content = content + data[i].honours + '</span>';
+    if (data[i].hasOwnProperty('field')) {
+      if (!(data[i].honours == '')) {
+        content = content + '<br><span class="pub-honour">';
+        content = content + '<i class="fas fa-award"></i> ';
+        content = content + data[i].honours + '</span>';
+      }
     }
 
     content = content + '</span></p>';

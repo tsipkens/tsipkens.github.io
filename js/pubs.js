@@ -173,13 +173,15 @@ function writeConf(data, id, type, hon, st = null) {
 
     content = content + '</span></p>';
     
-    if ((!(data[i].honours == '')) || (data[i].hasOwnProperty('PDF'))) {
+    if ((data[i].hasOwnProperty('honours')) || (data[i].hasOwnProperty('PDF'))) {
       content = content + '<p class="pub-title">';
 
-      if (!(data[i].honours == '')) {
-        content = content + '<span class="pub-honour">';
-        content = content + '<i class="fas fa-award"></i> ';
-        content = content + data[i].honours + '</span> ';
+      if (data[i].hasOwnProperty('honours')) {
+        if (!(data[i].honours == '')) {
+          content = content + '<span class="pub-honour">';
+          content = content + '<i class="fas fa-award"></i> ';
+          content = content + data[i].honours + '</span> ';
+        }
       }
       
       if (data[i].hasOwnProperty('PDF')) {

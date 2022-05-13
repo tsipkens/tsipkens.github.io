@@ -151,6 +151,9 @@ function writeConf(data, id, type, hon, st = null) {
 
     // Filter by honours.
     if (hon == true) {
+      if (!(data[i].hasOwnProperty('honours'))) {
+        continue;
+      }
       if (data[i].honours == '') {
         continue;
       }

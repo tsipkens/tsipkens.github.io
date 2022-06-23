@@ -34,7 +34,7 @@ body {
   font-weight: 300;
   font-size: 13.5pt;
   transition: 0.3s;
-  color: #111;
+  color: #222;
   background-color: var(--background-color);
 }
 
@@ -81,11 +81,11 @@ h1 {
 }
 
 h2 {
-  font-size: 37pt;
+  font-size: 40pt;
   padding-bottom: 15px;
   padding-top: 110px;
   color: var(--c1);
-  font-weight: 700;
+  font-weight: 600;
 }
 
 body.dark-theme h2 {
@@ -93,23 +93,32 @@ body.dark-theme h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 35px;
   margin-top: 45px;
   padding-top: 2px;
-  padding-bottom: 0px;
-  font-style: italic;
+  padding-bottom: 10px;
+  border-bottom: #222 1px solid;
+}
+body.dark-theme h3 {
+  border-bottom: #DDD 1px solid;
 }
 
 h3 span {
   color: #333;
   font-weight: 200;
-  font-size: 18pt;
+  font-size: 20pt;
   padding-bottom: 2px;
   display: inline-block;
 }
 
 body.dark-theme h3 span {
   color: #bbb;
+}
+
+h4 {
+  margin-top: 35px;
+  font-weight: 200;
+  font-size: 20pt;
 }
 
 a {
@@ -171,7 +180,7 @@ div.post-header a {
   margin-right: 20px;
   margin-left: 20px;
   line-height: 17px;
-  color: #111;
+  color: #222;
   transition: all 0.3s ease 0s;
 }
 
@@ -306,7 +315,7 @@ p.pub-title {
   margin: 0px;
   text-align: left;
   font-size: 13.5pt;
-  color: #111;
+  color: #222;
 }
 
 body.dark-theme p.pub-title {
@@ -354,25 +363,11 @@ p.pub-num {
 }
 
 .pub-entry {
-  margin-top: 35px;
-  padding-top: 9px;
-  border-top: 1px #DDD solid;
+  margin-top: 15px;
+  margin-bottom: 22px;
+  padding-top: 5px;
   transition: all 0.8s ease 0s;
   line-height: 108%;
-}
-
-body.dark-theme .pub-entry {
-  border-top: 1px #444 solid;
-}
-
-.pub-entry:hover {
-  border-top: 3px var(--c1) solid;
-  padding-top: 7px;
-  cursor: pointer;
-}
-
-body.dark-theme .pub-entry:hover {
-  border-top: 3px var(--c2) solid;
 }
 
 .pub-entry:hover p.pub-title {
@@ -448,7 +443,7 @@ body.dark-theme .post-pub a {
 }
 
 .pub-honour {
-  color: #111;
+  color: #222;
   font-size: 12pt;
   margin-right: 10px;
 }

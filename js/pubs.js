@@ -39,6 +39,10 @@ filterPubs = function (data, st) {
         se = se.concat(entry.title);
         se = se.concat(" ");
 
+        // Add entry years.
+        se = se.concat(entry.year);
+        se = se.concat(" ");
+
         // Add entry journal (only if exists).
         if (entry.hasOwnProperty('journal')) {
           se = se.concat(entry.journal);

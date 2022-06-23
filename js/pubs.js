@@ -40,7 +40,8 @@ filterPubs = function (data, st) {
         se = se.concat(" ");
 
         // Add entry years.
-        se = se.concat(entry.year);
+        // Add brackets to allow better filtering, if desired.
+        se = se.concat("(" + entry.year + ")");
         se = se.concat(" ");
 
         // Add entry journal (only if exists).

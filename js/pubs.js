@@ -134,13 +134,15 @@ function writePubs(data, id, yyyy, st = null) {
     content = content + ' <i>' + data[i].journal + '</i>';
 
     if (!(data[i].volume === null)) {
-      content = content + ', ' + data[i].volume + ', ' + data[i].pages + ' (' + data[i].year + ').';
+      content = content + ', ' + data[i].volume + ', ' + data[i].pages;
     }
 
+    content = content + ' (' + data[i].year + ').';
+
     if (data[i].doi.includes('arxiv')) { // for pre-prints
-      content = content + ' <b>&#183</b> <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi + '</a>';
+      content = content + ' <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi + '</a>';
     } else { // otherwise for DOIs
-      content = content + ' <b>&#183</b> <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi.replace('https://doi.org/', '') + '</a>';
+      content = content + ' <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi.replace('https://doi.org/', '') + '</a>';
     }
 
     if (data[i].hasOwnProperty('field')) {

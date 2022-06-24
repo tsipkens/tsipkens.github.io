@@ -127,14 +127,14 @@ function writePubs(data, id, yyyy, st = null) {
     printYearHeading(data, i, ul, iLastPrinted)
     iLastPrinted = i // copy over current i
 
-    content = '<p class="no-space-sub" style="padding-top:0px;">' + data[i].title + '</b></p>';
+    content = '<p class="no-space-sub" style="padding-top:0px;">' + data[i].title + '</b>.</p>';
     content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
-    content = content + formatAuthor(data[i].author);
+    content = content + formatAuthor(data[i].author) + '. ';
     content = content + '<span class="no-space-sub">';
-    content = content + ' <b>&#183</b> <i>' + data[i].journal + '</i> (' + data[i].year + ')';
+    content = content + ' <i>' + data[i].journal + '</i>';
 
     if (!(data[i].volume === null)) {
-      content = content + ' <b>&#183</b> ' + data[i].volume + ', ' + data[i].pages;
+      content = content + ', ' + data[i].volume + ', ' + data[i].pages + ' (' + data[i].year + ').';
     }
 
     if (data[i].doi.includes('arxiv')) { // for pre-prints
@@ -218,12 +218,12 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p class="no-space-sub" style="padding-top:0px;">' + data[i].title + '</p>';
+    content = '<p class="no-space-sub" style="padding-top:0px;">' + data[i].title + '.</p>';
     content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
-    content = content + formatAuthor(data[i].author);
+    content = content + formatAuthor(data[i].author) + '.';
     content = content + '<span class="no-space-sub">';
-    content = content + ' <b>&#183</b> <i>' + data[i].booktitle + '</i> <b>&#183</b> ' + data[i].address;
-    content = content + ' <b>&#183</b> ' + data[i].date + ', ' + data[i].year;
+    content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address;
+    content = content + ' ' + data[i].date + ', ' + data[i].year + '.';
 
     content = content + '</span></p>';
 

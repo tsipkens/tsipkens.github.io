@@ -209,7 +209,7 @@ input {
   margin-right: 3px;
   padding: 7px;
   background-color: white;
-  border: 1.5px solid #CCC;
+  border: 1px solid #CCC;
   border-radius: 6px;
   font-size: 13.5pt;
   transition: 0.5s;
@@ -219,17 +219,17 @@ input {
 }
 
 input:hover {
-  border: 2.5px solid var(--c1);
+  border: 1px solid var(--c1);
 }
 
 body.dark-theme input {
-  border: 2.5px solid #666;
+  border: 1px solid #666;
   background-color: black;
   color: white;
 }
 
 body.dark-theme input:hover {
-  border: 2.5px solid var(--c2);
+  border: 1px solid var(--c2);
 }
 
 

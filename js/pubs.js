@@ -228,8 +228,8 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
     } else {
       content = content + '."'
     }
-    content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address;
-    content = content + ' ' + data[i].date + ', ' + data[i].year + '.';
+    content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address + '. ';
+    content = content + data[i].date + ', ' + data[i].year + '.';
 
     content = content + '</span></p>';
 

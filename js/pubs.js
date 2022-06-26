@@ -1,5 +1,6 @@
 function formatAuthor(author) {
   author = author.replace('T. Sipkens', '<b>T. Sipkens</b>').replace('T. A. Sipkens', '<b>T. A. Sipkens</b>');
+  author = author.replace('*', '<b>*</b>');
   return author;
 }
 
@@ -127,10 +128,9 @@ function writePubs(data, id, yyyy, st = null) {
     printYearHeading(data, i, ul, iLastPrinted)
     iLastPrinted = i // copy over current i
 
-    content = '<p class="no-space-sub" style="padding-top:0px;">' + data[i].title + '</b>.</p>';
-    content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
+    content = '<p>';
     content = content + formatAuthor(data[i].author) + '. ';
-    content = content + '<span class="no-space-sub">';
+    content = content + '"' + data[i].title + '." ';
     content = content + ' <i>' + data[i].journal + '</i>';
 
     if (!(data[i].volume === null)) {
@@ -140,9 +140,9 @@ function writePubs(data, id, yyyy, st = null) {
     content = content + ' (' + data[i].year + ').';
 
     if (data[i].doi.includes('arxiv')) { // for pre-prints
-      content = content + ' <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi + '</a>';
+      content = content + ' <a style="display:inline-block;" href="' + data[i].doi.toLowerCase() + '">' + data[i].doi + '</a>';
     } else { // otherwise for DOIs
-      content = content + ' <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi.replace('https://doi.org/', '') + '</a>';
+      content = content + ' <a style="display:inline-block;" href="' + data[i].doi.toLowerCase() + '">' + data[i].doi.replace('https://doi.org/', '') + '</a>';
     }
 
     if (data[i].hasOwnProperty('field')) {
@@ -153,7 +153,7 @@ function writePubs(data, id, yyyy, st = null) {
       }
     }
 
-    content = content + '</span></p>';
+    content = content + '</p>';
 
 
     // Create variable that will create li's to be added to ul
@@ -220,10 +220,14 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p class="no-space-sub" style="padding-top:0px;">' + data[i].title + '.</p>';
-    content = content + '<p class="no-space-sub" style="padding-top:0px;"> '
-    content = content + formatAuthor(data[i].author) + '.';
-    content = content + '<span class="no-space-sub">';
+    content = '<p">';
+    content = content + formatAuthor(data[i].author) + '. ';
+    content = content + '"' + data[i].title;
+    if ((data[i].title[data[i].title.length - 1]) === "?") {
+      content = content + '"'
+    } else {
+      content = content + '."'
+    }
     content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address;
     content = content + ' ' + data[i].date + ', ' + data[i].year + '.';
 
@@ -244,7 +248,7 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
         content = content + '<span class="pub-honour">';
         content = content + '<a href="' + data[i].PDF + '" style="text-decoration:none;">';
         content = content + '<i class="fas fa-file-pdf"></i> ';
-        content = content + ' PDF</a></span>';
+        content = content + ' PDF</a>';
       }
 
       content = content + '</p>';

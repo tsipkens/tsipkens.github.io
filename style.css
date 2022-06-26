@@ -309,65 +309,18 @@ body.dark-theme a.a-icon:hover svg {
 
 
 /* Format publication and code entries. */
-p.pub-title {
-  padding-top: 0px;
-  padding-bottom: 6px;
-  margin: 0px;
-  text-align: left;
-  font-size: 13.5pt;
-  color: #222;
-}
-
-body.dark-theme p.pub-title {
-  color: #EEE;
-}
-
-p.pub-title a {
-  text-decoration: none;
-  color: inherit;
-}
-
-p.pub-title b {
-  font-weight: 600;
-}
-
-.no-space-sub {
-  padding-top: 0px;
-  padding-bottom: 2px;
-  margin: 0px;
-  text-align: left;
-  font-size: 12pt;
-  color: #444;
-}
-
-body.dark-theme .no-space-sub {
-  color: #CCC;
-}
-
-.no-space-sub a {
-  text-decoration: none;
-}
-
-.no-space-sub a:hover {
-  color: var(--c1);
-}
-
-p.pub-num {
-  padding-top: 0px;
-  padding-bottom: 2px;
-  margin: 0px;
-  text-align: left;
-  font-size: 20px;
-  font-weight: 800;
-  color: #DDD;
-}
-
 .pub-entry {
   margin-top: 15px;
   margin-bottom: 22px;
   padding-top: 5px;
   transition: all 0.8s ease 0s;
-  line-height: 108%;
+  text-align: left;
+  font-size: 12pt;
+}
+
+.pub-entry p {
+  padding: 0px;
+  text-align: left;
 }
 
 .pub-entry:hover p.pub-title {
@@ -417,6 +370,36 @@ body.dark-theme .pub-entry::marker {
 
 body.dark-theme .pub-entry:hover::marker {
   color: var(--c2);
+}
+
+.pub-entry a {
+  text-decoration: none;
+}
+
+.pub-entry a:hover {
+  text-decoration: underline;
+}
+
+p.pub-title {
+  padding-top: 0px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-align: left;
+  font-size: 13.5pt;
+  color: #222;
+}
+
+body.dark-theme p.pub-title {
+  color: #EEE;
+}
+
+p.pub-title a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p.pub-title b {
+  font-weight: 600;
 }
 
 .post-pub {

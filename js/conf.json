@@ -1,11 +1,56 @@
 [{
     "type": "Oral",
+    "author": "J. C. Corbin, T. A. Sipkens, F. Liu*, G. J. Smallwood",
+    "title": "Size-dependent LII response of small soot particles linked to E(m) in soot emitted from diffusion flames",
+    "booktitle": "9th International Workshop on Laser-Induced Incandescence",
+    "address": "Glasgow, United Kingdom",
+    "date": "May 12-15",
+    "year": 2022,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "T. A. Sipkens*, F. Liu, J. C. Corbin, G. J. Smallwood",
+    "title": "Modelling artifacts in the apparent volume fraction as a function of laser fluence",
+    "booktitle": "9th International Workshop on Laser-Induced Incandescence",
+    "address": "Glasgow, United Kingdom",
+    "date": "May 12-15",
+    "year": 2022,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "H. Nikookar*, S. N. Rogak, T. A. Sipkens",
+    "title": "Morphological categorization of wildfire smoke particulate matters: A semi-automated approach",
+    "booktitle": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "address": "Ottawa, ON, Canada",
+    "date": "May 16-19",
+    "year": 2022,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "J. C. Corbin*, F. Liu, T. A. Sipkens, P. Lobo, G. J. Smallwood, T. J. Johnson, M. P. Johnson",
+    "title": "Size-dependent mass absorption cross-section of soot particles from various sources",
+    "booktitle": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "address": "Ottawa, ON, Canada",
+    "date": "May 16-19",
+    "year": 2022,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "T. A. Sipkens*, G. J. Smallwood, J. C. Corbin",
+    "title": "Average charge approach to compute the average particle size transmitted by aerosol classifiers",
+    "booktitle": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "address": "Ottawa, ON, Canada",
+    "date": "May 16-19",
+    "year": 2022,
+    "doi": null
+}, {
+    "type": "Oral",
     "author": "T. Sipkens, J. Corbin, G. Smallwood, A. Oldershaw, I. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, T. Koukoulas, R. Green, P. Lobo",
     "title": "Robust measurement of particle filtration efficiencies: Evaluated quantities and experimental sensitivities",
     "booktitle": "International Society for Respirator Protection Conference",
     "address": "Virtual",
     "date": "May 9-12",
-    "year": 2021,
+    "year": 2022,
     "doi": null
 }, {
     "type": "Poster",

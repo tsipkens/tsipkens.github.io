@@ -4,3 +4,6 @@ codegen/
 
 # Ignore temporary files.
 temp*
+
+# Ignore archived files.
+archive/

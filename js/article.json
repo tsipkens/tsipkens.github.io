@@ -65,17 +65,6 @@
     "badge": null,
     "doi": "https://doi.org/10.1088/1361-6501/ac3f83"
 }, {
-    "author": "J. C. Corbin, G. J. Smallwood, I. Leroux, J. N. Oliaee, F. Liu, T. A. Sipkens, R. G. Green, N. F. Murnaghan, T. Koukoulas, P. Lobo",
-    "title": "Systematic experimental comparison of particle filtration efficiency test methods for commercial respirators and face masks",
-    "journal": "Scientific Reports",
-    "volume": 11,
-    "number": null,
-    "pages": "21979",
-    "year": 2021,
-    "honours": "",
-    "badge": null,
-    "doi": "https://doi.org/10.1038/s41598-021-01265-8"
-}, {
     "author": "A. Naseri, T. A. Sipkens, S. N. Rogak, J. S. Olfert",
     "title": "Optimized instrument configurations for tandem particle mass analyzer and single particle-soot photometer experiments",
     "journal": "Journal of Aerosol Science",
@@ -86,6 +75,17 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2021.105897"
+}, {
+    "author": "J. C. Corbin, G. J. Smallwood, I. Leroux, J. N. Oliaee, F. Liu, T. A. Sipkens, R. G. Green, N. F. Murnaghan, T. Koukoulas, P. Lobo",
+    "title": "Systematic experimental comparison of particle filtration efficiency test methods for commercial respirators and face masks",
+    "journal": "Scientific Reports",
+    "volume": 11,
+    "number": null,
+    "pages": "21979",
+    "year": 2021,
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1038/s41598-021-01265-8"
 }, {
     "author": "T. A. Sipkens, U. Trivanovic, A. Naseri, O. W. Bello, A. Baldelli, M. Kazemimanesh, A. K. Bertram, L. Kostiuk, J. C. Corbin, J. S. Olfert, S. N. Rogak",
     "title": "Using two-dimensional distributions to inform the mixing state of soot and salt particles produced in gas flares",

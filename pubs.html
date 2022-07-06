@@ -142,27 +142,17 @@
             writeConf(data, 'pubs-cp', 'Poster', false)
           });
       </script>
-
+      
 
       <h3 id="theses">Theses</h3>
-      <ul style="list-style: none;">
-        <li class="pub-entry" data-aos="slide-up">
-          <p class="no-space-sub">Advances in the modeling of time-resolved laser-induced incandescence</p>
-          <span class="no-space-sub"><b>T. A. Sipkens</b>.</span>
-          <span class="no-space-sub">
-            PhD Thesis. University of Waterloo (2018).
-            <a href="http://hdl.handle.net/10012/13860"><br>http://hdl.handle.net/10012/13860</a>
-          </span></p>
-        </li>
-        <li class="pub-entry" data-aos="slide-up">
-          <p class="no-space-sub">Sizing of non-carbonaceous nanoparticles by time-resolved laser-induced incandescence</p>
-          <span class="no-space-sub"><b>T. A. Sipkens</b>.</span>
-          <span class="no-space-sub">
-            MASc Thesis. University of Waterloo (2014). 
-            <a href="http://hdl.handle.net/10012/8890"><br>http://hdl.handle.net/10012/8890</a>
-          </span></p>
-        </li>
-      </ul>
+      <ul id="pubs-theses" class="pubs" style="list-style: none;"></ul>
+
+      <!-- Add theses -->
+      <script>
+        writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json", 
+          'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'], 
+          null, false)
+      </script>
     </div>
   </div>
 

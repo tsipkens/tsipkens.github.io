@@ -1,10 +1,12 @@
 function formatAuthor(author) {
-  author = author.replace('T. Sipkens', '<b>T. Sipkens</b>').replace('T. A. Sipkens', '<b>T. A. Sipkens</b>');
+  author = author.replace('T. Sipkens', '<b>T. Sipkens</b>')
+                 .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
+                 .replace('Timothy A. Sipkens', '<b>Timothy A. Sipkens</b>');
   author = author.replace('*', '<b>*</b>');
   return author;
 }
 
-function printYearHeading(data, i, ul, iLastPrinted = i - 1) {
+function printYearHeading(data, i, ul, iLastPrinted = i - 1, f_aos = true) {
   if ((i == 0) || (iLastPrinted === null)) {
     content = data[i].year.toString()
   } else {
@@ -15,9 +17,6 @@ function printYearHeading(data, i, ul, iLastPrinted = i - 1) {
     }
   }
   if (!(content === null)) {
-    // Create variable that will create li's to be added to ul
-    let dih = document.createElement('div');
-    dih.setAttribute('data-aos', 'slide-up')
 
     // Add Bootstrap list item class to each li
     let h4 = document.createElement('h4');
@@ -26,10 +25,27 @@ function printYearHeading(data, i, ul, iLastPrinted = i - 1) {
     // Create the html markup for each li
     h4.innerHTML = (content);
 
-    // Append each h4 to the ul
-    dih.appendChild(h4);
-    ul.appendChild(dih);
+    // Append each h4 to the ul\
+    if (f_aos) {
+      // Create variable that will create li's to be added to ul
+      let dih = document.createElement('div');
+      dih.setAttribute('data-aos', 'slide-up')
+
+      dih.appendChild(h4);
+      ul.appendChild(dih);
+    } else {
+      ul.appendChild(h4);
+    }
   }
+}
+
+writeDOI = function (doi) {
+  if (doi.includes('https://doi.org/')) { // for pre-prints
+    content = ' <a style="display:inline-block;" href="' + doi + '">' + doi.replace('https://doi.org/', '').toLowerCase() + '</a>';
+  } else { // otherwise for DOIs
+    content = ' <a style="display:inline-block;" href="' + doi + '">' + doi.toLowerCase() + '</a>';
+  }
+  return content;
 }
 
 filterPubs = function (data, st) {
@@ -103,7 +119,7 @@ filterPubs = function (data, st) {
   return data;
 }
 
-// For writing HTML from JSON data.
+//== For writing HTML from JSON data. ====================//
 function writePubs(data, id, yyyy, st = null) {
 
   data = filterPubs(data, st);
@@ -139,11 +155,7 @@ function writePubs(data, id, yyyy, st = null) {
 
     content = content + ' (' + data[i].year + ').';
 
-    if (data[i].doi.includes('arxiv')) { // for pre-prints
-      content = content + ' <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi.toLowerCase() + '</a>';
-    } else { // otherwise for DOIs
-      content = content + ' <a style="display:inline-block;" href="' + data[i].doi + '">' + data[i].doi.replace('https://doi.org/', '').toLowerCase() + '</a>';
-    }
+    content = content + writeDOI(data[i].doi);
 
     if (data[i].hasOwnProperty('field')) {
       if (!(data[i].honours == '')) {
@@ -262,3 +274,65 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
     ul.appendChild(di);
   }
 }
+
+
+function writer(fn, id, template, nfield=null, fyear=true) {
+  var json = $.getJSON(fn,
+      function (data) {
+          var iLastPrinted = null
+
+          let ul = document.getElementById(id);
+          ul.innerHTML = "";
+
+          // Loop over each object in data array
+          for (let i in data) {
+
+              if (fyear) {
+                  // Add year headers.
+                  printYearHeading(data, i, ul, iLastPrinted, false)
+              }
+              iLastPrinted = i // copy over current
+              
+              if (!(nfield == null)) {
+                // currently unused, for future writing of title/name field
+              }
+
+              txt = ''
+              for (let j in template) {
+                  if (data[i][template[j]] === null) {
+                      continue;
+                      // do nothing as current entry it null
+                  } else if (!(j == template.length - 1)) {
+                      if (data[i][template[j-1]] === null) {
+                          continue;
+                          // do nothing if next is null (skips grammar)
+                      }
+                  }
+
+                  if ((template[j] === '.') || (template[j] === ',')) {
+                      txt = txt + template[j] + ' '
+                  } else if ((template[j] === '(') || (template[j] === ')') || 
+                          (template[j] === ' ') || 
+                          (template[j] === '<i>') || (template[j] === '</i>')) {
+                      txt = txt + template[j]
+                  } else if (template[j] === 'author') {
+                      txt = txt + formatAuthor(data[i][template[j]])
+                  } else if (template[j] === 'doi') {
+                    txt = txt + writeDOI(data[i].doi);
+                  } else {
+                      txt = txt + data[i][template[j]]
+                  }
+              }
+              txt = txt + '.'
+
+              let li = document.createElement('li');
+              li.classList.add('pub-entry')
+              li.innerHTML = (txt);
+              ul.appendChild(li)
+          }
+
+          // Write other outputs.
+
+      });
+}
+

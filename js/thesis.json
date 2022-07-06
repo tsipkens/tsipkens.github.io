@@ -3,13 +3,15 @@
     "title": "Advances in the modeling of time-resolved laser-induced incandescence",
     "school": "University of Waterloo",
     "year": 2018,
-    "address": "Waterloo, ON",
+    "address": "Waterloo, ON, Canada",
+    "type": "PhD Thesis",
     "doi": "http://hdl.handle.net/10012/13860"
 }, {
     "author": "T. A. Sipkens",
     "title": "Sizing of non-carbonaceous nanoparticles by time-resolved laser-induced incandescence",
     "school": "University of Waterloo",
     "year": 2014,
-    "address": "Waterloo, ON",
+    "address": "Waterloo, ON, Canada",
+    "type": "MASc Thesis",
     "doi": "http://hdl.handle.net/10012/8890"
 }]

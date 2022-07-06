@@ -276,9 +276,14 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
 }
 
 
-function writer(fn, id, template, nfield=null, fyear=true) {
+function writer(fn, id, template, nfield=null, fyear=true, st=null) {
   var json = $.getJSON(fn,
       function (data) {
+          
+          if (!(st == null)) {
+            data = filterPubs(data, st);
+          }
+          
           var iLastPrinted = null
 
           let ul = document.getElementById(id);

@@ -224,6 +224,9 @@
           writeConf(data, 'pubs-co', 'Oral', false, node.value);
           writeConf(data, 'pubs-cp', 'Poster', false, node.value);
         });
+      writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json", 
+        'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'], 
+        null, false, node.value)
     };
   });
 </script>

@@ -4,7 +4,8 @@
     "field": "Mechanical and Mechatronics Engineering",
     "school": "University of Waterloo",
     "address": "Waterloo, Ontario, Canada", 
-    "thesis": "Advances in the modeling time-resolved laser-induced incandescence"
+    "thesis": "Advances in the modeling time-resolved laser-induced incandescence", 
+    "year": 2019
 }, {
     "degree": "Masters of Applied Science",
     "short": "MASc",
@@ -12,6 +13,7 @@
     "school": "University of Waterloo",
     "address": "Waterloo, Ontario, Canada",
     "thesis": "Sizing of non-carbonaceous nanoparticle by time-resolved laser-induced incandescence", 
+    "year": 2015, 
     "honors": "Governor General’s Gold Medal"
 }, {
     "degree": "Bachelor of Applied Science",
@@ -19,5 +21,6 @@
     "field": "Mechanical Engineering",
     "school": "University of Waterloo",
     "address": "Waterloo, Ontario, Canada", 
+    "year": 2012, 
     "honors": "Dean’s Honors List, With Distinction"
 }]

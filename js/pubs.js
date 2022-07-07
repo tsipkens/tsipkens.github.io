@@ -1,7 +1,7 @@
 function formatAuthor(author) {
   author = author.replace('T. Sipkens', '<b>T. Sipkens</b>')
-                 .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
-                 .replace('Timothy A. Sipkens', '<b>Timothy A. Sipkens</b>');
+    .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
+    .replace('Timothy A. Sipkens', '<b>Timothy A. Sipkens</b>');
   author = author.replace('*', '<b>*</b>');
   return author;
 }
@@ -276,68 +276,79 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
 }
 
 
-function writer(fn, id, template, nfield=null, fyear=true, st=null) {
+function writer(fn, id, template, nfield = null, fyear = true, st = null) {
   var json = $.getJSON(fn,
-      function (data) {
-          
-          if (!(st == null)) {
-            data = filterPubs(data, st);
+    function (data) {
+
+      if (!(st == null)) {
+        data = filterPubs(data, st);
+      }
+
+      var iLastPrinted = null
+
+      let ul = document.getElementById(id);
+      ul.innerHTML = "";
+
+      // Loop over each object in data array
+      for (let i in data) {
+
+        if (fyear) {
+          // Add year headers.
+          printYearHeading(data, i, ul, iLastPrinted, false)
+        }
+        iLastPrinted = i // copy over current
+
+        txt = ''
+        if (!(nfield == null)) {
+          txt = txt + '<b>'
+          for (let j in nfield) {
+            if ((nfield[j] === '.') || (nfield[j] === ',')) {
+              txt = txt + nfield[j] + ' '
+            } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
+              (nfield[j] === ' ') ||
+              (nfield[j] === '<i>') || (nfield[j] === '</i>') || (nfield[j] === '<br>')) {
+              txt = txt + nfield[j]
+            } else {
+              txt = txt + data[i][nfield[j]]
+            }
           }
-          
-          var iLastPrinted = null
+          txt = txt + '</b><br>'
+        }
 
-          let ul = document.getElementById(id);
-          ul.innerHTML = "";
-
-          // Loop over each object in data array
-          for (let i in data) {
-
-              if (fyear) {
-                  // Add year headers.
-                  printYearHeading(data, i, ul, iLastPrinted, false)
-              }
-              iLastPrinted = i // copy over current
-              
-              if (!(nfield == null)) {
-                // currently unused, for future writing of title/name field
-              }
-
-              txt = ''
-              for (let j in template) {
-                  if (data[i][template[j]] === null) {
-                      continue;
-                      // do nothing as current entry it null
-                  } else if (!(j == template.length - 1)) {
-                      if (data[i][template[j-1]] === null) {
-                          continue;
-                          // do nothing if next is null (skips grammar)
-                      }
-                  }
-
-                  if ((template[j] === '.') || (template[j] === ',')) {
-                      txt = txt + template[j] + ' '
-                  } else if ((template[j] === '(') || (template[j] === ')') || 
-                          (template[j] === ' ') || 
-                          (template[j] === '<i>') || (template[j] === '</i>')) {
-                      txt = txt + template[j]
-                  } else if (template[j] === 'author') {
-                      txt = txt + formatAuthor(data[i][template[j]])
-                  } else if (template[j] === 'doi') {
-                    txt = txt + writeDOI(data[i].doi);
-                  } else {
-                      txt = txt + data[i][template[j]]
-                  }
-              }
-              txt = txt + '.'
-
-              let li = document.createElement('li');
-              li.classList.add('pub-entry')
-              li.innerHTML = (txt);
-              ul.appendChild(li)
+        for (let j in template) {
+          if (data[i][template[j]] === null) {
+            continue;
+            // do nothing as current entry it null
+          } else if (!(j == template.length - 1)) {
+            if (data[i][template[j - 1]] === null) {
+              continue;
+              // do nothing if next is null (skips grammar)
+            }
           }
 
-          // Write other outputs.
+          if ((template[j] === '.') || (template[j] === ',')) {
+            txt = txt + template[j] + ' '
+          } else if ((template[j] === '(') || (template[j] === ')') ||
+            (template[j] === ' ') ||
+            (template[j] === '<i>') || (template[j] === '</i>')) {
+            txt = txt + template[j]
+          } else if (template[j] === 'author') {
+            txt = txt + formatAuthor(data[i][template[j]])
+          } else if (template[j] === 'doi') {
+            txt = txt + writeDOI(data[i].doi);
+          } else {
+            txt = txt + data[i][template[j]]
+          }
+        }
+        txt = txt + '.'
 
-      });
+        let li = document.createElement('li');
+        li.classList.add('pub-entry')
+        li.innerHTML = (txt);
+        ul.appendChild(li)
+      }
+
+      // Write other outputs.
+
+    });
 }
-

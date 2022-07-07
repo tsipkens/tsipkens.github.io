@@ -300,14 +300,16 @@ function writer(fn, id, template, nfield = null, fyear = true, st = null) {
 
         txt = ''
         if (!(nfield == null)) {
-          txt = txt + '<b>'
+          txt = txt + '<b style="font-size:13pt;">'
           for (let j in nfield) {
             if ((nfield[j] === '.') || (nfield[j] === ',')) {
               txt = txt + nfield[j] + ' '
             } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
-              (nfield[j] === ' ') ||
-              (nfield[j] === '<i>') || (nfield[j] === '</i>') || (nfield[j] === '<br>')) {
+              (nfield[j] === ' ') || (nfield[j] === '<br>') ||
+              (nfield[j] === '<i>') || (nfield[j] === '</i>')) {
               txt = txt + nfield[j]
+            } else if (nfield[j] === 'year') {
+              txt = txt + '<span style="font-size:10pt;">' + data[i].year + '</span><br>'
             } else {
               txt = txt + data[i][nfield[j]]
             }
@@ -329,7 +331,7 @@ function writer(fn, id, template, nfield = null, fyear = true, st = null) {
           if ((template[j] === '.') || (template[j] === ',')) {
             txt = txt + template[j] + ' '
           } else if ((template[j] === '(') || (template[j] === ')') ||
-            (template[j] === ' ') ||
+            (template[j] === ' ') || (template[j] === '<br>') ||
             (template[j] === '<i>') || (template[j] === '</i>')) {
             txt = txt + template[j]
           } else if (template[j] === 'author') {
@@ -340,7 +342,6 @@ function writer(fn, id, template, nfield = null, fyear = true, st = null) {
             txt = txt + data[i][template[j]]
           }
         }
-        txt = txt + '.'
 
         let li = document.createElement('li');
         li.classList.add('pub-entry')

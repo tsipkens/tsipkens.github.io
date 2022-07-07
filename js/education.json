@@ -1,0 +1,23 @@
+[{
+    "degree": "Doctor of Philosophy",
+    "short": "PhD",
+    "field": "Mechanical and Mechatronics Engineering",
+    "school": "University of Waterloo",
+    "address": "Waterloo, Ontario, Canada", 
+    "thesis": "Advances in the modeling time-resolved laser-induced incandescence"
+}, {
+    "degree": "Masters of Applied Science",
+    "short": "MASc",
+    "field": "Mechanical Engineering",
+    "school": "University of Waterloo",
+    "address": "Waterloo, Ontario, Canada",
+    "thesis": "Sizing of non-carbonaceous nanoparticle by time-resolved laser-induced incandescence", 
+    "honors": "Governor General’s Gold Medal"
+}, {
+    "degree": "Bachelor of Applied Science",
+    "short": "BASc",
+    "field": "Mechanical Engineering",
+    "school": "University of Waterloo",
+    "address": "Waterloo, Ontario, Canada", 
+    "honors": "Dean’s Honors List, With Distinction"
+}]

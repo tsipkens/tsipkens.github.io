@@ -139,6 +139,9 @@ body.dark-theme a:hover {
   color: var(--c4);
 }
 
+ul {
+  list-style: none;
+}
 
 #header {
   display: none;

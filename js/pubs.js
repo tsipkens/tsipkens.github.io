@@ -48,6 +48,12 @@ writeDOI = function (doi) {
   return content;
 }
 
+checkNoItems = function (ul) {
+  if (ul.innerHTML === "") {
+    ul.innerHTML = "<li class='pub-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
+  }
+}
+
 filterPubs = function (data, st) {
 
   if (!(st == null)) { // skip is search term (st) is empty
@@ -183,6 +189,9 @@ function writePubs(data, id, yyyy, st = null) {
     di.appendChild(li);
     ul.appendChild(di);
   }
+
+  // If nothing was printed.
+  checkNoItems(ul);
 }
 
 
@@ -273,6 +282,9 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
     di.appendChild(li);
     ul.appendChild(di);
   }
+
+  // If nothing was printed.
+  checkNoItems(ul);
 }
 
 
@@ -349,7 +361,7 @@ function writer(fn, id, template, nfield = null, fyear = true, st = null) {
         ul.appendChild(li)
       }
 
-      // Write other outputs.
-
+      // If nothing was printed.
+      checkNoItems(ul);
     });
 }

@@ -426,9 +426,18 @@
             barrier face covering materials, condensed into a web app
             <a href="https://tsipkens.github.io/fmviz">here</a>.
          </p>
-         
+
          <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
-            class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
+                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a>
+         </p>
+
+         <h2>Education</h2>
+         <ul id="education" class="pubs"></ul>
+
+         <script>
+            writer('https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/education.json', 'education',
+               ['school', ',', 'address'], ['year', 'degree', ' ', '(', 'short', ')', '<br>', 'field'], false)
+         </script>
 
          <!--
          <h2 id="about">PROJECTS</h2>
@@ -457,9 +466,7 @@
             Some sample projects are listed below.
          </p>
 
-         <ol id="userRepos" style="list-style:none;">
-
-         </ol>
+         <ul id="userRepos"></ul>
 
          <p class="post-pub" data-aos="slide-up">
             <a href="https://github.com/tsipkens">More repositories <i class="fas fa-chevron-right"
@@ -492,7 +499,7 @@
 
 
          <h3 id="journaln">Conferences <span> / Select</span></h3>
-         
+
          <ol id="pubs-c" class="pubs"></ol>
 
          <!-- Honour conferences -->
@@ -502,7 +509,7 @@
                   writeConf(data, 'pubs-c', null, true, null, false)
                });
          </script>
-         
+
       </div>
    </div>
 

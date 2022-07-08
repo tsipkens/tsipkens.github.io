@@ -105,6 +105,7 @@
         <i class="fas fa-search"></i>
       </p>
 
+      <h2>Publications</h2>
 
       <h3 id="journal1">Journal articles</h3>
 
@@ -142,15 +143,15 @@
             writeConf(data, 'pubs-cp', 'Poster', false)
           });
       </script>
-      
+
 
       <h3 id="theses">Theses</h3>
       <ul id="pubs-theses" class="pubs" style="list-style: none;"></ul>
 
       <!-- Add theses -->
       <script>
-        writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json", 
-          'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'], 
+        writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+          'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'],
           null, false)
       </script>
     </div>
@@ -224,8 +225,8 @@
           writeConf(data, 'pubs-co', 'Oral', false, node.value);
           writeConf(data, 'pubs-cp', 'Poster', false, node.value);
         });
-      writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json", 
-        'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'], 
+      writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+        'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'],
         null, false, node.value)
     };
   });

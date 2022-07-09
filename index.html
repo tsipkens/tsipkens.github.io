@@ -392,10 +392,6 @@
 
 
 
-
-
-
-
          <h2 id="about">About</h2>
          <p>
             I am an aerosol scientist and researcher interested in optical and
@@ -435,9 +431,15 @@
          <ul id="education" class="pubs"></ul>
 
          <script>
-            writer('https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/education.json', 'education',
-               ['school', ',', 'address'], ['year', 'degree', ' ', '(', 'short', ')', '<br>', 'field'], false)
+            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/education.json",
+               function (data) {
+                  di2 = writer(data, ['school', ',', 'address'],
+                     ['year', 'degree', ' ', '(', 'short', ')', '<br>', 'field'], false)
+                  addItems('education', di2);
+               });
          </script>
+
+
 
          <!--
          <h2 id="about">PROJECTS</h2>
@@ -490,7 +492,8 @@
                function (data) {
                   var today = new Date();
                   var yyyy = today.getFullYear();
-                  writePubs(data, 'pubs-j', yyyy - 3)
+                  di2 = writePubs(data, yyyy - 3);
+                  addItems('pubs-j', di2);
                });
          </script>
 
@@ -506,7 +509,8 @@
          <script>
             var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                function (data) {
-                  writeConf(data, 'pubs-c', null, true, null, false)
+                  di2 = writeConf(data, null, true, null, false);
+                  addItems('pubs-c', di2);
                });
          </script>
 

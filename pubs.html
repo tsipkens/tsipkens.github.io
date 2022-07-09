@@ -105,7 +105,7 @@
         <i class="fas fa-search"></i>
       </p>
 
-      <h2>Publications</h2>
+      <h2 style="padding-top:50px;">Publications</h2>
 
       <h3 id="journal1">Journal articles</h3>
 
@@ -116,7 +116,8 @@
       <script>
         var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
           function (data) {
-            writePubs(data, 'pubs-j', null, null)
+            di2 = writePubs(data, null, null)
+            addItems('pubs-j', di2);
           });
       </script>
 
@@ -128,7 +129,8 @@
       <script>
         var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
           function (data) {
-            writeConf(data, 'pubs-co', 'Oral', false)
+            di2 = writeConf(data, 'Oral', false)
+            addItems('pubs-co', di2);
           });
       </script>
 
@@ -140,7 +142,8 @@
       <script>
         var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
           function (data) {
-            writeConf(data, 'pubs-cp', 'Poster', false)
+            di2 = writeConf(data, 'Poster', false)
+            addItems('pubs-cp', di2);
           });
       </script>
 
@@ -150,9 +153,13 @@
 
       <!-- Add theses -->
       <script>
-        writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
-          'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'],
-          null, false)
+        var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+          function (data) {
+            di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.',
+              'doi'],
+              null, false)
+            addItems('pubs-theses', di2);
+          })
       </script>
     </div>
   </div>
@@ -218,16 +225,23 @@
     if (event.key === "Enter") {
       var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
         function (data) {
-          writePubs(data, 'pubs-j', null, node.value);
+          di2 = writePubs(data, null, node.value);
+          addItems('pubs-j', di2);
         });
       var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
         function (data) {
-          writeConf(data, 'pubs-co', 'Oral', false, node.value);
-          writeConf(data, 'pubs-cp', 'Poster', false, node.value);
+          di2 = writeConf(data, 'Oral', false, node.value);
+          addItems('pubs-co', di2);
+          di2 = writeConf(data, 'Poster', false, node.value);
+          addItems('pubs-cp', di2);
         });
-      writer("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
-        'pubs-theses', ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'],
-        null, false, node.value)
+      var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+        function (data) {
+          di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.',
+            'doi'],
+            null, false, node.value)
+          addItems('pubs-theses', di2);
+        })
     };
   });
 </script>

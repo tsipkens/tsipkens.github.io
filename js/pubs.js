@@ -6,7 +6,7 @@ function formatAuthor(author) {
   return author;
 }
 
-function printYearHeading(data, i, ul, iLastPrinted = i - 1, f_aos = true) {
+function printYearHeading(data, i, di2, iLastPrinted = i - 1, f_aos = true) {
   if ((i == 0) || (iLastPrinted === null)) {
     content = data[i].year.toString()
   } else {
@@ -25,16 +25,16 @@ function printYearHeading(data, i, ul, iLastPrinted = i - 1, f_aos = true) {
     // Create the html markup for each li
     h4.innerHTML = (content);
 
-    // Append each h4 to the ul\
+    // Append each h4 to the di2\
     if (f_aos) {
-      // Create variable that will create li's to be added to ul
+      // Create variable that will create li's to be added to di2
       let dih = document.createElement('div');
       dih.setAttribute('data-aos', 'slide-up')
 
       dih.appendChild(h4);
-      ul.appendChild(dih);
+      di2.appendChild(dih);
     } else {
-      ul.appendChild(h4);
+      di2.appendChild(h4);
     }
   }
 }
@@ -48,9 +48,9 @@ writeDOI = function (doi) {
   return content;
 }
 
-checkNoItems = function (ul) {
-  if (ul.innerHTML === "") {
-    ul.innerHTML = "<li class='pub-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
+checkNoItems = function (di2) {
+  if (di2.innerHTML === "") {
+    di2.innerHTML = "<li class='pub-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
   }
 }
 
@@ -100,10 +100,16 @@ filterPubs = function (data, st) {
           se = se.concat(entry.journal);
           se = se.concat(" ");
         }
-
+        
         // Add entry conference name (only if exists).
-        if (entry.hasOwnProperty('Conference')) {
+        if (entry.hasOwnProperty('booktitle')) {
           se = se.concat(entry.booktitle);
+          se = se.concat(" ");
+        }
+
+        // Add entry type.
+        if (entry.hasOwnProperty('type')) {
+          se = se.concat(entry.type);
           se = se.concat(" ");
         }
 
@@ -125,14 +131,22 @@ filterPubs = function (data, st) {
   return data;
 }
 
+addItems = function (id, di) {
+  let di2 = document.getElementById(id);
+  di2.innerHTML = "";
+  di2.append(di);
+}
+
+
+
+
 //== For writing HTML from JSON data. ====================//
-function writePubs(data, id, yyyy, st = null) {
+function writePubs(data, yyyy, st = null) {
 
   data = filterPubs(data, st);
   data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
 
-  let ul = document.getElementById(id);
-  ul.innerHTML = "";
+  let di2 = document.createElement('div');
 
   var iLastPrinted = null
 
@@ -147,7 +161,7 @@ function writePubs(data, id, yyyy, st = null) {
     }
 
     // Add year headers.
-    printYearHeading(data, i, ul, iLastPrinted)
+    printYearHeading(data, i, di2, iLastPrinted)
     iLastPrinted = i // copy over current i
 
     content = '<p>';
@@ -174,7 +188,7 @@ function writePubs(data, id, yyyy, st = null) {
     content = content + '</p>';
 
 
-    // Create variable that will create li's to be added to ul
+    // Create variable that will create li's to be added to di2
     let di = document.createElement('div');
     di.setAttribute('data-aos', 'slide-up')
 
@@ -185,25 +199,26 @@ function writePubs(data, id, yyyy, st = null) {
     // Create the html markup for each li
     li.innerHTML = (content);
 
-    // Append each li to the ul
+    // Append each li to the di2
     di.appendChild(li);
-    ul.appendChild(di);
+    di2.appendChild(di);
   }
 
   // If nothing was printed.
-  checkNoItems(ul);
+  checkNoItems(di2);
+
+  return di2;
 }
 
 
 
 // For writing HTML from JSON data.
-function writeConf(data, id, type, hon, st = null, ye = true) {
+function writeConf(data, type, hon, st = null, ye = true) {
 
   data = filterPubs(data, st);
   data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
 
-  let ul = document.getElementById(id);
-  ul.innerHTML = "";
+  let di2 = document.createElement('div');
 
   var iLastPrinted = null
 
@@ -229,11 +244,11 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
 
     // Add year headers.
     if (ye) {
-      printYearHeading(data, i, ul, iLastPrinted)
+      printYearHeading(data, i, di2, iLastPrinted)
     }
     iLastPrinted = i // copy over current i
 
-    // Create variable that will create li's to be added to ul
+    // Create variable that will create li's to be added to di2
     let di = document.createElement('div');
     di.setAttribute('data-aos', 'slide-up')
 
@@ -278,90 +293,99 @@ function writeConf(data, id, type, hon, st = null, ye = true) {
     // Create the html markup for each li
     li.innerHTML = (content);
 
-    // Append each li to the ul
+    // Append each li to the di2
     di.appendChild(li);
-    ul.appendChild(di);
+    di2.appendChild(di);
   }
 
   // If nothing was printed.
-  checkNoItems(ul);
+  checkNoItems(di2);
+
+  return di2;
 }
 
 
-function writer(fn, id, template, nfield = null, fyear = true, st = null) {
-  var json = $.getJSON(fn,
-    function (data) {
+function writer(data, template, nfield = null, fyear = true, st = null) {
+    
+    if (!(st == null)) {
+      data = filterPubs(data, st);
+    }
+    data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
 
-      if (!(st == null)) {
-        data = filterPubs(data, st);
+    var iLastPrinted = null
+
+    let di2 = document.createElement('div');
+
+    // Loop over each object in data array
+    for (let i in data) {
+
+      if (fyear) {
+        // Add year headers.
+        printYearHeading(data, i, di2, iLastPrinted, false)
       }
+      iLastPrinted = i // copy over current
 
-      var iLastPrinted = null
-
-      let ul = document.getElementById(id);
-      ul.innerHTML = "";
-
-      // Loop over each object in data array
-      for (let i in data) {
-
-        if (fyear) {
-          // Add year headers.
-          printYearHeading(data, i, ul, iLastPrinted, false)
-        }
-        iLastPrinted = i // copy over current
-
-        txt = ''
-        if (!(nfield == null)) {
-          txt = txt + '<b style="font-size:13pt;">'
-          for (let j in nfield) {
-            if ((nfield[j] === '.') || (nfield[j] === ',')) {
-              txt = txt + nfield[j] + ' '
-            } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
-              (nfield[j] === ' ') || (nfield[j] === '<br>') ||
-              (nfield[j] === '<i>') || (nfield[j] === '</i>')) {
-              txt = txt + nfield[j]
-            } else if (nfield[j] === 'year') {
-              txt = txt + '<span style="font-size:10pt;">' + data[i].year + '</span><br>'
-            } else {
-              txt = txt + data[i][nfield[j]]
-            }
-          }
-          txt = txt + '</b><br>'
-        }
-
-        for (let j in template) {
-          if (data[i][template[j]] === null) {
-            continue;
-            // do nothing as current entry it null
-          } else if (!(j == template.length - 1)) {
-            if (data[i][template[j - 1]] === null) {
-              continue;
-              // do nothing if next is null (skips grammar)
-            }
-          }
-
-          if ((template[j] === '.') || (template[j] === ',')) {
-            txt = txt + template[j] + ' '
-          } else if ((template[j] === '(') || (template[j] === ')') ||
-            (template[j] === ' ') || (template[j] === '<br>') ||
-            (template[j] === '<i>') || (template[j] === '</i>')) {
-            txt = txt + template[j]
-          } else if (template[j] === 'author') {
-            txt = txt + formatAuthor(data[i][template[j]])
-          } else if (template[j] === 'doi') {
-            txt = txt + writeDOI(data[i].doi);
+      txt = ''
+      if (!(nfield == null)) {
+        txt = txt + '<b style="font-size:13pt;">'
+        for (let j in nfield) {
+          if ((nfield[j] === '.') || (nfield[j] === ',')) {
+            txt = txt + nfield[j] + ' '
+          } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
+            (nfield[j] === ' ') || (nfield[j] === '<br>') ||
+            (nfield[j] === '<i>') || (nfield[j] === '</i>')) {
+            txt = txt + nfield[j]
+          } else if (nfield[j] === 'year') {
+            txt = txt + '<span style="font-size:10pt;">' + data[i].year + '</span><br>'
           } else {
-            txt = txt + data[i][template[j]]
+            txt = txt + data[i][nfield[j]]
+          }
+        }
+        txt = txt + '</b><br>'
+      }
+
+      for (let j in template) {
+        if (data[i][template[j]] === null) {
+          continue;
+          // do nothing as current entry it null
+        } else if (!(j == template.length - 1)) {
+          if (data[i][template[j - 1]] === null) {
+            continue;
+            // do nothing if next is null (skips grammar)
           }
         }
 
-        let li = document.createElement('li');
-        li.classList.add('pub-entry')
-        li.innerHTML = (txt);
-        ul.appendChild(li)
+        if ((template[j] === '.') || (template[j] === ',')) {
+          txt = txt + template[j] + ' '
+        } else if ((template[j] === '(') || (template[j] === ')') ||
+          (template[j] === ' ') || (template[j] === '<br>') ||
+          (template[j] === '<i>') || (template[j] === '</i>')) {
+          txt = txt + template[j]
+        } else if (template[j] === 'author') {
+          txt = txt + formatAuthor(data[i][template[j]])
+        } else if (template[j] === 'doi') {
+          txt = txt + writeDOI(data[i].doi);
+        } else if (template[j] === 'honours') {
+          if (data[i].hasOwnProperty('honours')) {
+            if (!(data[i].honours === "")) {
+              txt = txt + '<br><span class="pub-honour">';
+              txt = txt + '<i class="fas fa-award"></i> ';
+              txt = txt + data[i].honours + '</span> ';
+            }
+          }
+        } else {
+          txt = txt + data[i][template[j]]
+        }
       }
 
-      // If nothing was printed.
-      checkNoItems(ul);
-    });
-}
+      let li = document.createElement('li');
+      li.classList.add('pub-entry')
+      li.innerHTML = (txt);
+      di2.appendChild(li)
+    }
+
+    // If nothing was printed.
+    checkNoItems(di2);
+
+    return di2;
+  }

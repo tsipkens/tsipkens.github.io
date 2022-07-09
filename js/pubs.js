@@ -1,4 +1,4 @@
-function formatAuthor(author) {
+formatAuthor = function (author) {
   author = author.replace('T. Sipkens', '<b>T. Sipkens</b>')
     .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
     .replace('Timothy A. Sipkens', '<b>Timothy A. Sipkens</b>');
@@ -6,7 +6,7 @@ function formatAuthor(author) {
   return author;
 }
 
-function printYearHeading(data, i, di2, iLastPrinted = i - 1, f_aos = true) {
+printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
   if ((i == 0) || (iLastPrinted === null)) {
     content = data[i].year.toString()
   } else {
@@ -100,7 +100,7 @@ filterPubs = function (data, st) {
           se = se.concat(entry.journal);
           se = se.concat(" ");
         }
-        
+
         // Add entry conference name (only if exists).
         if (entry.hasOwnProperty('booktitle')) {
           se = se.concat(entry.booktitle);
@@ -141,7 +141,7 @@ addItems = function (id, di) {
 
 
 //== For writing HTML from JSON data. ====================//
-function writePubs(data, yyyy, st = null) {
+writePubs = function (data, yyyy, st = null) {
 
   data = filterPubs(data, st);
   data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
@@ -213,7 +213,7 @@ function writePubs(data, yyyy, st = null) {
 
 
 // For writing HTML from JSON data.
-function writeConf(data, type, hon, st = null, ye = true) {
+writeConf = function (data, type, hon, st = null, ye = true) {
 
   data = filterPubs(data, st);
   data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
@@ -305,87 +305,87 @@ function writeConf(data, type, hon, st = null, ye = true) {
 }
 
 
-function writer(data, template, nfield = null, fyear = true, st = null) {
-    
-    if (!(st == null)) {
-      data = filterPubs(data, st);
-    }
-    data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
+writer = function (data, template, nfield = null, fyear = true, st = null) {
 
-    var iLastPrinted = null
-
-    let di2 = document.createElement('div');
-
-    // Loop over each object in data array
-    for (let i in data) {
-
-      if (fyear) {
-        // Add year headers.
-        printYearHeading(data, i, di2, iLastPrinted, false)
-      }
-      iLastPrinted = i // copy over current
-
-      txt = ''
-      if (!(nfield == null)) {
-        txt = txt + '<b style="font-size:13pt;">'
-        for (let j in nfield) {
-          if ((nfield[j] === '.') || (nfield[j] === ',')) {
-            txt = txt + nfield[j] + ' '
-          } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
-            (nfield[j] === ' ') || (nfield[j] === '<br>') ||
-            (nfield[j] === '<i>') || (nfield[j] === '</i>')) {
-            txt = txt + nfield[j]
-          } else if (nfield[j] === 'year') {
-            txt = txt + '<span style="font-size:10pt;">' + data[i].year + '</span><br>'
-          } else {
-            txt = txt + data[i][nfield[j]]
-          }
-        }
-        txt = txt + '</b><br>'
-      }
-
-      for (let j in template) {
-        if (data[i][template[j]] === null) {
-          continue;
-          // do nothing as current entry it null
-        } else if (!(j == template.length - 1)) {
-          if (data[i][template[j - 1]] === null) {
-            continue;
-            // do nothing if next is null (skips grammar)
-          }
-        }
-
-        if ((template[j] === '.') || (template[j] === ',')) {
-          txt = txt + template[j] + ' '
-        } else if ((template[j] === '(') || (template[j] === ')') ||
-          (template[j] === ' ') || (template[j] === '<br>') ||
-          (template[j] === '<i>') || (template[j] === '</i>')) {
-          txt = txt + template[j]
-        } else if (template[j] === 'author') {
-          txt = txt + formatAuthor(data[i][template[j]])
-        } else if (template[j] === 'doi') {
-          txt = txt + writeDOI(data[i].doi);
-        } else if (template[j] === 'honours') {
-          if (data[i].hasOwnProperty('honours')) {
-            if (!(data[i].honours === "")) {
-              txt = txt + '<br><span class="pub-honour">';
-              txt = txt + '<i class="fas fa-award"></i> ';
-              txt = txt + data[i].honours + '</span> ';
-            }
-          }
-        } else {
-          txt = txt + data[i][template[j]]
-        }
-      }
-
-      let li = document.createElement('li');
-      li.classList.add('pub-entry')
-      li.innerHTML = (txt);
-      di2.appendChild(li)
-    }
-
-    // If nothing was printed.
-    checkNoItems(di2);
-
-    return di2;
+  if (!(st == null)) {
+    data = filterPubs(data, st);
   }
+  data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
+
+  var iLastPrinted = null
+
+  let di2 = document.createElement('div');
+
+  // Loop over each object in data array
+  for (let i in data) {
+
+    if (fyear) {
+      // Add year headers.
+      printYearHeading(data, i, di2, iLastPrinted, false)
+    }
+    iLastPrinted = i // copy over current
+
+    txt = ''
+    if (!(nfield == null)) {
+      txt = txt + '<b style="font-size:13pt;">'
+      for (let j in nfield) {
+        if ((nfield[j] === '.') || (nfield[j] === ',')) {
+          txt = txt + nfield[j] + ' '
+        } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
+          (nfield[j] === ' ') || (nfield[j] === '<br>') ||
+          (nfield[j] === '<i>') || (nfield[j] === '</i>')) {
+          txt = txt + nfield[j]
+        } else if (nfield[j] === 'year') {
+          txt = txt + '<span style="font-size:10pt;">' + data[i].year + '</span><br>'
+        } else {
+          txt = txt + data[i][nfield[j]]
+        }
+      }
+      txt = txt + '</b><br>'
+    }
+
+    for (let j in template) {
+      if (data[i][template[j]] === null) {
+        continue;
+        // do nothing as current entry it null
+      } else if (!(j == template.length - 1)) {
+        if (data[i][template[j - 1]] === null) {
+          continue;
+          // do nothing if next is null (skips grammar)
+        }
+      }
+
+      if ((template[j] === '.') || (template[j] === ',')) {
+        txt = txt + template[j] + ' '
+      } else if ((template[j] === '(') || (template[j] === ')') ||
+        (template[j] === ' ') || (template[j] === '<br>') ||
+        (template[j] === '<i>') || (template[j] === '</i>')) {
+        txt = txt + template[j]
+      } else if (template[j] === 'author') {
+        txt = txt + formatAuthor(data[i][template[j]])
+      } else if (template[j] === 'doi') {
+        txt = txt + writeDOI(data[i].doi);
+      } else if (template[j] === 'honours') {
+        if (data[i].hasOwnProperty('honours')) {
+          if (!(data[i].honours === "")) {
+            txt = txt + '<br><span class="pub-honour">';
+            txt = txt + '<i class="fas fa-award"></i> ';
+            txt = txt + data[i].honours + '</span> ';
+          }
+        }
+      } else {
+        txt = txt + data[i][template[j]]
+      }
+    }
+
+    let li = document.createElement('li');
+    li.classList.add('pub-entry')
+    li.innerHTML = (txt);
+    di2.appendChild(li)
+  }
+
+  // If nothing was printed.
+  checkNoItems(di2);
+
+  return di2;
+}

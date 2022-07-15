@@ -267,27 +267,23 @@ writeConf = function (data, type, hon, st = null, ye = true) {
     content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address + '. ';
     content = content + data[i].date + ', ' + data[i].year + '.';
 
-    content = content + '</span></p>';
+    content = content + '</span>';
 
-    if ((data[i].hasOwnProperty('honours')) || (data[i].hasOwnProperty('PDF'))) {
-      content = content + '<p class="pub-title">';
+    if (data[i].hasOwnProperty('pdf')) {
+      content = content + ' <a href="' + data[i].pdf + '" style="text-decoration:none;">';
+      content = content + '<i class="fas fa-file-pdf"></i></a>';
+    }
 
-      if (data[i].hasOwnProperty('honours')) {
-        if (!(data[i].honours == '')) {
-          content = content + '<span class="pub-honour">';
-          content = content + '<i class="fas fa-award"></i> ';
-          content = content + data[i].honours + '</span> ';
-        }
-      }
+    content = content + '</p>';
 
-      if (data[i].hasOwnProperty('PDF')) {
+    if (data[i].hasOwnProperty('honours')) {
+      if (!(data[i].honours == '')) {
+        content = content + '<p class="pub-title">';
         content = content + '<span class="pub-honour">';
-        content = content + '<a href="' + data[i].PDF + '" style="text-decoration:none;">';
-        content = content + '<i class="fas fa-file-pdf"></i> ';
-        content = content + ' PDF</a>';
+        content = content + '<i class="fas fa-award"></i> ';
+        content = content + data[i].honours + '</span> ';
+        content = content + '</p>';
       }
-
-      content = content + '</p>';
     }
 
     // Create the html markup for each li

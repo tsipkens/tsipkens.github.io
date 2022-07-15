@@ -170,7 +170,7 @@ div.post-header {
   max-width: 800px;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 11pt;
+  font-size: 12pt;
   font-weight: 400;
   display: flex;
   align-items: flex-start;
@@ -465,7 +465,7 @@ body.dark-theme .fa-award {
 
 .little-icon i {
   color: var(--c1);
-  font-size: 8pt;
+  font-size: 10pt;
 }
 
 body.dark-theme .little-icon i {

@@ -155,7 +155,7 @@ writePubs = function (data, yyyy, st = null) {
 
     // Filter by the date.
     if (!(yyyy == null)) {
-      if (!(data[i].year > yyyy)) {
+      if (!(((data[i].year > yyyy)) || (data[i].year === 'Accepted'))) {
         continue;
       }
     }

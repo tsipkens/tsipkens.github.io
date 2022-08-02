@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@100;300;400;500;600;700&display=swap');
 
 :root {
   color-scheme: light dark;
@@ -118,7 +118,7 @@ body.dark-theme h3 span {
 
 h4 {
   margin-top: 35px;
-  font-weight: 200;
+  font-weight: 100;
   font-size: 20pt;
 }
 

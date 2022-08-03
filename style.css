@@ -332,7 +332,7 @@ body.dark-theme a.a-icon:hover svg {
   padding-top: 5px;
   transition: all 0.8s ease 0s;
   text-align: left;
-  font-size: 13pt;
+  font-size: 12pt;
 }
 
 .pub-entry p {
@@ -402,7 +402,7 @@ p.pub-title {
   padding-bottom: 6px;
   margin: 0px;
   text-align: left;
-  font-size: 13.5pt;
+  font-size: 13pt;
   color: #222;
 }
 

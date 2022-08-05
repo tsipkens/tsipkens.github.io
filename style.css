@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@100;300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/gotham-narrow');
 
 :root {
   color-scheme: light dark;
@@ -31,7 +32,7 @@ html {
 body {
   margin: auto 0px;
   padding: 0px;
-  font-family: 'Oxygen';
+  font-family: 'Gotham Narrow';
   font-weight: 300;
   font-size: 13pt;
   transition: 0.3s;
@@ -46,7 +47,7 @@ body.dark-theme {
 
 b {
   /* Format all bolds */
-  font-weight: 600;
+  font-weight: 350;
 }
 
 p {
@@ -78,7 +79,7 @@ div.pre-main {
 h1 {
   margin-bottom: 16px;
   font-size: 55pt;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 h2 {
@@ -86,7 +87,7 @@ h2 {
   padding-bottom: 15px;
   padding-top: 110px;
   color: var(--c1);
-  font-weight: 600;
+  font-weight: 350;
 }
 
 body.dark-theme h2 {
@@ -95,6 +96,7 @@ body.dark-theme h2 {
 
 h3 {
   font-size: 30px;
+  font-weight: 350;
   margin-top: 45px;
   padding-top: 2px;
   padding-bottom: 10px;
@@ -106,7 +108,7 @@ body.dark-theme h3 {
 
 h3 span {
   color: #333;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 20pt;
   padding-bottom: 2px;
   display: inline-block;
@@ -118,7 +120,7 @@ body.dark-theme h3 span {
 
 h4 {
   margin-top: 35px;
-  font-weight: 100;
+  font-weight: 300;
   font-size: 20pt;
 }
 
@@ -173,7 +175,7 @@ div.post-header {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 13pt;
-  font-weight: 400;
+  font-weight: 350;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -201,7 +203,7 @@ body.dark-theme div.post-header a:hover {
 }
 
 div.post-header a.head-first {
-  font-weight: 700;
+  font-weight: 350;
   font-size: 14pt;
   line-height: 20px;
   margin-left: 0px;
@@ -218,7 +220,7 @@ input {
   border-radius: 6px;
   font-size: 13.5pt;
   transition: 0.5s;
-  font-family: 'Oxygen';
+  font-family: 'Gotham Narrow';
   font-weight: 300;
   color: black;
 }
@@ -371,14 +373,14 @@ body.dark-theme .pub-entry:hover a {
 
 .pub-entry::marker {
   color: #999;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 10pt;
   transition: all 0.3s ease 0s;
 }
 
 .pub-entry:hover::marker {
   color: var(--c1);
-  font-weight: 600;
+  font-weight: 350;
 }
 
 body.dark-theme .pub-entry::marker {
@@ -415,10 +417,6 @@ p.pub-title a {
   color: inherit;
 }
 
-p.pub-title b {
-  font-weight: 600;
-}
-
 .post-pub {
   margin-top: 18px;
   margin-bottom: 35px;
@@ -426,7 +424,7 @@ p.pub-title b {
 
 .post-pub a {
   font-size: 13pt;
-  font-weight: 600;
+  font-weight: 350;
   padding-left: 0px;
   padding-top: 5px;
   color: var(--c1);

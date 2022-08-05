@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@100;300;400;500;600;700&display=swap');
-@import url('http://fonts.cdnfonts.com/css/gotham-narrow');
-@import url('http://fonts.cdnfonts.com/css/gotham');
+@import url('https://fonts.cdnfonts.com/css/gotham-narrow');
+@import url('https://fonts.cdnfonts.com/css/gotham');
 
 :root {
   color-scheme: light dark;
@@ -262,8 +262,7 @@ body.dark-theme input:hover {
   transition: all 0.3s ease 0s;
   border: solid 1px #DDD;
   border-radius: 40px;
-  padding: 5px;
-  padding-bottom: 7px;
+  padding: 8px;
   background-color: white;
   margin: 0px;
   box-shadow: 0px 0px 4px #DDD;
@@ -380,15 +379,7 @@ body.dark-theme .pub-entry:hover a {
 
 .pub-entry::marker {
   color: #999;
-  font-weight: 300;
   font-size: 10pt;
-  transition: all 0.3s ease 0s;
-}
-
-.pub-entry:hover::marker {
-  color: var(--c1);
-  font-family: 'Gotham';
-  font-weight: 500;
 }
 
 body.dark-theme .pub-entry::marker {
@@ -451,8 +442,8 @@ body.dark-theme .post-pub a {
 
 .pub-honour {
   color: #222;
-  font-size: 13pt;
   margin-right: 10px;
+  font-size: 12pt;
 }
 
 body.dark-theme .pub-honour {

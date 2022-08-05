@@ -177,11 +177,11 @@ writePubs = function (data, yyyy, st = null) {
 
     content = content + writeDOI(data[i].doi);
 
-    if (data[i].hasOwnProperty('field')) {
+    if (data[i].hasOwnProperty('honours')) {
       if (!(data[i].honours == '')) {
-        content = content + '<br><span class="pub-honour">';
+        content = content + '<p class="pub-title"><span class="pub-after">';
         content = content + '<i class="fas fa-award"></i> ';
-        content = content + data[i].honours + '</span>';
+        content = content + data[i].honours + '</span></p>';
       }
     }
 
@@ -256,7 +256,7 @@ writeConf = function (data, type, hon, st = null, ye = true) {
     let li = document.createElement('li');
     li.classList.add('pub-entry')
 
-    content = '<p">';
+    content = '<p>';
     content = content + formatAuthor(data[i].author) + '. ';
     content = content + '"' + data[i].title;
     if ((data[i].title[data[i].title.length - 1]) === "?") {
@@ -267,22 +267,18 @@ writeConf = function (data, type, hon, st = null, ye = true) {
     content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address + '. ';
     content = content + data[i].date + ', ' + data[i].year + '.';
 
-    content = content + '</span>';
+    content = content + '</span>'; 
 
     if (data[i].hasOwnProperty('pdf')) {
-      content = content + ' <a href="' + data[i].pdf + '" style="text-decoration:none;">';
-      content = content + '<i class="fas fa-file-pdf"></i></a>';
+      content = content + '<span class="pub-after" style="padding-left:10px;"><a class="little-icon" href="' + data[i].pdf + '">';
+      content = content + '<i class="fas fa-file-pdf"></i></a></span>';
     }
-
-    content = content + '</p>';
 
     if (data[i].hasOwnProperty('honours')) {
       if (!(data[i].honours == '')) {
-        content = content + '<p class="pub-title">';
-        content = content + '<span class="pub-honour">';
+        content = content + '<p class="pub-title"><span class="pub-after">';
         content = content + '<i class="fas fa-award"></i> ';
-        content = content + data[i].honours + '</span> ';
-        content = content + '</p>';
+        content = content + data[i].honours + '</span></p> ';
       }
     }
 

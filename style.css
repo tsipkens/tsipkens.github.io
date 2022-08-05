@@ -178,8 +178,6 @@ div.post-header {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 13pt;
-  font-family: 'Gotham';
-  font-weight: 500;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -367,10 +365,6 @@ body.dark-theme .pub-entry:hover p.pub-title {
   color: var(--c1);
 }
 
-.pub-entry:hover .no-space-sub a {
-  text-decoration: underline;
-}
-
 body.dark-theme .pub-entry:hover a {
   color: var(--c2);
 }
@@ -397,7 +391,7 @@ body.dark-theme .pub-entry:hover::marker {
 }
 
 p.pub-title {
-  padding-top: 0px;
+  padding-top: 2px;
   padding-bottom: 6px;
   margin: 0px;
   text-align: left;
@@ -412,6 +406,14 @@ body.dark-theme p.pub-title {
 p.pub-title a {
   text-decoration: none;
   color: inherit;
+}
+
+.pub-after {
+  font-size: 10pt;
+  margin-right: 15px;
+}
+.pub-after a:hover {
+  text-decoration: none;
 }
 
 .post-pub {
@@ -438,12 +440,6 @@ body.dark-theme .post-pub a {
   text-decoration: underline;
 }
 
-.pub-honour {
-  color: #222;
-  margin-right: 10px;
-  font-size: 12pt;
-}
-
 body.dark-theme .pub-honour {
   color: #DDD;
 }
@@ -458,9 +454,6 @@ body.dark-theme .fa-award {
 
 
 /* Code icons */
-.little-icon {
-  margin-left: 15px;
-}
 
 .little-icon i {
   color: var(--c1);

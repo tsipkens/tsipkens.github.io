@@ -61,16 +61,16 @@ function requestUserRepos(username) {
             li.classList.add('pub-entry')
 
             // Create the html markup for each li
-            tstar = formater('<a class="little-icon" href=' + data[i].html_url +
-                '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a>')
-            tfork = formater('<a class="little-icon" href=' + data[i].html_url +
-                '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a>')
+            tstar = formater('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+                '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a></span>')
+            tfork = formater('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+                '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a></span>')
 
             li.innerHTML = (`
                 <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
-                <p class="no-space-sub" style="padding-top:0px;"> ${data[i].description}
+                <p style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
-                <p class="pub-title"><span style="font-size:9.5pt;margin-right:10px;">${data[i].language}` + tstar + tfork + `</span></p>
+                <p class="pub-title"><span class="pub-after">${data[i].language}</span>` + tstar + tfork + `</p>
             `);
 
             // Append each li to the ul

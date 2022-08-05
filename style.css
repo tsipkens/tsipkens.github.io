@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@100;300;400;500;600;700&display=swap');
 @import url('http://fonts.cdnfonts.com/css/gotham-narrow');
+@import url('http://fonts.cdnfonts.com/css/gotham');
 
 :root {
   color-scheme: light dark;
@@ -47,7 +48,8 @@ body.dark-theme {
 
 b {
   /* Format all bolds */
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
 }
 
 p {
@@ -80,6 +82,7 @@ h1 {
   margin-bottom: 16px;
   font-size: 55pt;
   font-weight: 300;
+  font-family: 'Gotham';
 }
 
 h2 {
@@ -87,7 +90,8 @@ h2 {
   padding-bottom: 15px;
   padding-top: 110px;
   color: var(--c1);
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
 }
 
 body.dark-theme h2 {
@@ -96,11 +100,12 @@ body.dark-theme h2 {
 
 h3 {
   font-size: 30px;
-  font-weight: 350;
   margin-top: 45px;
   padding-top: 2px;
   padding-bottom: 10px;
   border-bottom: #222 1px solid;
+  font-family: 'Gotham Narrow';
+  font-weight: 350;
 }
 body.dark-theme h3 {
   border-bottom: #DDD 1px solid;
@@ -175,7 +180,8 @@ div.post-header {
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 13pt;
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -203,7 +209,8 @@ body.dark-theme div.post-header a:hover {
 }
 
 div.post-header a.head-first {
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
   font-size: 14pt;
   line-height: 20px;
   margin-left: 0px;
@@ -380,7 +387,8 @@ body.dark-theme .pub-entry:hover a {
 
 .pub-entry:hover::marker {
   color: var(--c1);
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
 }
 
 body.dark-theme .pub-entry::marker {
@@ -424,7 +432,8 @@ p.pub-title a {
 
 .post-pub a {
   font-size: 13pt;
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
   padding-left: 0px;
   padding-top: 5px;
   color: var(--c1);

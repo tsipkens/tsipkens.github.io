@@ -77,8 +77,9 @@ div.pre-main {
 }
 
 h1 {
+  margin-top: 30px;
   margin-bottom: 16px;
-  font-size: 55pt;
+  font-size: 45pt;
   font-weight: 300;
   font-family: 'Gotham';
 }
@@ -97,13 +98,13 @@ body.dark-theme h2 {
 }
 
 h3 {
-  font-size: 30px;
+  font-size: 26px;
   margin-top: 45px;
   padding-top: 2px;
   padding-bottom: 10px;
   border-bottom: #222 1px solid;
-  font-family: 'Gotham Narrow';
-  font-weight: 350;
+  font-family: 'Gotham';
+  font-weight: 500;
 }
 body.dark-theme h3 {
   border-bottom: #DDD 1px solid;
@@ -111,8 +112,9 @@ body.dark-theme h3 {
 
 h3 span {
   color: #333;
+  font-size: 17pt;
+  font-family: 'Gotham Narrow';
   font-weight: 300;
-  font-size: 20pt;
   padding-bottom: 2px;
   display: inline-block;
 }
@@ -124,7 +126,7 @@ body.dark-theme h3 span {
 h4 {
   margin-top: 35px;
   font-weight: 300;
-  font-size: 20pt;
+  font-size: 18pt;
 }
 
 a {

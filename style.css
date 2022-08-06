@@ -102,12 +102,12 @@ h3 {
   margin-top: 45px;
   padding-top: 2px;
   padding-bottom: 10px;
-  border-bottom: #222 1px solid;
+  border-bottom: #222 0.75px solid;
   font-family: 'Gotham';
   font-weight: 500;
 }
 body.dark-theme h3 {
-  border-bottom: #DDD 1px solid;
+  border-bottom: #DDD 0.75px solid;
 }
 
 h3 span {

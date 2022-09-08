@@ -82,8 +82,8 @@
             </div>
             <div>
                <a href="#about">About</a>
-               <a href="#code">Codes</a>
-               <a href="#pubs" style="margin-right:0px;">Publications</a>
+               <a href="#pubs">Publications</a>
+               <a href="#code" style="margin-right:0px;">Codes</a>
             </div>
          </div>
       </div>
@@ -424,10 +424,42 @@
             <a href="https://tsipkens.github.io/fmviz">here</a>.
          </p>
 
-         <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
-                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a>
-         </p>
 
+         <h2 id="pubs">Publications</h2>
+
+         <h3 id="journaln">Journal articles <span> / Recent</span></h3>
+
+         <ol id="pubs-j" class="pubs"></ol>
+
+         <!-- Add journal articles -->
+         <script>
+            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
+               function (data) {
+                  var today = new Date();
+                  var yyyy = today.getFullYear();
+                  di2 = writePubs(data, yyyy - 2);
+                  addItems('pubs-j', di2);
+               });
+         </script>
+
+         <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
+                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
+
+
+         <h3 id="journaln">Conference proceedings <span> / Select</span></h3>
+
+         <ol id="pubs-c" class="pubs"></ol>
+
+         <!-- Honour conferences -->
+         <script>
+            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+               function (data) {
+                  di2 = writeConf(data, null, true, null, false);
+                  addItems('pubs-c', di2);
+               });
+         </script>
+
+         <!--
          <h2>Education</h2>
          <ul id="education" class="pubs"></ul>
 
@@ -439,6 +471,7 @@
                   addItems('education', di2);
                });
          </script>
+         -->
 
 
 
@@ -479,41 +512,6 @@
 
          <!-- Generate GitHub repo list. -->
          <script src="js/gh.js"></script>
-
-
-         <h2 id="pubs">Publications</h2>
-
-         <h3 id="journaln">Journal articles <span> / Recent</span></h3>
-
-         <ol id="pubs-j" class="pubs"></ol>
-
-         <!-- Add journal articles -->
-         <script>
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
-               function (data) {
-                  var today = new Date();
-                  var yyyy = today.getFullYear();
-                  di2 = writePubs(data, yyyy - 2);
-                  addItems('pubs-j', di2);
-               });
-         </script>
-
-         <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
-                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
-
-
-         <h3 id="journaln">Conference proceedings <span> / Select</span></h3>
-
-         <ol id="pubs-c" class="pubs"></ol>
-
-         <!-- Honour conferences -->
-         <script>
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
-               function (data) {
-                  di2 = writeConf(data, null, true, null, false);
-                  addItems('pubs-c', di2);
-               });
-         </script>
 
       </div>
    </div>

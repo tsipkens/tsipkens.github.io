@@ -179,7 +179,9 @@ div.post-header {
   max-width: 800px;
   padding-top: 15px;
   padding-bottom: 15px;
-  font-size: 13pt;
+  font-size: 12pt;
+  font-weight: 500;
+  font-family: Gotham;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;

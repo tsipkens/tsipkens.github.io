@@ -113,6 +113,12 @@ filterPubs = function (data, st) {
           se = se.concat(" ");
         }
 
+        // Add rags.
+        if (entry.hasOwnProperty('tags')) {
+          content = content + se.concat(entry.tags);
+          se = se.concat(" ");
+        }
+
         se = se.toUpperCase(); // second part to make case insensitive
 
         // Search. Combine with an "and" to find/exclude all terms.
@@ -133,7 +139,7 @@ filterPubs = function (data, st) {
 
 addItems = function (id, di) {
   let di2 = document.getElementById(id);
-  di2.innerHTML = "";
+  di2.innerHTML = " ";
   di2.append(di);
 }
 

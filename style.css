@@ -211,7 +211,7 @@ body.dark-theme div.post-header a:hover {
 div.post-header a.head-first {
   font-family: 'Gotham';
   font-weight: 500;
-  font-size: 14pt;
+  font-size: 18pt;
   line-height: 20px;
   margin-left: 0px;
 }
@@ -334,6 +334,23 @@ body.dark-theme a.a-icon:hover svg {
 
 
 /* Format publication and code entries. */
+.expand-pubs {
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-top:var(--c1) solid 1.5px;
+}
+
+body.dark-theme .expand-pubs {
+  border-top:var(--c2) solid 1.5px;
+}
+
+.pubs {
+  max-height:1000px;
+  overflow-y:hidden;
+}
+
 .pub-entry {
   margin-top: 15px;
   margin-bottom: 22px;

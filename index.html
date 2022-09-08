@@ -40,9 +40,6 @@
    <!-- Import for Alimetric -->
    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
-   <!-- Custom content -->
-   <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
-
    <link rel="icon" type="image/png" href="ico/favicon.png">
    <link href="https://fonts.cdnfonts.com/css/gotham-narrow" rel="stylesheet">
    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
@@ -426,37 +423,95 @@
 
 
          <h2 id="pubs">Publications</h2>
+   
+         <p style="padding:0px;">
+            <input type="text" id="filtBox" name="filtBox" value=""></input>
+            <i class="fas fa-search"></i>
+         </p>
 
-         <h3 id="journaln">Journal articles <span> / Recent</span></h3>
+         <h3 id="head-pubs-j">Journal articles</h3>
 
          <ol id="pubs-j" class="pubs"></ol>
 
-         <!-- Add journal articles -->
+         <a><div id="post-pubs-j" class="expand-pubs" onclick="expandPubs('pubs-j')">
+            <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+         </div></a>
+
          <script>
+            
+         </script>
+
+         <!--
+         <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
+                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
+         -->
+
+
+         <h3 id="head-pubs-c">Conference publications</h3>
+
+         <ol id="pubs-c" class="pubs"></ol>
+
+         <a><div id="post-pubs-c" class="expand-pubs" onclick="expandPubs('pubs-c')">
+            <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+         </div></a>
+
+         <!-- Load pubs.js functions. -->
+         <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
+
+         <!-- Add publications. -->
+         <script>
+            // To expand a publication section.
+            var expandPubs = function (ids) {
+               if (document.getElementById(ids).style.maxHeight == "99999px") {
+                  document.getElementById(ids).style.maxHeight = "1000px";
+                  document.getElementById("post-" + ids).innerHTML = "<a><i class='fas fa-chevron-down' style='font-size:11pt;'></i></a>";
+                  document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
+               } else {
+                  document.getElementById(ids).style.maxHeight = "99999px";
+                  document.getElementById(["post-" + ids]).innerHTML = "<a><i class='fas fa-chevron-up' style='font-size:11pt;'></i></a>";
+               }
+            }
+
+            // Add journal articles.
             var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
                function (data) {
                   var today = new Date();
                   var yyyy = today.getFullYear();
-                  di2 = writePubs(data, yyyy - 2);
+                  di2 = writePubs(data, null);
                   addItems('pubs-j', di2);
                });
-         </script>
-
-         <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
-                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
-
-
-         <h3 id="journaln">Conference proceedings <span> / Select</span></h3>
-
-         <ol id="pubs-c" class="pubs"></ol>
-
-         <!-- Honour conferences -->
-         <script>
+            
+            // Add conferences.
             var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                function (data) {
-                  di2 = writeConf(data, null, true, null, false);
+                  di2 = writeConf(data, null, false, null);
                   addItems('pubs-c', di2);
                });
+            
+            const node = document.getElementById("filtBox");
+            node.addEventListener("keyup", function (event) {
+               preterm = null;
+               searchterm = node.value;
+               if (event.key === "Enter") {
+                  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
+                  function (data) {
+                     di2 = writePubs(data, preterm, searchterm);
+                     addItems('pubs-j', di2);
+                  });
+                  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+                  function (data) {
+                     di2 = writeConf(data, null, false, searchterm);
+                     addItems('pubs-c', di2);
+                  });
+                  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+                  function (data) {
+                     di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.',
+                        'doi'],
+                        null, false, searchterm)
+                     addItems('pubs-theses', di2);
+                  })
+               };
+            });
          </script>
 
          <!--

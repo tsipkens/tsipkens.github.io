@@ -177,10 +177,10 @@ div.post-header {
   margin: 0 auto;
   width: 95%;
   max-width: 800px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 12pt;
-  font-weight: 500;
+  font-weight: 400;
   font-family: Gotham;
   display: flex;
   align-items: flex-start;
@@ -191,7 +191,7 @@ div.post-header a {
   text-decoration: none;
   margin-right: 20px;
   margin-left: 20px;
-  line-height: 17px;
+  line-height: 34px;
   color: #222;
   transition: all 0.3s ease 0s;
 }
@@ -210,8 +210,8 @@ body.dark-theme div.post-header a:hover {
 
 div.post-header a.head-first {
   font-family: 'Gotham';
-  font-weight: 500;
-  font-size: 18pt;
+  font-weight: 300;
+  font-size: 12pt;
   line-height: 20px;
   margin-left: 0px;
 }

@@ -40,6 +40,9 @@
    <!-- Import for Alimetric -->
    <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 
+   <!-- Load pubs.js functions. -->
+   <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
+
    <link rel="icon" type="image/png" href="ico/favicon.png">
    <link href="https://fonts.cdnfonts.com/css/gotham-narrow" rel="stylesheet">
    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
@@ -455,8 +458,8 @@
             <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
          </div></a>
 
-         <!-- Load pubs.js functions. -->
-         <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
+         <h3 id="theses">Theses</h3>
+         <ul id="pubs-theses" class="pubs" style="list-style: none;"></ul>
 
          <!-- Add publications. -->
          <script>
@@ -487,6 +490,15 @@
                   di2 = writeConf(data, null, false, null);
                   addItems('pubs-c', di2);
                });
+            
+            // Add theses.
+            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+               function (data) {
+                  di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.',
+                  'doi'],
+                  null, false)
+                  addItems('pubs-theses', di2);
+               })
             
             const node = document.getElementById("filtBox");
             node.addEventListener("keyup", function (event) {

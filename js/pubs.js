@@ -115,7 +115,7 @@ filterPubs = function (data, st) {
 
         // Add rags.
         if (entry.hasOwnProperty('tags')) {
-          content = content + se.concat(entry.tags);
+          se = se.concat(entry.tags);
           se = se.concat(" ");
         }
 
@@ -139,6 +139,7 @@ filterPubs = function (data, st) {
 
 addItems = function (id, di) {
   let di2 = document.getElementById(id);
+  console.log(id)
   di2.innerHTML = " ";
   di2.append(di);
 }

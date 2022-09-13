@@ -133,11 +133,11 @@ a {
   color: var(--c1);
   cursor: pointer;
   transition: all 0.8s ease 0s;
-  text-decoration: underline 1px;
+  text-decoration: none;
 }
 a:hover {
-  color: var(--c3);
-  text-decoration: underline 1.5px;
+  color: #FF5733;
+  text-decoration: underline 1px;
 }
 
 body.dark-theme a {
@@ -145,7 +145,7 @@ body.dark-theme a {
   cursor: pointer;
 }
 body.dark-theme a:hover {
-  color: var(--c4);
+  color: #FF5733;
 }
 
 ul {
@@ -404,7 +404,7 @@ body.dark-theme .pub-entry:hover {
 }
 
 .pub-entry:hover a {
-  color: var(--c1);
+  color: #FF5733;
 }
 
 body.dark-theme .pub-entry:hover a {

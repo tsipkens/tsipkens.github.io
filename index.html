@@ -459,14 +459,14 @@
          </div></a>
 
          <h3 id="theses">Theses</h3>
-         <ul id="pubs-theses" class="pubs" style="list-style: none;"></ul>
+         <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
 
          <!-- Add publications. -->
          <script>
             // To expand a publication section.
             var expandPubs = function (ids) {
                if (document.getElementById(ids).style.maxHeight == "99999px") {
-                  document.getElementById(ids).style.maxHeight = "1000px";
+                  document.getElementById(ids).style.maxHeight = "1150px";
                   document.getElementById("post-" + ids).innerHTML = "<a><i class='fas fa-chevron-down' style='font-size:11pt;'></i></a>";
                   document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
                } else {

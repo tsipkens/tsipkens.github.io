@@ -348,8 +348,13 @@ body.dark-theme .expand-pubs {
 
 .pubs {
   max-height: 1150px;
-  overflow-y:hidden;
+  overflow-x: visible;
+  overflow-y: hidden;
   position: relative;
+  margin-left: -40px;
+}
+.pubs h4 {
+  margin-left: 40px;
 }
 .pubs:after {
   content: "";
@@ -375,6 +380,7 @@ body.dark-theme .expand-pubs {
   transition: all 0.8s ease 0s;
   text-align: left;
   font-size: 12pt;
+  margin-left: 40px;
 }
 
 .pub-entry p {
@@ -416,13 +422,10 @@ body.dark-theme .pub-entry:hover a {
   font-size: 10pt;
 }
 .pub-entry:hover::marker {
-  color: var(--c1);
+  color: #FF5733;
 }
 body.dark-theme .pub-entry::marker {
   color: #777;
-}
-body.dark-theme .pub-entry:hover::marker {
-  color: var(--c2);
 }
 
 .pub-entry a {

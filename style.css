@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@100;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700&&display=swap');
 
 :root {
   color-scheme: light dark;
@@ -81,7 +81,7 @@ h1 {
   margin-bottom: 16px;
   font-size: 45pt;
   font-weight: 300;
-  font-family: 'Gotham';
+  font-family: 'Roboto' 'Gotham';
 }
 
 h2 {
@@ -351,9 +351,11 @@ body.dark-theme .expand-pubs {
   overflow-x: visible;
   overflow-y: hidden;
   position: relative;
+}
+ol.pubs {
   margin-left: -40px;
 }
-.pubs h4 {
+ol.pubs h4 {
   margin-left: 40px;
 }
 .pubs:after {
@@ -380,6 +382,8 @@ body.dark-theme .expand-pubs {
   transition: all 0.8s ease 0s;
   text-align: left;
   font-size: 12pt;
+}
+ol .pub-entry {
   margin-left: 40px;
 }
 

@@ -216,6 +216,11 @@ div.post-header a.head-first {
   margin-left: 0px;
 }
 
+.addresses {
+  padding-right: 20px;
+  display: inline-block;
+}
+
 
 input {
   width: 75%;
@@ -464,6 +469,10 @@ p.pub-title a {
 }
 .pub-after a:hover {
   text-decoration: none;
+}
+.pub-entry:hover .pub-after i {
+  color: #FF5733;
+  transition: all 0.8s ease 0s;
 }
 
 .post-pub {

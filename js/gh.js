@@ -65,12 +65,12 @@ function requestUserRepos(username) {
                 '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a></span>')
             tfork = formater('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a></span>')
-
+                
             li.innerHTML = (`
                 <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
-                <p class="pub-title"><span class="pub-after">${data[i].language}</span>` + tstar + tfork + `</p>
+                <p style="padding-top:5px;"><span class="pub-after">${data[i].language}</span>` + tstar + tfork + `</p>
             `);
 
             // Append each li to the ul

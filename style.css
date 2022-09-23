@@ -93,6 +93,10 @@ h2 {
   font-weight: 500;
 }
 
+.head-div {
+  page-break-after: avoid;
+}
+
 body.dark-theme h2 {
   color: var(--c2);
 }
@@ -387,6 +391,7 @@ ol.pubs h4 {
   transition: all 0.8s ease 0s;
   text-align: left;
   font-size: 12pt;
+  page-break-inside: avoid;
 }
 ol .pub-entry {
   margin-left: 40px;

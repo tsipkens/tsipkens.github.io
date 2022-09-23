@@ -38,7 +38,11 @@
    <script src="https://kit.fontawesome.com/58cf1bb60d.js" crossorigin="anonymous"></script>
 
    <!-- Import for Alimetric -->
-   <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
+   <!-- <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script> -->
+
+   <!-- Import forHTML2PDF -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.js"></script>
 
    <!-- Load pubs.js functions. -->
    <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
@@ -90,7 +94,7 @@
    </div>
 
    <div class="pre-main">
-      <div class="main">
+      <div class="main" id="main">
          <div id="btn-toggle">
             <a>
                <div>
@@ -537,74 +541,83 @@
          </p>
 
 
+         <div class="head-div">
+            <h2 id="about">About</h2>
+         </div>
 
-         <h2 id="about">About</h2>
-         <p>
-            I am an aerosol scientist and researcher interested in optical and
-            physical diagnostics, with a particular focus on data inversion and analysis.
-            My work has included analysis of the products of gas flares, interpreting
-            TEM images with machine learning, modeling of time-resolved laser-induced
-            incandescence (TiRe-LII), face mask characteristics, and molecular
-            dynamics simulations of nanoscale heat transfer.
-         </p>
+         <div id="about-div">
+            <p>
+               I am an aerosol scientist and researcher interested in optical and
+               physical diagnostics, with a particular focus on data inversion and analysis.
+               My work has included analysis of the products of gas flares, interpreting
+               TEM images with machine learning, modeling of time-resolved laser-induced
+               incandescence (TiRe-LII), face mask characteristics, and molecular
+               dynamics simulations of nanoscale heat transfer.
+            </p>
 
-         <p>
-            I received my PhD from the University of Waterloo in 2018 under
-            the supervision of Prof. Kyle Daun, with a focus on
-            time-resolved laser-induced incandescence (TiRe-LII), an optical
-            nanoparticle diagnostic that employs a nanosecond pulsed laser to heat
-            particles. Links to the related theses are <a href="#theses">here</a>.
-         </p>
+            <p>
+               I received my PhD from the University of Waterloo in 2018 under
+               the supervision of Prof. Kyle Daun, with a focus on
+               time-resolved laser-induced incandescence (TiRe-LII), an optical
+               nanoparticle diagnostic that employs a nanosecond pulsed laser to heat
+               particles. Links to the related theses are <a href="#theses">here</a>.
+            </p>
 
-         <p>
-            I held a Killam postdoctoral fellowship in the Mechanical Engineering
-            Department at the University of British Columbia from 2018 to 2020.
-            There, I refined aerosol diagnostics, including novel approaches
-            to interpret tandem measurements of aerosol characteristics
-            — e.g., following the use of a centrifugal particle mass analyzer (CPMA)
-            and differential mobility analyzer (DMA) in series — and machine
-            learning techniques to interpret transmission electron microscopy (TEM)
-            images of soot. I also worked on the filtration properties of candidate
-            barrier face covering materials, condensed into a web app
-            <a href="https://tsipkens.github.io/fmviz">here</a>.
-         </p>
+            <p>
+               I held a Killam postdoctoral fellowship in the Mechanical Engineering
+               Department at the University of British Columbia from 2018 to 2020.
+               There, I refined aerosol diagnostics, including novel approaches
+               to interpret tandem measurements of aerosol characteristics
+               — e.g., following the use of a centrifugal particle mass analyzer (CPMA)
+               and differential mobility analyzer (DMA) in series — and machine
+               learning techniques to interpret transmission electron microscopy (TEM)
+               images of soot. I also worked on the filtration properties of candidate
+               barrier face covering materials, condensed into a web app
+               <a href="https://tsipkens.github.io/fmviz">here</a>.
+            </p>
+         </div>
 
+         
+         <div class="head-div">
+            <h2 id="pubs">Publications & Presentations</h2>
+         </div>
 
-         <h2 id="pubs">Publications & Presentations</h2>
-   
-         <p style="padding:0px;">
-            <input type="text" id="filtBox" name="filtBox" value=""></input>
-            <i class="fas fa-search"></i>
-         </p>
+         <div id="pubs-div">
+            <p style="padding:0px;">
+               <input type="text" id="filtBox" name="filtBox" value=""></input>
+               <i class="fas fa-search"></i>
+            </p>
 
-         <h3 id="head-pubs-j">Journal articles</h3>
+            <div class="head-div">
+               <h3 id="head-pubs-j">Journal articles</h3>
+            </div>
 
-         <ol id="pubs-j" class="pubs"></ol>
+            <ol id="pubs-j" class="pubs"></ol>
 
-         <a><div id="post-pubs-j" class="expand-pubs" onclick="expandPubs('pubs-j')">
-            <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-         </div></a>
+            <a><div id="post-pubs-j" class="expand-pubs" onclick="expandPubs('pubs-j')">
+               <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+            </div></a>
 
-         <script>
+            <!--
+            <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
+                     class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
+            -->
+
+            <div class="head-div">
+               <h3 id="head-pubs-c">Conference publications</h3>
+            </div>
+
+            <ol id="pubs-c" class="pubs"></ol>
+
+            <a><div id="post-pubs-c" class="expand-pubs" onclick="expandPubs('pubs-c')">
+               <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+            </div></a>
             
-         </script>
-
-         <!--
-         <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
-                  class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
-         -->
-
-
-         <h3 id="head-pubs-c">Conference publications</h3>
-
-         <ol id="pubs-c" class="pubs"></ol>
-
-         <a><div id="post-pubs-c" class="expand-pubs" onclick="expandPubs('pubs-c')">
-            <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-         </div></a>
-
-         <h3 id="theses">Theses</h3>
-         <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
+            <div class="head-div">
+               <h3 id="theses">Theses</h3>
+            </div>
+            <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
+         </div>
 
          <!-- Add publications. -->
          <script>
@@ -707,7 +720,9 @@
          </p>
          -->
 
-         <h2 id="code">Codes</h2>
+         <div class="head-div">
+            <h2 id="code">Codes</h2>
+         </div>
          <p>
             As part of many of my projects, I have code available for use by researchers.
             Please refer to my <a href="https://github.com/tsipkens">GitHub page</a> for more details.
@@ -782,5 +797,30 @@
          document.getElementById("header").style.boxShadow = "none";
          document.getElementById("header").style.maxHeight = "0px";
       }
+   }
+</script>
+
+
+<script>
+   var printPDF = function () {
+      console.log('Printing...');
+
+      /*
+      const element = document.getElementById('pubs-div');
+
+      var opt = {
+         margin:       1,
+         filename:     'myfile.pdf',
+         image:        { type: 'jpeg', quality: 0.98 },
+         html2canvas:  { scale: 2 },
+         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      // New Promise-based usage:
+      expandPubs('pubs-j')
+      html2pdf().set(opt).from(element).save();
+      expandPubs('pubs-j')
+      console.log('Done.')
+      */
    }
 </script>

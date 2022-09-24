@@ -7,7 +7,7 @@ for more information.
 requestUserRepos('tsipkens');
 
 
-validRepos = ['atems', 'fmviz', 'cmap', 'mat-2d-aerosol-inversion', 'tfer-pma', 'odias', 'autils', 'aubos'];
+validRepos = ['atems', 'aerosol-icon-project', 'fmviz', 'cmap', 'mat-2d-aerosol-inversion', 'tfer-pma', 'odias', 'autils', 'aubos'];
 
 
 function formatter(txt, num, tafter) {
@@ -62,22 +62,24 @@ function requestUserRepos(username) {
             li.classList.add('pub-entry')
 
             // Create the html markup for each li
+            tlang = `<span class="pub-after">` + data[i].language + `</span>`
+            if (data[i].language === null) { tlang = ''; }
+
             tstar = formatter('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
                 '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a></span>')
             tfork = formatter('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a></span>')
-            if (data[i].license === null) {
-                tlic = ''
-            } else {
-                tlic = '<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
-                    '/network/members><i class="fa-solid fa-scale-balanced" style="padding-right:5px;"></i>' + data[i].license.spdx_id + '</a></span>';
-            }
+            
+            if (data[i].license === null) { tlic = ''; }
+            else { tlic = '<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+                '/network/members><i class="fa-solid fa-scale-balanced" style="padding-right:5px;"></i>' + data[i].license.spdx_id + '</a></span>'; }
+            
                 
             li.innerHTML = (`
                 <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
-                <p style="padding-top:5px;"><span class="pub-after">${data[i].language}</span>` + tstar + tfork + tlic + `</p>
+                <p style="padding-top:5px;">` + tlang + tstar + tfork + tlic + `</p>
             `);
 
             // Append each li to the ul

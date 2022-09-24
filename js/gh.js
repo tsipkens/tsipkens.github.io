@@ -10,7 +10,7 @@ requestUserRepos('tsipkens');
 validRepos = ['atems', 'fmviz', 'cmap', 'mat-2d-aerosol-inversion', 'tfer-pma', 'odias', 'autils', 'aubos'];
 
 
-function formater(txt, num, tafter) {
+function formatter(txt, num, tafter) {
     if (num == 0) {
         out = '';
     } else {
@@ -38,6 +38,7 @@ function requestUserRepos(username) {
 
         // Parse API data into JSON
         const data = JSON.parse(this.response);
+        console.log(data)
         let root = document.getElementById('userRepos');
         while (root.firstChild) {
             root.removeChild(root.firstChild);
@@ -61,16 +62,22 @@ function requestUserRepos(username) {
             li.classList.add('pub-entry')
 
             // Create the html markup for each li
-            tstar = formater('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+            tstar = formatter('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
                 '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a></span>')
-            tfork = formater('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+            tfork = formatter('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a></span>')
+            if (data[i].license === null) {
+                tlic = ''
+            } else {
+                tlic = '<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+                    '/network/members><i class="fa-solid fa-scale-balanced" style="padding-right:5px;"></i>' + data[i].license.spdx_id + '</a></span>';
+            }
                 
             li.innerHTML = (`
                 <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
-                <p style="padding-top:5px;"><span class="pub-after">${data[i].language}</span>` + tstar + tfork + `</p>
+                <p style="padding-top:5px;"><span class="pub-after">${data[i].language}</span>` + tstar + tfork + tlic + `</p>
             `);
 
             // Append each li to the ul

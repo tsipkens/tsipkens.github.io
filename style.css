@@ -348,11 +348,11 @@ body.dark-theme a.a-icon:hover svg {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 15px;
-  border-top:var(--c1) solid 1.5px;
+  border-top:black solid 1.5px;
 }
 
 body.dark-theme .expand-pubs {
-  border-top:var(--c2) solid 1.5px;
+  border-top:white solid 1.5px;
 }
 
 .pubs {

@@ -75,7 +75,7 @@
 
 </head>
 
-<body onload="if (dark) { toggleNight(); }">
+<body onload="if (dark) { toggleNight(); }" id="body">
 
 
    <div id="header">
@@ -588,35 +588,36 @@
                <i class="fas fa-search"></i>
             </p>
 
-            <div class="head-div">
-               <h3 id="head-pubs-j">Journal articles</h3>
+            <div class="horz-list">
+               <a id="journal-selector" class="active" onclick="switchPubs('journal')">Journal articles</a>
+               <a id="conf-selector" onclick="switchPubs('conf')">Conference publications</a>
+               <a id="thesis-selector" onclick="switchPubs('thesis')">Theses</a>
             </div>
 
-            <ol id="pubs-j" class="pubs"></ol>
+            <div id="journal-wrapper">
+               <ol id="pubs-j" class="pubs"></ol>
 
-            <a><div id="post-pubs-j" class="expand-pubs" onclick="expandPubs('pubs-j')">
-               <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-            </div></a>
+               <a><div id="post-pubs-j" class="expand-pubs" onclick="expandPubs('pubs-j')">
+                  <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+               </div></a>
+            </div>
 
             <!--
             <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
                      class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
             -->
 
-            <div class="head-div">
-               <h3 id="head-pubs-c">Conference publications</h3>
+            <div id="conf-wrapper" style="display:none;">
+               <ol id="pubs-c" class="pubs"></ol>
+
+               <a><div id="post-pubs-c" class="expand-pubs" onclick="expandPubs('pubs-c')">
+                  <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+               </div></a>
             </div>
-
-            <ol id="pubs-c" class="pubs"></ol>
-
-            <a><div id="post-pubs-c" class="expand-pubs" onclick="expandPubs('pubs-c')">
-               <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-            </div></a>
             
-            <div class="head-div">
-               <h3 id="theses">Theses</h3>
+            <div id="thesis-wrapper" style="display:none;">
+               <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
             </div>
-            <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
          </div>
 
          <!-- Add publications. -->
@@ -682,6 +683,20 @@
                   })
                };
             });
+
+            // Switch between publication type. 
+            function switchPubs(id) {
+               var ids = ['journal', 'conf', 'thesis']
+               for (let ii in ids) {
+                  if (ids[ii] === id) {
+                     document.getElementById(ids[ii] + '-wrapper').style.display = 'block';
+                     document.getElementById(ids[ii] + '-selector').className = 'active';
+                     continue;
+                  }
+                  document.getElementById(ids[ii] + '-wrapper').style.display = 'none';
+                  document.getElementById(ids[ii] + '-selector').className = 'passive';
+               }
+            }
          </script>
 
          <!--

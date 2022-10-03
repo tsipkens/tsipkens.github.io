@@ -148,9 +148,6 @@ body.dark-theme a {
   color: var(--c2);
   cursor: pointer;
 }
-body.dark-theme a:hover {
-  color: #FF5733;
-}
 
 ul {
   list-style: none;
@@ -514,6 +511,37 @@ body.dark-theme .pub-honour {
 }
 body.dark-theme .fa-award {
   color: var(--c2);
+}
+
+.horz-list {
+  margin-top: 30px;
+}
+.horz-list a {
+  display: inline-block;
+  margin-right: 20px;
+  padding: 8px 0px;
+  font-family: 'Gotham';
+  font-weight: 500;
+  transition: none;
+  color: black;
+}
+.horz-list a:hover {
+  color: var(--c1);
+}
+body.dark-theme .horz-list a {
+  color: white;
+}
+body.dark-theme .horz-list a:hover {
+  color: var(--c2);
+}
+.horz-list a:hover {
+  text-decoration: none;
+}
+.horz-list .active {
+  border-bottom: solid black 2px;
+}
+body.dark-theme .horz-list .active {
+  border-bottom: solid white 2px;
 }
 
 

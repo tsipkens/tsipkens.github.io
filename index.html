@@ -589,8 +589,9 @@
             </p>
 
             <div class="horz-list">
-               <a id="journal-selector" class="active" onclick="switchPubs('journal')">Journal articles</a>
-               <a id="conf-selector" onclick="switchPubs('conf')">Conference publications</a>
+               <a id="journal-selector" class="active" onclick="switchPubs('journal')">Journal Articles</a>
+               <a id="oral-selector" onclick="switchPubs('oral')">Oral Presentations</a>
+               <a id="poster-selector" onclick="switchPubs('poster')">Posters</a>
                <a id="thesis-selector" onclick="switchPubs('thesis')">Theses</a>
             </div>
 
@@ -607,14 +608,22 @@
                      class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
             -->
 
-            <div id="conf-wrapper" style="display:none;">
-               <ol id="pubs-c" class="pubs"></ol>
+            <div id="oral-wrapper" style="display:none;">
+               <ol id="pubs-oral" class="pubs"></ol>
 
-               <a><div id="post-pubs-c" class="expand-pubs" onclick="expandPubs('pubs-c')">
+               <a><div id="post-pubs-oral" class="expand-pubs" onclick="expandPubs('pubs-oral')">
                   <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
                </div></a>
             </div>
             
+            <div id="poster-wrapper" style="display:none;">
+               <ol id="pubs-poster" class="pubs"></ol>
+
+               <a><div id="post-pubs-poster" class="expand-pubs" onclick="expandPubs('pubs-poster')">
+                  <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
+               </div></a>
+            </div>
+
             <div id="thesis-wrapper" style="display:none;">
                <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
             </div>
@@ -646,8 +655,10 @@
             // Add conferences.
             var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                function (data) {
-                  di2 = writeConf(data, null, false, null);
-                  addItems('pubs-c', di2);
+                  di2 = writeConf(data, 'Oral', false, null);
+                  addItems('pubs-oral', di2);
+                  di2 = writeConf(data, 'Poster', false, null);
+                  addItems('pubs-poster', di2);
                });
             
             // Add theses.
@@ -671,8 +682,10 @@
                   });
                   var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                   function (data) {
-                     di2 = writeConf(data, null, false, searchterm);
-                     addItems('pubs-c', di2);
+                     di2 = writeConf(data, 'Oral', false, searchterm);
+                     addItems('pubs-oral', di2);
+                     di2 = writeConf(data, 'Poster', false, searchterm);
+                     addItems('pubs-poster', di2);
                   });
                   var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
                   function (data) {
@@ -686,7 +699,7 @@
 
             // Switch between publication type. 
             function switchPubs(id) {
-               var ids = ['journal', 'conf', 'thesis']
+               var ids = ['journal', 'oral', 'poster', 'thesis']
                for (let ii in ids) {
                   if (ids[ii] === id) {
                      document.getElementById(ids[ii] + '-wrapper').style.display = 'block';

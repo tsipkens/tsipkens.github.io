@@ -5,12 +5,13 @@
   color-scheme: light dark;
   /* both supported */
   --background-color: #F8F8F8;
-  --c1: #E01E5A; /* #0969DA; */
+  --c1: #0969DA; /* red > #E01E5A; */
   /* dark accent */
   --c2: #FEDC3D;
   /* light accent */
-  --c3: #E01E5A;
+  --c3: #0969DA;
   --c4: #EEC200;
+  --c5: #FF5733;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -140,7 +141,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #FF5733;
+  color: var(--c5);
   text-decoration: underline 1px;
 }
 
@@ -421,7 +422,7 @@ body.dark-theme .pub-entry:hover {
 }
 
 .pub-entry:hover a {
-  color: #FF5733;
+  color: var(--c5);
 }
 
 body.dark-theme .pub-entry:hover a {
@@ -433,7 +434,7 @@ body.dark-theme .pub-entry:hover a {
   font-size: 10pt;
 }
 .pub-entry:hover::marker {
-  color: #FF5733;
+  color: var(--c5);
 }
 body.dark-theme .pub-entry::marker {
   color: #777;
@@ -473,7 +474,7 @@ p.pub-title a {
   text-decoration: none;
 }
 .pub-entry:hover .pub-after i {
-  color: #FF5733;
+  color: var(--c5);
   transition: all 0.8s ease 0s;
 }
 

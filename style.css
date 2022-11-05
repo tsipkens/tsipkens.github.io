@@ -442,7 +442,7 @@ body.dark-theme .pub-entry:hover a {
   color: var(--c5);
 }
 body.dark-theme .pub-entry::marker {
-  color: #777;
+  color: white;
 }
 
 .pub-entry a {

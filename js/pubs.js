@@ -246,6 +246,9 @@ writeConf = function (data, type, hon, st = null, ye = true) {
       if (data[i].honours == '') {
         continue;
       }
+      if (data[i].honours == null) {
+        continue;
+      }
     }
 
     // Add year headers.
@@ -281,7 +284,9 @@ writeConf = function (data, type, hon, st = null, ye = true) {
     }
 
     if (data[i].hasOwnProperty('honours')) {
-      if (!(data[i].honours == '')) {
+      if (data[i].honours == '') {  // then skip (do nothing)
+      } else if (data[i].honours == null) {  // then skip (do nothing)
+      } else {  // then honours are available
         content = content + '<p class="pub-title"><span class="pub-after">';
         content = content + '<i class="fas fa-award"></i> ';
         content = content + data[i].honours + '</span></p> ';

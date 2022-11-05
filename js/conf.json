@@ -35,6 +35,15 @@
     "year": 2022,
     "doi": null
 }, {
+    "type": "Poster",
+    "author": "T. A. Sipkens, J. C. Corbin, A. Oldershaw, I. D. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, P. Lobo, T. Koukoulas, R. G. Green, G. J. Smallwood",
+    "title": "Robust measurement of particle filtration efficiencies: Evaluated quantities and experimental sensitivities",
+    "booktitle": "International Aerosol Conference",
+    "address": "Athens, Greece (Virtual)",
+    "date": "September 4-9",
+    "year": 2022,
+    "doi": null
+}, {
     "type": "Oral",
     "author": "J. C. Corbin, T. A. Sipkens, F. Liu*, G. J. Smallwood",
     "title": "Size-dependent LII response of small soot particles linked to E(m) in soot emitted from diffusion flames",
@@ -81,7 +90,7 @@
     "doi": null
 }, {
     "type": "Oral",
-    "author": "T. Sipkens, J. Corbin, G. Smallwood, A. Oldershaw, I. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, T. Koukoulas, R. Green, P. Lobo",
+    "author": "T. Sipkens*, J. Corbin, G. Smallwood, A. Oldershaw, I. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, T. Koukoulas, R. Green, P. Lobo",
     "title": "Robust measurement of particle filtration efficiencies: Evaluated quantities and experimental sensitivities",
     "booktitle": "International Society for Respirator Protection Conference",
     "address": "Virtual",

@@ -1,5 +1,17 @@
 [{
     "author": "T. A. Sipkens, J. C. Corbin, T. Koukoulas, A. Oldershaw, T. Lavoie, J. Norooz Oliaee, F. Liu, I. D. Leroux, G. J. Smallwood, P. Lobo, R. G. Green",
+    "title": "Tutorial: Guide to error propagation for particle counting measurements",
+    "journal": "Journal of Aerosol Science",
+    "volume": null,
+    "number": null,
+    "pages": "106091",
+    "year": "2022",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2022.106091", 
+    "tags": "pfe"
+}, {
+    "author": "T. A. Sipkens, J. C. Corbin, T. Koukoulas, A. Oldershaw, T. Lavoie, J. Norooz Oliaee, F. Liu, I. D. Leroux, G. J. Smallwood, P. Lobo, R. G. Green",
     "title": "Comparison of measurement systems for assessing number- and mass-based particle filtration efficiency",
     "journal": "Journal of Occupational and Environmental Hygiene",
     "volume": null,

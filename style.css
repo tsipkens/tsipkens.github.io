@@ -6,8 +6,10 @@
   /* both supported */
   --background-color: #F8F8F8;
   --c1: #0969DA; /* red > #E01E5A; */
+  --c1l: #F4F6F8;
   /* dark accent */
   --c2: #FEDC3D;
+  --c2l: #332C0C;
   /* light accent */
   --c3: #0969DA;
   --c4: #EEC200;
@@ -154,6 +156,20 @@ ul {
   list-style: none;
 }
 
+#colorbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--c1);
+  height: 10px;
+  z-index: 20;
+}
+body.dark-theme #colorbar {
+  background-color: var(--c2);
+}
+
+
 #header {
   display: none;
 }
@@ -161,17 +177,20 @@ ul {
 @media screen and (min-width: 600px) {
   #header {
     display: inline-block;
-    background-color: inherit;
+    background-color: var(--c1l);
     opacity: 0.95;
     margin: 0px;
     padding: 0px;
     z-index: 20;
     position: fixed;
-    top: 0;
+    top: 10;
     width: 100%;
     transition: 0.6s;
     max-height: 0px;
     overflow-y: hidden;
+  }
+  body.dark-theme #header {
+    background-color: inherit;
   }
 }
 

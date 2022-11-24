@@ -183,10 +183,12 @@ writePubs = function (data, yyyy, st = null) {
 
     content = content + writeDOI(data[i].doi);
 
+    // content = content + '<i class="fa-sharp fa-solid fa-quote-right" style="padding-left:15px;"></i>';
+
     if (data[i].hasOwnProperty('honours')) {
       if (!(data[i].honours == '')) {
         content = content + '<p class="pub-title"><span class="pub-after">';
-        content = content + '<i class="fas fa-award"></i> ';
+        content = content + '<i class="fa-solid fa-award"></i> ';
         content = content + data[i].honours + '</span></p>';
       }
     }

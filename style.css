@@ -80,11 +80,12 @@ div.pre-main {
 }
 
 h1 {
-  margin-top: 26px;
-  margin-bottom: 16px;
   font-size: 45pt;
   font-weight: 300;
   font-family: 'Roboto' 'Gotham';
+}
+.h1-div {
+  margin-top: 70px;
 }
 
 h2 {
@@ -318,10 +319,11 @@ body.dark-theme #moon {
 }
 
 img.profile {
-  margin-top: 70px;
-  height: 160px;
+  margin-right: 20px;
+  height: 140px;
   border: 1.5px solid black;
   border-radius: 50%;
+  vertical-align: top;
 }
 body.dark-theme img.profile {
   border: 1.5px solid #DDD;

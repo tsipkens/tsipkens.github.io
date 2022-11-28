@@ -1,4 +1,16 @@
 [{
+    "author": "T. A. Sipkens, J. C. Corbin, A. Oldershaw, G. J. Smallwood",
+    "title": "Particle filtration efficiency measured using sodium chloride and polystyrene latex sphere test methods",
+    "journal": "Scientific Data",
+    "volume": null,
+    "number": null,
+    "pages": null,
+    "year": "2023",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1038/s41597-022-01860-y", 
+    "tags": "pfe"
+}, {
     "author": "T. A. Sipkens, J. C. Corbin, S. J. Grauer, G. J. Smallwood",
     "title": "Tutorial: Guide to error propagation for particle counting measurements",
     "journal": "Journal of Aerosol Science",

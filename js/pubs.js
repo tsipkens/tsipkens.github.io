@@ -183,7 +183,8 @@ writePubs = function (data, yyyy, st = null) {
 
     content = content + writeDOI(data[i].doi);
 
-    // content = content + '<i class="fa-sharp fa-solid fa-quote-right" style="padding-left:15px;"></i>';
+    content = content + " <a style='margin-left:4px;font-size:9pt;' onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
+                        ")'><i class='fa-solid fa-quote-right'></i></a>"
 
     if (data[i].hasOwnProperty('honours')) {
       if (!(data[i].honours == '')) {
@@ -192,9 +193,6 @@ writePubs = function (data, yyyy, st = null) {
         content = content + data[i].honours + '</span></p>';
       }
     }
-
-    content = content + " <a style='margin-left:4px;font-size:9pt;' onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
-                        ")'><i class='fa-solid fa-quote-right'></i></a>"
 
     content = content + '</p>';
 

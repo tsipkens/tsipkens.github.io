@@ -399,6 +399,11 @@ writer = function (data, template, nfield = null, fyear = true, st = null) {
 
 var entry2quote = function(datai) {
   yr = datai['year'];
+
+  author = datai['author']
+  author = author.replaceAll(', ' , ' and ');
+  datai['author'] = author;
+
   datai = JSON.stringify(datai);
   datai = datai.replaceAll('{"', '@article{' + yr + ',');
   datai = datai.replaceAll('"}', '}\n}');

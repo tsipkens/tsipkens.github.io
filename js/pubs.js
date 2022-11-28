@@ -193,6 +193,8 @@ writePubs = function (data, yyyy, st = null) {
       }
     }
 
+    content = content + " <a style='margin-left:4px;font-size:9pt;' onclick='entry2quote(" + JSON.stringify(data[i]) + ")'><i class='fa-solid fa-quote-right'></i></a>"
+
     content = content + '</p>';
 
 
@@ -393,4 +395,16 @@ writer = function (data, template, nfield = null, fyear = true, st = null) {
   checkNoItems(di2);
 
   return di2;
+}
+
+var entry2quote = function(datai) {
+  yr = datai['year'];
+  datai = JSON.stringify(datai);
+  datai = datai.replaceAll('{"', '@article{' + yr + ',');
+  datai = datai.replaceAll('"}', '}\n}');
+  datai = datai.replaceAll('":"', '={');
+  datai = datai.replaceAll('":', '={');
+  datai = datai.replaceAll('","', '},\n');
+  datai = datai.replaceAll(',"', '},\n');
+  navigator.clipboard.writeText(datai);
 }

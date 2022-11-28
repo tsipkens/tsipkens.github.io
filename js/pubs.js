@@ -403,11 +403,22 @@ var entry2quote = function(obj, datai0) {
 
   author = datai['author']
   author = author.replaceAll(', ' , ' and ');
+  
+  // Reformat author.
+  authorlist = author.split(" and ");
+  for (let a in authorlist) {
+    at = authorlist[a].split(" ");
+    authorn = at[at.length - 1] + ",";
+    for (var i = 0; i < (at.length - 1); i++) {
+      authorn = authorn + " " + at[i];
+    }
+    author = author.replace(authorlist[a], authorn)
+    
+  }
   datai['author'] = author;
 
   // Last name of the first author.
-  author1 = author.split(" and ");
-  author1 = author1[0].split(" ");
+  author1 = authorlist[0].split(" ");
   author1 = author1[author1.length - 1];
   
   // First word of title.

@@ -193,7 +193,8 @@ writePubs = function (data, yyyy, st = null) {
       }
     }
 
-    content = content + " <a style='margin-left:4px;font-size:9pt;' onclick='entry2quote(" + JSON.stringify(data[i]) + ")'><i class='fa-solid fa-quote-right'></i></a>"
+    content = content + " <a style='margin-left:4px;font-size:9pt;' onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
+                        ")'><i class='fa-solid fa-quote-right'></i></a>"
 
     content = content + '</p>';
 
@@ -397,19 +398,48 @@ writer = function (data, template, nfield = null, fyear = true, st = null) {
   return di2;
 }
 
-var entry2quote = function(datai) {
+var entry2quote = function(obj, datai0) {
+  datai = datai0;
+  // datai = Object.assign({}, datai0);  // copy data entry for modification
   yr = datai['year'];
 
   author = datai['author']
   author = author.replaceAll(', ' , ' and ');
   datai['author'] = author;
 
+  // Last name of the first author.
+  author1 = author.split(" and ");
+  author1 = author1[0].split(" ");
+  author1 = author1[author1.length - 1];
+  
+  // First word of title.
+  title1 = datai['title'].split(' ');
+  title1 = title1[0].split('-');
+  title1 = title1[0].split(':');
+  title1 = title1[0];
+
+  // Remove inappropriate fields.
+  keynames = Object.keys(datai);
+  for (let j in datai) {
+    if (datai[j] === null) {
+      delete datai[j]
+    }
+  }
+  delete datai['honours']
+  delete datai['tags']
+  delete datai['badge']
+
   datai = JSON.stringify(datai);
-  datai = datai.replaceAll('{"', '@article{' + yr + ',');
+  datai = datai.replaceAll('{"', '@article{' + (author1 + yr + title1).toLowerCase() + ', \n');
   datai = datai.replaceAll('"}', '}\n}');
   datai = datai.replaceAll('":"', '={');
   datai = datai.replaceAll('":', '={');
-  datai = datai.replaceAll('","', '},\n');
-  datai = datai.replaceAll(',"', '},\n');
+  datai = datai.replaceAll('","', '}, \n');
+  datai = datai.replaceAll(',"', '}, \n');
   navigator.clipboard.writeText(datai);
+
+  obj.innerHTML = "<i class='fa-solid fa-check'></i>"
+  setTimeout(() => {  obj.innerHTML = "<i class='fa-solid fa-quote-right'></i>"; }, 1000);
+
+  console.log(datai)
 }

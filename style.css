@@ -161,7 +161,7 @@ ul {
   left: 0;
   width: 100%;
   background-color: var(--c1);
-  height: 10px;
+  height: 6px;
   z-index: 20;
 }
 body.dark-theme #colorbar {

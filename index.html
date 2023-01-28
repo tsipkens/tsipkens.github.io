@@ -596,6 +596,7 @@
 
             <div class="horz-list">
                <a id="journal-selector" class="active" onclick="switchPubs('journal')">Journal Articles</a>
+               <a id="chapter-selector" onclick="switchPubs('chapter')">Book Chapters</a>
                <a id="oral-selector" onclick="switchPubs('oral')">Oral Presentations</a>
                <a id="poster-selector" onclick="switchPubs('poster')">Posters</a>
                <a id="thesis-selector" onclick="switchPubs('thesis')">Theses</a>
@@ -609,6 +610,10 @@
                </div></a>
             </div>
 
+            <div id="chapter-wrapper" style="display:none;">
+               <ul id="pubs-chapter" class="pubs" style="list-style:none;"></ul>
+            </div>
+            
             <!--
             <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
                      class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
@@ -658,6 +663,15 @@
                   addItems('pubs-j', di2);
                });
             
+            // Add book chapters.
+            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/chapter.json",
+               function (data) {
+                  di2 = writer(data, ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.', 'publisher', ' ', '(', 'year', ')', '.',
+                  'doi'],
+                  null, false)
+                  addItems('pubs-chapter', di2);
+               })
+            
             // Add conferences.
             var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                function (data) {
@@ -705,7 +719,7 @@
 
             // Switch between publication type. 
             function switchPubs(id) {
-               var ids = ['journal', 'oral', 'poster', 'thesis']
+               var ids = ['journal', 'chapter', 'oral', 'poster', 'thesis']
                for (let ii in ids) {
                   if (ids[ii] === id) {
                      document.getElementById(ids[ii] + '-wrapper').style.display = 'block';

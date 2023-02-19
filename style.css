@@ -318,7 +318,7 @@ body.dark-theme #sun {
   color: #CCC;
 }
 #sun {
-  color: var(--c1);
+  color: #FF5733;
 }
 body.dark-theme #moon {
   color: var(--c2);

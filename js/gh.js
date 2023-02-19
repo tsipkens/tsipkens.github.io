@@ -75,7 +75,7 @@ function requestUserRepos(username) {
                 '/network/members><i class="fa-solid fa-scale-balanced" style="padding-right:5px;"></i>' + data[i].license.spdx_id + '</a></span>'; }
             
             li.innerHTML = (`
-                <p class="pub-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
+                <p class="list-title"><b><a href="${data[i].html_url}">${data[i].name}</a></b></p>
                 <p style="padding-top:0px;"> ${data[i].description}
                 <br><a href="${data[i].html_url}">${data[i].html_url}</a></p>
                 <p style="padding-top:5px;">` + tlang + tstar + tfork + tlic + `</p>

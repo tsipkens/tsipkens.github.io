@@ -433,12 +433,12 @@ ol .list-entry {
   text-align: left;
 }
 
-.list-entry:hover p.pub-title {
+.list-entry:hover p.list-title {
   transition: all 0.8s ease 0s;
   color: var(--c1);
 }
 
-body.dark-theme .list-entry:hover p.pub-title {
+body.dark-theme .list-entry:hover p.list-title {
   color: var(--c2);
 }
 
@@ -481,7 +481,7 @@ body.dark-theme .list-entry::marker {
   text-decoration: underline;
 }
 
-p.pub-title {
+p.list-title {
   padding-top: 2px;
   padding-bottom: 6px;
   margin: 0px;
@@ -490,11 +490,11 @@ p.pub-title {
   color: #222;
 }
 
-body.dark-theme p.pub-title {
+body.dark-theme p.list-title {
   color: #EEE;
 }
 
-p.pub-title a {
+p.list-title a {
   text-decoration: none;
   color: inherit;
 }

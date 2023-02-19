@@ -80,10 +80,17 @@
    <div id="header">
       <div class="pre-main">
          <div class="post-header">
-            <div style="margin-top:7px;">
-               <a href="#" class="head-first" style="margin-left:0px;"><i class="fa-solid fa-house"></i></a>
+            <div class="btn-toggle" id="btn-toggle-bar">
+               <a style="margin-left:0px;padding-left:0px;">
+                  <div>
+                     <span><i class="fas fa-moon" id="moon"></i></span> |
+                     <span><i class="fas fa-sun" id="sun"></i></span>
+                     <span></span> <!-- placeholder for dark/light theme toggle -->
+                  </div>
+               </a>
             </div>
             <div>
+               <a href="#" style="margin-left:0px;"><i class="fa-solid fa-house"></i></a>
                <a href="#about">About</a>
                <a href="#edu">Education</a>
                <a href="#pubs">Publications</a>
@@ -97,7 +104,7 @@
 
    <div class="pre-main">
       <div class="main" id="main">
-         <div id="btn-toggle">
+         <div class="btn-toggle" id="btn-toggle">
             <a>
                <div>
                   <span><i class="fas fa-moon" id="moon"></i></span> |
@@ -828,6 +835,15 @@
 <script>
    const btn = document.querySelector("#btn-toggle");
    btn.addEventListener("click", function () {
+      // Toggle dark theme.
+      dark = !dark;
+
+      toggleNight(); // apply theme
+      scrollFunction();
+   })
+
+   const btnbar = document.querySelector("#btn-toggle-bar");
+   btnbar.addEventListener("click", function () {
       // Toggle dark theme.
       dark = !dark;
 

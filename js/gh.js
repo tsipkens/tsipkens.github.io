@@ -59,7 +59,7 @@ function requestUserRepos(username) {
 
             // Add Bootstrap list item class to each li
             let li = document.createElement('li');
-            li.classList.add('pub-entry')
+            li.classList.add('list-entry')
 
             // Create the html markup for each li
             tlang = `<span class="pub-after">` + data[i].language + `</span>`

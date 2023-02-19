@@ -50,7 +50,7 @@ writeDOI = function (doi) {
 
 checkNoItems = function (di2) {
   if (di2.innerHTML === "") {
-    di2.innerHTML = "<li class='pub-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
+    di2.innerHTML = "<li class='list-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
   }
 }
 
@@ -203,7 +203,7 @@ writePubs = function (data, yyyy, st = null) {
 
     // Add Bootstrap list item class to each li
     let li = document.createElement('li');
-    li.classList.add('pub-entry')
+    li.classList.add('list-entry')
 
     // Create the html markup for each li
     li.innerHTML = (content);
@@ -266,7 +266,7 @@ writeConf = function (data, type, hon, st = null, ye = true) {
 
     // Add Bootstrap list item class to each li
     let li = document.createElement('li');
-    li.classList.add('pub-entry')
+    li.classList.add('list-entry')
 
     content = '<p>';
     content = content + formatAuthor(data[i].author) + '. ';
@@ -385,7 +385,7 @@ writer = function (data, template, nfield = null, fyear = true, st = null) {
     }
 
     let li = document.createElement('li');
-    li.classList.add('pub-entry')
+    li.classList.add('list-entry')
     li.innerHTML = (txt);
     di2.appendChild(li)
   }

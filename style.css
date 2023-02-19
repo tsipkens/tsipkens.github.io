@@ -410,7 +410,7 @@ ol.pubs h4 {
   background-image: var(--background-color);
 }
 
-.pub-entry {
+.list-entry {
   margin-top: 15px;
   margin-bottom: 22px;
   padding-top: 5px;
@@ -419,60 +419,60 @@ ol.pubs h4 {
   font-size: 12.5pt;
   page-break-inside: avoid;
 }
-ol .pub-entry {
+ol .list-entry {
   margin-left: 40px;
 }
 
-.pub-entry p {
+.list-entry p {
   padding: 0px;
   text-align: left;
 }
 
-.pub-entry:hover p.pub-title {
+.list-entry:hover p.pub-title {
   transition: all 0.8s ease 0s;
   color: var(--c1);
 }
 
-body.dark-theme .pub-entry:hover p.pub-title {
+body.dark-theme .list-entry:hover p.pub-title {
   color: var(--c2);
 }
 
-.pub-entry:hover .pub-author {
+.list-entry:hover .pub-author {
   color: inherit;
 }
 
-.pub-entry:hover {
+.list-entry:hover {
   color: black;
 }
 
-body.dark-theme .pub-entry:hover {
+body.dark-theme .list-entry:hover {
   color: white;
 }
 
-.pub-entry:hover a {
+.list-entry:hover a {
   color: var(--c5);
 }
 
-body.dark-theme .pub-entry:hover a {
+body.dark-theme .list-entry:hover a {
   color: var(--c2);
 }
 
-.pub-entry::marker {
+.list-entry::marker {
   color: #999;
   font-size: 10pt;
 }
-.pub-entry:hover::marker {
+.list-entry:hover::marker {
   color: var(--c5);
 }
-body.dark-theme .pub-entry::marker {
+body.dark-theme .list-entry::marker {
   color: white;
 }
 
-.pub-entry a {
+.list-entry a {
   text-decoration: none;
 }
 
-.pub-entry a:hover {
+.list-entry a:hover {
   text-decoration: underline;
 }
 
@@ -501,7 +501,7 @@ p.pub-title a {
 .pub-after a:hover {
   text-decoration: none;
 }
-.pub-entry:hover .pub-after i {
+.list-entry:hover .pub-after i {
   color: var(--c5);
   transition: all 0.8s ease 0s;
 }
@@ -621,7 +621,7 @@ body.dark-theme .little-icon i {
 
 
 
-.pub-entry .aos-init .aos-animate {
+.list-entry .aos-init .aos-animate {
   transition: all 0.8s ease 0s;
 }
 

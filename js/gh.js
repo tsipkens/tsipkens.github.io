@@ -62,16 +62,16 @@ function requestUserRepos(username) {
             li.classList.add('list-entry')
 
             // Create the html markup for each li
-            tlang = `<span class="pub-after">` + data[i].language + `</span>`
+            tlang = `<span class="list-after">` + data[i].language + `</span>`
             if (data[i].language === null) { tlang = ''; }
 
-            tstar = formatter('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+            tstar = formatter('<span class="list-after"><a class="little-icon" href=' + data[i].html_url +
                 '/stargazers><i class="far fa-star"></i>', data[i].stargazers_count, '</a></span>')
-            tfork = formatter('<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+            tfork = formatter('<span class="list-after"><a class="little-icon" href=' + data[i].html_url +
                 '/network/members><i class="fas fa-code-branch"></i>', data[i].forks_count, '</a></span>')
             
             if (data[i].license === null) { tlic = ''; }
-            else { tlic = '<span class="pub-after"><a class="little-icon" href=' + data[i].html_url +
+            else { tlic = '<span class="list-after"><a class="little-icon" href=' + data[i].html_url +
                 '/network/members><i class="fa-solid fa-scale-balanced" style="padding-right:5px;"></i>' + data[i].license.spdx_id + '</a></span>'; }
             
             li.innerHTML = (`

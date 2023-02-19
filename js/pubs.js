@@ -188,7 +188,7 @@ writePubs = function (data, yyyy, st = null) {
 
     if (data[i].hasOwnProperty('honours')) {
       if (!(data[i].honours == '')) {
-        content = content + '<p class="pub-title"><span class="pub-after">';
+        content = content + '<p class="pub-title"><span class="list-after">';
         content = content + '<i class="fa-solid fa-award"></i> ';
         content = content + data[i].honours + '</span></p>';
       }
@@ -282,7 +282,7 @@ writeConf = function (data, type, hon, st = null, ye = true) {
     content = content + '</span>'; 
 
     if (data[i].hasOwnProperty('pdf')) {
-      content = content + '<span class="pub-after" style="padding-left:10px;"><a class="little-icon" href="' + data[i].pdf + '">';
+      content = content + '<span class="list-after" style="padding-left:10px;"><a class="little-icon" href="' + data[i].pdf + '">';
       content = content + '<i class="fas fa-file-pdf"></i></a></span>';
     }
 
@@ -290,7 +290,7 @@ writeConf = function (data, type, hon, st = null, ye = true) {
       if (data[i].honours == '') {  // then skip (do nothing)
       } else if (data[i].honours == null) {  // then skip (do nothing)
       } else {  // then honours are available
-        content = content + '<p class="pub-title"><span class="pub-after">';
+        content = content + '<p class="pub-title"><span class="list-after">';
         content = content + '<i class="fas fa-award"></i> ';
         content = content + data[i].honours + '</span></p> ';
       }

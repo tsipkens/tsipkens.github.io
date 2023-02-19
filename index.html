@@ -80,7 +80,7 @@
    <div id="header">
       <div class="pre-main">
          <div class="post-header">
-            <div class="btn-toggle" id="btn-toggle-bar">
+            <div class="light-dark-toggle" id="light-dark-toggle-bar">
                <a style="margin-left:0px;padding-left:0px;">
                   <div>
                      <span><i class="fas fa-moon" id="moon"></i></span> |
@@ -104,7 +104,7 @@
 
    <div class="pre-main">
       <div class="main" id="main">
-         <div class="btn-toggle" id="btn-toggle">
+         <div class="light-dark-toggle" id="light-dark-toggle">
             <a>
                <div>
                   <span><i class="fas fa-moon" id="moon"></i></span> |
@@ -833,7 +833,7 @@
 
 <!-- Add scrolling effect. -->
 <script>
-   const btn = document.querySelector("#btn-toggle");
+   const btn = document.querySelector("#light-dark-toggle");
    btn.addEventListener("click", function () {
       // Toggle dark theme.
       dark = !dark;
@@ -842,7 +842,7 @@
       scrollFunction();
    })
 
-   const btnbar = document.querySelector("#btn-toggle-bar");
+   const btnbar = document.querySelector("#light-dark-toggle-bar");
    btnbar.addEventListener("click", function () {
       // Toggle dark theme.
       dark = !dark;

@@ -4,7 +4,7 @@
 :root {
   color-scheme: light dark;
   /* both supported */
-  --background-color: #F8F8F8;
+  --background-color: #FCFCFC;
   --c1: #0969DA; /* red > #E01E5A; */
   --c1l: #F4F6F8;
   /* dark accent */

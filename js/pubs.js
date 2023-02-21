@@ -176,7 +176,12 @@ writePubs = function (data, yyyy, st = null) {
     content = content + ' <i>' + data[i].journal + '</i>';
 
     if (!(data[i].volume === null)) {
-      content = content + ', ' + data[i].volume + ', ' + data[i].pages;
+      content = content + ', ' + data[i].volume;
+    }
+    if (!(data[i].pages === null)) {
+      content = content + ', ' + data[i].pages;
+    } else if (!(data[i].number === null)) {
+      content = content + ', ' + data[i].number + '';
     }
 
     content = content + ' (' + data[i].year + ').';

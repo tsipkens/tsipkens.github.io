@@ -176,7 +176,7 @@ writePubs = function (data, yyyy, st = null) {
     content = content + ' <i>' + data[i].journal + '</i>';
 
     if (!(data[i].volume === null)) {
-      content = content + ', ' + data[i].volume;
+      content = content + ' <b>' + data[i].volume + '</b>';
     }
     if (!(data[i].pages === null)) {
       content = content + ', ' + data[i].pages;

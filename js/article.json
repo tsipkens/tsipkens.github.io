@@ -1,4 +1,16 @@
 [{
+    "author": "J. P. Molnar, L. Venkatakrishnan, B. E. Schmidt, T. A. Sipkens, S. J. Grauer",
+    "title": "Estimating density, velocity, and pressure fields in supersonic flows using physics-informed BOS",
+    "journal": "Experiments in Fluids",
+    "volume": 64,
+    "number": 14,
+    "pages": null,
+    "year": "2023",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1007/s00348-022-03554-y", 
+    "tags": "schlieren"
+}, {
     "author": "T. A. Sipkens, J. C. Corbin, A. Oldershaw, G. J. Smallwood",
     "title": "Particle filtration efficiency measured using sodium chloride and polystyrene latex sphere test methods",
     "journal": "Scientific Data",

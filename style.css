@@ -465,6 +465,9 @@ body.dark-theme .list-entry:hover {
 .list-entry:hover a {
   color: var(--c5);
 }
+.list-entry:hover .little-icon i {
+  color: var(--c5);
+}
 
 body.dark-theme .list-entry:hover a {
   color: var(--c2);
@@ -584,6 +587,7 @@ body.dark-theme .horz-list .active {
 .little-icon i {
   color: var(--c1);
   font-size: 10pt;
+  transition: all 0.8s ease 0s; 
 }
 
 body.dark-theme .little-icon i {

@@ -155,6 +155,10 @@ ul {
   list-style: none;
 }
 
+ol {
+  list-style: decimal-leading-zero;
+}
+
 #colorbar {
   position: fixed;
   top: 0;
@@ -200,6 +204,11 @@ body.dark-theme #colorbar {
   }
   #colorbar {
     top: 55px;
+  }
+}
+@media screen and (max-width: 600px) {
+  ol {
+    list-style: none;
   }
 }
 
@@ -463,10 +472,8 @@ body.dark-theme .list-entry:hover a {
 
 .list-entry::marker {
   color: #999;
+  font-weight: 200;
   font-size: 10pt;
-}
-.list-entry:hover::marker {
-  color: var(--c5);
 }
 body.dark-theme .list-entry::marker {
   color: white;

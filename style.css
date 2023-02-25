@@ -34,7 +34,7 @@ html {
 body {
   margin: auto 0px;
   padding: 0px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', 'sans-serif';
   font-weight: 400;
   font-size: 11.5pt;
   transition: 0.3s;
@@ -383,7 +383,7 @@ body.dark-theme a.a-icon:hover svg {
 
 
 /* Format publication and code entries. */
-.expand-pubs {
+.expand-list {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -391,23 +391,23 @@ body.dark-theme a.a-icon:hover svg {
   border-top:black solid 1.5px;
 }
 
-body.dark-theme .expand-pubs {
+body.dark-theme .expand-list {
   border-top:white solid 1.5px;
 }
 
-.pubs {
+.list {
   max-height: 1150px;
   overflow-x: visible;
   overflow-y: hidden;
   position: relative;
 }
-ol.pubs {
+ol.list {
   margin-left: -40px;
 }
-ol.pubs h4 {
+ol.list h4 {
   margin-left: 40px;
 }
-.pubs:after {
+.list:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -419,7 +419,7 @@ ol.pubs h4 {
   width: 100%;
   height: 20px;
 }
-#pubs-theses:after {
+#list-theses:after {
   z-index: -1;
   background-image: var(--background-color);
 }

@@ -48,13 +48,14 @@ writeDOI = function (doi) {
   return content;
 }
 
-checkNoItems = function (di2) {
+checkNoItems = function (di2) {  // if no items to print, print "No matching items."
   if (di2.innerHTML === "") {
     di2.innerHTML = "<li class='list-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
   }
 }
 
 filterPubs = function (data, st) {
+  // st = searchTerm
 
   if (!(st == null)) { // skip is search term (st) is empty
 
@@ -113,7 +114,7 @@ filterPubs = function (data, st) {
           se = se.concat(" ");
         }
 
-        // Add rags.
+        // Add tags.
         if (entry.hasOwnProperty('tags')) {
           se = se.concat(entry.tags);
           se = se.concat(" ");
@@ -147,251 +148,40 @@ addItems = function (id, di) {
 
 
 //== For writing HTML from JSON data. ====================//
-writePubs = function (data, yyyy, st = null) {
 
-  data = filterPubs(data, st);
+/*
+General function for writing JSON formatted data. 
+Inputs: 
+data = JSON formatter data, as above
+template = array with fields and separators
+fYear = flag of whether to print year headers
+searchTerm = search term used to filter results
+*/
+writer = function (data, template, fYear = false, searchTerm = null) {
+  
+  if (!(searchTerm == null)) {
+    data = filterPubs(data, searchTerm);
+  }
   data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
-
-  let di2 = document.createElement('div');
 
   var iLastPrinted = null
 
+  let di2 = document.createElement('div');  // initialize outer div element
+
   // Loop over each object in data array
   for (let i in data) {
-
-    // Filter by the date.
-    if (!(yyyy == null)) {
-      if (!(((data[i].year > yyyy)) || (data[i].year === 'In press'))) {
-        continue;
-      }
-    }
 
     // Add year headers.
-    printYearHeading(data, i, di2, iLastPrinted)
-    iLastPrinted = i // copy over current i
-
-    content = '<p>';
-    content = content + formatAuthor(data[i].author) + '. ';
-    content = content + '"' + data[i].title + '." ';
-    content = content + ' <i>' + data[i].journal + '</i>';
-
-    if (!(data[i].volume === null)) {
-      content = content + ' <b>' + data[i].volume + '</b>';
-    }
-    if (!(data[i].pages === null)) {
-      content = content + ', ' + data[i].pages;
-    } else if (!(data[i].number === null)) {
-      content = content + ', ' + data[i].number + '';
-    }
-
-    content = content + ' (' + data[i].year + ').';
-
-    content = content + writeDOI(data[i].doi);
-
-    content = content + " <a style='margin-left:4px;font-size:9pt;' onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
-                        ")'><i class='fa-solid fa-quote-right'></i></a>"
-
-    if (data[i].hasOwnProperty('honours')) {
-      if (!(data[i].honours == '')) {
-        content = content + '<p class="list-title"><span class="list-after">';
-        content = content + '<i class="fa-solid fa-award"></i> ';
-        content = content + data[i].honours + '</span></p>';
-      }
-    }
-
-    content = content + '</p>';
-
-
-    // Create variable that will create li's to be added to di2
-    let di = document.createElement('div');
-    di.setAttribute('data-aos', 'slide-up')
-
-    // Add Bootstrap list item class to each li
-    let li = document.createElement('li');
-    li.classList.add('list-entry')
-
-    // Create the html markup for each li
-    li.innerHTML = (content);
-
-    // Append each li to the di2
-    di.appendChild(li);
-    di2.appendChild(di);
-  }
-
-  // If nothing was printed.
-  checkNoItems(di2);
-
-  return di2;
-}
-
-
-
-// For writing HTML from JSON data.
-writeConf = function (data, type, hon, st = null, ye = true) {
-
-  data = filterPubs(data, st);
-  data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
-
-  let di2 = document.createElement('div');
-
-  var iLastPrinted = null
-
-  // Loop over each object in data array
-  for (let i in data) {
-
-    // Filter by the presentation type.
-    if (!(type == null)) {
-      if (!(data[i].type == type)) {
-        continue;
-      }
-    }
-
-    // Filter by honours.
-    if (hon == true) {
-      if (!(data[i].hasOwnProperty('honours'))) {
-        continue;
-      }
-      if (data[i].honours == '') {
-        continue;
-      }
-      if (data[i].honours == null) {
-        continue;
-      }
-    }
-
-    // Add year headers.
-    if (ye) {
-      printYearHeading(data, i, di2, iLastPrinted)
-    }
-    iLastPrinted = i // copy over current i
-
-    // Create variable that will create li's to be added to di2
-    let di = document.createElement('div');
-    di.setAttribute('data-aos', 'slide-up')
-
-    // Add Bootstrap list item class to each li
-    let li = document.createElement('li');
-    li.classList.add('list-entry')
-
-    content = '<p>';
-    content = content + formatAuthor(data[i].author) + '. ';
-    content = content + '"' + data[i].title;
-    if ((data[i].title[data[i].title.length - 1]) === "?") {
-      content = content + '"'
-    } else {
-      content = content + '."'
-    }
-    content = content + ' <i>' + data[i].booktitle + '</i>. ' + data[i].address + '. ';
-    content = content + data[i].date + ', ' + data[i].year + '.';
-
-    content = content + '</span>'; 
-
-    if (data[i].hasOwnProperty('pdf')) {
-      content = content + '<span class="list-after" style="padding-left:10px;"><a class="little-icon" href="' + data[i].pdf + '">';
-      content = content + '<i class="fas fa-file-pdf"></i></a></span>';
-    }
-
-    if (data[i].hasOwnProperty('honours')) {
-      if (data[i].honours == '') {  // then skip (do nothing)
-      } else if (data[i].honours == null) {  // then skip (do nothing)
-      } else {  // then honours are available
-        content = content + '<p class="list-title"><span class="list-after">';
-        content = content + '<i class="fas fa-award"></i> ';
-        content = content + data[i].honours + '</span></p> ';
-      }
-    }
-
-    // Create the html markup for each li
-    li.innerHTML = (content);
-
-    // Append each li to the di2
-    di.appendChild(li);
-    di2.appendChild(di);
-  }
-
-  // If nothing was printed.
-  checkNoItems(di2);
-
-  return di2;
-}
-
-
-writer = function (data, template, nfield = null, fyear = true, st = null) {
-
-  if (!(st == null)) {
-    data = filterPubs(data, st);
-  }
-  data = data.sort((a, b) => (b.year - a.year)) // sort entries by year
-
-  var iLastPrinted = null
-
-  let di2 = document.createElement('div');
-
-  // Loop over each object in data array
-  for (let i in data) {
-
-    if (fyear) {
-      // Add year headers.
+    if (fYear) {
       printYearHeading(data, i, di2, iLastPrinted, false)
     }
     iLastPrinted = i // copy over current
-
-    txt = ''
-    if (!(nfield == null)) {
-      txt = txt + '<b style="font-size:13pt;">'
-      for (let j in nfield) {
-        if ((nfield[j] === '.') || (nfield[j] === ',')) {
-          txt = txt + nfield[j] + ' '
-        } else if ((nfield[j] === '(') || (nfield[j] === ')') ||
-          (nfield[j] === ' ') || (nfield[j] === '<br>') ||
-          (nfield[j] === '<i>') || (nfield[j] === '</i>')) {
-          txt = txt + nfield[j]
-        } else if (nfield[j] === 'year') {
-          txt = txt + '<span style="font-size:10pt;">' + data[i].year + '</span><br>'
-        } else {
-          txt = txt + data[i][nfield[j]]
-        }
-      }
-      txt = txt + '</b><br>'
-    }
-
-    for (let j in template) {
-      if (data[i][template[j]] === null) {
-        continue;
-        // do nothing as current entry it null
-      } else if (!(j == template.length - 1)) {
-        if (data[i][template[j - 1]] === null) {
-          continue;
-          // do nothing if next is null (skips grammar)
-        }
-      }
-
-      if ((template[j] === '.') || (template[j] === ',')) {
-        txt = txt + template[j] + ' '
-      } else if ((template[j] === '(') || (template[j] === ')') ||
-        (template[j] === ' ') || (template[j] === '<br>') ||
-        (template[j] === '<i>') || (template[j] === '</i>')) {
-        txt = txt + template[j]
-      } else if (template[j] === 'author') {
-        txt = txt + formatAuthor(data[i][template[j]])
-      } else if (template[j] === 'doi') {
-        txt = txt + writeDOI(data[i].doi);
-      } else if (template[j] === 'honours') {
-        if (data[i].hasOwnProperty('honours')) {
-          if (!(data[i].honours === "")) {
-            txt = txt + '<br><span class="pub-honour">';
-            txt = txt + '<i class="fas fa-award"></i> ';
-            txt = txt + data[i].honours + '</span> ';
-          }
-        }
-      } else {
-        txt = txt + data[i][template[j]]
-      }
-    }
+    
+    content = writeItem(data, template, i, content);
 
     let li = document.createElement('li');
-    li.classList.add('list-entry')
-    li.innerHTML = (txt);
+    li.classList.add('list-entry');
+    li.innerHTML = (content);
     di2.appendChild(li)
   }
 
@@ -399,6 +189,82 @@ writer = function (data, template, nfield = null, fyear = true, st = null) {
   checkNoItems(di2);
 
   return di2;
+}
+
+// Helper to parse write a single item using the given template.
+var writeItem = function (data, template, i) {
+
+  content = '';
+
+  // Loop through the items in the proposed template.
+  for (let j in template) {
+    
+    templJ = template[j];  // make local copy of template[j]
+    
+    if (data[i][templJ] === null) {
+      continue; // do nothing as current entry it null
+    } else if (!(j == template.length - 1)) {
+      if (data[i][template[j - 1]] === null) {
+        continue; // do nothing if next is null (skips grammar)
+      }
+    }
+    
+    // Start parsing grammar/formatting.
+    if ((templJ === '.') || (templJ === ',')) {
+      content = content + templJ + ' '
+
+    } else if ((templJ === '(') || (templJ === ')') ||
+      (templJ === ' ') || (templJ === '<br>') ||
+      (templJ === '<i>') || (templJ === '</i>') || 
+      (templJ === '<b>') || (templJ === '</b>')) {
+      content = content + templJ
+
+    // Start parsing "special" fields, e.g., format author field.
+    } else if (templJ === 'author') {  
+      content = content + formatAuthor(data[i][templJ])
+
+    } else if (templJ === 'doi') {  // add DOI as link
+      content = content + writeDOI(data[i].doi);
+
+    } else if (templJ == 'quote') {  //  add link to copy BIBTEX info
+      content = content + " <a style='margin-left:4px;font-size:9pt;' " + 
+        "onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
+        ")'><i class='fa-solid fa-quote-right'></i></a>"
+
+    } else if (templJ == 'pdf') {  // if link to PDF is provided
+      if (data[i].hasOwnProperty('pdf')) {
+        content = content + '<span class="list-after" style="padding-left:10px;"><a class="little-icon" href="' + data[i].pdf + '">';
+        content = content + '<i class="fas fa-file-pdf"></i></a></span>';
+      }
+
+    } else if (templJ === 'honours') { // add honour/award, if relevant
+      if (data[i].hasOwnProperty('honours')) {
+        if (data[i].honours == '') {  // then skip (do nothing)
+        } else if (data[i].honours == null) {  // then skip (do nothing)
+        } else {  // then honours are available
+          content = content + '<p class="list-title"><span class="list-after">';
+          content = content + '<i class="fas fa-award"></i> ';
+          content = content + data[i].honours + '</span></p> ';
+        }
+      }
+
+    } else {
+      content = content + data[i][templJ]  // finally just add the field data itself
+    }
+  }
+
+  return content;
+}
+
+// Filter conferences by the presentation type.
+filterConf = function (data, type) {
+  if (!(type == null)) {
+    // Filter the data by the search term. 
+    data = data.filter(function (entry) {
+      return entry.type.includes(type);
+    });
+  }
+  return data;
 }
 
 var entry2quote = function(obj, datai0) {
@@ -444,12 +310,12 @@ var entry2quote = function(obj, datai0) {
   delete datai['badge']
 
   datai = JSON.stringify(datai);
-  datai = datai.replaceAll('{"', '@article{' + (author1 + yr + title1).toLowerCase() + ', \n');
+  datai = datai.replaceAll('{"', '@article{' + (author1 + yr + title1).toLowerCase() + ', \n ');
   datai = datai.replaceAll('"}', '}\n}');
   datai = datai.replaceAll('":"', '={');
   datai = datai.replaceAll('":', '={');
-  datai = datai.replaceAll('","', '}, \n');
-  datai = datai.replaceAll(',"', '}, \n');
+  datai = datai.replaceAll('","', '}, \n ');
+  datai = datai.replaceAll(',"', '}, \n ');
   navigator.clipboard.writeText(datai);
 
   obj.innerHTML = "<i class='fa-solid fa-check'></i>"

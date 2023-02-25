@@ -592,7 +592,7 @@
          </div>
 
          <div id="edu-div">
-            <ul reversed class="pubs">
+            <ul reversed class="list">
                <div data-aos="slide-up" class="aos-init aos-animate"><li class="list-entry">
                   <p>2019</p>
                   <p class="pub-title" style="padding-bottom:0px;"><b>Doctor of Philosophy</b></p>
@@ -618,7 +618,7 @@
 
          
          <div class="head-div">
-            <h2 id="pubs">Publications & Presentations</h2>
+            <h2 id="list">Publications & Presentations</h2>
          </div>
 
          <div id="pubs-div">
@@ -636,15 +636,15 @@
             </div>
 
             <div id="journal-wrapper">
-               <ol reversed id="pubs-j" class="pubs"></ol>
+               <ol reversed id="pubs-j" class="list"></ol>
 
-               <a><div id="post-pubs-j" class="expand-pubs" onclick="expandPubs('pubs-j')">
+               <a><div id="post-pubs-j" class="expand-list" onclick="expandPubs('pubs-j')">
                   <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
                </div></a>
             </div>
 
             <div id="chapter-wrapper" style="display:none;">
-               <ul id="pubs-chapter" class="pubs" style="list-style:none;"></ul>
+               <ul id="pubs-chapter" class="list" style="list-style:none;"></ul>
             </div>
             
             <!--
@@ -653,23 +653,23 @@
             -->
 
             <div id="oral-wrapper" style="display:none;">
-               <ol reversed id="pubs-oral" class="pubs"></ol>
+               <ol reversed id="pubs-oral" class="list"></ol>
 
-               <a><div id="post-pubs-oral" class="expand-pubs" onclick="expandPubs('pubs-oral')">
+               <a><div id="post-pubs-oral" class="expand-list" onclick="expandPubs('pubs-oral')">
                   <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
                </div></a>
             </div>
             
             <div id="poster-wrapper" style="display:none;">
-               <ol reversed id="pubs-poster" class="pubs"></ol>
+               <ol reversed id="pubs-poster" class="list"></ol>
 
-               <a><div id="post-pubs-poster" class="expand-pubs" onclick="expandPubs('pubs-poster')">
+               <a><div id="post-pubs-poster" class="expand-list" onclick="expandPubs('pubs-poster')">
                   <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
                </div></a>
             </div>
 
             <div id="thesis-wrapper" style="display:none;">
-               <ul id="pubs-theses" class="pubs" style="list-style:none;"></ul>
+               <ul id="pubs-theses" class="list" style="list-style:none;"></ul>
             </div>
          </div>
 
@@ -687,67 +687,60 @@
                }
             }
 
-            // Add journal articles.
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
-               function (data) {
-                  var today = new Date();
-                  var yyyy = today.getFullYear();
-                  di2 = writePubs(data, null);
-                  addItems('pubs-j', di2);
-               });
-            
-            // Add book chapters.
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/chapter.json",
-               function (data) {
-                  di2 = writer(data, ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.', 'publisher', ' ', '(', 'year', ')', '.',
-                  'doi'],
-                  null, false)
-                  addItems('pubs-chapter', di2);
-               })
-            
-            // Add conferences.
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
-               function (data) {
-                  di2 = writeConf(data, 'Oral', false, null);
-                  addItems('pubs-oral', di2);
-                  di2 = writeConf(data, 'Poster', false, null);
-                  addItems('pubs-poster', di2);
-               });
-            
-            // Add theses.
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
-               function (data) {
-                  di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.',
-                  'doi'],
-                  null, false)
-                  addItems('pubs-theses', di2);
-               })
-            
-            const node = document.getElementById("filtBox");
-            node.addEventListener("keyup", function (event) {
-               preterm = null;
-               searchterm = node.value;
-               if (event.key === "Enter") {
-                  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
+            // Function to read in and add publications.
+            var populatePubs = function (searchTerm = null) {
+               // Add journal articles.
+               var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
                   function (data) {
-                     di2 = writePubs(data, preterm, searchterm);
+                     di2 = writer(data, 
+                        ['author', '.', 'title', '.', '<i>', 'journal', '</i>', ' ', 
+                        '<b>', 'volume', '</b>', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ', 'quote', ' ', 'honours'], 
+                        true, searchTerm);
                      addItems('pubs-j', di2);
                   });
-                  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+
+               // Add book chapters.
+               var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/chapter.json",
                   function (data) {
-                     di2 = writeConf(data, 'Oral', false, searchterm);
+                     di2 = writer(data, ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.', 'publisher', ' ', '(', 'year', ')', '.', 'doi'], 
+                        false, searchTerm)
+                     addItems('pubs-chapter', di2);
+                  })
+
+               // Add conference publications.
+               var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
+                  function (data) {
+                     confTeample = ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.', 
+                        'address', '.', 'date', ',', 'year', '.', 'pdf', 'honours'];
+
+                     dataO = filterConf(data, 'Oral');  // print oral presentations
+                     di2 = writer(dataO, confTeample, true, searchTerm);
                      addItems('pubs-oral', di2);
-                     di2 = writeConf(data, 'Poster', false, searchterm);
+                     
+                     dataP = filterConf(data, 'Poster');  // print poster presentations
+                     di2 = writer(dataP, confTeample, true, searchTerm);
                      addItems('pubs-poster', di2);
                   });
-                  var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
+
+               // Add theses.
+               var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
                   function (data) {
-                     di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.',
-                        'doi'],
-                        null, false, searchterm)
+                     di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'],
+                        false, searchTerm)
                      addItems('pubs-theses', di2);
                   })
-               };
+            }
+            populatePubs();  // initial populate
+            
+            // Add listeners to search box.
+            const node = document.getElementById("filtBox");
+            node.addEventListener("keyup", function (event) {
+               if (event.key === "Enter") { 
+                  populatePubs(node.value)
+               }
+            });
+            node.addEventListener("focusout", function (event) {
+               populatePubs(node.value);
             });
 
             // Switch between publication type. 
@@ -767,7 +760,7 @@
 
          <!--
          <h2>Education</h2>
-         <ul id="education" class="pubs"></ul>
+         <ul id="education" class="list"></ul>
 
          <script>
             var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/education.json",

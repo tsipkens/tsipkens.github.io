@@ -6,10 +6,8 @@
   /* both supported */
   --background-color: #FCFCFC;
   --c1: #0969DA; /* red > #E01E5A; */
-  --c1l: #F4F6F8;
   /* dark accent */
   --c2: #FEDC3D;
-  --c2l: #332C0C;
   /* light accent */
   --c3: #0969DA;
   --c4: #EEC200;
@@ -134,12 +132,11 @@ ol {
 }
 
 #colorbar {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background-color: var(--c1);
-  height: 6px;
+  height: 5px;
   z-index: 20;
 }
 body.dark-theme #colorbar {
@@ -149,14 +146,13 @@ body.dark-theme #colorbar {
 
 #header {
   display: none;
-  font-size: 12pt;
 }
 
 @media screen and (min-width: 600px) {
   #header {
     display: inline-block;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(252, 252, 252, 0.85);
     margin: 0px;
     padding: 0px;
     z-index: 20;
@@ -164,20 +160,19 @@ body.dark-theme #colorbar {
     top: 0;
     width: 100%;
     transition: 0.6s;
-    height: 55px;
+    height: 60px;
     overflow-y: hidden;
-    box-shadow: 0px 0px 10px black;
+    box-shadow: 0px 0px 10px #F0F0F0;
+    border-bottom: #F0F0F0 1px solid;
   }
   #light-dark-toggle {
     display: none;
   }
   body.dark-theme #header {
     backdrop-filter: blur(8px);
-    background-color: rgba(0, 0, 0, 0.85);
-    box-shadow: 0px 0px 10px black;
-  }
-  #colorbar {
-    top: 55px;
+    background-color: rgba(13, 17, 23, 0.85);
+    box-shadow: 0px 0px 10px #111;
+    border-bottom: #111 1px solid;
   }
 }
 @media screen and (max-width: 600px) {
@@ -192,7 +187,6 @@ div.post-header {
   max-width: 900px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-family: 'Gotham';
   font-weight: 400;
   display: flex;
   align-items: flex-start;

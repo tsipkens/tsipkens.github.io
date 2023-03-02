@@ -19,22 +19,22 @@ printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
   if (!(content === null)) {
 
     // Add Bootstrap list item class to each li
-    let h4 = document.createElement('h4');
-    h4.classList.add('h-year')
+    let h3 = document.createElement('h3');
+    h3.classList.add('h-year')
 
     // Create the html markup for each li
-    h4.innerHTML = (content);
+    h3.innerHTML = (content);
 
-    // Append each h4 to the di2\
+    // Append each h3 to the di2\
     if (f_aos) {
       // Create variable that will create li's to be added to di2
       let dih = document.createElement('div');
       dih.setAttribute('data-aos', 'slide-up')
 
-      dih.appendChild(h4);
+      dih.appendChild(h3);
       di2.appendChild(dih);
     } else {
-      di2.appendChild(h4);
+      di2.appendChild(h3);
     }
   }
 }

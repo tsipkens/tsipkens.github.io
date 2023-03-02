@@ -104,32 +104,6 @@ body.dark-theme h2 {
 }
 
 h3 {
-  font-size: 26px;
-  margin-top: 45px;
-  padding-top: 2px;
-  padding-bottom: 10px;
-  border-bottom: #222 0.75px solid;
-  font-family: 'Gotham';
-  font-weight: 500;
-}
-body.dark-theme h3 {
-  border-bottom: #DDD 0.75px solid;
-}
-
-h3 span {
-  color: #333;
-  font-size: 17pt;
-  font-family: 'Open Sans';
-  font-weight: 300;
-  padding-bottom: 2px;
-  display: inline-block;
-}
-
-body.dark-theme h3 span {
-  color: #bbb;
-}
-
-h4 {
   margin-top: 35px;
   font-weight: 300;
   font-size: 18pt;
@@ -404,7 +378,7 @@ body.dark-theme .expand-list {
 ol.list {
   margin-left: -40px;
 }
-ol.list h4 {
+ol.list h3 {
   margin-left: 40px;
 }
 .list:after {

@@ -265,7 +265,6 @@ body.dark-theme input:hover {
 /*--- For light/dark toggle ---*/
 .toggle--checkbox {
   display: none;
-  cursor: pointer;
 }
 .toggle--checkbox:checked + .toggle--label {
   background: black;
@@ -290,6 +289,7 @@ body.dark-theme input:hover {
   display: flex;
   position: relative;
   transition: all 250ms ease-in;
+  cursor: pointer;
 }
 .toggle--label:before { /* inner portion, when light active */
   animation-name: reverse;
@@ -303,7 +303,7 @@ body.dark-theme input:hover {
   left: 10%;
   position: absolute;
   border-radius: 30px;
-  background: white;
+  background: var(--c2);;
   box-shadow: white 0px 0px 4px;
 }
 @keyframes switch {

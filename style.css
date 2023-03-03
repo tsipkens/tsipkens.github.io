@@ -165,19 +165,22 @@ body.dark-theme #colorbar {
     box-shadow: 0px 0px 10px #F0F0F0;
     border-bottom: #F0F0F0 1px solid;
   }
-  #light-dark-toggle {
-    display: none;
-  }
   body.dark-theme #header {
     backdrop-filter: blur(8px);
     background-color: rgba(13, 17, 23, 0.85);
     box-shadow: 0px 0px 10px #111;
     border-bottom: #111 1px solid;
   }
+  #light-dark-toggle-inpage {
+    display: none;
+  }
 }
 @media screen and (max-width: 600px) {
   ol {
     list-style: none;
+  }
+  #light-dark-toggle-bar {
+    display: none;
   }
 }
 
@@ -263,115 +266,33 @@ body.dark-theme input:hover {
 
 
 /*--- For light/dark toggle ---*/
-.toggle--checkbox {
-  display: none;
-}
-.toggle--checkbox:checked + .toggle--label {
-  background: black;
-  border-color: black;
-}
-.toggle--checkbox:checked + .toggle--label:before { /* inner portion, when light active */
-  background: white;
-  animation-name: switch;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-  box-shadow: none;
-}
-.toggle--checkbox:checked + .toggle--label:after {
-  transition-delay: 250ms;
-  opacity: 1;
-}
-.toggle--label {
-  width: 60px;
-  height: 30px;
-  background: var(--c1);
-  border-radius: 30px;
-  display: flex;
-  position: relative;
-  transition: all 250ms ease-in;
-  cursor: pointer;
-}
-.toggle--label:before { /* inner portion, when light active */
-  animation-name: reverse;
-  animation-duration: 250ms;
-  animation-fill-mode: forwards;
-  transition: all 250ms ease-in;
-  content: "";
-  width: 30%;
-  height: 60%;
-  top: 20%;
-  left: 10%;
-  position: absolute;
-  border-radius: 30px;
-  background: var(--c2);;
-  box-shadow: white 0px 0px 4px;
-}
-@keyframes switch {
-  0% {
-    left: 10%;
-  }
-  60% {
-    left: 10%;
-    width: 60%;
-  }
-  100% {
-    left: 60%;
-    width: 30%;
-  }
-}
-@keyframes reverse {
-  0% {
-    left: 60%;
-    width: 30%;
-  }
-  60% {
-    left: 10%;
-    width: 60%;
-  } 
-  100% {
-    left: 10%;
-  }
-}
-
-
-.light-dark-toggle {
-  margin-bottom: 20px;
-}
-.light-dark-toggle a {
-  text-decoration: none;
-}
-
-.light-dark-toggle a div {
-  color: #CCC;
-  font-size: 14pt;
+button.light-dark-toggle {
+  font-family: inherit;
+  font-size: 16pt;
   display: inline;
+  background-color: inherit;
+  width: 35px;
+  text-align: center;
   vertical-align: middle;
-  transition: all 0.3s ease 0s;
-  border: solid 1px #DDD;
-  border-radius: 40px;
-  padding: 8px;
-  background-color: white;
-  margin: 0px;
-  box-shadow: 0px 0px 4px #DDD;
-}
-body.dark-theme .light-dark-toggle div {
-  color: #555;
-  border: solid 1px #555;
-  background-color: black;
-  box-shadow: 0px 0px 4px #222;
-}
-.light-dark-toggle div span {
-  padding-left: 5px;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
 }
 body.dark-theme #sun {
-  color: #CCC;
+  display: inline-block;
+  color: var(--c2);
 }
 #sun {
-  color: var(--c2);
+  display: none;
 }
 body.dark-theme #moon {
-  color: var(--c2);
+  display: none;
 }
+#moon {
+  display: inline-block;
+  color: var(--c1);
+}
+
 
 img.profile {
   margin-right: 20px;
@@ -387,28 +308,49 @@ body.dark-theme img.profile {
 
 div.div-icon {
   padding-right: 80px;
+  margin-bottom: 10px;
 }
 
 a.a-icon {
   margin-right: 20px;
   text-decoration: none;
+  vertical-align: text-top;
+}
+
+a.a-icon i {
+  display: inline-block;
+  color: black;
+  font-size: 33px;
+  transition: 0.3s;
+  padding-right: 5px;
+}
+body.dark-theme a.a-icon i {
+  color: white;
+}
+a.a-icon:hover i {
+  color: var(--c1);
+}
+body.dark-theme a.a-icon:hover i {
+  color: var(--c2);
+}
+
+.fa-scholar {
+  content: url('img/google-scholar.svg');
+  height: 1em;
+  width: auto;
 }
 
 a.a-icon svg {
-  margin-top: 10px;
-  margin-bottom: 10px;
   height: 33px;
   width: 35px;
   color: black;
 }
-
 body.dark-theme a.a-icon svg {
   height: 33px;
   width: 35px;
   color: white;
   fill: white;
 }
-
 a.a-icon:hover svg {
   fill: var(--c3);
   color: var(--c3);

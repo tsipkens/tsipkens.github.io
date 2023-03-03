@@ -262,6 +262,78 @@ body.dark-theme input:hover {
 }
 
 
+/*--- For light/dark toggle ---*/
+.toggle--checkbox {
+  display: none;
+  cursor: pointer;
+}
+.toggle--checkbox:checked + .toggle--label {
+  background: black;
+  border-color: black;
+}
+.toggle--checkbox:checked + .toggle--label:before { /* inner portion, when light active */
+  background: white;
+  animation-name: switch;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  box-shadow: none;
+}
+.toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 250ms;
+  opacity: 1;
+}
+.toggle--label {
+  width: 60px;
+  height: 30px;
+  background: var(--c1);
+  border-radius: 30px;
+  display: flex;
+  position: relative;
+  transition: all 250ms ease-in;
+}
+.toggle--label:before { /* inner portion, when light active */
+  animation-name: reverse;
+  animation-duration: 250ms;
+  animation-fill-mode: forwards;
+  transition: all 250ms ease-in;
+  content: "";
+  width: 30%;
+  height: 60%;
+  top: 20%;
+  left: 10%;
+  position: absolute;
+  border-radius: 30px;
+  background: white;
+  box-shadow: white 0px 0px 4px;
+}
+@keyframes switch {
+  0% {
+    left: 10%;
+  }
+  60% {
+    left: 10%;
+    width: 60%;
+  }
+  100% {
+    left: 60%;
+    width: 30%;
+  }
+}
+@keyframes reverse {
+  0% {
+    left: 60%;
+    width: 30%;
+  }
+  60% {
+    left: 10%;
+    width: 60%;
+  } 
+  100% {
+    left: 10%;
+  }
+}
+
+
 .light-dark-toggle {
   margin-bottom: 20px;
 }

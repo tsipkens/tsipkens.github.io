@@ -210,6 +210,7 @@ div.post-header a {
   line-height: 34px;
   color: #222;
   transition: all 0.3s ease 0s;
+  padding-bottom: 2px;
 }
 
 body.dark-theme div.post-header a {

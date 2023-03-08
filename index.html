@@ -86,10 +86,10 @@
          <div class="post-header">
             <div>
                <a href="#" style="margin-left:0px;"><i class="fa-solid fa-house"></i></a>
-               <a href="#about">About</a>
-               <a href="#edu">Education</a>
-               <a href="#pubs">Publications</a>
-               <a href="#code" style="margin-right:0px;">Codes</a>
+               <a id="about-nav" href="#about">About</a>
+               <a id="edu-nav" href="#edu">Education</a>
+               <a id="pubs-nav" href="#pubs">Publications</a>
+               <a id="code-nav" href="#code" style="margin-right:0px;">Codes</a>
             </div>
             <button onclick="toggleNight()" class="light-dark-toggle" id="light-dark-toggle-bar">
                <span><i class="fas fa-moon" id="moon"></i></span>
@@ -645,19 +645,21 @@
          <div class="head-div">
             <h2 id="code">Codes</h2>
          </div>
-         <p>
-            As part of many of my projects, I have code available for use by researchers.
-            Please refer to my <a href="https://github.com/tsipkens">GitHub page</a> for more details.
-            Some sample projects are listed below.
-         </p>
 
-         <ul id="userRepos"></ul>
+         <div id="code-div">
+            <p>
+               As part of many of my projects, I have code available for use by researchers.
+               Please refer to my <a href="https://github.com/tsipkens">GitHub page</a> for more details.
+               Some sample projects are listed below.
+            </p>
 
-         <p class="post-pub" data-aos="slide-up">
-            <a href="https://github.com/tsipkens"><i class="fas fa-chevron-right" style="font-size:11pt;"></i> More
-               repositories</a>
-         </p>
+            <ul id="userRepos"></ul>
 
+            <p class="post-pub" data-aos="slide-up">
+               <a href="https://github.com/tsipkens"><i class="fas fa-chevron-right" style="font-size:11pt;"></i> More
+                  repositories</a>
+            </p>
+         </div>
 
          <!-- Generate GitHub repo list. -->
          <script src="js/gh.js"></script>
@@ -706,7 +708,54 @@
             document.getElementById("header").style.boxShadow = "none";
          }
       }
+
+      // Color underline for navbar entries.
+      if (dark) {
+         col = "var(--c2)";
+      } else {
+         col = "var(--c1)";
+      }
+      if (isInViewport(document.querySelector('#pubs-div'))) {
+        document.getElementById("pubs-nav").style.borderBottom = "3px solid " + col;
+      } else {
+        document.getElementById("pubs-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
+      }
+      if (isInViewport(document.querySelector('#about-div'))) {
+        document.getElementById("about-nav").style.borderBottom = "3px solid " + col;
+      } else {
+        document.getElementById("about-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
+      }
+      if (isInViewport(document.querySelector('#edu-div'))) {
+        document.getElementById("edu-nav").style.borderBottom = "3px solid " + col;
+      } else {
+        document.getElementById("edu-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
+      }
+      if (isInViewport(document.querySelector('#code-div'))) {
+        document.getElementById("code-nav").style.borderBottom = "3px solid " + col;
+      } else {
+        document.getElementById("code-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
+      }
    }
+
+   // Check if a given element is in the viewport.
+   function isInViewport(el) {
+      var top = el.offsetTop;
+      var left = el.offsetLeft;
+      var width = el.offsetWidth;
+      var height = el.offsetHeight;
+      while(el.offsetParent) {
+        el = el.offsetParent;
+        top += el.offsetTop;
+        left += el.offsetLeft;
+      }
+      return (
+        top < (window.pageYOffset + window.innerHeight / 2) &&
+        left < (window.pageXOffset + window.innerWidth) &&
+        (top + height) > window.pageYOffset &&
+        (left + width) > window.pageXOffset
+      );
+    }
+
    scrollFunction(); // initialize
 </script>
 

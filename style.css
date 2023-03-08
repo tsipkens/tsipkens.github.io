@@ -140,11 +140,9 @@ ol {
   height: 5px;
   z-index: 20;
 }
-
 body.dark-theme #colorbar {
   background-color: var(--c2);
 }
-
 
 #header {
   display: none;

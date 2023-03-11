@@ -5,12 +5,7 @@
   /* both supported */
   --background-color: #FDFDFD;
   --c1: #0969DA;
-  /* red > #E01E5A; */
-  /* dark accent */
   --c2: #FEDC3D;
-  /* light accent */
-  --c3: #0969DA;
-  --c4: #EEC200;
   --c5: #FF5733;
 }
 
@@ -20,6 +15,7 @@
   }
 }
 
+/*------ Basic formatting ------*/
 * {
   padding: 0;
   margin: 0;
@@ -39,14 +35,12 @@ body {
   color: black;
   background-color: var(--background-color);
 }
-
 body.dark-theme {
   color: #CCC;
   background-color: var(--background-color);
 }
 
 b {
-  /* Format all bolds */
   font-family: 'Open Sans';
   font-weight: 700;
 }
@@ -57,8 +51,7 @@ p {
   padding-bottom: 8px;
   margin: 0px;
 }
-
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {  /* for narrow displays */
   p {
     text-align: justify;
   }
@@ -71,34 +64,22 @@ div.main {
   padding-top: 110px;
   padding-bottom: 50px;
 }
-
 div.pre-main {
   padding-left: 18px;
   padding-right: 5px;
 }
 
-h1 {
-  font-size: 45pt;
-  font-weight: 300;
-  font-family: 'Open Sans''Gotham''sans-serif';
-  margin-top: 30px;
-}
+/* h1 is site specific */
 
 h2 {
   font-size: 28pt;
   padding-bottom: 15px;
   padding-top: 120px;
-  color: black;
   font-family: 'Gotham';
   font-weight: 600;
 }
-
-.head-div {
+.head-div {  /* if site is printed */
   page-break-after: avoid;
-}
-
-body.dark-theme h2 {
-  color: white;
 }
 
 h3 {
@@ -113,12 +94,10 @@ a {
   transition: all 0.8s ease 0s;
   text-decoration: none;
 }
-
 a:hover {
   color: var(--c5);
   text-decoration: underline 1px;
 }
-
 body.dark-theme a {
   color: var(--c2);
   cursor: pointer;
@@ -127,9 +106,22 @@ body.dark-theme a {
 ul {
   list-style: none;
 }
-
 ol {
   list-style: decimal-leading-zero;
+}
+ol li::marker {
+  color: #999;
+  font-weight: 300;
+  font-size: 10pt;
+}
+body.dark-theme ol li::marker {
+  color: white;
+}
+ol li:hover::marker {
+  color: black;
+}
+body.dark-theme ol li:hover::marker {
+  color: white;
 }
 
 #colorbar {
@@ -143,11 +135,13 @@ ol {
 body.dark-theme #colorbar {
   background-color: var(--c2);
 }
+/*-----------------------------*/
 
+
+/*----- Header formatting -----*/
 #header {
   display: none;
 }
-
 @media screen and (min-width: 600px) {
   #header {
     display: inline-block;
@@ -163,29 +157,12 @@ body.dark-theme #colorbar {
     overflow-y: hidden;
     box-shadow: 0px 0px 10px #F0F0F0;
     border-bottom: var(--background-color) 1px solid;
-    /* default border blended to bg */
   }
-
   body.dark-theme #header {
     backdrop-filter: blur(8px);
     background-color: rgba(13, 17, 23, 0.85);
     box-shadow: 0px 0px 10px #111;
     border-bottom: var(--background-color) 1px solid;
-    /* default border blended to bg */
-  }
-
-  #light-dark-toggle-inpage {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  ol {
-    list-style: none;
-  }
-
-  #light-dark-toggle-bar {
-    display: none;
   }
 }
 
@@ -229,6 +206,66 @@ div.post-header a.head-first {
   font-size: 15pt;
   margin-left: 0px;
 }
+/*-----------------------------*/
+
+
+/*--- For light/dark toggle ---*/
+button.light-dark-toggle {
+  font-family: inherit;
+  font-size: 16pt;
+  display: inline;
+  background-color: inherit;
+  width: 35px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+body.dark-theme #sun {
+  display: inline-block;
+  color: var(--c2);
+}
+
+#sun {
+  display: none;
+}
+
+body.dark-theme #moon {
+  display: none;
+}
+
+#moon {
+  display: inline-block;
+  color: var(--c1);
+}
+
+@media screen and (min-width: 600px) {
+  #light-dark-toggle-inpage {
+    display: none;
+  }
+}
+/*-----------------------------*/
+
+
+/*----- Site specific -----*/
+h1 {
+  font-size: 45pt;
+  font-weight: 300;
+  font-family: 'Open Sans', 'sans-serif';
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  ol {
+    list-style: none;
+  }
+
+  #light-dark-toggle-bar {
+    display: none;
+  }
+}
 
 .addresses {
   padding-right: 20px;
@@ -270,40 +307,6 @@ body.dark-theme input {
 body.dark-theme input:hover {
   border: 1px solid var(--c2);
 }
-
-
-/*--- For light/dark toggle ---*/
-button.light-dark-toggle {
-  font-family: inherit;
-  font-size: 16pt;
-  display: inline;
-  background-color: inherit;
-  width: 35px;
-  text-align: center;
-  vertical-align: middle;
-  padding: 5px;
-  cursor: pointer;
-  border: none;
-}
-
-body.dark-theme #sun {
-  display: inline-block;
-  color: var(--c2);
-}
-
-#sun {
-  display: none;
-}
-
-body.dark-theme #moon {
-  display: none;
-}
-
-#moon {
-  display: inline-block;
-  color: var(--c1);
-}
-/*-----------------------------*/
 
 
 img.profile {
@@ -370,8 +373,8 @@ body.dark-theme a.a-icon svg {
 }
 
 a.a-icon:hover svg {
-  fill: var(--c3);
-  color: var(--c3);
+  fill: var(--c1);
+  color: var(--c1);
   transition: all 0.3s ease 0s;
 }
 
@@ -477,16 +480,6 @@ body.dark-theme .list-entry:hover {
 
 body.dark-theme .list-entry:hover a {
   color: var(--c2);
-}
-
-.list-entry::marker {
-  color: #999;
-  font-weight: 200;
-  font-size: 10pt;
-}
-
-body.dark-theme .list-entry::marker {
-  color: white;
 }
 
 .list-entry a {

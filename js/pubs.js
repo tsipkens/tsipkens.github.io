@@ -138,12 +138,63 @@ filterPubs = function (data, st) {
   return data;
 }
 
-addItems = function (id, di) {
-  let di2 = document.getElementById(id);
-  di2.innerHTML = " ";
-  di2.append(di);
-}
+// For quote button.
+var entry2quote = function(obj, datai0) {
+  datai = datai0;
+  // datai = Object.assign({}, datai0);  // copy data entry for modification
+  yr = datai['year'];
 
+  author = datai['author']
+  author = author.replaceAll(', ' , ' and ');
+  
+  // Reformat author.
+  authorlist = author.split(" and ");
+  for (let a in authorlist) {
+    at = authorlist[a].split(" ");
+    authorn = at[at.length - 1] + ",";
+    for (var i = 0; i < (at.length - 1); i++) {
+      authorn = authorn + " " + at[i];
+    }
+    author = author.replace(authorlist[a], authorn)
+    
+  }
+  datai['author'] = author;
+
+  // Last name of the first author.
+  author1 = authorlist[0].split(" ");
+  author1 = author1[author1.length - 1];
+  
+  // First word of title.
+  title1 = datai['title'].split(' ');
+  title1 = title1[0].split('-');
+  title1 = title1[0].split(':');
+  title1 = title1[0];
+
+  // Remove inappropriate fields.
+  keynames = Object.keys(datai);
+  for (let j in datai) {
+    if (datai[j] === null) {
+      delete datai[j]
+    }
+  }
+  delete datai['honours']
+  delete datai['tags']
+  delete datai['badge']
+
+  datai = JSON.stringify(datai);
+  datai = datai.replaceAll('{"', '@article{' + (author1 + yr + title1).toLowerCase() + ', \n ');
+  datai = datai.replaceAll('"}', '}\n}');
+  datai = datai.replaceAll('":"', '={');
+  datai = datai.replaceAll('":', '={');
+  datai = datai.replaceAll('","', '}, \n ');
+  datai = datai.replaceAll(',"', '}, \n ');
+  navigator.clipboard.writeText(datai);
+
+  obj.innerHTML = "<i class='fa-solid fa-check'></i>"
+  setTimeout(() => {  obj.innerHTML = "<i class='fa-solid fa-quote-right'></i>"; }, 1000);
+
+  console.log(datai)
+}
 
 
 
@@ -256,6 +307,27 @@ var writeItem = function (data, template, i) {
   return content;
 }
 
+// A wrapper for writer for journal articles. 
+// Uses a standard template and the above writer function.
+writeArticles = function (data, fYear = false, searchTerm = null) {
+  template = ['author', '.', 'title', '.', '<i>', 'journal', '</i>', ' ',
+    '<b>', 'volume', '</b>', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
+    'quote', ' ', 'honours'
+  ]
+  return writer(data, template, fYear, searchTerm)
+}
+
+// A wrapper for writer for conference contributions. 
+// Uses a standard template and the above writer function.
+writeConf = function (data, fYear = false, searchTerm = null) {
+  template = [
+    'author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.',
+    'address', '.', 'date', ',', 'year', '.', 'pdf', 'honours'
+  ]
+  return writer(data, template, fYear, searchTerm)
+}
+
+
 // Filter conferences by the presentation type.
 filterConf = function (data, type) {
   if (!(type == null)) {
@@ -267,59 +339,10 @@ filterConf = function (data, type) {
   return data;
 }
 
-var entry2quote = function(obj, datai0) {
-  datai = datai0;
-  // datai = Object.assign({}, datai0);  // copy data entry for modification
-  yr = datai['year'];
 
-  author = datai['author']
-  author = author.replaceAll(', ' , ' and ');
-  
-  // Reformat author.
-  authorlist = author.split(" and ");
-  for (let a in authorlist) {
-    at = authorlist[a].split(" ");
-    authorn = at[at.length - 1] + ",";
-    for (var i = 0; i < (at.length - 1); i++) {
-      authorn = authorn + " " + at[i];
-    }
-    author = author.replace(authorlist[a], authorn)
-    
-  }
-  datai['author'] = author;
-
-  // Last name of the first author.
-  author1 = authorlist[0].split(" ");
-  author1 = author1[author1.length - 1];
-  
-  // First word of title.
-  title1 = datai['title'].split(' ');
-  title1 = title1[0].split('-');
-  title1 = title1[0].split(':');
-  title1 = title1[0];
-
-  // Remove inappropriate fields.
-  keynames = Object.keys(datai);
-  for (let j in datai) {
-    if (datai[j] === null) {
-      delete datai[j]
-    }
-  }
-  delete datai['honours']
-  delete datai['tags']
-  delete datai['badge']
-
-  datai = JSON.stringify(datai);
-  datai = datai.replaceAll('{"', '@article{' + (author1 + yr + title1).toLowerCase() + ', \n ');
-  datai = datai.replaceAll('"}', '}\n}');
-  datai = datai.replaceAll('":"', '={');
-  datai = datai.replaceAll('":', '={');
-  datai = datai.replaceAll('","', '}, \n ');
-  datai = datai.replaceAll(',"', '}, \n ');
-  navigator.clipboard.writeText(datai);
-
-  obj.innerHTML = "<i class='fa-solid fa-check'></i>"
-  setTimeout(() => {  obj.innerHTML = "<i class='fa-solid fa-quote-right'></i>"; }, 1000);
-
-  console.log(datai)
+// Simple utility to add items to a specific element. 
+addItems = function (id, di) {
+  let di2 = document.getElementById(id);
+  di2.innerHTML = " ";
+  di2.append(di);
 }

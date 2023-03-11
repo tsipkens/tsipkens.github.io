@@ -530,12 +530,7 @@
                var json = $.getJSON(
                   "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
                   function (data) {
-                     di2 = writer(data,
-                        ['author', '.', 'title', '.', '<i>', 'journal', '</i>', ' ',
-                           '<b>', 'volume', '</b>', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
-                           'quote', ' ', 'honours'
-                        ],
-                        true, searchTerm);
+                     di2 = writeArticles(data, true, searchTerm);
                      addItems('pubs-j', di2);
                   });
 
@@ -554,16 +549,13 @@
                var json = $.getJSON(
                   "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                   function (data) {
-                     confTeample = ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.',
-                        'address', '.', 'date', ',', 'year', '.', 'pdf', 'honours'
-                     ];
 
                      dataO = filterConf(data, 'Oral'); // print oral presentations
-                     di2 = writer(dataO, confTeample, true, searchTerm);
+                     di2 = writeConf(dataO, true, searchTerm);
                      addItems('pubs-oral', di2);
 
                      dataP = filterConf(data, 'Poster'); // print poster presentations
-                     di2 = writer(dataP, confTeample, true, searchTerm);
+                     di2 = writeConf(dataP, true, searchTerm);
                      addItems('pubs-poster', di2);
                   });
 

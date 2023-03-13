@@ -1,3 +1,5 @@
+// A simple function to format authors for lists. 
+// Included bolding a specific author. 
 formatAuthor = function (author) {
   author = author.replace('T. Sipkens', '<b>T. Sipkens</b>')
     .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
@@ -6,6 +8,7 @@ formatAuthor = function (author) {
   return author;
 }
 
+// A function to print years between publications, if flagged below.
 printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
   if ((i == 0) || (iLastPrinted === null)) {
     content = data[i].year.toString()
@@ -39,6 +42,7 @@ printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
   }
 }
 
+// A simple utility to format DOI links. 
 writeDOI = function (doi) {
   if (doi.includes('https://doi.org/')) { // for pre-prints
     content = ' <a style="display:inline-block;" href="' + doi + '">' + doi.replace('https://doi.org/', '').toLowerCase() + '</a>';
@@ -48,14 +52,18 @@ writeDOI = function (doi) {
   return content;
 }
 
-checkNoItems = function (di2) {  // if no items to print, print "No matching items."
+// Check if not items, then replace contents
+// if no items to print, print "No matching items."
+checkNoItems = function (di2) {  
   if (di2.innerHTML === "") {
     di2.innerHTML = "<li class='list-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
   }
 }
 
+
+// A function to filter publications according to a search term, where
+// st = searchTerm
 filterPubs = function (data, st) {
-  // st = searchTerm
 
   if (!(st == null)) { // skip is search term (st) is empty
 
@@ -138,33 +146,37 @@ filterPubs = function (data, st) {
   return data;
 }
 
-// For quote button.
-var entry2quote = function(obj, datai0) {
-  datai = datai0;
-  // datai = Object.assign({}, datai0);  // copy data entry for modification
+
+// JSON <-> BIBTEX conversions.
+
+// Convert JSON to BiBTeX.
+var json2bibtex = function (dataIn) {
+  datai = dataIn;
+
   yr = datai['year'];
 
+  // Reformat author to BiBTeX.
   author = datai['author']
   author = author.replaceAll(', ' , ' and ');
   
-  // Reformat author.
-  authorlist = author.split(" and ");
-  for (let a in authorlist) {
-    at = authorlist[a].split(" ");
+  authorList = author.split(" and ");
+  for (let a in authorList) {
+    at = authorList[a].split(" ");
     authorn = at[at.length - 1] + ",";
-    for (var i = 0; i < (at.length - 1); i++) {
-      authorn = authorn + " " + at[i];
+    for (var ii = 0; ii < (at.length - 1); ii++) {
+      authorn = authorn + " " + at[ii];
     }
-    author = author.replace(authorlist[a], authorn)
-    
+    author = author.replace(authorList[a], authorn)
   }
   datai['author'] = author;
 
   // Last name of the first author.
-  author1 = authorlist[0].split(" ");
+  // Used for tag.
+  author1 = authorList[0].split(" ");
   author1 = author1[author1.length - 1];
   
   // First word of title.
+  // Used for tag.
   title1 = datai['title'].split(' ');
   title1 = title1[0].split('-');
   title1 = title1[0].split(':');
@@ -177,10 +189,13 @@ var entry2quote = function(obj, datai0) {
       delete datai[j]
     }
   }
+
+  // Delete extra fields.
   delete datai['honours']
   delete datai['tags']
   delete datai['badge']
 
+  // Stringify and output.
   datai = JSON.stringify(datai);
   datai = datai.replaceAll('{"', '@article{' + (author1 + yr + title1).toLowerCase() + ', \n ');
   datai = datai.replaceAll('"}', '}\n}');
@@ -188,12 +203,59 @@ var entry2quote = function(obj, datai0) {
   datai = datai.replaceAll('":', '={');
   datai = datai.replaceAll('","', '}, \n ');
   datai = datai.replaceAll(',"', '}, \n ');
+
+  return datai;
+}
+
+// BiBTeX to JSON conversion.
+var bibtex2json = function (datai) {
+  // Clean up whitespace.
+  datai = datai.replaceAll('\n', '');
+  datai = datai.replaceAll('    ', ' ');
+  datai = datai.replaceAll('   ', ' ');
+  datai = datai.replaceAll('  ', ' ');
+
+  // Reformat towards BiBTex.
+  datai = datai.replace(/@article.*aut/, '{"aut')
+  datai = datai.replaceAll('}}', '"}');
+  datai = datai.replaceAll('={', '": "');
+  datai = datai.replaceAll('}, ', '", "');
+  datai = datai.replaceAll('}}', '"}');
+
+  js = JSON.parse(datai)
+
+  author = js['author'] 
+  authorList = author.split(" and ");
+  for (let a in authorList) {
+    at = authorList[a].split(" ");
+    authorn = ''
+    for (var ii = 1; ii < (at.length); ii++) {
+      authorn = authorn + " " + at[ii];
+    }
+    authorn = authorn + " " + at[0];
+    author = author.replace(authorList[a], authorn)
+  }
+  author = author.replaceAll(",", "")
+  author = author.replaceAll(" and  ", ", ")
+  author = author.substring(1)
+  js['author'] = author
+
+  console.log(js)
+
+  return js
+}
+
+// For quote button, copying to clipboard.
+var entry2quote = function (obj, datai0) {
+  datai = json2bibtex(datai0);
+
   navigator.clipboard.writeText(datai);
 
   obj.innerHTML = "<i class='fa-solid fa-check'></i>"
   setTimeout(() => {  obj.innerHTML = "<i class='fa-solid fa-quote-right'></i>"; }, 1000);
 
   console.log(datai)
+  // bibtex2json(datai)  // shows conversion back to JSON
 }
 
 

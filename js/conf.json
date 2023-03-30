@@ -18,7 +18,7 @@
     "doi": null
 }, {
     "type": "Poster",
-    "author": "J. C. Corbin, T. A. Sipkens, R. L. Modini, M. Gysel-Beer",
+    "author": "J. C. Corbin, T. A. Sipkens*, R. L. Modini, M. Gysel-Beer",
     "title": "Mechanisms of soot-aggregate restructuring and compaction",
     "booktitle": "American Association for Aerosol Research Annual Conference",
     "address": "Raleigh, NC, USA",
@@ -36,7 +36,7 @@
     "doi": null
 }, {
     "type": "Poster",
-    "author": "T. A. Sipkens, J. C. Corbin, A. Oldershaw, I. D. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, P. Lobo, T. Koukoulas, R. G. Green, G. J. Smallwood",
+    "author": "T. A. Sipkens*, J. C. Corbin, A. Oldershaw, I. D. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, P. Lobo, T. Koukoulas, R. G. Green, G. J. Smallwood",
     "title": "Robust measurement of particle filtration efficiencies: Evaluated quantities and experimental sensitivities",
     "booktitle": "International Aerosol Conference",
     "address": "Athens, Greece (Virtual)",

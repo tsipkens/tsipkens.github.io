@@ -318,7 +318,9 @@ var writeItem = function (data, template, i) {
       continue; // do nothing as current entry it null
     } else if (!(j == template.length - 1)) {
       if (data[i][template[j - 1]] === null) {
-        continue; // do nothing if next is null (skips grammar)
+        if (!(template[j].includes('b>'))) {
+          continue; // do nothing if next is null (skips grammar)
+        }
       }
     }
     
@@ -328,8 +330,8 @@ var writeItem = function (data, template, i) {
 
     } else if ((templJ === '(') || (templJ === ')') ||
       (templJ === ' ') || (templJ === '<br>') ||
-      (templJ === '<i>') || (templJ === '</i>') || 
-      (templJ === '<b>') || (templJ === '</b>')) {
+      (templJ.includes('i>')) || 
+      (templJ.includes('b>'))) {
       content = content + templJ
 
     // Start parsing "special" fields, e.g., format author field.
@@ -372,7 +374,7 @@ var writeItem = function (data, template, i) {
 // A wrapper for writer for journal articles. 
 // Uses a standard template and the above writer function.
 writeArticles = function (data, fYear = false, searchTerm = null) {
-  template = ['author', '.', 'title', '.', '<i>', 'journal', '</i>', ' ',
+  template = ['author', '.', 'title', '.', '<i>', 'journal', '</i> ',
     '<b>', 'volume', '</b>', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
     'quote', ' ', 'honours'
   ]

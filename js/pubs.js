@@ -375,7 +375,7 @@ var writeItem = function (data, template, i) {
 // Uses a standard template and the above writer function.
 writeArticles = function (data, fYear = false, searchTerm = null) {
   template = ['author', '.', 'title', '.', '<i>', 'journal', '</i> ',
-    '<b>', 'volume', '</b>', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
+    '<b>', 'volume', '</b>, ', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
     'quote', ' ', 'honours'
   ]
   return writer(data, template, fYear, searchTerm)

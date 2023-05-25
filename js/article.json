@@ -1,9 +1,22 @@
 [{
+    "author": "T. A. Sipkens, T. Johnson, R. Nishida, G. J. Smallwood, J. C. Corbin",
+    "title": "Technical note: Simplified approaches to estimate the output of particle mass analyzers paired with unipolar chargers",
+    "journal": "Journal of Aerosol Science",
+    "pages": "106195",
+    "volume": 173,
+    "number": null,
+    "year": "2023",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.jaerosci.2023.106195", 
+    "tags": "characterization"
+}, {
     "author": "S. E. Laengert, Y. J. Kwon, J. C. Corbin, T. A. Sipkens, P. Morkus, R. J. LaRue, D. R. Latulippe, C. M. Clase, C.-F. de Lannoy",
     "title": "Aerosol charge neutralization and its impact on particle filtration efficiency of common face mask materials",
     "journal": "Journal of Aerosol Science",
     "pages": "106189",
-    "volume": "In press",
+    "volume": 173,
+    "number": null,
     "year": "2023",
     "honours": "",
     "badge": null,

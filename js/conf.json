@@ -1,4 +1,13 @@
 [{
+    "type": "Oral",
+    "author": "F. Liu*, T. A. Sipkens, G. J. Smallwood",
+    "title": "On the particle size and pressure dependent calibration constant of the conventional LII method for soot concentration measurement",
+    "booktitle": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "address": "Edmonton, AB, Canada",
+    "date": "May 15-18",
+    "year": 2023,
+    "doi": null
+}, {
     "type": "Poster",
     "author": "T. A. Sipkens*, J. C. Corbin, A. Oldershaw, I. D. Leroux, J. Norooz Oliaee, F. Liu, T. Lavoie, P. Lobo, T. Koukoulas, R. G. Green, G. J. Smallwood",
     "title": "Robust measurement of particle filtration efficiencies: Evaluated quantities and experimental sensitivities",

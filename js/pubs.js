@@ -1,3 +1,7 @@
+// PUBS.JS
+// Created by T. A. Sipkens for formatting citations from a JSON file. 
+//--------------------------------------------------------------------//
+
 // A simple function to format authors for lists. 
 // Included bolding a specific author. 
 formatAuthor = function (author) {
@@ -290,7 +294,7 @@ writer = function (data, template, fYear = false, searchTerm = null) {
     }
     iLastPrinted = i // copy over current
     
-    content = writeItem(data, template, i, content);
+    content = writeItem(data, template, i);
 
     let li = document.createElement('li');
     li.classList.add('list-entry');

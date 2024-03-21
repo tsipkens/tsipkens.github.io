@@ -178,6 +178,11 @@ div.post-header {
   justify-content: space-between;
 }
 
+div.post-header div {
+  display: flex;
+  align-items: center;
+}
+
 div.post-header a {
   text-decoration: none;
   margin-right: 15px;

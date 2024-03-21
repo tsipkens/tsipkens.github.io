@@ -1,5 +1,131 @@
 [{
     "type": "Oral",
+    "author": "J. Scott, T. Sipkens*, R. Mehri, G. Smallwood, M. R. Kholghy",
+    "title": "Rapid assessment of jet engine-like soot from Jet-A1 and sustainable aviation fuels Made by a spray flame",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "R. Mehri*, T. Sipkens, J. Corbin, Z. Gajdosechova, G. Smallwood",
+    "title": "Quantification and characterization of nanomaterials shed from face masks",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "J. Corbin*, T. Sipkens, R. Modini, M. Gysel",
+    "title": "Soot restructuring and compaction: Mechanisms and resulting effective density",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "R. Mehri*, J. Corbin, T. Sipkens, F. Liu, M. Johnson, G. Smallwood",
+    "title": "Mapping out the absorption of soot as a function of particle mass using CERMS and laser-induced incandescence",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "J. Pongetti, T. Sipkens, M. Kiasadegh, J. S. Olfert, J. Symonds",
+    "title": "Automated tandem aerosol classifier experiments",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "F. Liu, J. Corbin, T. Sipkens*, G. Smallwood",
+    "title": "Modelling the response of tar brown carbon (tarballs) to pulsed laser-induced incandesce (P-LII)",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "T. Sipkens*, R. Mehri, A. Oldershaw, G. Smallwood",
+    "title": "Overview of the size of respiratory particles containing infectious pathogens",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "N. Sapkota, T. Sipkens, M. Guan*, A. Kumar, S. Rogak",
+    "title": "Measuring the charger efficiency in the Electrical Low Pressure Impactor for fractal aggregates using an aerodynamic aerosol classifier",
+    "booktitle": "American Association for Aerosol Research Annual Conference",
+    "address": "Portland, OR, USA",
+    "date": "October 2-6",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "T. A. Sipkens*, R. Mehri, J. C. Corbin, G. J. Smallwood",
+    "title": "Overview of the size of respiratory particles containing infectious pathogens",
+    "booktitle": "European Aerosol Conference",
+    "address": "Malaga, Spain",
+    "date": "September 3-8",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "J. C. Corbin*, T. A. Sipkens, R. Modini, M. Gysel-Beer",
+    "title": "Soot restructuring and compaction: mechanisms and resulting effective density",
+    "booktitle": "European Aerosol Conference",
+    "address": "Malaga, Spain",
+    "date": "September 3-8",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "F. Liu, J. C. Corbin, T. A. Sipkens*, G. J. Smallwood",
+    "title": "Effects of tar brown carbon refractive index on its ability to incandesce during laser heating in the single particle soot photometer (SP2)",
+    "booktitle": "European Aerosol Conference",
+    "address": "Malaga, Spain",
+    "date": "September 3-8",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "T. A. Sipkens*, B. Smith, S. Gagné, J.C. Corbin, P. Lobo, B. Brem, A. Fischer, L. Durdina, G. J. Smallwood",
+    "title": "Uncertainty in thermal-optical analysis for elemental carbon from aircraft engine exhaust: An interlaboratory study",
+    "booktitle": "European Aerosol Conference",
+    "address": "Malaga, Spain",
+    "date": "September 3-8",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Poster",
+    "author": "T. A. Sipkens*",
+    "title": "Molecular dynamics simulations of heat transfer from different carbon allotropes",
+    "booktitle": "Laser Diagnostics in Combustion Gordon Research Conference",
+    "address": "Newry, ME, USA",
+    "date": "July 9-14",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
+    "author": "T. A. Sipkens, B. Smith, S. Gagné, J. C. Corbin, P. Lobo, B. Brem, A. Fischer, L. Durdina, G. Smallwood",
+    "title": "Uncertainty in thermal-optical analysis for elemental carbon from aircraft engine exhaust: An interlaboratory study",
+    "booktitle": "Combustion Institute – Canadian Section Spring Technical Meeting",
+    "address": "Edmonton, AB, Canada",
+    "date": "May 15-18",
+    "year": 2023,
+    "doi": null
+}, {
+    "type": "Oral",
     "author": "F. Liu*, T. A. Sipkens, G. J. Smallwood",
     "title": "On the particle size and pressure dependent calibration constant of the conventional LII method for soot concentration measurement",
     "booktitle": "Combustion Institute – Canadian Section Spring Technical Meeting",

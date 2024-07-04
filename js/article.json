@@ -1,4 +1,40 @@
 [{
+    "author": "J. Scott, T. A. Sipkens, G. Smallwood, R. Mehri, J. C. Corbin, P. Lobo, M. R. Kholghy",
+    "title": "Rapid assessment of jet engine-like soot from combustion of conventional and sustainable aviation fuels using flame spray pyrolysis",
+    "journal": "Aerosol Science and Technology",
+    "pages": "595-609",
+    "volume": 58,
+    "number": 6,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1080/02786826.2024.2316190", 
+    "tags": "characterization"
+}, {
+    "author": "T. A. Sipkens, J. C. Corbin",
+    "title": "Effective density and packing of compacted soot aggregates",
+    "journal": "Carbon",
+    "pages": "119197",
+    "volume": 226,
+    "number": null,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1016/j.carbon.2024.119197", 
+    "tags": "characterization"
+}, {
+    "author": "T. Sipkens, J. Corbin, B. Smith, S. Gagné, P. Lobo, B. Brem, M. Johnson, G. Smallwood",
+    "title": "Quantifying the uncertainties in thermal-optical analysis of carbonaceous aircraft engine emissions: An interlaboratory study",
+    "journal": "Atmospheric Measurement Techniques Discussions",
+    "pages": "1-17",
+    "volume": null,
+    "number": null,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.5194/amt-2024-1", 
+    "tags": "characterization"
+}, {
     "author": "T. A. Sipkens, A. Boies, J. C. Corbin, R. K. Chakrabarty, J. Olfert, S. N. Rogak",
     "title": "Overview of methods to characterize the mass, size, and morphology of soot",
     "journal": "Journal of Aerosol Science",

@@ -1,4 +1,52 @@
 [{
+    "author": "T. A. Sipkens, R. Dastanpour, U. Trivanovic, H. Nikookar, S, N. Rogak",
+    "title": "atems: Analysis tools for TEM images of carbonaceous particles",
+    "journal": "Journal of Open Source Software",
+    "pages": "6416",
+    "volume": 9,
+    "number": 94,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": ":https://doi.org/10.21105/joss.06416", 
+    "tags": "characterization"
+}, {
+    "author": "T. E. G. Alvarez‑Arenas, T. A. Sipkens, J. C. Corbin, P. Salso, V. Genovés",
+    "title": "Relating the ultrasonic and aerosol filtration properties of filters",
+    "journal": "Scientific Reports",
+    "pages": "",
+    "volume": null,
+    "number": null,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": "", 
+    "tags": "ppe"
+}, {
+    "author": "H. Nikookar, T. A. Sipkens, S. N. Rogak",
+    "title": "Simulating the effect of post-flame agglomeration on the structure of soot",
+    "journal": "Aerosol Science and Technology",
+    "pages": "",
+    "volume": null,
+    "number": null,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": "", 
+    "tags": "modeling"
+}, {
+    "author": "T. A. Sipkens, J. C. Corbin, B. Smith, S. Gagné, P. Lobo, B. T. Brem, M. P. Johnson, G. J. Smallwood",
+    "title": "Quantifying the uncertainties in thermal–optical analysis of carbonaceous aircraft engine emissions: an interlaboratory study",
+    "journal": "Atmospheric Measurement Techniques",
+    "pages": "4291-4302",
+    "volume": 17,
+    "number": 14,
+    "year": "2024",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.5194/amt-17-4291-2024", 
+    "tags": "characterization"
+}, {
     "author": "J. Scott, T. A. Sipkens, G. Smallwood, R. Mehri, J. C. Corbin, P. Lobo, M. R. Kholghy",
     "title": "Rapid assessment of jet engine-like soot from combustion of conventional and sustainable aviation fuels using flame spray pyrolysis",
     "journal": "Aerosol Science and Technology",

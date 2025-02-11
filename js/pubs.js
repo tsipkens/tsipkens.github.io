@@ -4,11 +4,13 @@
 
 // A simple function to format authors for lists. 
 // Included bolding a specific author. 
-formatAuthor = function (author) {
-  author = author.replace('T. Sipkens', '<b>T. Sipkens</b>')
-    .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
-    .replace('Timothy A. Sipkens', '<b>Timothy A. Sipkens</b>');
-  author = author.replace('*', '<b>*</b>');
+formatAuthor = function (author, bolder = false) {
+  if (bolder) {
+    author = author.replace('T. Sipkens', '<b>T. Sipkens</b>')
+      .replace('T. A. Sipkens', '<b>T. A. Sipkens</b>')
+      .replace('Timothy A. Sipkens', '<b>Timothy A. Sipkens</b>');
+    author = author.replace('*', '<b>*</b>');
+  }
   return author;
 }
 
@@ -332,14 +334,18 @@ var writeItem = function (data, template, i) {
     if ((templJ === '.') || (templJ === ',')) {
       content = content + templJ + ' '
 
+    } else if (templJ.includes('<p')) {
+      content = content + '<p class="list-title">'
+
     } else if ((templJ === '(') || (templJ === ')') ||
       (templJ === ' ') || (templJ === '<br>') ||
       (templJ.includes('i>')) || 
-      (templJ.includes('b>'))) {
+      (templJ.includes('b>')) || 
+      (templJ.includes('p>'))) {
       content = content + templJ
 
     // Start parsing "special" fields, e.g., format author field.
-    } else if (templJ === 'author') {  
+    } else if (templJ === 'author') {
       content = content + formatAuthor(data[i][templJ])
 
     } else if (templJ === 'doi') {  // add DOI as link
@@ -378,6 +384,15 @@ var writeItem = function (data, template, i) {
 // A wrapper for writer for journal articles. 
 // Uses a standard template and the above writer function.
 writeArticles = function (data, fYear = false, searchTerm = null) {
+  template = ['<p>', '<b>', 'title', '</b>', '</p>', 'author', '<br>', '<i>', 'journal', '</i> ',
+    'volume', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
+    'quote', ' ', 'honours'
+  ]
+  return writer(data, template, fYear, searchTerm)
+}
+
+// Older version of writeArticles.
+writeArticles0 = function (data, fYear = false, searchTerm = null) {
   template = ['author', '.', 'title', '.', '<i>', 'journal', '</i> ',
     '<b>', 'volume', '</b>', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
     'quote', ' ', 'honours'

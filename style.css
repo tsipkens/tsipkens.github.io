@@ -84,7 +84,8 @@ h2 {
 
 h3 {
   margin-top: 35px;
-  font-weight: 300;
+  font-family: 'Gotham';
+  font-weight: 600;
   font-size: 18pt;
 }
 
@@ -95,7 +96,6 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: var(--c5);
   text-decoration: underline 1px;
 }
 body.dark-theme a {
@@ -110,8 +110,9 @@ ol {
   list-style: decimal-leading-zero;
 }
 ol li::marker {
-  color: #999;
-  font-weight: 300;
+  color: black;
+  font-family: 'open Sans';
+  font-weight: 500;
   font-size: 10pt;
 }
 body.dark-theme ol li::marker {
@@ -295,7 +296,7 @@ input {
   font-size: 13.5pt;
   transition: 0.5s;
   font-family: 'Open Sans';
-  font-weight: 300;
+  font-weight: 400;
   color: black;
 }
 
@@ -439,12 +440,13 @@ ol.list h3 {
 }
 
 .list-entry {
-  margin-top: 15px;
+  margin-top: 25px;
   margin-bottom: 22px;
   padding-top: 5px;
   transition: all 0.8s ease 0s;
   text-align: left;
   page-break-inside: avoid;
+  border-top: 1.5px black solid;
 }
 
 ol .list-entry {
@@ -475,14 +477,6 @@ body.dark-theme .list-entry:hover p.list-title {
 
 body.dark-theme .list-entry:hover {
   color: white;
-}
-
-.list-entry:hover a {
-  color: var(--c5);
-}
-
-.list-entry:hover .little-icon i {
-  color: var(--c5);
 }
 
 body.dark-theme .list-entry:hover a {

@@ -7,3 +7,6 @@ temp*
 
 # Ignore archived files.
 archive/
+
+# Seperate code to ignore.
+cv/

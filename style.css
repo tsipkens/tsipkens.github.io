@@ -116,7 +116,7 @@ ol {
 ol li::marker {
   color: black;
   font-weight: 700;
-  font-size: 13pt;
+  font-size: 12.5pt;
 }
 
 body.dark-theme ol li::marker {

@@ -106,20 +106,24 @@ body.dark-theme a {
 ul {
   list-style: none;
 }
+@counter-style empty-style {
+  system: extends decimal;
+  suffix: '  ';
+}
 ol {
-  list-style: decimal-leading-zero;
+  list-style: empty-style;
 }
 ol li::marker {
   color: black;
-  font-family: 'open Sans';
-  font-weight: 500;
-  font-size: 10pt;
+  font-weight: 600;
+  font-size: 13pt;
 }
+
 body.dark-theme ol li::marker {
   color: white;
 }
 ol li:hover::marker {
-  color: black;
+  color: var(--c1);
 }
 body.dark-theme ol li:hover::marker {
   color: white;

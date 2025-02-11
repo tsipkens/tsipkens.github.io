@@ -1,5 +1,31 @@
 [
   {
+    "author": "T. A. Sipkens, R. Mehri, R. P. Calderon, R. G. Green, A. Oldershaw, G. J. Smallwood",
+    "title": "Interlaboratory comparison of particle filtration efficiency testing equipment",
+    "journal": "Journal of Occupational and Environmental Hygiene",
+    "pages": null,
+    "volume": null,
+    "number": null,
+    "year": "2025",
+    "honours": "",
+    "badge": null,
+    "doi": "",
+    "tags": "ppe"
+  },
+  {
+    "author": "H. Nikookar, T. A. Sipkens, S. N. Rogak",
+    "title": "Simulating the effect of post-flame agglomeration on the structure of soot",
+    "journal": "Aerosol Science and Technology",
+    "pages": "1-15",
+    "volume": 59,
+    "number": 1,
+    "year": "2025",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1080/02786826.2024.2402020",
+    "tags": "modeling"
+  },
+  {
     "author": "K. Vasilatou, K. Iida, M. Kazemimanesh, J. Olfert, H. Sakurai, T. A. Sipkens, G. J. Smallwood",
     "title": "Aerosol physical characterization: A review on the current state of aerosol documentary standards and calibration strategies",
     "journal": "Journal of Aerosol Science",
@@ -37,19 +63,6 @@
     "badge": null,
     "doi": "https://doi.org/10.1038/s41598-024-67809-w",
     "tags": "ppe"
-  },
-  {
-    "author": "H. Nikookar, T. A. Sipkens, S. N. Rogak",
-    "title": "Simulating the effect of post-flame agglomeration on the structure of soot",
-    "journal": "Aerosol Science and Technology",
-    "pages": "1-15",
-    "volume": 59,
-    "number": 1,
-    "year": "2024",
-    "honours": "",
-    "badge": null,
-    "doi": "https://doi.org/10.1080/02786826.2024.2402020",
-    "tags": "modeling"
   },
   {
     "author": "T. A. Sipkens, J. C. Corbin, B. Smith, S. Gagné, P. Lobo, B. T. Brem, M. P. Johnson, G. J. Smallwood",

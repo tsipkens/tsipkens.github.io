@@ -298,10 +298,15 @@ writer = function (data, template, fYear = false, searchTerm = null) {
     
     content = writeItem(data, template, i);
 
+    // Create variable that will create li's to be added to ul
+    let di = document.createElement('div');
+    di.setAttribute('data-aos', 'slide-up')
+
     let li = document.createElement('li');
     li.classList.add('list-entry');
     li.innerHTML = (content);
-    di2.appendChild(li)
+    di.appendChild(li)
+    di2.appendChild(di)
   }
 
   // If nothing was printed.

@@ -7,7 +7,7 @@ for more information.
 requestUserRepos('tsipkens');
 
 
-validRepos = ['atems', 'aerosol-icon-project', 'fmviz', 'cmap', 'mat-2d-aerosol-inversion', 'tfer-pma', 'odias', 'autils', 'aubos'];
+validRepos = ['atems', 'aerosol-icon-project', 'cmap', 'bidias', 'tfer-pma', 'odias', 'autils', 'aubos'];
 
 
 function formatter(txt, num, tafter) {

@@ -456,8 +456,8 @@
             <div class="horz-list">
                <a id="journal-selector" class="active" onclick="switchPubs('journal')">Journal Articles</a>
                <a id="chapter-selector" onclick="switchPubs('chapter')">Book Chapters</a>
-               <a id="oral-selector" onclick="switchPubs('oral')">Oral Presentations</a>
-               <a id="poster-selector" onclick="switchPubs('poster')">Posters</a>
+               <!--<a id="oral-selector" onclick="switchPubs('oral')">Oral Presentations</a>
+               <a id="poster-selector" onclick="switchPubs('poster')">Posters</a>-->
                <a id="thesis-selector" onclick="switchPubs('thesis')">Theses</a>
             </div>
 
@@ -546,6 +546,7 @@
                   })
 
                // Add conference publications.
+               /*
                var json = $.getJSON(
                   "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
                   function (data) {
@@ -558,6 +559,7 @@
                      di2 = writeConf(dataP, true, searchTerm);
                      addItems('pubs-poster', di2);
                   });
+               */
 
                // Add theses.
                var json = $.getJSON(
@@ -585,7 +587,7 @@
 
             // Switch between publication type. 
             function switchPubs(id) {
-               var ids = ['journal', 'chapter', 'oral', 'poster', 'thesis']
+               var ids = ['journal', 'chapter', 'thesis'] // 'oral', 'poster' < removed categories
                for (let ii in ids) {
                   if (ids[ii] === id) {
                      document.getElementById(ids[ii] + '-wrapper').style.display = 'block';

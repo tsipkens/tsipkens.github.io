@@ -114,8 +114,7 @@ ol {
   list-style: empty-style;
 }
 ol li::marker {
-  color: black;
-  font-weight: 700;
+  color: var(--c1);
   font-size: 12.5pt;
 }
 

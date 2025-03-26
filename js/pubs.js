@@ -60,7 +60,7 @@ writeDOI = function (doi) {
 
 // Check if not items, then replace contents
 // if no items to print, print "No matching items."
-checkNoItems = function (di2) {  
+checkNoItems = function (di2) {
   if (di2.innerHTML === "") {
     di2.innerHTML = "<li class='list-entry' style='list-style:none;color:#888;'><i>No matching items.</i></li>";
   }
@@ -264,6 +264,18 @@ var entry2quote = function (obj, datai0) {
   // bibtex2json(datai)  // shows conversion back to JSON
 }
 
+// For quote button, copying to clipboard.
+var entry2txt = function (obj, datai0) {
+  datai1 = [datai0]
+  datai = writeItem(datai1, ['author', '.', 'title', '.',
+        'journal', ' ', '(', 'year', ')', ' ', 'volume', ',', 'pages', '.', 'doi_txt'], 0)
+
+  navigator.clipboard.writeText(datai);
+
+  obj.innerHTML = "<i class='fa-solid fa-check'></i>"
+  setTimeout(() => {  obj.innerHTML = "<i class='fa-solid fa-align-left'></i>"; }, 1000);
+}
+
 
 
 //== For writing HTML from JSON data. ====================//
@@ -356,10 +368,16 @@ var writeItem = function (data, template, i) {
     } else if (templJ === 'doi') {  // add DOI as link
       content = content + writeDOI(data[i].doi);
 
+    } else if (templJ === 'doi_txt') {  // add DOI as static text
+      content = content + data[i].doi.substr(16);
+
     } else if (templJ == 'quote') {  //  add link to copy BIBTEX info
       content = content + " <a style='margin-left:4px;font-size:9pt;' " + 
         "onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
         ")'><i class='fa-solid fa-quote-right'></i></a>"
+      content = content + " <a style='margin-left:4px;font-size:9pt;' " + 
+        "onclick='entry2txt(this, " + JSON.stringify(data[i]) + 
+        ")'><i class='fa-solid fa-align-left'></i></a>"
 
     } else if (templJ == 'pdf') {  // if link to PDF is provided
       if (data[i].hasOwnProperty('pdf')) {

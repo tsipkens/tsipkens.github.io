@@ -449,7 +449,6 @@ ol.list h3 {
   transition: all 0.8s ease 0s;
   text-align: left;
   page-break-inside: avoid;
-  border-top: 1.5px black solid;
 }
 
 ol .list-entry {

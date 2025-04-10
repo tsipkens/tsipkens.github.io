@@ -357,7 +357,8 @@ var writeItem = function (data, template, i) {
     } else if ((templJ === '(') || (templJ === ')') ||
       (templJ === ' ') || (templJ === '<br>') ||
       (templJ.includes('i>')) || 
-      (templJ.includes('b>')) || 
+      (templJ.includes('<b')) || 
+      (templJ.includes('</b')) || 
       (templJ.includes('p>'))) {
       content = content + templJ
 
@@ -407,7 +408,7 @@ var writeItem = function (data, template, i) {
 // A wrapper for writer for journal articles. 
 // Uses a standard template and the above writer function.
 writeArticles = function (data, fYear = false, searchTerm = null) {
-  template = ['<p>', '<b>', 'title', '</b>', '</p>', 'author', '<br>', '<i>', 'journal', '</i> ',
+  template = ['<p>', '<b style="font-weight:600;">', 'title', '</b>', '</p>', 'author', '<br>', '<i>', 'journal', '</i> ',
     'volume', ',', 'pages', ' ', '(', 'year', ')', '.', 'doi', ' ',
     'quote', ' ', 'honours'
   ]

@@ -114,7 +114,6 @@ ol {
   list-style: empty-style;
 }
 ol li::marker {
-  color: var(--c1);
   font-size: 12.5pt;
 }
 
@@ -449,6 +448,7 @@ ol.list h3 {
   transition: all 0.8s ease 0s;
   text-align: left;
   page-break-inside: avoid;
+  padding-bottom: 10px;
 }
 
 ol .list-entry {

@@ -6,6 +6,7 @@
   color-scheme: light dark;
   /* both supported */
   --background-color: #FDFDFD;
+  --foreground-color: black;
   --c1: #0969DA;
   --c2: #FEDC3D;
   --c5: #FF5733;
@@ -14,6 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #0D1117;
+    --foreground-color: white;
   }
 }
 
@@ -62,7 +64,7 @@ p {
 div.main {
   margin: 0 auto;
   width: 95%;
-  max-width: 900px;
+  max-width: 1050px;
   padding-top: 110px;
   padding-bottom: 50px;
 }
@@ -108,10 +110,10 @@ body.dark-theme a {
 ul {
   list-style: none;
 }
-@counter-style empty-style {
+/* @counter-style empty-style {
   system: extends decimal;
   suffix: '  ';
-}
+} */
 ol {
   list-style: empty-style;
 }
@@ -174,7 +176,7 @@ body.dark-theme #colorbar {
 div.post-header {
   margin: 0 auto;
   width: 95%;
-  max-width: 900px;
+  max-width: 1050px;
   padding-top: 15px;
   padding-bottom: 15px;
   font-weight: 400;
@@ -410,6 +412,17 @@ body.dark-theme .expand-list {
   border-top: white solid 1.5px;
 }
 
+.pub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.full-width-heading {
+  /* This breaks the grid flow to span all columns */
+  grid-column: 1 / -1;
+}
+
 .list {
   max-height: 1150px;
   overflow-x: visible;
@@ -418,12 +431,13 @@ body.dark-theme .expand-list {
 }
 
 ol.list {
-  margin-left: -40px;
+  list-style-position: inside;
+  /* margin-left: -40px; */
 }
 
-ol.list h3 {
+/* ol.list h3 {
   margin-left: 40px;
-}
+} */
 
 .list:after {
   content: "";
@@ -446,16 +460,17 @@ ol.list h3 {
 .list-entry {
   margin-top: 25px;
   margin-bottom: 22px;
-  padding-top: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: all 0.8s ease 0s;
   text-align: left;
   page-break-inside: avoid;
-  padding-bottom: 10px;
+  border-top: 3px var(--foreground-color) solid;
 }
 
-ol .list-entry {
+/* ol .list-entry {
   margin-left: 40px;
-}
+} */
 
 .list-entry p {
   padding: 0px;

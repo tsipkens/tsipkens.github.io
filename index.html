@@ -69,8 +69,10 @@
          // Update background color
          if (dark) {
             document.querySelector(':root').style.setProperty('--background-color', '#0D1117');
+            document.querySelector(':root').style.setProperty('--foreground-color', 'white');
          } else {
             document.querySelector(':root').style.setProperty('--background-color', '#FDFDFD');
+            document.querySelector(':root').style.setProperty('--foreground-color', 'black');
          }
 
          scrollFunction();
@@ -568,7 +570,7 @@
          </div>
 
          <div id="edu-div">
-            <ul reversed class="list">
+            <ul reversed class="list pub-grid">
                <div data-aos="slide-up" class="aos-init aos-animate">
                   <li class="list-entry">
                      <p>2019</p>
@@ -645,7 +647,7 @@
                Some sample projects are listed below.
             </p>
 
-            <ul id="userRepos"></ul>
+            <ul id="userRepos" class="pub-grid"></ul>
 
             <p class="post-pub" data-aos="slide-up">
                <a href="https://github.com/tsipkens"><i class="fa-solid fa-up-right-from-square" style="font-size:11pt;"></i> More

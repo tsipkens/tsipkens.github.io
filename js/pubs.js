@@ -30,6 +30,7 @@ printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
     // Add Bootstrap list item class to each li
     let h3 = document.createElement('h3');
     h3.classList.add('h-year')
+    h3.classList.add('full-width-heading')
 
     // Create the html markup for each li
     h3.innerHTML = (content);
@@ -38,7 +39,7 @@ printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
     if (f_aos) {
       // Create variable that will create li's to be added to di2
       let dih = document.createElement('div');
-      dih.setAttribute('data-aos', 'slide-up')
+      dih.setAttribute('data-aos', 'slide-up');
 
       dih.appendChild(h3);
       di2.appendChild(dih);
@@ -51,9 +52,9 @@ printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
 // A simple utility to format DOI links. 
 writeDOI = function (doi) {
   if (doi.includes('https://doi.org/')) { // for pre-prints
-    content = ' <a style="display:inline-block;" href="' + doi + '">' + doi.replace('https://doi.org/', '').toLowerCase() + '</a>';
+    content = ' <br><a style="display:inline-block;" href="' + doi + '">' + doi.replace('https://doi.org/', '').toLowerCase() + '</a><br>';
   } else { // otherwise for DOIs
-    content = ' <a style="display:inline-block;" href="' + doi + '">' + doi.toLowerCase() + '</a>';
+    content = ' <br><a style="display:inline-block;" href="' + doi + '">' + doi.toLowerCase() + '</a><br>';
   }
   return content;
 }
@@ -298,6 +299,7 @@ writer = function (data, template, fYear = false, searchTerm = null) {
   var iLastPrinted = null
 
   let di2 = document.createElement('div');  // initialize outer div element
+  di2.classList.add('pub-grid')
 
   // Loop over each object in data array
   for (let i in data) {

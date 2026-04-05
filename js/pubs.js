@@ -52,9 +52,9 @@ printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
 // A simple utility to format DOI links. 
 writeDOI = function (doi) {
   if (doi.includes('https://doi.org/')) { // for pre-prints
-    content = ' <br><a style="display:inline-block;" href="' + doi + '">' + doi.replace('https://doi.org/', '').toLowerCase() + '</a><br>';
+    content = ' <br><a style="display:inline-block;padding-top:5px;" href="' + doi + '">' + doi.replace('https://doi.org/', '').toLowerCase() + '</a><br>';
   } else { // otherwise for DOIs
-    content = ' <br><a style="display:inline-block;" href="' + doi + '">' + doi.toLowerCase() + '</a><br>';
+    content = ' <br><a style="display:inline-block;padding-top:5px;" href="' + doi + '">' + doi.toLowerCase() + '</a><br>';
   }
   return content;
 }
@@ -375,12 +375,12 @@ var writeItem = function (data, template, i) {
       content = content + data[i].doi.substr(16);
 
     } else if (templJ == 'quote') {  //  add link to copy BIBTEX info
-      content = content + " <a style='margin-left:4px;font-size:9pt;' " + 
+      content = content + " <div style='padding-top:5px;'><a style='margin-left:4px;font-size:9pt;' " + 
         "onclick='entry2quote(this, " + JSON.stringify(data[i]) + 
         ")'><i class='fa-solid fa-quote-right'></i></a>"
       content = content + " <a style='margin-left:4px;font-size:9pt;' " + 
         "onclick='entry2txt(this, " + JSON.stringify(data[i]) + 
-        ")'><i class='fa-solid fa-align-left'></i></a>"
+        ")'><i class='fa-solid fa-align-left'></i></a></div>"
 
     } else if (templJ == 'pdf') {  // if link to PDF is provided
       if (data[i].hasOwnProperty('pdf')) {

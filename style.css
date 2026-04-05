@@ -270,9 +270,9 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-  ol {
+  /* ol {
     list-style: none;
-  }
+  } */
 
   #light-dark-toggle-bar {
     display: none;
@@ -419,7 +419,7 @@ body.dark-theme .expand-list {
 }
 
 .full-width-heading {
-  /* This breaks the grid flow to span all columns */
+  /* This breaks the grid flow to span all columns (e.g., for years) */
   grid-column: 1 / -1;
 }
 
@@ -460,7 +460,7 @@ ol.list {
 .list-entry {
   margin-top: 25px;
   margin-bottom: 22px;
-  padding-top: 10px;
+  padding-top: 10px;  
   padding-bottom: 10px;
   transition: all 0.8s ease 0s;
   text-align: left;
@@ -477,10 +477,10 @@ ol.list {
   text-align: left;
 }
 
-.list-entry:hover p.list-title {
+/* .list-entry:hover p.list-title {
   transition: all 0.8s ease 0s;
   color: var(--c1);
-}
+} */
 
 body.dark-theme .list-entry:hover p.list-title {
   color: var(--c2);

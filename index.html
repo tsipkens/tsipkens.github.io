@@ -428,11 +428,14 @@
             <div id="journal-wrapper">
                <ol reversed id="pubs-j" class="list"></ol>
 
-               <a>
-                  <div id="post-pubs-j" class="expand-list" onclick="expandPubs('pubs-j')">
-                     <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-                  </div>
-               </a>
+               <div id="post-pubs-poster" class="expand-list">
+                  <a>
+                     <i class="fas fa-chevron-down" onclick="expandPubs('pubs-j')"></i>
+                  </a>
+                  <a>
+                     <i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-j')"></i>
+                  </a>
+               </div>
             </div>
 
             <div id="chapter-wrapper" style="display:none;">
@@ -447,21 +450,28 @@
             <div id="oral-wrapper" style="display:none;">
                <ol reversed id="pubs-oral" class="list"></ol>
 
-               <a>
-                  <div id="post-pubs-oral" class="expand-list" onclick="expandPubs('pubs-oral')">
-                     <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-                  </div>
-               </a>
+            
+               <div id="post-pubs-poster" class="expand-list">
+                  <a>
+                     <i class="fas fa-chevron-down" onclick="expandPubs('pubs-oral')"></i>
+                  </a>
+                  <a>
+                     <i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-oral')"></i>
+                  </a>
+               </div>
             </div>
 
             <div id="poster-wrapper" style="display:none;">
                <ol reversed id="pubs-poster" class="list"></ol>
 
-               <a>
-                  <div id="post-pubs-poster" class="expand-list" onclick="expandPubs('pubs-poster')">
-                     <i class="fas fa-chevron-down" style="font-size:11pt;"></i>
-                  </div>
-               </a>
+               <div id="post-pubs-poster" class="expand-list">
+                  <a>
+                     <i class="fas fa-chevron-down" onclick="expandPubs('pubs-poster')"></i>
+                  </a>
+                  <a>
+                     <i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-poster')"></i>
+                  </a>
+               </div>
             </div>
 
             <div id="thesis-wrapper" style="display:none;">
@@ -472,20 +482,22 @@
          <!-- Add publications. -->
          <script>
             // To expand a publication section.
+            maxH = 1150
             var expandPubs = function (ids) {
-               if (document.getElementById(ids).style.maxHeight == "99999px") {
-                  document.getElementById(ids).style.maxHeight = "1150px";
-                  document.getElementById("post-" + ids).innerHTML =
-                     "<a><i class='fas fa-chevron-down' style='font-size:11pt;'></i></a>";
-                  document.getElementById("post-" + ids).scrollIntoView({
-                     behavior: 'instant',
-                     block: 'end'
-                  });
-               } else {
-                  document.getElementById(ids).style.maxHeight = "99999px";
-                  document.getElementById(["post-" + ids]).innerHTML =
-                     "<a><i class='fas fa-chevron-up' style='font-size:11pt;'></i></a>";
-               }
+               maxH = maxH + 1150
+               document.getElementById(ids).style.maxHeight = maxH + "px";
+               document.getElementById("post-" + ids).scrollIntoView({
+                  behavior: 'instant',
+                  block: 'end'
+               });
+            }
+            var shrinkPubs = function (ids) {
+               maxH = maxH - 1150
+               document.getElementById(ids).style.maxHeight = maxH + "px";
+               document.getElementById("post-" + ids).scrollIntoView({
+                  behavior: 'instant',
+                  block: 'end'
+               });
             }
 
             // Function to read in and add publications.

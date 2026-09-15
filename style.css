@@ -405,11 +405,22 @@ body.dark-theme a.a-icon:hover svg {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 15px;
-  border-top: black solid 1.5px;
+  border-top: black solid 2px;
+  font-size: 20pt;
+}
+
+.expand-list a {
+  width: 350px;
+  display: inline-block;
+  width: 60px;
+}
+
+.expand-list a:hover {
+  text-decoration: none;
 }
 
 body.dark-theme .expand-list {
-  border-top: white solid 1.5px;
+  border-top: white solid 2px;
 }
 
 .pub-grid {

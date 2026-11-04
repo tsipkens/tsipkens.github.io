@@ -1,72 +1,49 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
    <meta charset="utf-8">
    <title>Timothy Sipkens | Aerosol scientist and researcher</title>
-
-   <meta name="author" content="Timothy Sipkens" />
-   <meta name="description"
-      content="Timothy A. Sipkens is a Canadian researcher and aerosol scientist with a particular focus on inverse problems and data analysis.">
-   <meta name="keywords" content="sipkens, timothy sipkens, t a sipkens, aerosol scientist, researcher, profile">
-   <meta name="robots" content="index,follow" />
-
-   <meta name="google-site-verification" content="V3Pa3U8C_JbI1IrC9NgYsb-sF2cc4NA5lTznQQqjujk" />
-
-   <!-- facebook open graph tags -->
-   <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://tsipkens.github.io" />
-   <meta property="og:title" content="Timothy Sipkens | Aerosol scientist and researcher" />
-   <meta property="og:site_name" content="Timothy Sipkens | Aerosol scientist and researcher" />
-   <meta property="og:description"
-      content="Timothy A. Sipkens is a Canadian researcher and aerosol scientist with a particular focus on inverse problems and data analysis." />
-
-   <meta name="title" property="og:title" content="Timothy Sipkens | Aerosol scientist and researcher">
    <meta name="author" content="Timothy Sipkens">
+   <meta name="description" content="Timothy A. Sipkens is a Canadian researcher and aerosol scientist with a particular focus on inverse problems and data analysis.">
+   <meta name="keywords" content="sipkens, timothy sipkens, t a sipkens, aerosol scientist, researcher, profile">
+   <meta name="robots" content="index,follow">
+   <meta name="google-site-verification" content="V3Pa3U8C_JbI1IrC9NgYsb-sF2cc4NA5lTznQQqjujk">
 
+   <!-- Open Graph Tags -->
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://tsipkens.github.io">
+   <meta property="og:title" content="Timothy Sipkens | Aerosol scientist and researcher">
+   <meta property="og:site_name" content="Timothy Sipkens | Aerosol scientist and researcher">
+   <meta property="og:description" content="Timothy A. Sipkens is a Canadian researcher and aerosol scientist with a particular focus on inverse problems and data analysis.">
    <meta name="viewport" content="width=device-width, initial-scale=1">
-
    <link rel="canonical" href="https://tsipkens.github.io">
 
-   <!-- Load jquery -->
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <!-- jQuery & AOS Stylesheets -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
-   <!-- For scrolling effect -->
-   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+   <!-- FontAwesome Icons -->
+   <script src="https://kit.fontawesome.com/58cf1bb60d.js" crossorigin="anonymous" defer></script>
 
-   <!-- Import font awesome icons -->
-   <script src="https://kit.fontawesome.com/58cf1bb60d.js" crossorigin="anonymous"></script>
+   <!-- Academicons CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.6/css/academicons.min.css">
 
-   <!-- Import for Alimetric -->
-   <!-- <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script> -->
-
-   <!-- Import forHTML2PDF -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.js"></script>
-
-   <!-- Load pubs.js functions. -->
-   <script type='text/javascript' src="js/pubs.js"></script> <!-- Formatting pubs -->
+   <!-- Publication & GitHub scripts combined -->
+   <script type="text/javascript" src="js/pubs.js" defer></script>
 
    <link rel="icon" type="image/png" href="ico/favicon.png">
    <link href="https://fonts.cdnfonts.com/css/gotham-narrow" rel="stylesheet">
    <link href="https://fonts.cdnfonts.com/css/gotham" rel="stylesheet">
    <link href="style.css" rel="stylesheet">
-
-   <meta name="color-scheme" content="light dark" />
+   <meta name="color-scheme" content="light dark">
 
    <script>
-      // Initialize light/dark mode.
       const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
       var dark = prefersDarkScheme.matches;
 
-      // Apply appropriate theme.
       function toggleNight() {
          dark = !dark;
-
-         // Swap CSS.
          document.body.classList.toggle("dark-theme");
-
-         // Update background color
          if (dark) {
             document.querySelector(':root').style.setProperty('--background-color', '#0D1117');
             document.querySelector(':root').style.setProperty('--foreground-color', 'white');
@@ -74,12 +51,10 @@
             document.querySelector(':root').style.setProperty('--background-color', '#FDFDFD');
             document.querySelector(':root').style.setProperty('--foreground-color', 'black');
          }
-
          scrollFunction();
       };
    </script>
 </head>
-
 <body onload="if (dark) { dark = !dark; toggleNight(); }" id="body">
 
    <div id="header">
@@ -103,7 +78,6 @@
 
    <div class="pre-main">
       <div class="main" id="main">
-
          <div style="margin-bottom:20px;" id="light-dark-toggle-inpage">
             <button onclick="toggleNight()" class="light-dark-toggle">
                <span><i class="fas fa-moon" id="moon"></i></span>
@@ -111,271 +85,64 @@
             </button>
          </div>
 
-         <img class="profile" src="img/profile.jpg" />
+         <img class="profile" src="img/profile.jpg" alt="Timothy A. Sipkens Profile Picture">
          <h1>Timothy A. <b>Sipkens</b></h1>
-         <p>
-            <div class="div-icon">
-               <a class="a-icon" href="https://scholar.google.ca/citations?user=_ajcbxwAAAAJ&hl=en">
-                  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                     xmlns="http://www.w3.org/2000/svg"
-                     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="384" height="512"
-                     viewBox="0 0 384 512" version="1.1" id="svg8" inkscape:version="1.0 (1.0+r73+1)"
-                     sodipodi:docname="google-scholar.svg">
-                     <title id="title833">Google Scholar</title>
-                     <defs id="defs2" />
-                     <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
-                        inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.75" inkscape:cx="192"
-                        inkscape:cy="256" inkscape:document-units="px" inkscape:current-layer="layer6"
-                        inkscape:document-rotation="0" showgrid="true" units="px" showguides="true"
-                        inkscape:guide-bbox="true" inkscape:window-width="1315" inkscape:window-height="713"
-                        inkscape:window-x="51" inkscape:window-y="27" inkscape:window-maximized="1">
-                        <inkscape:grid type="xygrid" id="grid10" empspacing="4" />
-                        <sodipodi:guide position="384.00001,64" orientation="0,1" id="guide23" inkscape:label="baseline"
-                           inkscape:locked="true" inkscape:color="rgb(0,0,255)" />
-                     </sodipodi:namedview>
-                     <metadata id="metadata5">
-                        <rdf:RDF>
-                           <cc:Work rdf:about="">
-                              <dc:format>image/svg+xml</dc:format>
-                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                              <dc:title>Google Scholar</dc:title>
-                              <cc:license rdf:resource="http://scripts.sil.org/OFL" />
-                              <dc:subject>
-                                 <rdf:Bag>
-                                    <rdf:li>Google Scholar</rdf:li>
-                                 </rdf:Bag>
-                              </dc:subject>
-                           </cc:Work>
-                           <cc:License rdf:about="http://scripts.sil.org/OFL">
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
-                           </cc:License>
-                        </rdf:RDF>
-                     </metadata>
-                     <g inkscape:groupmode="layer" id="layer6" inkscape:label="icon">
-                        <path style="stroke-width:0.0647871"
-                           d="M 343.75868,106.66243 V 79.430205 L 363.52365,63.999997 H 149.63354 L 20.476345,176.2736 h 85.656075 c -0.15534,2.12494 -0.21914,4.04644 -0.21914,6.22563 0,20.84472 7.2192,38.08662 21.67203,51.86089 14.45284,13.79702 32.25124,20.64784 53.32651,20.64784 4.92319,0 9.75059,-0.36794 14.43842,-1.02419 -2.90722,6.50082 -4.37457,12.52302 -4.37457,18.14228 0,9.87526 4.49924,20.4304 13.46715,31.6418 -39.23377,2.6705 -68.06112,9.73264 -86.43702,21.16322 -10.53108,6.49907 -19.000207,14.70396 -25.390349,24.5311 -6.390569,9.89933 -9.577754,20.51525 -9.577754,31.9616 0,9.64822 2.062375,18.33611 6.21907,26.06233 4.156694,7.7263 9.577757,14.07047 16.312223,18.98408 6.71825,4.96781 14.46899,9.10088 23.219,12.46874 8.73429,3.34378 17.40643,5.71858 26.06106,7.06258 8.62707,1.34222 17.20471,1.9985 25.70579,1.9985 13.46887,0 26.95353,-1.73428 40.54711,-5.18707 13.56165,-3.48461 26.28022,-8.64143 38.17105,-15.4927 11.85935,-6.80488 21.51545,-16.0865 28.9219,-27.7183 7.39024,-11.67998 11.09457,-24.80499 11.09457,-39.33613 0,-11.01584 -2.24964,-21.03852 -6.7502,-30.14073 -4.46864,-9.07202 -9.93785,-16.54102 -16.45271,-22.34403 -6.5008,-5.81263 -12.99987,-11.15539 -19.51512,-15.9679 -6.50083,-4.84488 -12.00021,-9.75058 -16.46884,-14.8129 -4.4848,-5.04657 -6.73444,-10.05419 -6.73444,-14.98395 0,-4.92145 1.73422,-9.67183 5.21588,-14.26559 3.45451,-4.6095 7.67376,-9.04795 12.60967,-13.30571 4.93756,-4.24944 9.87523,-8.96788 14.79665,-14.13302 4.92147,-5.14719 9.14072,-11.82739 12.60971,-20.00822 3.48467,-8.17907 5.20318,-17.44489 5.20318,-27.75679 0,-13.4527 -2.54714,-24.46065 -7.54735,-33.31348 -0.59369,-1.02243 -1.21757,-1.80338 -1.87511,-3.02225 l 56.90745,-46.672136 v 17.118526 c -7.39373,0.92969 -6.62422,5.34582 -6.62422,10.6352 v 128.66719 c 0,5.95832 4.8751,10.83382 10.83386,10.83382 h 3.98869 c 5.95835,0 10.83386,-4.87506 10.83386,-10.83382 V 117.29282 c 0,-5.27669 0.77741,-9.68801 -6.56167,-10.63039 z M 236.39865,329.14114 c 1.14099,0.7503 3.7039,2.78075 7.7184,6.03838 4.0495,3.24319 6.797,5.69582 8.26567,7.41432 1.43851,1.66381 3.5792,4.16501 6.37617,7.54734 2.81268,3.3744 4.7184,6.30394 5.71853,8.73425 1.00016,2.4767 2.01603,5.46089 3.04636,8.94556 0.98567,3.44488 1.48486,6.97595 1.48486,10.56169 0,17.04813 -6.56338,29.68007 -19.65604,37.85915 -13.125,8.18083 -28.76651,12.27368 -46.93767,12.27368 -9.18709,0 -18.2031,-1.09289 -27.06247,-3.1951 -8.84322,-2.11665 -17.31192,-5.3362 -25.39035,-9.60185 -8.07846,-4.25771 -14.57754,-10.20337 -19.50072,-17.79659 -4.93764,-7.64012 -7.40645,-16.41464 -7.40645,-26.24962 0,-10.32022 2.79692,-19.28987 8.42233,-26.90588 5.59343,-7.62564 12.93774,-13.3919 22.03208,-17.3154 9.0624,-3.94582 18.24946,-6.74232 27.56166,-8.39827 9.31221,-1.7023 18.79679,-2.555 28.43842,-2.555 4.46862,0 7.93582,0.25115 10.40465,0.69607 0.45456,0.21918 3.03188,2.07025 7.73456,5.56326 4.70401,3.46237 7.62565,5.59519 8.75047,6.38401 z m -3.35823,-100.5779 c -7.40648,8.85938 -17.73454,13.2882 -30.95363,13.2882 -11.85933,0 -22.29766,-4.76482 -31.26554,-14.31195 -8.99984,-9.52309 -15.42235,-20.32803 -19.34408,-32.43061 -3.93752,-12.10871 -5.90585,-23.98423 -5.90585,-35.648 0,-13.6942 3.59542,-25.35184 10.7809,-34.97598 7.18727,-9.64952 17.49915,-14.48477 30.93786,-14.48477 11.87507,0 22.37423,5.03825 31.43704,15.15677 9.09434,10.08482 15.60961,21.41303 19.5169,33.96799 3.92176,12.5392 5.87345,24.52979 5.87345,35.98399 0,13.44658 -3.70256,24.60984 -11.07663,33.45436 z"
-                           id="path2" />
-                     </g>
-                  </svg>
-               </a>
+         
+         <div class="div-icon" style="margin-top:20px;margin-bottom:25px;">
+            <!-- Google Scholar (Academicons) -->
+            <a class="a-icon" href="https://scholar.google.ca/citations?user=_ajcbxwAAAAJ&hl=en" aria-label="Google Scholar">
+               <i class="ai ai-google-scholar"></i>
+            </a>
 
-               <a class="a-icon" href="https://www.researchgate.net/profile/Timothy-Sipkens">
-                  <i class="fa-brands fa-researchgate"></i>
-               </a>
+            <!-- ResearchGate (Academicons / Font Awesome) -->
+            <a class="a-icon" href="https://www.researchgate.net/profile/Timothy-Sipkens" aria-label="ResearchGate">
+               <i class="ai ai-researchgate"></i>
+            </a>
 
-               <a class="a-icon" href="https://github.com/tsipkens">
-                  <i class="fa-brands fa-github"></i>
-               </a>
+            <!-- GitHub (Font Awesome Brands) -->
+            <a class="a-icon" href="https://github.com/tsipkens" aria-label="GitHub">
+               <i class="fa-brands fa-github"></i>
+            </a>
 
-               <a class="a-icon" href="https://www.linkedin.com/in/tsipkens/">
-                  <i class="fa-brands fa-linkedin"></i>
-               </a>
+            <!-- LinkedIn (Font Awesome Brands) -->
+            <a class="a-icon" href="https://www.linkedin.com/in/tsipkens/" aria-label="LinkedIn">
+               <i class="fa-brands fa-linkedin"></i>
+            </a>
 
-               <a class="a-icon" href="https://orcid.org/0000-0003-1719-7105">
-                  <i class="fa-brands fa-orcid"></i>
-               </a>
+            <!-- ORCID (Academicons) -->
+            <a class="a-icon" href="https://orcid.org/0000-0003-1719-7105" aria-label="ORCID">
+               <i class="ai ai-orcid"></i>
+            </a>
 
-               <a class="a-icon" href="https://publons.com/researcher/2129579/timothy-a-sipkens/">
-                  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                     xmlns="http://www.w3.org/2000/svg"
-                     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="320" height="512"
-                     viewBox="0 0 320 512" version="1.1" id="svg8" inkscape:version="1.0 (1.0+r73+1)"
-                     sodipodi:docname="publons.svg">
-                     <title id="title833">Publons</title>
-                     <defs id="defs2" />
-                     <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0"
-                        inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="0.75" inkscape:cx="160"
-                        inkscape:cy="256" inkscape:document-units="px" inkscape:current-layer="layer6"
-                        inkscape:document-rotation="0" showgrid="true" units="px" showguides="true"
-                        inkscape:guide-bbox="true" inkscape:window-width="1315" inkscape:window-height="713"
-                        inkscape:window-x="51" inkscape:window-y="27" inkscape:window-maximized="1">
-                        <inkscape:grid type="xygrid" id="grid10" empspacing="4" />
-                        <sodipodi:guide position="320,64" orientation="0,1" id="guide23" inkscape:label="baseline"
-                           inkscape:locked="true" inkscape:color="rgb(0,0,255)" />
-                     </sodipodi:namedview>
-                     <metadata id="metadata5">
-                        <rdf:RDF>
-                           <cc:Work rdf:about="">
-                              <dc:format>image/svg+xml</dc:format>
-                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                              <dc:title>Publons</dc:title>
-                              <cc:license rdf:resource="http://scripts.sil.org/OFL" />
-                              <dc:subject>
-                                 <rdf:Bag>
-                                    <rdf:li>Publons</rdf:li>
-                                 </rdf:Bag>
-                              </dc:subject>
-                           </cc:Work>
-                           <cc:License rdf:about="http://scripts.sil.org/OFL">
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
-                           </cc:License>
-                        </rdf:RDF>
-                     </metadata>
-                     <g inkscape:groupmode="layer" id="layer6" inkscape:label="icon">
-                        <path style="stroke-width:0.0675242"
-                           d="m 282.06661,122.98132 c -3.2209,-7.85624 -7.83525,-15.06718 -12.99213,-21.77629 C 256.78328,85.683269 240.55101,72.513548 221.19584,67.207938 192.10931,59.16487 159.8688,66.793626 136.1456,85.051094 c -5.09779,3.864028 -9.62245,8.388701 -13.81111,13.199916 -2.0064,-10.384158 -2.62896,-21.005002 -4.98098,-31.309075 -1.20489,-1.294575 -2.37127,-3.231853 -4.44504,-2.905461 -5.1586,0.09944 -9.94883,2.271956 -14.643244,4.188662 -20.224038,8.79381 -40.379391,17.725013 -60.594244,26.507449 -2.134581,1.017656 -4.803349,1.542209 -6.166613,3.667156 -0.44494,2.846399 -0.414315,5.800009 -0.03024,8.656029 1.225451,2.80484 4.278347,4.08801 6.759869,5.60003 6.520115,3.66586 13.545546,6.67851 19.265902,11.6096 5.137607,4.22893 7.854503,10.72979 8.320008,17.27046 0.206476,2.16476 0.276964,4.33785 0.286564,6.5201 -0.01928,79.37849 0.01134,158.76613 -0.01928,238.14414 -0.513633,10.0289 0.139125,20.1457 -1.4722,30.09455 -0.830385,4.68302 -3.516655,9.91996 -8.635448,10.84791 -7.667246,0.59191 -15.403189,-0.28686 -23.059497,0.39504 -2.046205,0.0782 -2.766336,2.3026 -2.638585,4.02066 0.01928,4.56491 -0.128201,9.13946 0.07831,13.71355 -0.0098,1.25431 1.353637,1.848 2.055831,2.70727 14.305929,-0.37455 28.603547,-1.41271 42.909037,-1.58071 27.34747,-0.53287 54.71551,-0.0495 82.01486,1.59995 2.1442,0.0113 5.52304,0.0397 5.99686,-2.67666 0.42569,-4.88163 0.36619,-9.83024 0.0398,-14.70227 -0.0398,-2.16476 -2.24308,-3.192 -4.11997,-3.192 -5.90892,-0.30577 -11.8161,-0.0385 -17.72502,-0.0994 -3.43703,-0.0896 -7.17287,0.41431 -10.30409,-1.3344 -3.12158,-1.89615 -4.20965,-5.69106 -5.04966,-9.0209 -2.48984,-12.46884 -1.57108,-25.26408 -2.03526,-37.89132 -0.30717,-28.06888 -0.73108,-56.13955 -0.83039,-84.21808 11.61922,5.2369 24.23682,7.96343 36.89293,9.07993 21.98411,2.11359 44.63892,-2.23345 64.03432,-12.87353 24.43372,-13.12161 43.18774,-35.51086 53.77794,-60.96217 8.38869,-19.94886 12.08341,-41.72343 11.70893,-63.31246 -0.0722,-14.87511 -1.8511,-30.00181 -7.66072,-43.81469 z M 228.61503,238.8957 c -4.35664,15.52352 -13.17935,30.85628 -27.79371,38.68187 -12.32972,6.86577 -27.14097,6.02578 -40.52814,3.36967 -10.39378,-2.05582 -19.82898,-7.39994 -27.78411,-14.26743 -6.80624,-6.65924 -9.33763,-16.52976 -9.20814,-25.80656 0.12949,-40.41003 -0.18723,-80.84061 0.15837,-121.24099 9.11844,-12.78564 23.93932,-21.054439 39.40201,-23.179386 14.68174,-2.153842 30.21312,2.678368 40.78583,13.140856 14.32649,13.96028 21.40004,33.5329 25.55064,52.69163 4.95998,25.17439 6.34425,51.6626 -0.58232,76.61034 z"
-                           id="path2" />
-                     </g>
-                  </svg>
-               </a>
+            <!-- Publons (Academicons) -->
+            <a class="a-icon" href="https://publons.com/researcher/2129579/timothy-a-sipkens/" aria-label="Publons">
+               <i class="ai ai-publons"></i>
+            </a>
 
-               <a class="a-icon" href="https://www.scopus.com/authid/detail.uri?authorId=55652400700">
-                  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-                  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                     xmlns="http://www.w3.org/2000/svg"
-                     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="scopus.svg"
-                     inkscape:version="1.0 (1.0+r73+1)" id="svg8" version="1.1" viewBox="0 0 512 512" height="512"
-                     width="512">
-                     <title id="title861">Scopus</title>
-                     <defs id="defs2" />
-                     <sodipodi:namedview inkscape:window-maximized="1" inkscape:window-y="27" inkscape:window-x="51"
-                        inkscape:window-height="713" inkscape:window-width="1315" inkscape:guide-bbox="true"
-                        showguides="true" units="px" showgrid="true" inkscape:document-rotation="0"
-                        inkscape:current-layer="layer6" inkscape:document-units="px" inkscape:cy="256" inkscape:cx="320"
-                        inkscape:zoom="0.75" inkscape:pageshadow="2" inkscape:pageopacity="0.0" borderopacity="1.0"
-                        bordercolor="#666666" pagecolor="#ffffff" id="base" scale-x="1">
-                        <inkscape:grid empspacing="4" id="grid10" type="xygrid" />
-                        <sodipodi:guide inkscape:color="rgb(0,0,255)" inkscape:locked="true" inkscape:label="baseline"
-                           id="guide863" orientation="0,1" position="512,64" />
-                     </sodipodi:namedview>
-                     <metadata id="metadata5">
-                        <rdf:RDF>
-                           <cc:Work rdf:about="">
-                              <dc:format>image/svg+xml</dc:format>
-                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                              <dc:title>Scopus</dc:title>
-                              <cc:license rdf:resource="http://scripts.sil.org/OFL" />
-                              <dc:subject>
-                                 <rdf:Bag>
-                                    <rdf:li>Scopus</rdf:li>
-                                 </rdf:Bag>
-                              </dc:subject>
-                           </cc:Work>
-                           <cc:License rdf:about="http://scripts.sil.org/OFL">
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
-                           </cc:License>
-                        </rdf:RDF>
-                     </metadata>
-                     <g inkscape:label="icon" id="layer6" inkscape:groupmode="layer">
-                        <path id="rect1609"
-                           style="opacity:0.999;fill-opacity:1;stroke:none;stroke-width:1.5118;stroke-linecap:square"
-                           d="M 64,64 V 448 H 448 V 64 Z m 116.81542,99.92578 c 22.22181,0 32.04017,2.58584 45.73537,8.27051 l -1.292,20.41113 c -14.72837,-8.7855 -26.35575,-11.36718 -43.15137,-11.36718 -19.37945,0 -29.2002,14.72659 -29.2002,28.16308 0,18.08753 17.31277,24.80703 33.59181,34.62597 20.92965,12.40292 42.63573,23.51411 42.63573,48.06153 0,32.2992 -27.64955,48.57714 -54.00585,48.57714 -18.86288,0 -32.5565,-2.84253 -45.99316,-9.04393 l 3.10254,-20.41407 c 13.17814,8.01015 24.54717,11.88867 41.85937,11.88867 17.57072,0 32.29688,-11.88662 32.29688,-28.42383 0,-17.05391 -16.53489,-23.51559 -32.29688,-33.07617 -21.18819,-12.91968 -44.44336,-24.28934 -44.44336,-50.64551 0,-26.35612 19.37863,-47.02734 51.16112,-47.02734 z m 161.70412,0 c 26.09777,0 37.72572,3.10211 51.9375,9.82031 l -1.54982,19.37988 c -15.50393,-8.52716 -31.78349,-11.88573 -52.97168,-11.88573 -33.59128,0 -62.27343,26.61294 -62.27343,69.76464 0,40.82619 29.19944,71.5752 65.8916,71.5752 16.79562,0 33.59152,-3.35879 49.35351,-11.88575 l 1.54981,19.6377 c -13.95327,6.97658 -31.52275,9.82031 -52.71094,9.82031 -42.11835,0 -87.33692,-31.00949 -87.33692,-87.59766 0,-49.6116 37.98197,-88.6289 88.11037,-88.6289 z" />
-                     </g>
-                  </svg>
-               </a>
+            <!-- Scopus (Academicons) -->
+            <a class="a-icon" href="https://www.scopus.com/authid/detail.uri?authorId=55652400700" aria-label="Scopus">
+               <i class="ai ai-scopus"></i>
+            </a>
 
-               <a class="a-icon" href="https://www.webofscience.com/wos/author/record/F-3640-2017">
-                  <svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#"
-                     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"
-                     xmlns="http://www.w3.org/2000/svg"
-                     xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-                     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" sodipodi:docname="template-square.svg"
-                     inkscape:version="1.0 (1.0+r73+1)" id="svg8" version="1.1" viewBox="0 0 448 512" height="512"
-                     width="448">
-                     <title id="title1578">ResearcherID</title>
-                     <defs id="defs2" />
-                     <sodipodi:namedview inkscape:window-maximized="1" inkscape:window-y="27" inkscape:window-x="51"
-                        inkscape:window-height="713" inkscape:window-width="1315" inkscape:guide-bbox="true"
-                        showguides="true" units="px" showgrid="true" inkscape:document-rotation="0"
-                        inkscape:current-layer="layer6" inkscape:document-units="px" inkscape:cy="256"
-                        inkscape:cx="203.33333" inkscape:zoom="0.75" inkscape:pageshadow="2" inkscape:pageopacity="0.0"
-                        borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base">
-                        <inkscape:grid empspacing="4" id="grid10" type="xygrid" />
-                        <sodipodi:guide inkscape:color="rgb(0,0,255)" inkscape:locked="true" inkscape:label=""
-                           id="guide832" orientation="0,1" position="448,416" />
-                        <sodipodi:guide inkscape:color="rgb(0,0,255)" inkscape:locked="true" inkscape:label=""
-                           id="guide834" orientation="0,1" position="448,96" />
-                        <sodipodi:guide inkscape:color="rgb(0,0,255)" inkscape:locked="true" inkscape:label="baseline"
-                           id="guide836" orientation="0,1" position="448,64" />
-                        <sodipodi:guide position="64,512" orientation="1,0" id="guide835" />
-                        <sodipodi:guide position="384,512" orientation="1,0" id="guide837" />
-                     </sodipodi:namedview>
-                     <metadata id="metadata5">
-                        <rdf:RDF>
-                           <cc:Work rdf:about="">
-                              <dc:format>image/svg+xml</dc:format>
-                              <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-                              <dc:title>ResearcherID</dc:title>
-                              <cc:license rdf:resource="http://scripts.sil.org/OFL" />
-                              <dc:subject>
-                                 <rdf:Bag>
-                                    <rdf:li>ResearcherID</rdf:li>
-                                 </rdf:Bag>
-                              </dc:subject>
-                           </cc:Work>
-                           <cc:License rdf:about="http://scripts.sil.org/OFL">
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Reproduction" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Distribution" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/Embedding" />
-                              <cc:permits rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeWorks" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Notice" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/Attribution" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/ShareAlike" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/DerivativeRenaming" />
-                              <cc:requires rdf:resource="http://scripts.sil.org/pub/OFL/BundlingWhenSelling" />
-                           </cc:License>
-                        </rdf:RDF>
-                     </metadata>
-                     <g inkscape:label="icon" id="layer6" inkscape:groupmode="layer">
-                        <path
-                           d="M 48 32 C 21.5 32 0 53.5 0 80 L 0 432 C 0 458.5 21.5 480 48 480 L 400 480 C 426.5 480 448 458.5 448 432 L 448 80 C 448 53.5 426.5 32 400 32 L 48 32 z M 106.13281 96 L 217.67969 96 C 246.19953 96 266.57414 98.880056 278.80078 104.62695 C 291.02741 110.37389 301.06644 120.34656 308.91992 134.5332 C 316.77341 148.71982 320.70703 165.70769 320.70703 185.50781 C 320.70703 210.53459 314.70674 230.693 302.69336 245.97266 C 290.68 261.25232 273.62582 270.85362 251.50586 274.78711 C 262.85239 282.93369 272.23946 291.8526 279.66602 301.51953 C 287.09258 311.19954 297.20005 328.54604 310.01367 353.58594 L 341.86719 416 L 278.66602 416 L 240.3457 346.37305 C 226.54589 321.19971 217.17321 305.43918 212.22656 299.11914 C 207.27991 292.79909 202.03912 288.4274 196.50586 286.02734 C 190.97258 283.62729 182.1075 282.42773 169.88086 282.42773 L 158.94727 282.42773 L 158.94727 416 L 106.13281 416 L 106.13281 96 z M 158.94727 150.13281 L 158.94727 231.33398 L 198.24023 231.33398 C 222.25347 231.33398 237.53327 230.28038 244.08008 228.17383 C 250.6269 226.06726 255.93363 221.81338 260.01367 215.40039 C 264.09372 209.00049 266.11914 200.48057 266.11914 189.86719 C 266.11914 179.68039 264.08058 171.49359 260.01367 165.30664 C 255.94675 159.11967 250.41265 154.86655 243.42578 152.5332 C 238.47913 150.93306 224.14589 150.13281 200.42578 150.13281 L 158.94727 150.13281 z "
-                           id="path2" />
-                     </g>
-                  </svg>
-               </a>
+            <!-- ResearcherID / Web of Science (Academicons) -->
+            <a class="a-icon" href="https://www.webofscience.com/wos/author/record/F-3640-2017" aria-label="ResearcherID">
+               <i class="ai ai-researcherid"></i>
+            </a>
+         </div>
 
-            </div>
-         </p>
-
-         <p>
-            <div class="addresses">
-               <i class="fa-solid fa-lightbulb"></i>
-               <span style="padding-left:3px;">Aerosols, Optical Diagnostics, Inverse Analyses, Uncertainty
-                  Quantification</span>
-            </div>
-            <div class="addresses">
-               <i class="fa-solid fa-message" style="font-size:9pt;"></i>
-               <span style="padding-left:3px;display:inline-block">tsipkens (at) uwaterloo.ca</span> /
-               <span style="display:inline-block">timothy.sipkens (at) nrc-cnrc.gc.ca</span>
-            </div>
-            <div class="addresses">
-               <i class="fa-solid fa-location-pin"></i>
-               <span style="padding-left:3px;">Ontario, Canada</span>
-            </div>
-         </p>
-
+         <div class="addresses">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span style="padding-left:3px;">Aerosols, Optical Diagnostics, Inverse Analyses, Uncertainty Quantification</span>
+         </div>
+         <div class="addresses">
+            <i class="fa-solid fa-message" style="font-size:9pt;"></i>
+            <span style="padding-left:3px;display:inline-block">tsipkens (at) uwaterloo.ca</span> /
+            <span style="display:inline-block">timothy.sipkens (at) nrc-cnrc.gc.ca</span>
+         </div>
+         <div class="addresses">
+            <i class="fa-solid fa-location-pin"></i>
+            <span style="padding-left:3px;">Ontario, Canada</span>
+         </div>
 
          <div class="head-div">
             <h2 id="about" style="padding-top:90px;">About</h2>
@@ -383,29 +150,12 @@
 
          <div id="about-div">
             <p>
-               I am an aerosol scientist and researcher interested in optical and
-               physical diagnostics, with a particular focus on data inversion and analysis.
-               My work has included analysis of the products of gas flares, interpreting
-               TEM images with machine learning, modeling of time-resolved laser-induced
-               incandescence (TiRe-LII), particle filtration and respiratory protection,
-               and molecular dynamics simulations of nanoscale heat transfer.
+               I am an aerosol scientist and researcher interested in optical and physical diagnostics, with a particular focus on data inversion and analysis. My work has included analysis of the products of gas flares, interpreting TEM images with machine learning, modeling of time-resolved laser-induced incandescence (TiRe-LII), particle filtration and respiratory protection, and molecular dynamics simulations of nanoscale heat transfer.
             </p>
-
             <p>
-               I received my PhD from the University of Waterloo in 2019, with a focus
-               on TiRe-LII as a diagnostic for engineered nanoparticles. From 2018
-               to 2020, I held a Killam postdoctoral fellowship in the Mechanical Engineering
-               Department at the University of British Columbia.
-               There, I refined aerosol diagnostics, including novel approaches
-               to interpret tandem measurements of aerosol characteristics
-               — e.g., following the use of a centrifugal particle mass analyzer (CPMA)
-               and differential mobility analyzer (DMA) in series — and machine
-               learning techniques to interpret transmission electron microscopy (TEM)
-               images of soot. I joined the National Research Council Canada in 2021,
-               where I continue to work on aerosol characterization.
+               I received my PhD from the University of Waterloo in 2019, with a focus on TiRe-LII as a diagnostic for engineered nanoparticles. From 2018 to 2020, I held a Killam postdoctoral fellowship in the Mechanical Engineering Department at the University of British Columbia. There, I refined aerosol diagnostics, including novel approaches to interpret tandem measurements of aerosol characteristics — e.g., following the use of a centrifugal particle mass analyzer (CPMA) and differential mobility analyzer (DMA) in series — and machine learning techniques to interpret transmission electron microscopy (TEM) images of soot. I joined the National Research Council Canada in 2021, where I continue to work on aerosol characterization.
             </p>
          </div>
-
 
          <div class="head-div">
             <h2 id="pubs">Publications & Presentations</h2>
@@ -413,28 +163,21 @@
 
          <div id="pubs-div">
             <p style="padding:0px;">
-               <input type="text" id="filtBox" name="filtBox" value="" placeholder="author title journal year"></input>
+               <input type="text" id="filtBox" name="filtBox" value="" placeholder="author title journal year">
                <i class="fas fa-search"></i>
             </p>
 
             <div class="horz-list">
                <a id="journal-selector" class="active" onclick="switchPubs('journal')">Journal Articles</a>
                <a id="chapter-selector" onclick="switchPubs('chapter')">Book Chapters</a>
-               <!--<a id="oral-selector" onclick="switchPubs('oral')">Oral Presentations</a>
-               <a id="poster-selector" onclick="switchPubs('poster')">Posters</a>-->
                <a id="thesis-selector" onclick="switchPubs('thesis')">Theses</a>
             </div>
 
             <div id="journal-wrapper">
                <ol reversed id="pubs-j" class="list"></ol>
-
-               <div id="post-pubs-poster" class="expand-list">
-                  <a>
-                     <i class="fas fa-chevron-down" onclick="expandPubs('pubs-j')"></i>
-                  </a>
-                  <a>
-                     <i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-j')"></i>
-                  </a>
+               <div id="post-pubs-j" class="expand-list">
+                  <a><i class="fas fa-chevron-down" onclick="expandPubs('pubs-j')"></i></a>
+                  <a><i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-j')"></i></a>
                </div>
             </div>
 
@@ -442,128 +185,66 @@
                <ul id="pubs-chapter" class="list" style="list-style:none;"></ul>
             </div>
 
-            <!--
-            <p class="post-pub" data-aos="slide-up"><a href="pubs.html">Full publication list <i
-                     class="fas fa-chevron-right" style="font-size:11pt;"></i></a></p>
-            -->
-
-            <div id="oral-wrapper" style="display:none;">
-               <ol reversed id="pubs-oral" class="list"></ol>
-
-            
-               <div id="post-pubs-poster" class="expand-list">
-                  <a>
-                     <i class="fas fa-chevron-down" onclick="expandPubs('pubs-oral')"></i>
-                  </a>
-                  <a>
-                     <i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-oral')"></i>
-                  </a>
-               </div>
-            </div>
-
-            <div id="poster-wrapper" style="display:none;">
-               <ol reversed id="pubs-poster" class="list"></ol>
-
-               <div id="post-pubs-poster" class="expand-list">
-                  <a>
-                     <i class="fas fa-chevron-down" onclick="expandPubs('pubs-poster')"></i>
-                  </a>
-                  <a>
-                     <i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-poster')"></i>
-                  </a>
-               </div>
-            </div>
-
             <div id="thesis-wrapper" style="display:none;">
                <ul id="pubs-theses" class="list" style="list-style:none;"></ul>
             </div>
          </div>
 
-         <!-- Add publications. -->
          <script>
-            // To expand a publication section.
-            maxH = 1150
-            var expandPubs = function (ids) {
-               maxH = maxH + 1150
+            const expandSize = 2000;
+            let maxH = 1150;
+            const expandPubs = function (ids) {
+               maxH += expandSize;
                document.getElementById(ids).style.maxHeight = maxH + "px";
-               document.getElementById("post-" + ids).scrollIntoView({
-                  behavior: 'instant',
-                  block: 'end'
-               });
-            }
-            var shrinkPubs = function (ids) {
-               maxH = maxH - 1150
+               document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
+            };
+            const shrinkPubs = function (ids) {
+               maxH = Math.max(1150, maxH - expandSize);
                document.getElementById(ids).style.maxHeight = maxH + "px";
-               document.getElementById("post-" + ids).scrollIntoView({
-                  behavior: 'instant',
-                  block: 'end'
-               });
-            }
+               document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
+            };
 
-            // Function to read in and add publications.
-            var populatePubs = function (searchTerm = null) {
-               // Add journal articles.
-               var json = $.getJSON(
-                  "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json",
-                  function (data) {
-                     di2 = writeArticles(data, true, searchTerm);
+            const populatePubs = async function (searchTerm = null) {
+               try {
+                  const articleRes = await fetch("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json");
+                  if (articleRes.ok) {
+                     const data = await articleRes.json();
+                     const di2 = writeArticles(data, true, searchTerm);
                      addItems('pubs-j', di2);
-                  });
+                  }
+               } catch (e) { console.error("Failed to load articles", e); }
 
-               // Add book chapters.
-               var json = $.getJSON(
-                  "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/chapter.json",
-                  function (data) {
-                     di2 = writer(data, ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.',
-                           'publisher', ' ', '(', 'year', ')', '.', 'doi'
-                        ],
-                        false, searchTerm)
+               try {
+                  const chapterRes = await fetch("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/chapter.json");
+                  if (chapterRes.ok) {
+                     const data = await chapterRes.json();
+                     const di2 = writer(data, ['author', '.', 'title', '.', '<i>', 'booktitle', '</i>', '.', 'publisher', ' ', '(', 'year', ')', '.', 'doi'], false, searchTerm);
                      addItems('pubs-chapter', di2);
-                  })
+                  }
+               } catch (e) { console.error("Failed to load chapters", e); }
 
-               // Add conference publications.
-               /*
-               var json = $.getJSON(
-                  "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/conf.json",
-                  function (data) {
-
-                     dataO = filterConf(data, 'Oral'); // print oral presentations
-                     di2 = writeConf(dataO, true, searchTerm);
-                     addItems('pubs-oral', di2);
-
-                     dataP = filterConf(data, 'Poster'); // print poster presentations
-                     di2 = writeConf(dataP, true, searchTerm);
-                     addItems('pubs-poster', di2);
-                  });
-               */
-
-               // Add theses.
-               var json = $.getJSON(
-                  "https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json",
-                  function (data) {
-                     di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year',
-                           ')', '.', 'doi'
-                        ],
-                        false, searchTerm)
+               try {
+                  const thesisRes = await fetch("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/thesis.json");
+                  if (thesisRes.ok) {
+                     const data = await thesisRes.json();
+                     const di2 = writer(data, ['author', '.', 'title', '.', 'type', '.', 'school', '.', '(', 'year', ')', '.', 'doi'], false, searchTerm);
                      addItems('pubs-theses', di2);
-                  })
-            }
-            populatePubs(); // initial populate
+                  }
+               } catch (e) { console.error("Failed to load theses", e); }
+            };
 
-            // Add listeners to search box.
+            populatePubs();
+
             const node = document.getElementById("filtBox");
             node.addEventListener("keyup", function (event) {
-               if (event.key === "Enter") {
-                  populatePubs(node.value)
-               }
+               if (event.key === "Enter") { populatePubs(node.value); }
             });
             node.addEventListener("focusout", function (event) {
                populatePubs(node.value);
             });
 
-            // Switch between publication type. 
             function switchPubs(id) {
-               var ids = ['journal', 'chapter', 'thesis'] // 'oral', 'poster' < removed categories
+               const ids = ['journal', 'chapter', 'thesis'];
                for (let ii in ids) {
                   if (ids[ii] === id) {
                      document.getElementById(ids[ii] + '-wrapper').style.display = 'block';
@@ -576,7 +257,6 @@
             }
          </script>
 
-
          <div class="head-div">
             <h2 id="edu">Education</h2>
          </div>
@@ -587,66 +267,28 @@
                   <li class="list-entry">
                      <p>2019</p>
                      <p class="pub-title" style="padding-bottom:0px;"><b>Doctor of Philosophy</b></p>
-                     <p>Mechanical and Mechatronics Engineering</p>
-                     <p>University of Waterloo, Waterloo, Canada</p>
+                     <p>Mechanical and Mechatronics Engineering<br>
+                        University of Waterloo, Waterloo, Canada</p>
                   </li>
                </div>
-
                <div data-aos="slide-up" class="aos-init aos-animate">
                   <li class="list-entry">
                      <p>2015</p>
                      <p class="pub-title" style="padding-bottom:0px;"><b>Masters of Applied Science</b></p>
-                     <p>Mechanical Engineering</p>
-                     <p>University of Waterloo, Waterloo, Canada</p>
+                     <p>Mechanical Engineering<br>
+                        University of Waterloo, Waterloo, Canada</p>
                   </li>
                </div>
-
                <div data-aos="slide-up" class="aos-init aos-animate">
                   <li class="list-entry">
                      <p>2012</p>
                      <p class="pub-title" style="padding-bottom:0px;"><b>Bachelor of Applied Science</b></p>
-                     <p>Mechanical Engineering</p>
-                     <p>University of Waterloo, Waterloo, Canada</p>
+                     <p>Mechanical Engineering<br>
+                        University of Waterloo, Waterloo, Canada</p>
                   </li>
                </div>
             </ul>
          </div>
-         
-
-         <!--
-         <h2>Education</h2>
-         <ul id="education" class="list"></ul>
-
-         <script>
-            var json = $.getJSON("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/education.json",
-               function (data) {
-                  di2 = writer(data, ['school', ',', 'address'],
-                     ['year', 'degree', ' ', '(', 'short', ')', '<br>', 'field'], false)
-                  addItems('education', di2);
-               });
-         </script>
-         -->
-         
-
-         <!--
-         <h2 id="about">PROJECTS</h2>
-
-         <h3>DATA INVERSION <span>(in aerosol characterization)</span></h3>
-         <p>
-            Characterization of aerosols often requires a data analysis routine 
-            to retrieve particle characteristics. This project considers the data 
-            inversion routines that allow us to retrieve more accurate and detailed 
-            information from aerosol classifiers and characterization techniques. 
-         </p>
-
-         <h3>MOLECULAR DYNAMICS <span>(for nanoscale heat transfer)</span></h3>
-         <p>
-            With a particular focus on conduction, this project uses classical
-            molecular dynamics simulations to shed light on the transfer of energy
-            across solid-gas or liquid-gas interfaces. Simulations model this heat transfer 
-            in the free molecular regime, considering individual gas molecules. 
-         </p>
-         -->
 
          <div class="head-div">
             <h2 id="code">Codes</h2>
@@ -654,137 +296,73 @@
 
          <div id="code-div">
             <p>
-               As part of many of my projects, I have code available for use by researchers.
-               Please refer to my <a href="https://github.com/tsipkens">GitHub page</a> for more details.
-               Some sample projects are listed below.
+               As part of many of my projects, I have code available for use by researchers. Please refer to my <a href="https://github.com/tsipkens">GitHub page</a> for more details. Some sample projects are listed below.
             </p>
-
             <ul id="userRepos" class="pub-grid"></ul>
-
             <p class="post-pub" data-aos="slide-up">
-               <a href="https://github.com/tsipkens"><i class="fa-solid fa-up-right-from-square" style="font-size:11pt;"></i> More
-                  repositories</a>
+               <a href="https://github.com/tsipkens"><i class="fa-solid fa-up-right-from-square" style="font-size:11pt;"></i> More repositories</a>
             </p>
          </div>
 
-         <!-- Generate GitHub repo list. -->
-         <script src="js/gh.js"></script>
-
+         <!-- GitHub repos loading is now handled automatically by the combined pubs.js script -->
       </div>
    </div>
 
    <div class="footer">
-      © Timothy Sipkens 2025
+      © Timothy Sipkens 2026
    </div>
 
-</body>
-
-
-<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
-
-<!-- Add scrolling effect. -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-   AOS.init({
-      once: true,
-   })
-</script>
-
-<script>
-   // When the user scrolls down 50px from the top of the document, reformat header
-   window.onscroll = function () {
-      scrollFunction()
-   };
-
-   function scrollFunction() {
-      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 60) {
-         if (dark) {
-            document.getElementById("header").style.borderBottom = "1px #242526 solid";
-            document.getElementById("header").style.boxShadow = "0px 0px 10px #111";
-         } else {
-            document.getElementById("header").style.borderBottom = "1px #DDD solid";
-            document.getElementById("header").style.boxShadow = "0px 0px 10px #F0F0F0";
+   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+   <script>
+      window.addEventListener('load', () => {
+         if (typeof AOS !== 'undefined') {
+            AOS.init({ once: true });
          }
-      } else {
-         if (dark) {
-            document.getElementById("header").style.borderBottom = "1px var(--background-color) solid";
-            document.getElementById("header").style.boxShadow = "none";
-         } else {
-            document.getElementById("header").style.borderBottom = "1px var(--background-color) solid";
-            document.getElementById("header").style.boxShadow = "none";
-         }
-      }
+      });
 
-      // Color underline for navbar entries.
-      if (dark) {
-         col = "var(--c2)";
-      } else {
-         col = "var(--c1)";
-      }
-      if (isInViewport(document.querySelector('#pubs-div'))) {
-        document.getElementById("pubs-nav").style.borderBottom = "3px solid " + col;
-      } else {
-        document.getElementById("pubs-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
-      }
-      if (isInViewport(document.querySelector('#about-div'))) {
-        document.getElementById("about-nav").style.borderBottom = "3px solid " + col;
-      } else {
-        document.getElementById("about-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
-      }
-      if (isInViewport(document.querySelector('#edu-div'))) {
-        document.getElementById("edu-nav").style.borderBottom = "3px solid " + col;
-      } else {
-        document.getElementById("edu-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
-      }
-      if (isInViewport(document.querySelector('#code-div'))) {
-        document.getElementById("code-nav").style.borderBottom = "3px solid " + col;
-      } else {
-        document.getElementById("code-nav").style.borderBottom = "3px solid rgba(125, 125, 125, 0)";
-      }
-   }
-
-   // Check if a given element is in the viewport.
-   function isInViewport(el) {
-      var top = el.offsetTop;
-      var left = el.offsetLeft;
-      var width = el.offsetWidth;
-      var height = el.offsetHeight;
-      while(el.offsetParent) {
-        el = el.offsetParent;
-        top += el.offsetTop;
-        left += el.offsetLeft;
-      }
-      return (
-        top < (window.pageYOffset + window.innerHeight / 2) &&
-        left < (window.pageXOffset + window.innerWidth) &&
-        (top + height) > window.pageYOffset &&
-        (left + width) > window.pageXOffset
-      );
-    }
-
-   scrollFunction(); // initialize
-</script>
-
-<script>
-   var printPDF = function () {
-      console.log('Printing...');
-
-      /*
-      const element = document.getElementById('pubs-div');
-
-      var opt = {
-         margin:       1,
-         filename:     'myfile.pdf',
-         image:        { type: 'jpeg', quality: 0.98 },
-         html2canvas:  { scale: 2 },
-         jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      window.onscroll = function () {
+         scrollFunction();
       };
 
-      // New Promise-based usage:
-      expandPubs('pubs-j')
-      html2pdf().set(opt).from(element).save();
-      expandPubs('pubs-j')
-      console.log('Done.')
-      */
-   }
-</script>
+      function scrollFunction() {
+         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 60) {
+            if (dark) {
+               document.getElementById("header").style.borderBottom = "1px #242526 solid";
+               document.getElementById("header").style.boxShadow = "0px 0px 10px #111";
+            } else {
+               document.getElementById("header").style.borderBottom = "1px #DDD solid";
+               document.getElementById("header").style.boxShadow = "0px 0px 10px #F0F0F0";
+            }
+         } else {
+            document.getElementById("header").style.borderBottom = "1px var(--background-color) solid";
+            document.getElementById("header").style.boxShadow = "none";
+         }
+
+         let col = dark ? "var(--c2)" : "var(--c1)";
+         if (document.querySelector('#pubs-div')) {
+            document.getElementById("pubs-nav").style.borderBottom = isInViewport(document.querySelector('#pubs-div')) ? "3px solid " + col : "3px solid rgba(125, 125, 125, 0)";
+         }
+         if (document.querySelector('#about-div')) {
+            document.getElementById("about-nav").style.borderBottom = isInViewport(document.querySelector('#about-div')) ? "3px solid " + col : "3px solid rgba(125, 125, 125, 0)";
+         }
+         if (document.querySelector('#edu-div')) {
+            document.getElementById("edu-nav").style.borderBottom = isInViewport(document.querySelector('#edu-div')) ? "3px solid " + col : "3px solid rgba(125, 125, 125, 0)";
+         }
+         if (document.querySelector('#code-div')) {
+            document.getElementById("code-nav").style.borderBottom = isInViewport(document.querySelector('#code-div')) ? "3px solid " + col : "3px solid rgba(125, 125, 125, 0)";
+         }
+      }
+
+      function isInViewport(el) {
+         if (!el) return false;
+         var rect = el.getBoundingClientRect();
+         return (
+            rect.top < (window.innerHeight / 2) &&
+            rect.bottom >= 0
+         );
+      }
+
+      scrollFunction();
+   </script>
+</body>
+</html>

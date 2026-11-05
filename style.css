@@ -10,9 +10,10 @@
   --c5: #FF5733;
 }
 
+/* See index.html for toggles background/foreground colors */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #0D1117;
+    --background-color: black;
     --foreground-color: white;
   }
 }

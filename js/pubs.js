@@ -163,10 +163,12 @@ writer = function (data, template, fYear = false, searchTerm = null, isArticles 
       let indexNum = isArticles ? (totalItems - parseInt(i)) : null;
       let content = writeItem([item], template, 0, indexNum);
       let di = document.createElement('div');
+      di.setAttribute('data-aos', 'slide-up');
 
       let li = document.createElement('li');
       li.classList.add('list-entry');
       li.innerHTML = content;
+
       di.appendChild(li);
       di2.appendChild(di);
     });
@@ -194,6 +196,7 @@ writer = function (data, template, fYear = false, searchTerm = null, isArticles 
       yearGroups[year].forEach(entryObj => {
         let content = writeItem([entryObj.item], template, 0, entryObj.globalIndex);
         let di = document.createElement('div');
+        di.setAttribute('data-aos', 'slide-up');
 
         let li = document.createElement('li');
         li.classList.add('list-entry');

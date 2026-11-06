@@ -421,7 +421,7 @@ body.dark-theme .expand-list {
 }
 
 .list {
-  max-height: 1150px;
+  max-height: 2150px;
   overflow-x: hidden;
   overflow-y: hidden;
   position: relative;
@@ -451,8 +451,6 @@ body.dark-theme .expand-list {
   justify-content: space-between; /* Optional: pushes bottom elements like DOI links/quotes to the bottom */
   flex-grow: 1;                    /* Fills all available vertical height in the grid track */
   width: 100%;
-  margin-top: 25px;
-  margin-bottom: 22px;
   padding: 10px 15px;
   transition: all 0.8s ease 0s;
   text-align: left;

@@ -6,6 +6,16 @@
 //--------------------------------------------------------------------//
 
 formatAuthor = function (author, bolder = true) {
+  author = author.replace(" and", "")
+  authorList = author.split(", ")
+
+  /* If long author list, only show some */
+  if (authorList.length > 7) {
+    authorList = authorList.slice(0,6)
+    author = authorList.join(", ")
+    author = author + ", et al."
+  }
+
   if (bolder && author) {
     author = author.replace("T. Sipkens", "<b>T. Sipkens</b>")
       .replace("T. A. Sipkens", "<b>T. A. Sipkens</b>")

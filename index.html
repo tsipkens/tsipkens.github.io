@@ -64,8 +64,8 @@
             <div>
                <a href="#" style="margin-left:0px;margin-bottom:4px;"><i class="fa-solid fa-house"></i></a>
                <a id="about-nav" href="#about">About</a>
-               <a id="edu-nav" href="#edu">Education</a>
                <a id="pubs-nav" href="#pubs">Publications</a>
+               <a id="edu-nav" href="#edu">Education</a>
                <a id="code-nav" href="#code" style="margin-right:0px;">Codes</a>
             </div>
             <button onclick="toggleNight()" class="light-dark-toggle" id="light-dark-toggle-bar">
@@ -192,14 +192,14 @@
 
          <script>
             const expandSize = 2000;
-            let maxH = 1150;
+            let maxH = 2150;
             const expandPubs = function (ids) {
                maxH += expandSize;
                document.getElementById(ids).style.maxHeight = maxH + "px";
                document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
             };
             const shrinkPubs = function (ids) {
-               maxH = Math.max(1150, maxH - expandSize);
+               maxH = Math.max(2150, maxH - expandSize);
                document.getElementById(ids).style.maxHeight = maxH + "px";
                document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
             };

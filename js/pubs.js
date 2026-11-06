@@ -142,7 +142,7 @@ writer = function (data, template, fYear = false, searchTerm = null, isArticles 
   data = data.sort((a, b) => (b.year - a.year));
 
   let di2 = document.createElement('div');
-  di2.classList.add('pub-container');
+  di2.classList.add(fYear ? 'pub-container' : 'pub-grid');
 
   let totalItems = data.length;
   let yearGroups = {};
@@ -157,41 +157,55 @@ writer = function (data, template, fYear = false, searchTerm = null, isArticles 
     yearGroups[year].push({ item: data[i], globalIndex: totalItems - i });
   }
 
-  yearOrder.forEach((year, yearIdx) => {
-    let groupDiv = document.createElement('div');
-    groupDiv.classList.add('pub-year-group');
-    
-    // Collapse sections beyond the first 5 most recent years
-    if (fYear && yearIdx >= 5) {
-      groupDiv.classList.add('collapsed');
-    }
-
-    if (fYear) {
-      let h3 = document.createElement('h3');
-      h3.classList.add('h-year', 'full-width-heading', 'clickable-year');
-      h3.innerHTML = `<span>${year} <i class="fas fa-chevron-down year-toggle-icon"></i></span>`;
-      h3.onclick = function () { toggleYearSection(this); };
-      groupDiv.appendChild(h3);
-    }
-
-    let gridDiv = document.createElement('div');
-    gridDiv.classList.add('pub-grid');
-
-    yearGroups[year].forEach(entryObj => {
-      let content = writeItem([entryObj.item], template, 0, entryObj.globalIndex);
+  // If fYear is false, render all items directly into di2 (which has pub-grid class)
+  if (!fYear) {
+    data.forEach((item, i) => {
+      let indexNum = isArticles ? (totalItems - parseInt(i)) : null;
+      let content = writeItem([item], template, 0, indexNum);
       let di = document.createElement('div');
-      di.setAttribute('data-aos', 'slide-up');
 
       let li = document.createElement('li');
       li.classList.add('list-entry');
       li.innerHTML = content;
       di.appendChild(li);
-      gridDiv.appendChild(di);
+      di2.appendChild(di);
     });
+  } else {
+    // If fYear is true, group by year with accordion headings
+    yearOrder.forEach((year, yearIdx) => {
+      let groupDiv = document.createElement('div');
+      groupDiv.classList.add('pub-year-group');
+      
+      // Collapse sections beyond the first 5 most recent years
+      if (yearIdx >= 5) {
+        groupDiv.classList.add('collapsed');
+      }
 
-    groupDiv.appendChild(gridDiv);
-    di2.appendChild(groupDiv);
-  });
+      let h3 = document.createElement('h3');
+      h3.classList.add('h-year', 'full-width-heading', 'clickable-year');
+      h3.innerHTML = `<span style="margin-left:15px;">${year} <i class="fas fa-chevron-down year-toggle-icon"></i></span>`;
+      h3.onclick = function () { toggleYearSection(this); };
+      
+      groupDiv.appendChild(h3);
+
+      let gridDiv = document.createElement('div');
+      gridDiv.classList.add('pub-grid');
+
+      yearGroups[year].forEach(entryObj => {
+        let content = writeItem([entryObj.item], template, 0, entryObj.globalIndex);
+        let di = document.createElement('div');
+
+        let li = document.createElement('li');
+        li.classList.add('list-entry');
+        li.innerHTML = content;
+        di.appendChild(li);
+        gridDiv.appendChild(di);
+      });
+
+      groupDiv.appendChild(gridDiv);
+      di2.appendChild(groupDiv);
+    });
+  }
 
   checkNoItems(di2);
   return di2;

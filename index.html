@@ -68,9 +68,11 @@
                <a id="edu-nav" href="#edu">Education</a>
                <a id="code-nav" href="#code" style="margin-right:0px;">Codes</a>
             </div>
-            <button onclick="toggleNight()" class="light-dark-toggle" id="light-dark-toggle-bar">
-               <span><i class="fas fa-moon" id="moon"></i></span>
-               <span><i class="fas fa-sun" id="sun"></i></span>
+            <button onclick="toggleNight()" class="light-dark-toggle" id="light-dark-toggle-bar" aria-label="Toggle dark mode">
+               <span class="toggle-thumb">
+                  <i class="fas fa-moon" id="moon"></i>
+                  <i class="fas fa-sun" id="sun"></i>
+               </span>
             </button>
          </div>
       </div>
@@ -79,9 +81,11 @@
    <div class="pre-main">
       <div class="main" id="main">
          <div style="margin-bottom:20px;" id="light-dark-toggle-inpage">
-            <button onclick="toggleNight()" class="light-dark-toggle">
-               <span><i class="fas fa-moon" id="moon"></i></span>
-               <span><i class="fas fa-sun" id="sun"></i></span>
+            <button onclick="toggleNight()" class="light-dark-toggle" id="light-dark-toggle-bar" aria-label="Toggle dark mode">
+               <span class="toggle-thumb">
+                  <i class="fas fa-moon" id="moon"></i>
+                  <i class="fas fa-sun" id="sun"></i>
+               </span>
             </button>
          </div>
 
@@ -174,36 +178,19 @@
             </div>
 
             <div id="journal-wrapper">
-               <ol reversed id="pubs-j" class="list"></ol>
-               <div id="post-pubs-j" class="expand-list">
-                  <a><i class="fas fa-chevron-down" onclick="expandPubs('pubs-j')"></i></a>
-                  <a><i class="fas fa-chevron-up" onclick="shrinkPubs('pubs-j')"></i></a>
-               </div>
+               <div id="pubs-j" class="list"></div>
             </div>
 
             <div id="chapter-wrapper" style="display:none;">
-               <ul id="pubs-chapter" class="list" style="list-style:none;"></ul>
+               <div id="pubs-chapter" class="list"></div>
             </div>
 
             <div id="thesis-wrapper" style="display:none;">
-               <ul id="pubs-theses" class="list" style="list-style:none;"></ul>
+               <div id="pubs-theses" class="list"></div>
             </div>
          </div>
 
          <script>
-            const expandSize = 2000;
-            let maxH = 2150;
-            const expandPubs = function (ids) {
-               maxH += expandSize;
-               document.getElementById(ids).style.maxHeight = maxH + "px";
-               document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
-            };
-            const shrinkPubs = function (ids) {
-               maxH = Math.max(2150, maxH - expandSize);
-               document.getElementById(ids).style.maxHeight = maxH + "px";
-               document.getElementById("post-" + ids).scrollIntoView({ behavior: 'instant', block: 'end' });
-            };
-
             const populatePubs = async function (searchTerm = null) {
                try {
                   const articleRes = await fetch("https://raw.githubusercontent.com/tsipkens/tsipkens.github.io/main/js/article.json");
@@ -304,7 +291,6 @@
             </p>
          </div>
 
-         <!-- GitHub repos loading is now handled automatically by the combined pubs.js script -->
       </div>
    </div>
 

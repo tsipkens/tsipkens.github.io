@@ -25,31 +25,6 @@ formatAuthor = function (author, bolder = true) {
   return author || "";
 }
 
-printYearHeading = function (data, i, di2, iLastPrinted = i - 1, f_aos = true) {
-  let content = null;
-  if ((i == 0) || (iLastPrinted === null)) {
-    content = data[i].year ? data[i].year.toString() : null;
-  } else {
-    if (data[iLastPrinted].year !== data[i].year && data[i].year) {
-      content = data[i].year.toString();
-    }
-  }
-  if (content !== null) {
-    let h3 = document.createElement('h3');
-    h3.classList.add('h-year', 'full-width-heading');
-    h3.textContent = content;
-
-    if (f_aos) {
-      let dih = document.createElement('div');
-      dih.setAttribute('data-aos', 'slide-up');
-      dih.appendChild(h3);
-      di2.appendChild(dih);
-    } else {
-      di2.appendChild(h3);
-    }
-  }
-}
-
 writeDOI = function (doi) {
   if (!doi) return '';
   const cleanDoi = doi.replace('https://doi.org/', '').toLowerCase();
@@ -155,36 +130,68 @@ var entry2txt = function (obj, datai0) {
   setTimeout(() => { obj.innerHTML = "<i class='fa-solid fa-align-left'></i>"; }, 1000);
 }
 
+toggleYearSection = function (headerEl) {
+  let groupEl = headerEl.parentElement;
+  groupEl.classList.toggle('collapsed');
+}
+
 writer = function (data, template, fYear = false, searchTerm = null, isArticles = false) {
   if (searchTerm !== null) {
     data = filterPubs(data, searchTerm);
   }
   data = data.sort((a, b) => (b.year - a.year));
 
-  var iLastPrinted = null;
   let di2 = document.createElement('div');
-  di2.classList.add('pub-grid');
+  di2.classList.add('pub-container');
 
   let totalItems = data.length;
+  let yearGroups = {};
+  let yearOrder = [];
 
-  for (let i in data) {
-    let indexNum = isArticles ? (totalItems - parseInt(i)) : null;
+  for (let i = 0; i < data.length; i++) {
+    let year = data[i].year ? data[i].year.toString() : 'Other';
+    if (!yearGroups[year]) {
+      yearGroups[year] = [];
+      yearOrder.push(year);
+    }
+    yearGroups[year].push({ item: data[i], globalIndex: totalItems - i });
+  }
+
+  yearOrder.forEach((year, yearIdx) => {
+    let groupDiv = document.createElement('div');
+    groupDiv.classList.add('pub-year-group');
+    
+    // Collapse sections beyond the first 5 most recent years
+    if (fYear && yearIdx >= 5) {
+      groupDiv.classList.add('collapsed');
+    }
 
     if (fYear) {
-      printYearHeading(data, i, di2, iLastPrinted, false);
+      let h3 = document.createElement('h3');
+      h3.classList.add('h-year', 'full-width-heading', 'clickable-year');
+      h3.innerHTML = `<span>${year} <i class="fas fa-chevron-down year-toggle-icon"></i></span>`;
+      h3.onclick = function () { toggleYearSection(this); };
+      groupDiv.appendChild(h3);
     }
-    iLastPrinted = i;
-    
-    let content = writeItem(data, template, i, indexNum);
-    let di = document.createElement('div');
-    di.setAttribute('data-aos', 'slide-up');
 
-    let li = document.createElement('li');
-    li.classList.add('list-entry');
-    li.innerHTML = content;
-    di.appendChild(li);
-    di2.appendChild(di);
-  }
+    let gridDiv = document.createElement('div');
+    gridDiv.classList.add('pub-grid');
+
+    yearGroups[year].forEach(entryObj => {
+      let content = writeItem([entryObj.item], template, 0, entryObj.globalIndex);
+      let di = document.createElement('div');
+      di.setAttribute('data-aos', 'slide-up');
+
+      let li = document.createElement('li');
+      li.classList.add('list-entry');
+      li.innerHTML = content;
+      di.appendChild(li);
+      gridDiv.appendChild(di);
+    });
+
+    groupDiv.appendChild(gridDiv);
+    di2.appendChild(groupDiv);
+  });
 
   checkNoItems(di2);
   return di2;
@@ -264,9 +271,8 @@ addItems = function (id, di) {
   }
 }
 
-
 //--------------------------------------------------------------------//
-// 2. GITHUB REPOSITORIES FETCHING & RENDERING (from gh.js)
+// 2. GITHUB REPOSITORIES FETCHING & RENDERING
 //--------------------------------------------------------------------//
 
 const validRepos = ['atems', 'py-atems', 'aerosol-icon-project', 'cmap', 'bidias', 'tfer-pma', 'pydias', 'autils', 'aubos'];
@@ -317,10 +323,10 @@ async function requestUserRepos(username) {
             aUrl.textContent = repo.html_url;
             pDesc.appendChild(aUrl);
 
-            // 3. Metadata Div (Wrapped in a DIV and pushed to bottom)
+            // 3. Metadata Div
             let divMeta = document.createElement('div');
             divMeta.className = 'repo-meta';
-            divMeta.style.marginTop = 'auto'; // Pins to the bottom of the card
+            divMeta.style.marginTop = 'auto';
 
             if (repo.language) {
                 let spanLang = document.createElement('span');
@@ -372,7 +378,6 @@ async function requestUserRepos(username) {
                 divMeta.appendChild(licSpan);
             }
 
-            // Append all top elements and the bottom meta div
             li.appendChild(pTitle);
             li.appendChild(pDesc);
             li.appendChild(divMeta);
@@ -384,5 +389,4 @@ async function requestUserRepos(username) {
     }
 }
 
-// Automatically trigger GitHub repo request on script load
 requestUserRepos('tsipkens');

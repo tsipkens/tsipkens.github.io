@@ -49,7 +49,7 @@ def main():
     print(f"Fetching metadata for {len(doi_list)} publications from Crossref...")
     
     for i, doi in enumerate(doi_list):
-        clean_doi = doi
+        clean_doi = doi[0]
         url = f"https://api.crossref.org/works/{clean_doi}?mailto={EMAIL}"
         
         try:

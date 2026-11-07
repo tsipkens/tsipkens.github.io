@@ -225,10 +225,10 @@ var writeItem = function (data, template, i, indexNum = null) {
     if ((templJ === '.') || (templJ === ',')) {
       content += templJ + ' ';
     } else if (templJ.includes('<p class="list-title')) {
-      if (indexNum !== null) {
-        content += '' + indexNum + '.<br><hr>';
-      }
       content += '<p class="list-title">';
+      if (indexNum !== null) {
+        content += '<span style="font-size:11pt;">' + indexNum + '. </span>';
+      }
     } else if ((templJ === '(') || (templJ === ')') || (templJ === ' ') || (templJ === '<br>') || (templJ.includes('i>')) || (templJ.includes('<b')) || (templJ.includes('</b')) || (templJ.includes('p>'))) {
       content += templJ;
     } else if (templJ === 'author') {

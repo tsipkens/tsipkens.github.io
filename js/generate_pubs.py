@@ -51,6 +51,12 @@ def main():
     for i, doi in enumerate(doi_list):
         clean_doi = doi[0]
         url = f"https://api.crossref.org/works/{clean_doi}?mailto={EMAIL}"
+
+        if len(doi) > 1:
+            tags = "#" + " ".join(doi[1:])
+        else:
+            tags = ""
+
         
         try:
             response = requests.get(url, headers=headers)
@@ -87,7 +93,8 @@ def main():
                 "year": year,
                 "honours": "",
                 "badge": None,
-                "doi": f"https://doi.org/{item.get('DOI', clean_doi)}"
+                "doi": f"https://doi.org/{item.get('DOI', clean_doi)}", 
+                "tags": tags
             }
             
             pub_data.append(pub_obj)

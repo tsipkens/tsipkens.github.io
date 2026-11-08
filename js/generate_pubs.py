@@ -53,7 +53,7 @@ def main():
         url = f"https://api.crossref.org/works/{clean_doi}?mailto={EMAIL}"
 
         if len(doi) > 1:
-            tags = "#" + " ".join(doi[1:])
+            tags = "#" + " #".join(doi[1:])
         else:
             tags = ""
 

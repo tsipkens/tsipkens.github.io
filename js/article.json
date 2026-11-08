@@ -23,7 +23,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2026.106832",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "T. A. Sipkens, J. C. Corbin, K. Chen, L. Rivellini, J. Abbatt, and J. S. Olfert",
@@ -49,7 +49,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1038/s41612-026-01369-w",
-    "tags": ""
+    "tags": "#marine"
   },
   {
     "author": "R. Mehri, R. T. Nishida, T. A. Sipkens, G. J. Smallwood, J. C. Corbin, P. Whitefield, S. Achterberg, R. C. Miake-Lye, B. A. Nault, R. Howard, and J. S. Olfert",
@@ -62,7 +62,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1080/02786826.2025.2568694",
-    "tags": ""
+    "tags": "#aviation"
   },
   {
     "author": "N. Sapkota, R. Mehri, J. C. Corbin, S. N. Rogak, and T. A. Sipkens",
@@ -88,7 +88,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1038/s41598-025-34482-6",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "E. Asmi, T. A. Sipkens, J. Saturno, J. Backman, K. Vasilatou, E. Weingartner, A. Keller, K. Ciupek, T. Müller, A. Babu Suja, G. Močnik, L. Drinovec, K. Eleftheriadis, M. I. Gini, A. Nowak, and J. C. Corbin",
@@ -101,7 +101,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1038/s41612-025-01288-2",
-    "tags": ""
+    "tags": "#review"
   },
   {
     "author": "N. Sapkota, R. Mehri, J. C. Corbin, S. N. Rogak, and T. A. Sipkens",
@@ -127,7 +127,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-025-08541-9",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "N. Sapkota, T. A. Sipkens, and S. N. Rogak",
@@ -153,7 +153,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2025.106636",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "H. I. Looi, H. I. Yazici, J. C. Corbin, R. Mehri, T. A. Sipkens, and K. J. Daun",
@@ -192,7 +192,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-025-08459-2",
-    "tags": ""
+    "tags": "#aviation"
   },
   {
     "author": "P. Beeler, J. C. Corbin, T. A. Sipkens, and L. Fierce",
@@ -218,7 +218,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1080/15459624.2024.2447321",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "H. Nikookar, T. A. Sipkens, and S. N. Rogak",
@@ -244,7 +244,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2024.106483",
-    "tags": ""
+    "tags": "#review"
   },
   {
     "author": "T. A. Sipkens, R. Dastanpour, U. Trivanovic, H. Nikookar, and S. N. Rogak",
@@ -257,7 +257,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.21105/joss.06416",
-    "tags": ""
+    "tags": "#tem"
   },
   {
     "author": "T. E. G. Alvarez-Arenas, T. A. Sipkens, J. C. Corbin, P. Salso, and V. Genovés",
@@ -270,7 +270,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1038/s41598-024-67809-w",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "T. A. Sipkens, J. C. Corbin, B. Smith, S. Gagné, P. Lobo, B. T. Brem, M. P. Johnson, and G. J. Smallwood",
@@ -283,7 +283,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.5194/amt-17-4291-2024",
-    "tags": ""
+    "tags": "#aviation"
   },
   {
     "author": "J. Scott, T. A. Sipkens, G. Smallwood, R. Mehri, J. C. Corbin, P. Lobo, and M. R. Kholghy",
@@ -296,7 +296,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1080/02786826.2024.2316190",
-    "tags": ""
+    "tags": "#aviation"
   },
   {
     "author": "T. A. Sipkens and J. C. Corbin",
@@ -322,7 +322,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2023.106211",
-    "tags": ""
+    "tags": "#review"
   },
   {
     "author": "T. A. Sipkens, T. Johnson, R. Nishida, G. J. Smallwood, and J. C. Corbin",
@@ -348,7 +348,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2023.106189",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "J. P. Molnar, L. Venkatakrishnan, B. E. Schmidt, T. A. Sipkens, and S. J. Grauer",
@@ -361,19 +361,6 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00348-022-03554-y",
-    "tags": ""
-  },
-  {
-    "author": "T. A. Sipkens, J. C. Corbin, A. Oldershaw, and G. J. Smallwood",
-    "title": "Particle filtration efficiency measured using sodium chloride and polystyrene latex sphere test methods",
-    "journal": "Scientific Data",
-    "pages": null,
-    "volume": "9",
-    "number": "1",
-    "year": "2022",
-    "honours": "",
-    "badge": null,
-    "doi": "https://doi.org/10.1038/s41597-022-01860-y",
     "tags": ""
   },
   {
@@ -390,6 +377,19 @@
     "tags": ""
   },
   {
+    "author": "T. A. Sipkens, J. C. Corbin, A. Oldershaw, and G. J. Smallwood",
+    "title": "Particle filtration efficiency measured using sodium chloride and polystyrene latex sphere test methods",
+    "journal": "Scientific Data",
+    "pages": null,
+    "volume": "9",
+    "number": "1",
+    "year": "2022",
+    "honours": "",
+    "badge": null,
+    "doi": "https://doi.org/10.1038/s41597-022-01860-y",
+    "tags": "#ppe"
+  },
+  {
     "author": "T. A. Sipkens, J. C. Corbin, T. Koukoulas, A. Oldershaw, T. Lavoie, J. Norooz Oliaee, F. Liu, I. D. Leroux, G. J. Smallwood, P. Lobo, and R. G. Green",
     "title": "Comparison of measurement systems for assessing number- and mass-based particle filtration efficiency",
     "journal": "Journal of Occupational and Environmental Hygiene",
@@ -400,7 +400,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1080/15459624.2022.2114596",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "T. W. Bement, D. J. Downey, A. Mitros, R. Lau, T. A. Sipkens, J. Songer, H. Alexander, D. Ostrom, H. Nikookar, and S. N. Rogak",
@@ -413,7 +413,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.4209/aaqr.220044",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "B. Zhao, T. A. Sipkens, and K. J. Daun",
@@ -452,7 +452,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-022-07769-z",
-    "tags": ""
+    "tags": "#lii review"
   },
   {
     "author": "T. A. Sipkens, S. J. Grauer, A. M. Steinberg, S. N. Rogak, and P. Kirchen",
@@ -478,7 +478,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2021.105897",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "J. C. Corbin, G. J. Smallwood, I. D. Leroux, J. Norooz Oliaee, F. Liu, T. A. Sipkens, R. G. Green, N. F. Murnaghan, T. Koukoulas, and P. Lobo",
@@ -491,7 +491,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1038/s41598-021-01265-8",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "T. A. Sipkens, U. Trivanovic, A. Naseri, O. W. Bello, A. Baldelli, M. Kazemimanesh, A. K. Bertram, L. Kostiuk, J. C. Corbin, J. S. Olfert, and S. N. Rogak",
@@ -504,7 +504,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2021.105826",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "T. A. Sipkens, M. Frei, A. Baldelli, P. Kirchen, F. E. Kruis, and S. N. Rogak",
@@ -517,7 +517,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.powtec.2021.04.026",
-    "tags": ""
+    "tags": "#tem"
   },
   {
     "author": "S. N. Rogak, T. A. Sipkens, M. Guan, H. Nikookar, D. Vargas Figueroa, and J. Wang",
@@ -530,7 +530,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1080/02786826.2020.1855321",
-    "tags": ""
+    "tags": "#ppe"
   },
   {
     "author": "T. Sipkens and S. Rogak",
@@ -543,7 +543,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2020.105699",
-    "tags": ""
+    "tags": "#tem"
   },
   {
     "author": "A. Naseri, T. A. Sipkens, S. N. Rogak, and J. S. Olfert",
@@ -556,7 +556,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1080/02786826.2020.1825615",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "U. Trivanovic, T. A. Sipkens, M. Kazemimanesh, A. Baldelli, A. M. Jefferson, B. M. Conrad, M. R. Johnson, J. C. Corbin, J. S. Olfert, and S. N. Rogak",
@@ -582,7 +582,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2020.105565",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "A. Baldelli, U. Trivanovic, T. A. Sipkens, and S. N. Rogak",
@@ -595,7 +595,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.chemosphere.2020.126532",
-    "tags": ""
+    "tags": "#review"
   },
   {
     "author": "T. Sipkens, J. Olfert, and S. Rogak",
@@ -608,7 +608,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1016/j.jaerosci.2019.105484",
-    "tags": ""
+    "tags": "#bidimensional"
   },
   {
     "author": "T. A. Sipkens, J. S. Olfert, and S. N. Rogak",
@@ -634,7 +634,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-019-7325-6",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "T. A. Sipkens, J. Menser, R. Mansmann, C. Schulz, and K. J. Daun",
@@ -647,7 +647,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-019-7251-7",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "R. Mansmann, T. A. Sipkens, J. Menser, K. J. Daun, T. Dreier, and C. Schulz",
@@ -660,7 +660,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-019-7235-7",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "T. A. Sipkens and K. J. Daun",
@@ -686,7 +686,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1063/1.5016341",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "P. J. Hadwin, T. A. Sipkens, K. A. Thomson, F. Liu, and K. J. Daun",
@@ -712,7 +712,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1364/ao.56.008436",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "S. J. Grauer, P. J. Hadwin, T. A. Sipkens, and K. J. Daun",
@@ -790,7 +790,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-015-6287-6",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "T. A. Sipkens, N. R. Singh, K. J. Daun, N. Bizmark, and M. Ioannidis",
@@ -803,7 +803,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-015-6022-3",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "J. W. Labahn, C. B. Devaud, T. A. Sipkens, and K. J. Daun",
@@ -842,7 +842,7 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1007/s00340-013-5508-0",
-    "tags": ""
+    "tags": "#lii"
   },
   {
     "author": "T. Sipkens, G. Joshi, K. J. Daun, and Y. Murakami",
@@ -855,6 +855,6 @@
     "honours": "",
     "badge": null,
     "doi": "https://doi.org/10.1115/ht2012-58185",
-    "tags": ""
+    "tags": "#lii"
   }
 ]

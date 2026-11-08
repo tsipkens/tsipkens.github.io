@@ -1,0 +1,38 @@
+name: Generate Publications JSON
+
+on:
+  push:
+    branches:
+      - main  # Or 'master' depending on your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Set up Python environment
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # Install dependencies (requests, pyyaml, etc.)
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests pyyaml
+
+      # Run the generation script
+      - name: Run generate_pubs.py
+        run: python generate_pubs.py
+
+      # Commit and push the updated article.json if changes occurred
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          file_pattern: js/article.json
+          commit_message: "Auto-generate article.json from updated DOIs [skip ci]"

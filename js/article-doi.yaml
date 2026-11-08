@@ -3,10 +3,10 @@
 - [ "10.5194/amt-19-3123-2026" ] # Sipkens et al., micro-aeth
 - [ "10.1038/s41612-026-01369-w", "marine"] # Kokkola et al., marine
 - [ "10.1080/02786826.2025.2568694", "aviation"] # Mehri et al. (2025), CERMS
-- [ "10.1016/j.jaerosci.2026.106768" ] # Sapkota et al., compacted soot 1
+- [ "10.1016/j.jaerosci.2026.106768", "tandem"] # Sapkota et al., compacted soot 1
 - [ "10.1038/s41598-025-34482-6", "ppe"] # Mehri et al., mask
 - [ "10.1038/s41612-025-01288-2", "review"] # Asmi et al.
-- [ "10.1080/02786826.2025.2541649" ] # shape of sodium chloride
+- [ "10.1080/02786826.2025.2541649", "tandem"] # shape of sodium chloride
 - [ "10.1007/s00340-025-08541-9", "lii"] # Liu et al., laser annealing
 - [ "10.1080/02786826.2025.2519093" ] # Sapkota et al., Aerosol Sci. Technol. (2025)
 - [ "10.1016/j.jaerosci.2025.106636", "bidimensional"] # Sipkens et al., J. Aerosol Sci. (2025)

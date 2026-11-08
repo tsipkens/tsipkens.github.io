@@ -25,6 +25,47 @@ formatAuthor = function (author, bolder = true) {
   return author || "";
 }
 
+function toSentenceCase(title) {
+    const words = title.split(' ');
+    if (words.length === 0) return title;
+
+    // Count words starting with an uppercase letter that are more than 1 character long
+    const capitalizedWordsCount = words.filter(word => /^[A-Z]/.test(word) && word.length > 1).length;
+
+    // Check if *most* of the qualifying words are capitalized (Title Case or ALL CAPS)
+    const isMostlyCapitalized = capitalizedWordsCount > words.length / 2;
+
+    // If it's already in sentence case, return it as-is to avoid altering names
+    if (!isMostlyCapitalized) {
+        return title;
+    }
+
+    return words.map((word, index) => {
+        // Split hyphenated words into individual parts
+        const parts = word.split('-');
+        
+        const processedParts = parts.map((part, partIndex) => {
+            if (partIndex === 0) {
+                // First part of the word (or standalone word)
+                const hasLaterCaps = /[A-Z]/.test(part.slice(1));
+                if (hasLaterCaps) {
+                    return part; // Preserve acronyms / protected terms (e.g., NASA)
+                }
+                if (index === 0) {
+                    return part.charAt(0).toUpperCase() + part.slice(1).toLowerCase();
+                } else {
+                    return part.toLowerCase();
+                }
+            } else {
+                // Parts after a hyphen: uncapitalize them
+                return part.toLowerCase();
+            }
+        });
+        
+        return processedParts.join('-');
+    }).join(' ');
+}
+
 writeDOI = function (doi) {
   if (!doi) return '';
   const cleanDoi = doi.replace('https://doi.org/', '').toLowerCase();
@@ -225,8 +266,20 @@ var writeItem = function (data, template, i, indexNum = null) {
     if ((templJ === '.') || (templJ === ',')) {
       content += templJ + ' ';
     } else if (templJ.includes('<p class="list-title')) {
+      if (data[i].tags.includes("#tem")) {
+        tag_badge = '<i class="fa-solid fa-microscope"></i>'
+      } else if (data[i].tags.includes("#bidim")||data[i].tags.includes("#tandem")) {
+        tag_badge = '<i class=<i class="fa-solid fa-ruler-combined"></i>></i>'
+      } else if (data[i].tags.includes("#md")) {
+        tag_badge = '<i class="fa-solid fa-atom"></i>'
+      } else if (data[i].tags.includes("#ppe")) {
+        tag_badge = '<i class="fa-solid fa-mask-face"></i>'
+      } else {
+        tag_badge = ""
+      }
+      console.log(tag_badge)
       if (indexNum !== null) {
-        content += '<span style="font-size:11pt;">' + indexNum + '. </span>';
+        content += '<span style="font-size:11pt;">' + indexNum + '. <span style="font-size:10pt;">' + tag_badge + '</span></span>';
       }
       content += '<p class="list-title">';
     } else if ((templJ === '(') || (templJ === ')') || (templJ === ' ') || (templJ === '<br>') || (templJ.includes('i>')) || (templJ.includes('<b')) || (templJ.includes('</b')) || (templJ.includes('p>'))) {
@@ -248,6 +301,8 @@ var writeItem = function (data, template, i, indexNum = null) {
       if (data[i].hasOwnProperty('honours') && data[i].honours) {
         content += '<p class="list-title"><span class="list-after"><i class="fas fa-award"></i> ' + data[i].honours + '</span></p> ';
       }
+    } else if (templJ === 'title') {
+      content += toSentenceCase(data[i][templJ]);
     } else {
       content += data[i][templJ];
     }

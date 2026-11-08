@@ -269,7 +269,7 @@ var writeItem = function (data, template, i, indexNum = null) {
       if (data[i].tags.includes("#tem")) {
         tag_badge = '<i class="fa-solid fa-microscope"></i>'
       } else if (data[i].tags.includes("#bidim")||data[i].tags.includes("#tandem")) {
-        tag_badge = '<i class=<i class="fa-solid fa-ruler-combined"></i>></i>'
+        tag_badge = '<i class="fa-solid fa-ruler-combined"></i>'
       } else if (data[i].tags.includes("#md")) {
         tag_badge = '<i class="fa-solid fa-atom"></i>'
       } else if (data[i].tags.includes("#ppe")) {

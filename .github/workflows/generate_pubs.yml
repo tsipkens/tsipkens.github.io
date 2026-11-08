@@ -28,7 +28,7 @@ jobs:
 
       # Run the generation script
       - name: Run generate_pubs.py
-        run: python generate_pubs.py
+        run: python js/generate_pubs.py
 
       # Commit and push the updated article.json if changes occurred
       - name: Commit and push changes
